@@ -1,0 +1,98 @@
+body {
+    background-image: url(../images/meetings-bg.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+
+.reg {
+    margin: auto;
+    width: 50%;
+    margin-top: 10%;
+    background: #F0F2F0;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right,  #d2d9f3, #a12c2f);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,  #d2d9f3, #a12c2f);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 20px;
+    border: white 1px solid;
+}
+
+.reg form {
+    margin: auto;
+    width: 70%;
+}
+.back{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* background-color: bisque; */
+}
+.back p{
+    width: 90%;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* padding-top: 2%; */
+    /* display: inline-block; */
+    /* background-color: aqua; */
+    padding-left: 30%;
+    margin-top: 2%;
+}
+.back a{
+    width: 10%;
+    /* background-color: blue; */
+    display: block;
+}
+.back a i{
+    /* background-color: black; */
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    color: #a12c2f;
+}
+.reg label {
+    color: #44484b;
+    font-weight: 500;
+    font-size: 20px;
+
+}
+
+.reg button {
+    background-color: #a12c2f;
+    text-align: center !important;
+    border-color: white;
+    margin-bottom: 2%;
+    font-weight: 500;
+}
+
+.reg button:hover {
+    background-color: transparent;
+    border-color: white;
+    color: #44484b;
+}
+
+
+.center a{
+    color: white;
+    width: 100%;
+    padding-bottom: 2%;
+}
+.center a:hover {
+    color: #a12c2f;
+}
+
+.center {
+    width: 100%;
+    text-align: center;
+
+}
