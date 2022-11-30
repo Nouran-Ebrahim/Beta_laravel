@@ -28,10 +28,10 @@
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="../public/assets/css/fontawesome.css">
-    <link rel="stylesheet" href="../public/assets/css/templatemo-edu-meeting.css">
-    <link rel="stylesheet" href="../public/assets/css/owl.css">
-    <link rel="stylesheet" href="../public/assets/css/lightbox.css">
+    <link rel="stylesheet" href="{{assets('assets/css/fontawesome.css')}}">
+    <link rel="stylesheet" href="{{assets('assets/css/templatemo-edu-meeting.css')}}">
+    <link rel="stylesheet" href="{{assets('assets/css/owl.css')}}">
+    <link rel="stylesheet" href="{{assets('assets/css/lightbox.css')}}">
     <!--
 
 TemplateMo 569 Edu Meeting
@@ -682,14 +682,14 @@ https://templatemo.com/tm-569-edu-meeting
     <script src="../public/vendor/jquery/jquery.min.js"></script>
     <script src="../public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script src="../public/assets/js/isotope.min.js"></script>
-    <script src="../public/assets/js/owl-carousel.js"></script>
-    <script src="../public/assets/js/lightbox.js"></script>
-    <script src="../public/assets/js/tabs.js"></script>
-    <script src="../public/assets/js/video.js"></script>
-    <script src="../public/assets/js/slick-slider.js"></script>
-    <script src="../public/assets/js/customs.js"></script>
-    <script src="../public/assets/js/sharedd.js"></script>
+    <script src="{{assets('assets/js/isotope.min.js')}}"></script>
+    <script src="{{assets('assets/js/owl-carousel.js')}}"></script>
+    <script src="{{assets('assets/js/lightbox.js')}}"></script>
+    <script src="{{assets(' assets/js/tabs.js')}}"></script>
+    <script src="{{assets('assets/js/video.js')}}"></script>
+    <script src="{{assets(' assets/js/slick-slider.js')}}"></script>
+    <script src="{{assets(' assets/js/customs.js')}}"></script>
+    <script src="{{assets('assets/js/sharedd.js')}} "></script>
 
     <!-- <script src="assets/js/levels.js"></script> -->
     <script>
