@@ -25,7 +25,7 @@
         integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous">
     </script>
     <!-- Bootstrap core CSS -->
-    <link href="../public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet')}}">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -322,9 +322,9 @@
         </p>
     </div>
     <!-- Bootstrap core JavaScript -->
-    <script src="../public/vendor/jquery/jquery.min.js"></script>
-    <script src="../public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../public/assets/js/courses.js"></script>
+    <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('assets/js/courses.js')}}"></script>
     {{-- <script src="../public/assets/js/sharedd.js"></script> --}}
 
 

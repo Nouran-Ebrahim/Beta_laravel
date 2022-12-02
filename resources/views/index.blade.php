@@ -24,14 +24,14 @@
     <title>Education Meeting HTML5 Template</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="{{assets('assets/css/fontawesome.css')}}">
-    <link rel="stylesheet" href="{{assets('assets/css/templatemo-edu-meeting.css')}}">
-    <link rel="stylesheet" href="{{assets('assets/css/owl.css')}}">
-    <link rel="stylesheet" href="{{assets('assets/css/lightbox.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/fontawesome.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/templatemo-edu-meeting.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/owl.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/lightbox.css')}}">
     <!--
 
 TemplateMo 569 Edu Meeting
@@ -78,7 +78,7 @@ https://templatemo.com/tm-569-edu-meeting
     <!-- ***** Main Banner Area Start ***** -->
     <section class="section main-banner" id="top" data-section="section1">
         <video autoplay muted loop id="bg-video">
-            <source src="../public/assets/images/course-video.mp4" type="video/mp4" />
+            <source src="{{asset('assets/images/course-video.mp4')}}" type="video/mp4" />
         </video>
 
         <div class="video-overlay header-text">
@@ -679,17 +679,17 @@ https://templatemo.com/tm-569-edu-meeting
 
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
-    <script src="../public/vendor/jquery/jquery.min.js"></script>
-    <script src="../public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
-    <script src="{{assets('assets/js/isotope.min.js')}}"></script>
-    <script src="{{assets('assets/js/owl-carousel.js')}}"></script>
-    <script src="{{assets('assets/js/lightbox.js')}}"></script>
-    <script src="{{assets(' assets/js/tabs.js')}}"></script>
-    <script src="{{assets('assets/js/video.js')}}"></script>
-    <script src="{{assets(' assets/js/slick-slider.js')}}"></script>
-    <script src="{{assets(' assets/js/customs.js')}}"></script>
-    <script src="{{assets('assets/js/sharedd.js')}} "></script>
+    <script src="{{asset('assets/js/isotope.min.js')}}"></script>
+    <script src="{{asset('assets/js/owl-carousel.js')}}"></script>
+    <script src="{{asset('assets/js/lightbox.js')}}"></script>
+    <script src="{{asset('assets/js/tabs.js')}}"></script>
+    <script src="{{asset('assets/js/video.js')}}"></script>
+    <script src="{{asset('assets/js/slick-slider.js')}}"></script>
+    <script src="{{asset('assets/js/customs.js')}}"></script>
+    <script src="{{asset('assets/js/sharedd.js')}} "></script>
 
     <!-- <script src="assets/js/levels.js"></script> -->
     <script>

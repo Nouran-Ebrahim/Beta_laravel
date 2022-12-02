@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-<img src="../public/assets/images/logo2.jpg">
+<img src="{{asset('assets/images/logo2.jpg')}}">
 </body>
 </html>
