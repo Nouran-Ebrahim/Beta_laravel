@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Show;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -52,3 +53,11 @@ Route::get('/prep-courses/{id}', function ($id) {
         'id'=> $id,
     ]);
 }) -> name('prep-courses');
+
+Route::get('/thanwy-courses/{id}', function ($id) {
+    return view('start',[
+        'id'=> $id,
+    ]);
+}) -> name('thanwy-courses');
+
+Route::get('thanwy/{id}/{sub}',[Show::class,'show']) -> name('thanwy.show');
