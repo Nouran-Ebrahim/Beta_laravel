@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +24,7 @@
         integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous">
     </script>
     <!-- Bootstrap core CSS -->
-    <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet')}}">
+    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet') }}">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -54,12 +53,12 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="{{route('index')}}" >Home</a></li>
-                            <li><a href="{{route('index')}}" class="active" id="level">Levels</a></li>
-                            <li><a href="{{route('index')}}" id="skill">Skills</a></li>
-                            <li><a href="{{route('joinus')}}">Join Us</a></li>
-                            <li><a href="{{route('about')}}">About</a></li>
-                            <li><a href="{{route('index')}}">Contact Us</a></li>
+                            <li><a href="{{ route('index') }}">Home</a></li>
+                            <li><a href="{{ route('index') }}" class="active" id="level">Levels</a></li>
+                            <li><a href="{{ route('index') }}" id="skill">Skills</a></li>
+                            <li><a href="{{ route('joinus') }}">Join Us</a></li>
+                            <li><a href="{{ route('about') }}">About</a></li>
+                            <li><a href="{{ route('index') }}">Contact Us</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -75,9 +74,16 @@
     <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="text-center mb-5">
-                <h1 class="text" id="title">أولى إعدادى عربي
+                @if ($id == 1)
+                    <h1 class="text" id="title">أولى إعدادى عربي </h1>
+                @else
+                    @if ($id == 2)
+                        <h1 class="text" id="title">ثانيه إعدادى عربي </h1>
+                    @else
+                        <h1 class="text" id="title">ثالثه إعدادى عربي </h1>
+                    @endif
+                @endif
 
-                </h1>
             </div>
 
             <div class="container">
@@ -104,7 +110,15 @@
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
-                            <a class="h5" href="">عربي</a>
+                            @if ($id == 1)
+                                <a class="h5" href="">عربي اولي</a>
+                            @else
+                                @if ($id == 2)
+                                    <a class="h5" href="">عربي ثانيه</a>
+                                @else
+                                    <a class="h5" href="">عربي ثالثه</a>
+                                @endif
+                            @endif
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
 
@@ -123,7 +137,15 @@
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
-                            <a class="h5" href="">رياضيات</a>
+                            @if ($id == 1)
+                                <a class="h5" href="">رياضيات اولي</a>
+                            @else
+                                @if ($id == 2)
+                                    <a class="h5" href="">رياضيات ثانيه</a>
+                                @else
+                                    <a class="h5" href="">رياضيات</a>
+                                @endif
+                            @endif
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h5 class="m-0">$99</h5>
@@ -141,7 +163,15 @@
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
+                            @if ($id == 1)
+                            <a class="h5" href="">دراسات اولي</a>
+                        @else
+                            @if ($id == 2)
+                            <a class="h5" href="">دراسات تانيه</a>
+                            @else
                             <a class="h5" href="">دراسات</a>
+                            @endif
+                        @endif
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h5 class="m-0">$99</h5>
@@ -158,7 +188,15 @@
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
+                            @if ($id == 1)
+                            <a class="h5" href="">علوم اولي</a>
+                        @else
+                            @if ($id == 2)
+                            <a class="h5" href="">علوم ثانيه</a>
+                            @else
                             <a class="h5" href="">علوم</a>
+                            @endif
+                        @endif
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h5 class="m-0">$99</h5>
@@ -175,7 +213,15 @@
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
+                            @if ($id == 1)
+                            <a class="h5" href="">انجليزي اولي</a>
+                        @else
+                            @if ($id == 2)
+                            <a class="h5" href="">انجليزي ثانيه </a>
+                            @else
                             <a class="h5" href="">انجليزي</a>
+                            @endif
+                        @endif
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h5 class="m-0">$99</h5>
@@ -192,7 +238,15 @@
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
+                            @if ($id == 1)
+                            <a class="h5" href="">فرنساوي اولي</a>
+                        @else
+                            @if ($id == 2)
+                            <a class="h5" href="">فرنساوي ثانيه</a>
+                            @else
                             <a class="h5" href="">فرنساوي</a>
+                            @endif
+                        @endif
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h5 class="m-0">$99</h5>
@@ -215,7 +269,15 @@
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
-                            <a class="h5" href="">Arabic</a>
+                            @if ($id == 1)
+                            <a class="h5" href=""> 1st Arabic</a>
+                        @else
+                            @if ($id == 2)
+                            <a class="h5" href=""> 2st Arabic</a>
+                            @else
+                            <a class="h5" href=""> 3st Arabic</a>
+                            @endif
+                        @endif
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
 
@@ -234,7 +296,15 @@
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
-                            <a class="h5" href="">Maths</a>
+                            @if ($id == 1)
+                            <a class="h5" href=""> 1st Math</a>
+                        @else
+                            @if ($id == 2)
+                            <a class="h5" href=""> 2st Math</a>
+                            @else
+                            <a class="h5" href=""> 3st Math</a>
+                            @endif
+                        @endif
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h5 class="m-0">$99</h5>
@@ -252,7 +322,15 @@
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
-                            <a class="h5" href="">Scoial Studies</a>
+                            @if ($id == 1)
+                            <a class="h5" href=""> 1st Scoial Studies</a>
+                        @else
+                            @if ($id == 2)
+                            <a class="h5" href=""> 2st Scoial Studies</a>
+                            @else
+                            <a class="h5" href=""> 3st Scoial Studies</a>
+                            @endif
+                        @endif
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h5 class="m-0">$99</h5>
@@ -269,7 +347,15 @@
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
-                            <a class="h5" href="">Science</a>
+                            @if ($id == 1)
+                            <a class="h5" href=""> 1st Science</a>
+                        @else
+                            @if ($id == 2)
+                            <a class="h5" href=""> 2st Science</a>
+                            @else
+                            <a class="h5" href=""> 3st Science</a>
+                            @endif
+                        @endif
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h5 class="m-0">$99</h5>
@@ -286,7 +372,15 @@
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
-                            <a class="h5" href="">English</a>
+                            @if ($id == 1)
+                            <a class="h5" href=""> 1st English</a>
+                        @else
+                            @if ($id == 2)
+                            <a class="h5" href=""> 2st English</a>
+                            @else
+                            <a class="h5" href=""> 3st English</a>
+                            @endif
+                        @endif
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h5 class="m-0">$99</h5>
@@ -303,7 +397,15 @@
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
-                            <a class="h5" href="">French</a>
+                            @if ($id == 1)
+                            <a class="h5" href=""> 1st French</a>
+                        @else
+                            @if ($id == 2)
+                            <a class="h5" href=""> 2st French</a>
+                            @else
+                            <a class="h5" href=""> 3st French </a>
+                            @endif
+                        @endif
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h5 class="m-0">$99</h5>
@@ -322,9 +424,9 @@
         </p>
     </div>
     <!-- Bootstrap core JavaScript -->
-    <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('assets/js/courses.js')}}"></script>
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/courses.js') }}"></script>
     {{-- <script src="../public/assets/js/sharedd.js"></script> --}}
 
 

@@ -125,7 +125,7 @@ https://templatemo.com/tm-569-edu-meeting
                                 of the
                                 card's
                                 content.</p>
-                            <a href="{{route('courses')}}"  class="card-link"><button type="button"
+                            <a href="{{route('prep-courses',1)}}"  class="card-link"><button type="button"
                                     class="btn btn-outline-primary view" id="prep-1">View</button></a>
                         </div>
                     </div>
@@ -137,7 +137,7 @@ https://templatemo.com/tm-569-edu-meeting
                                 of the
                                 card's
                                 content.</p>
-                            <a href="{{route('courses')}}"  class="card-link"><button type="button"
+                            <a href="{{route('prep-courses',2)}}"  class="card-link"><button type="button"
                                     class="btn btn-outline-primary view" id="prep-2" >View</button></a>
                         </div>
                     </div>
@@ -148,7 +148,7 @@ https://templatemo.com/tm-569-edu-meeting
                                 of the
                                 card's
                                 content.</p>
-                            <a href="{{route('courses')}}" class="card-link"><button type="button"
+                            <a href="{{route('prep-courses',3)}}" class="card-link"><button type="button"
                                     class="btn btn-outline-primary view" id="prep-3">View</button></a>
                         </div>
                     </div>

@@ -48,8 +48,7 @@ Route::get('/maths_1/{id}', function ($id) {
 }) -> name('maths_1');
 
 Route::get('/prep-courses/{id}', function ($id) {
-    return view('cources',[
+    return view('courses',[
         'id'=> $id,
-        'page_name'=>'prep courses'
     ]);
 }) -> name('prep-courses');
