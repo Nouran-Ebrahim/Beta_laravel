@@ -60,4 +60,4 @@ Route::get('/thanwy-courses/{id}', function ($id) {
     ]);
 }) -> name('thanwy-courses');
 
-Route::get('thanwy/{id}/{sub}',[Show::class,'show']) -> name('thanwy.show');
+Route::get('thanwy/{id}/{sub}',[Show::class,'show']);
