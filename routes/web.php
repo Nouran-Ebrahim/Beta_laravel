@@ -37,12 +37,12 @@ Route::get('/courses', function () {
 //     return view('thanwy');
 // })-> name('thanwy');
 
+//thanwy?id=1&sub=1
+//tahnwy/1/1
+Route::get('/prep-courses',[Show::class,'prep'])->name('prep-courses');
 
+Route::get('/thanwy-courses',[Show::class,'therd'] )->name('start');
 
-Route::get('/prep-courses/{id}',[Show::class,'prep'])->name('prep-courses');
+Route::get('/thanwy12-courses', [Show::class,'firstsecond'])->name('thanwy12-courses');
 
-Route::get('/thanwy-courses/{id}',[Show::class,'therd'] )->name('start');
-
-Route::get('/thanwy12-courses/{id}', [Show::class,'firstsecond'])->name('thanwy12-courses');
-
-Route::get('thanwy/{id}/{sub}',[Show::class,'show'])->name('thanwy');
+Route::get('thanwy',[Show::class,'show'])->name('thanwy');

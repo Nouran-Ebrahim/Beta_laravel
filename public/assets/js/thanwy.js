@@ -38,17 +38,21 @@ if($('.menu-trigger').length){
 	});
 })(window.jQuery);
 
-let url = window.location.href;
-//let id = url.slice(-1);
-let string=url.slice(-3)
-let arr=string.split('/')
-let id=arr[1]
-let therd=arr[0]
+let url = window.location.search;
+const urlParams = new URLSearchParams(url);
+let id=urlParams.get('id')
+let sub=urlParams.get('sub')
 console.log('id=',id)
-console.log('3rd=',therd)
-console.log(arr)
+console.log('subject=',sub)
+console.log(url)
 
-if(id==1 && therd=='s'){
+//let id = url.slice(-1);
+// let string=url.slice(-3) //3/1
+// let arr=string.split('/')
+// let id=arr[1]
+// let therd=arr[0]
+
+if(id==1 ){
 	console.log('1st secondry')
 	document.getElementById('thanwy').addEventListener('click', () => {
 		document.getElementById('english').style.display = "block";
@@ -74,7 +78,7 @@ if(id==1 && therd=='s'){
 		console.log("clicked-prep")
 	})
 }
-else if(id==2 && therd=='s'){
+else if(id==2 ){
 	console.log('2st secondry')
 	document.getElementById('thanwy').addEventListener('click', () => {
 		document.getElementById('english').style.display = "block";
@@ -99,7 +103,7 @@ else if(id==2 && therd=='s'){
 		console.log("clicked-prep")
 	})
 }
-else if(therd==3 && id==1) {
+else if(sub==1 && id==3) {
 	console.log('2daby')
 	document.getElementById('thanwy').addEventListener('click', () => {
 		document.getElementById('english').style.display = "block";
@@ -124,7 +128,7 @@ else if(therd==3 && id==1) {
 		console.log("clicked-prep")
 	})
 }
-else if(therd==3 && id==2) {
+else if(sub==2 && id==3) {
 	document.getElementById('thanwy').addEventListener('click', () => {
 		document.getElementById('english').style.display = "block";
 		document.getElementById('english').style.cssText = 'display: flex; flex-direction: row; '

@@ -37,9 +37,13 @@
 		}
 	});
 })(window.jQuery);
-let url = window.location.href;
-let id = url.slice(-1);
-console.log(id)
+// let url = window.location.href;
+// let id = url.slice(-1);
+// console.log(id)
+let url = window.location.search;
+const urlParams = new URLSearchParams(url);
+let id=urlParams.get('id')
+console.log('id=',id)
 if(id==1){
 	document.getElementById('thanwy').addEventListener('click', () => {
 		document.getElementById('english').style.display = "block";
