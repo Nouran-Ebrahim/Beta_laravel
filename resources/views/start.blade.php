@@ -84,37 +84,21 @@
                 @endif
             </div>
         </div>
-        <div class="row">
-            @if ($id == 1)
-                <a href="{{ route('thanwy',['id'=>1,'sub'=>1]) }}"><button type="button"
-                        class="btn btn-outline-danger">أدبي</button></a>
-                <a href="{{ route('thanwy',['id'=>1,'sub'=>2]) }}"><button type="button" class="btn btn-outline-danger">علمي
-                        علوم</button></a>
-                <a href="{{ route('thanwy',['id'=>1,'sub'=>3]) }}"><button type="button" class="btn btn-outline-danger">علمي
-                        رياضه</button></a>
-            @else
-                @if ($id == 2)
-                <a href="{{ route('thanwy',['id'=>2,'sub'=>1]) }}"><button type="button"
-                    class="btn btn-outline-danger">أدبي</button></a>
-            <a href="{{ route('thanwy',['id'=>2,'sub'=>2]) }}"><button type="button" class="btn btn-outline-danger">علمي
-                    علوم</button></a>
-            <a href="{{ route('thanwy',['id'=>2,'sub'=>3]) }}"><button type="button" class="btn btn-outline-danger">علميي
-                    رياضه</button></a>
-                @else
-                <a href="{{ route('thanwy',['id'=>3,'sub'=>1]) }}"><button type="button"
-                    class="btn btn-outline-danger">أدبي</button></a>
-            <a href="{{ route('thanwy',['id'=>3,'sub'=>2]) }}"><button type="button" class="btn btn-outline-danger">علمي
-                    علوم</button></a>
-            <a href="{{ route('thanwy',['id'=>3,'sub'=>3]) }}"><button type="button" class="btn btn-outline-danger">علمي
-                    رياضه</button></a>
-                @endif
-            @endif
+        <div class="row button-block">
 
+            <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 3, 'sub' => 1]) }}"><button type="button"
+                    class="btn btn-outline-danger">أدبي</button></a>
+            <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 3, 'sub' => 2]) }}"><button type="button"
+                    class="btn btn-outline-danger">علمي
+                    علوم</button></a>
+            <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 3, 'sub' => 3]) }}"><button type="button"
+                    class="btn btn-outline-danger">علمي
+                    رياضه</button></a>
 
         </div>
     </div>
 
-    <div class="footer">
+    <div class="footer start-footer ">
         <p>Copyright © 2022 beta education Co., Ltd. All Rights Reserved.
             <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">soul</a>
         </p>

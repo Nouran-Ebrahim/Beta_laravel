@@ -14,7 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="assets/css/cources.css">
+    <link  rel="stylesheet" href="{{asset('assets/css/cources.css') }}">
     !-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -24,7 +24,7 @@
         integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous">
     </script>
     <!-- Bootstrap core CSS -->
-    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet') }}">
+    <link  rel="stylesheet" href="{{asset('vendor/bootstrap/css/bootstrap.min.css') }}">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -48,7 +48,7 @@
                         <!-- ***** Logo Start ***** -->
 
                         <a href="index.php" class="logo logo-img">
-                            <img src="assets/images/logoo2.png">
+                            <img src="{{asset('assets/images/logoo2.png') }}">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -74,10 +74,10 @@
     <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="text-center mb-5">
-                @if ($id == 1)
+                @if ($id== 1)
                     <h1 class="text" id="title">أولى إعدادى عربي </h1>
                 @else
-                    @if ($id == 2)
+                    @if ($id== 2)
                         <h1 class="text" id="title">ثانيه إعدادى عربي </h1>
                     @else
                         <h1 class="text" id="title">ثالثه إعدادى عربي </h1>
@@ -103,7 +103,7 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2 bg">
 
-                        <img class="img-fluid photo" src="assets/images/arabic.png" alt="">
+                        <img class="img-fluid photo" src="{{asset('assets/images/arabic.png') }}" alt="">
 
                         <div class="course-content p-4">
                             <div class="d-flex justify-content-between mb-3">
@@ -130,14 +130,14 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2 bg">
-                        <img class="img-fluid photo" src="assets/images/maths.png" alt="">
+                        <img class="img-fluid photo" src="{{asset('assets/images/maths.png') }}" alt="">
 
                         <div class="course-content p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
-                            @if ($id == 1)
+                            @if ($id== 1)
                                 <a class="h5" href="">رياضيات اولي</a>
                             @else
                                 @if ($id == 2)
@@ -157,7 +157,7 @@
 
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2 bg">
-                        <img class="img-fluid photo" src="assets/images/mountain.png" alt="">
+                        <img class="img-fluid photo" src="{{asset('assets/images/mountain.png') }}" alt="">
                         <div class="course-content p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
@@ -182,7 +182,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2 bg">
-                        <img class="img-fluid photo" src="assets/images/physics.png" alt="">
+                        <img class="img-fluid photo" src="{{asset('assets/images/physics.png') }}" alt="">
                         <div class="course-content p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
@@ -207,7 +207,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2 bg">
-                        <img class="img-fluid photo" src="assets/images/english.png" alt="">
+                        <img class="img-fluid photo" src="{{asset('assets/images/english.png') }}" alt="">
                         <div class="course-content p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
@@ -232,7 +232,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2 bg">
-                        <img class="img-fluid photo" src="assets/images/france.png" alt="">
+                        <img class="img-fluid photo" src="{{asset('assets/images/france.png') }}" alt="">
                         <div class="course-content p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
@@ -262,7 +262,7 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2 bg">
 
-                        <img class="img-fluid photo" src="assets/images/arabic.png" alt="">
+                        <img class="img-fluid photo" src="{{asset('assets/images/arabic.png') }}" alt="">
 
                         <div class="course-content p-4">
                             <div class="d-flex justify-content-between mb-3">
@@ -289,7 +289,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2 bg">
-                        <img class="img-fluid photo" src="assets/images/maths.png" alt="">
+                        <img class="img-fluid photo" src="{{asset('assets/images/maths.png') }}" alt="">
 
                         <div class="course-content p-4">
                             <div class="d-flex justify-content-between mb-3">
@@ -316,7 +316,7 @@
 
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2 bg">
-                        <img class="img-fluid photo" src="assets/images/mountain.png" alt="">
+                        <img class="img-fluid photo" src="{{asset('assets/images/mountain.png') }}" alt="">
                         <div class="course-content p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
@@ -341,7 +341,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2 bg">
-                        <img class="img-fluid photo" src="assets/images/physics.png" alt="">
+                        <img class="img-fluid photo" src="{{asset('assets/images/physics.png') }}" alt="">
                         <div class="course-content p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
@@ -366,7 +366,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2 bg">
-                        <img class="img-fluid photo" src="assets/images/english.png" alt="">
+                        <img class="img-fluid photo" src="{{asset('assets/images/english.png') }}" alt="">
                         <div class="course-content p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
@@ -391,7 +391,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2 bg">
-                        <img class="img-fluid photo" src="assets/images/france.png" alt="">
+                        <img class="img-fluid photo" src="{{asset('assets/images/france.png') }}" alt="">
                         <div class="course-content p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
@@ -418,7 +418,7 @@
         </div>
     </div>
     <!-- Courses End -->
-    <div class="footer">
+    <div class="footer start-footer">
         <p>Copyright © 2022 beta education Co., Ltd. All Rights Reserved.
             <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">soul</a>
         </p>

@@ -33,31 +33,16 @@ Route::get('/register', function () {
 Route::get('/courses', function () {
     return view('courses');
 })-> name('courses');
-Route::get('/thanwy', function () {
-    return view('thanwy');
-})-> name('thanwy');
+// Route::get('/thanwy', function () {
+//     return view('thanwy');
+// })-> name('thanwy');
 
-Route::get('home', function () {
-    return view('home');
-});
 
-Route::get('/maths_1/{id}', function ($id) {
-    return view('cources',[
-        'page_name'=>'Maths',
-        'id'=> $id
-    ]);
-}) -> name('maths_1');
 
-Route::get('/prep-courses/{id}', function ($id) {
-    return view('courses',[
-        'id'=> $id,
-    ]);
-}) -> name('prep-courses');
+Route::get('/prep-courses/{id}',[Show::class,'prep'])->name('prep-courses');
 
-Route::get('/thanwy-courses/{id}', function ($id) {
-    return view('start',[
-        'id'=> $id,
-    ]);
-}) -> name('thanwy-courses');
+Route::get('/thanwy-courses/{id}',[Show::class,'therd'] )->name('start');
 
-Route::get('thanwy/{id}/{sub}',[Show::class,'show']);
+Route::get('/thanwy12-courses/{id}', [Show::class,'firstsecond'])->name('thanwy12-courses');
+
+Route::get('thanwy/{id}/{sub}',[Show::class,'show'])->name('thanwy');

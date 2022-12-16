@@ -48,7 +48,7 @@
                         <!-- ***** Logo Start ***** -->
 
                         <a href="index.blade.php" class="logo logo-img">
-                            <img src="assets/images/logoo2.png">
+                            <img src="{{ asset('assets/images/logoo2.png') }}">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -74,32 +74,18 @@
     <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="text-center mb-5">
-                @if ($_GET['id'] == 1)
-                    @if ($_GET['sub'] == 1)
-                        <h1 class="text" id="title">اولي ثانوي ادبي</h1>
-                    @else
-                        @if ($_GET['sub'] == 2)
-                            <h1 class="text" id="title">اولي ثانوي علمي علوم</h1>
-                        @else
-                            <h1 class="text" id="title">اولي ثانوي علمي رياضه</h1>
-                        @endif
-                    @endif
+                @if ($id == 1)
+
+                    <h1 class="text" id="title">اولي ثانوي </h1>
                 @else
-                    @if ($_GET['id'] == 2)
-                        @if ($_GET['sub'] == 1)
-                            <h1 class="text" id="title">ثانيه ثانوي ادبي</h1>
-                        @else
-                            @if ($_GET['sub'] == 2)
-                                <h1 class="text" id="title">ثانيه ثانوي علمي علوم</h1>
-                            @else
-                                <h1 class="text" id="title">ثانيه ثانوي علمي رياضه</h1>
-                            @endif
-                        @endif
+                    @if ($id == 2)
+
+                        <h1 class="text" id="title">ثانيه ثانوي </h1>
                     @else
-                        @if ($_GET['sub'] == 1)
+                        @if ($sub == 1)
                             <h1 class="text" id="title">ثالثه ثانوي ادبي</h1>
                         @else
-                            @if ($_GET['sub'] == 2)
+                            @if ($sub == 2)
                                 <h1 class="text" id="title">ثالثه ثانوي علمي علوم</h1>
                             @else
                                 <h1 class="text" id="title">ثالثه ثانوي علمي رياضه</h1>
@@ -123,128 +109,624 @@
             </div>
 
             <div class="row" id="arabic">
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="rounded overflow-hidden mb-2 bg">
+                @if ($id == 1)
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
 
-                        <img class="img-fluid photo" src="assets/images/arabic.png" alt="">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/arabic.png') }}" alt="">
 
-                        <div class="course-content p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
-                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
-                            </div>
-                            <a class="h5" href="">عربي</a>
-                            <div class="border-top mt-4 pt-4">
-                                <div class="d-flex justify-content-between">
+                            <div class="course-content p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                        Students</small>
+                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
+                                </div>
+                                <a class="h5" href="">عربيي</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
 
-                                    <h5 class="m-0">$99</h5>
+                                        <h5 class="m-0">$99</h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="rounded overflow-hidden mb-2 bg">
-                        <img class="img-fluid photo" src="assets/images/maths.png" alt="">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/maths.png') }}" alt="">
 
-                        <div class="course-content p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
-                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
-                            </div>
-                            <a class="h5" href="">رياضيات</a>
-                            <div class="border-top mt-4 pt-4">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="m-0">$99</h5>
+                            <div class="course-content p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                        Students</small>
+                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                        30m</small>
+                                </div>
+                                <a class="h5" href="">رياضيات</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="m-0">$99</h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}" alt="">
+                            <div class="course-content p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                        Students</small>
+                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                        30m</small>
+                                </div>
+                                <a class="h5" href="">دراسات</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="m-0">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/physics.png') }}" alt="">
+                            <div class="course-content p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                        Students</small>
+                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                        30m</small>
+                                </div>
+                                <a class="h5" href="">علوم</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="m-0">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/english.png') }}" alt="">
+                            <div class="course-content p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                        Students</small>
+                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                        30m</small>
+                                </div>
+                                <a class="h5" href="">انجليزي</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="m-0">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}" alt="">
+                            <div class="course-content p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                        Students</small>
+                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                        30m</small>
+                                </div>
+                                <a class="h5" href="">فرنساوي</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="m-0">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @elseif($id == 2)
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
 
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="rounded overflow-hidden mb-2 bg">
-                        <img class="img-fluid photo" src="assets/images/mountain.png" alt="">
-                        <div class="course-content p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
-                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
-                            </div>
-                            <a class="h5" href="">دراسات</a>
-                            <div class="border-top mt-4 pt-4">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="m-0">$99</h5>
+                            <img class="img-fluid photo" src="{{ asset('assets/images/arabic.png') }}" alt="">
+
+                            <div class="course-content p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                        Students</small>
+                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                        30m</small>
+                                </div>
+                                <a class="h5" href="">عربي</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+
+                                        <h5 class="m-0">$99</h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="rounded overflow-hidden mb-2 bg">
-                        <img class="img-fluid photo" src="assets/images/physics.png" alt="">
-                        <div class="course-content p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
-                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
-                            </div>
-                            <a class="h5" href="">علوم</a>
-                            <div class="border-top mt-4 pt-4">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="m-0">$99</h5>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/maths.png') }}" alt="">
+
+                            <div class="course-content p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                        Students</small>
+                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                        30m</small>
+                                </div>
+                                <a class="h5" href="">رياضيات</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="m-0">$99</h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="rounded overflow-hidden mb-2 bg">
-                        <img class="img-fluid photo" src="assets/images/english.png" alt="">
-                        <div class="course-content p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
-                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
-                            </div>
-                            <a class="h5" href="">انجليزي</a>
-                            <div class="border-top mt-4 pt-4">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="m-0">$99</h5>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}" alt="">
+                            <div class="course-content p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                        Students</small>
+                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                        30m</small>
+                                </div>
+                                <a class="h5" href="">دراسات</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="m-0">$99</h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="rounded overflow-hidden mb-2 bg">
-                        <img class="img-fluid photo" src="assets/images/france.png" alt="">
-                        <div class="course-content p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
-                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
-                            </div>
-                            <a class="h5" href="">فرنساوي</a>
-                            <div class="border-top mt-4 pt-4">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="m-0">$99</h5>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/physics.png') }}" alt="">
+                            <div class="course-content p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                        Students</small>
+                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                        30m</small>
+                                </div>
+                                <a class="h5" href="">علوم</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="m-0">$99</h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/english.png') }}" alt="">
+                            <div class="course-content p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                        Students</small>
+                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                        30m</small>
+                                </div>
+                                <a class="h5" href="">انجليزي ثانيه</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="m-0">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}" alt="">
+                            <div class="course-content p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                        Students</small>
+                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                        30m</small>
+                                </div>
+                                <a class="h5" href="">فرنساوي</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="m-0">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @else
+                    @if ($sub == 1)
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="rounded overflow-hidden mb-2 bg">
+
+                                <img class="img-fluid photo" src="{{ asset('assets/images/arabic.png') }}" alt="">
+
+                                <div class="course-content p-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                            Students</small>
+                                        <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                            30m</small>
+                                    </div>
+                                    <a class="h5" href="">عربي تالته ادبي</a>
+                                    <div class="border-top mt-4 pt-4">
+                                        <div class="d-flex justify-content-between">
+
+                                            <h5 class="m-0">$99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="rounded overflow-hidden mb-2 bg">
+                                <img class="img-fluid photo" src="{{ asset('assets/images/maths.png') }}" alt="">
+
+                                <div class="course-content p-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                            Students</small>
+                                        <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                            30m</small>
+                                    </div>
+                                    <a class="h5" href="">رياضيات ادبي</a>
+                                    <div class="border-top mt-4 pt-4">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="m-0">$99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="rounded overflow-hidden mb-2 bg">
+                                <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}" alt="">
+                                <div class="course-content p-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                            Students</small>
+                                        <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                            30m</small>
+                                    </div>
+                                    <a class="h5" href="">دراسات</a>
+                                    <div class="border-top mt-4 pt-4">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="m-0">$99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="rounded overflow-hidden mb-2 bg">
+                                <img class="img-fluid photo" src="{{ asset('assets/images/physics.png') }}" alt="">
+                                <div class="course-content p-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                            Students</small>
+                                        <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                            30m</small>
+                                    </div>
+                                    <a class="h5" href="">علوم</a>
+                                    <div class="border-top mt-4 pt-4">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="m-0">$99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="rounded overflow-hidden mb-2 bg">
+                                <img class="img-fluid photo" src="{{ asset('assets/images/english.png') }}" alt="">
+                                <div class="course-content p-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                            Students</small>
+                                        <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                            30m</small>
+                                    </div>
+                                    <a class="h5" href="">انجليزي ثانيه</a>
+                                    <div class="border-top mt-4 pt-4">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="m-0">$99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="rounded overflow-hidden mb-2 bg">
+                                <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}" alt="">
+                                <div class="course-content p-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                            Students</small>
+                                        <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                            30m</small>
+                                    </div>
+                                    <a class="h5" href="">فرنساوي</a>
+                                    <div class="border-top mt-4 pt-4">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="m-0">$99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @else
+                        @if ($sub == 2)
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="rounded overflow-hidden mb-2 bg">
+
+                                    <img class="img-fluid photo" src="{{ asset('assets/images/arabic.png') }}" alt="">
+
+                                    <div class="course-content p-4">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                                Students</small>
+                                            <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                                30m</small>
+                                        </div>
+                                        <a class="h5" href="">عربي</a>
+                                        <div class="border-top mt-4 pt-4">
+                                            <div class="d-flex justify-content-between">
+
+                                                <h5 class="m-0">$99</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="rounded overflow-hidden mb-2 bg">
+                                    <img class="img-fluid photo" src="{{ asset('assets/images/maths.png') }}" alt="">
+
+                                    <div class="course-content p-4">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                                Students</small>
+                                            <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                                30m</small>
+                                        </div>
+                                        <a class="h5" href="">رياضيات</a>
+                                        <div class="border-top mt-4 pt-4">
+                                            <div class="d-flex justify-content-between">
+                                                <h5 class="m-0">$99</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="rounded overflow-hidden mb-2 bg">
+                                    <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}" alt="">
+                                    <div class="course-content p-4">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                                Students</small>
+                                            <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                                30m</small>
+                                        </div>
+                                        <a class="h5" href="">دراسات</a>
+                                        <div class="border-top mt-4 pt-4">
+                                            <div class="d-flex justify-content-between">
+                                                <h5 class="m-0">$99</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="rounded overflow-hidden mb-2 bg">
+                                    <img class="img-fluid photo" src="{{ asset('assets/images/physics.png') }}" alt="">
+                                    <div class="course-content p-4">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                                Students</small>
+                                            <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                                30m</small>
+                                        </div>
+                                        <a class="h5" href="">علوم</a>
+                                        <div class="border-top mt-4 pt-4">
+                                            <div class="d-flex justify-content-between">
+                                                <h5 class="m-0">$99</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="rounded overflow-hidden mb-2 bg">
+                                    <img class="img-fluid photo" src="{{ asset('assets/images/english.png') }}" alt="">
+                                    <div class="course-content p-4">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                                Students</small>
+                                            <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                                30m</small>
+                                        </div>
+                                        <a class="h5" href="">انجليزي تالته علمي علوم</a>
+                                        <div class="border-top mt-4 pt-4">
+                                            <div class="d-flex justify-content-between">
+                                                <h5 class="m-0">$99</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="rounded overflow-hidden mb-2 bg">
+                                    <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}" alt="">
+                                    <div class="course-content p-4">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                                Students</small>
+                                            <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                                30m</small>
+                                        </div>
+                                        <a class="h5" href="">فرنساوي علمي علوم</a>
+                                        <div class="border-top mt-4 pt-4">
+                                            <div class="d-flex justify-content-between">
+                                                <h5 class="m-0">$99</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @else
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="rounded overflow-hidden mb-2 bg">
+
+                                    <img class="img-fluid photo" src="{{ asset('assets/images/arabic.png') }}" alt="">
+
+                                    <div class="course-content p-4">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                                Students</small>
+                                            <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                                30m</small>
+                                        </div>
+                                        <a class="h5" href="">عربي</a>
+                                        <div class="border-top mt-4 pt-4">
+                                            <div class="d-flex justify-content-between">
+
+                                                <h5 class="m-0">$99</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="rounded overflow-hidden mb-2 bg">
+                                    <img class="img-fluid photo" src="{{ asset('assets/images/maths.png') }}" alt="">
+
+                                    <div class="course-content p-4">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                                Students</small>
+                                            <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                                30m</small>
+                                        </div>
+                                        <a class="h5" href="">رياضيات</a>
+                                        <div class="border-top mt-4 pt-4">
+                                            <div class="d-flex justify-content-between">
+                                                <h5 class="m-0">$99</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="rounded overflow-hidden mb-2 bg">
+                                    <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}" alt="">
+                                    <div class="course-content p-4">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                                Students</small>
+                                            <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                                30m</small>
+                                        </div>
+                                        <a class="h5" href="">دراسات</a>
+                                        <div class="border-top mt-4 pt-4">
+                                            <div class="d-flex justify-content-between">
+                                                <h5 class="m-0">$99</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="rounded overflow-hidden mb-2 bg">
+                                    <img class="img-fluid photo" src="{{ asset('assets/images/physics.png') }}" alt="">
+                                    <div class="course-content p-4">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                                Students</small>
+                                            <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                                30m</small>
+                                        </div>
+                                        <a class="h5" href="">علوم</a>
+                                        <div class="border-top mt-4 pt-4">
+                                            <div class="d-flex justify-content-between">
+                                                <h5 class="m-0">$99</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="rounded overflow-hidden mb-2 bg">
+                                    <img class="img-fluid photo" src="{{ asset('assets/images/english.png') }}" alt="">
+                                    <div class="course-content p-4">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                                Students</small>
+                                            <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                                30m</small>
+                                        </div>
+                                        <a class="h5" href="">انجليزي ثانيه</a>
+                                        <div class="border-top mt-4 pt-4">
+                                            <div class="d-flex justify-content-between">
+                                                <h5 class="m-0">$99</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="rounded overflow-hidden mb-2 bg">
+                                    <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}" alt="">
+                                    <div class="course-content p-4">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                                Students</small>
+                                            <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                                30m</small>
+                                        </div>
+                                        <a class="h5" href="">فرنساوي علمي رياضه</a>
+                                        <div class="border-top mt-4 pt-4">
+                                            <div class="d-flex justify-content-between">
+                                                <h5 class="m-0">$99</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    @endif
+
+                @endif
+
             </div>
             <!-- قسم اللغاااات -->
             <!-- Courses Start -->
             <div class="row" id="english">
+                @if ($id == 1)
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2 bg">
 
-                        <img class="img-fluid photo" src="assets/images/arabic.png" alt="">
+                        <img class="img-fluid photo" src="{{ asset('assets/images/arabic.png') }}" alt="">
 
                         <div class="course-content p-4">
                             <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                    Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
-                            <a class="h5" href="">Arabic</a>
+                            <a class="h5" href="">1stArabic</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
 
@@ -256,32 +738,16 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2 bg">
-                        <img class="img-fluid photo" src="assets/images/maths.png" alt="">
+                        <img class="img-fluid photo" src="{{ asset('assets/images/maths.png') }}" alt="">
 
                         <div class="course-content p-4">
                             <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
-                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                    Students</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                    30m</small>
                             </div>
-                            <a class="h5" href="">Maths</a>
-                            <div class="border-top mt-4 pt-4">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="m-0">$99</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="rounded overflow-hidden mb-2 bg">
-                        <img class="img-fluid photo" src="assets/images/mountain.png" alt="">
-                        <div class="course-content p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
-                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
-                            </div>
-                            <a class="h5" href="">Scoial Studies</a>
+                            <a class="h5" href="">Math</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h5 class="m-0">$99</h5>
@@ -292,13 +758,15 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2 bg">
-                        <img class="img-fluid photo" src="assets/images/physics.png" alt="">
+                        <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}" alt="">
                         <div class="course-content p-4">
                             <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
-                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                    Students</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                    30m</small>
                             </div>
-                            <a class="h5" href="">Science</a>
+                            <a class="h5" href="">social studies</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h5 class="m-0">$99</h5>
@@ -309,11 +777,32 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2 bg">
-                        <img class="img-fluid photo" src="assets/images/english.png" alt="">
+                        <img class="img-fluid photo" src="{{ asset('assets/images/physics.png') }}" alt="">
                         <div class="course-content p-4">
                             <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
-                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                    Students</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                    30m</small>
+                            </div>
+                            <a class="h5" href="">since</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h5 class="m-0">$99</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2 bg">
+                        <img class="img-fluid photo" src="{{ asset('assets/images/english.png') }}" alt="">
+                        <div class="course-content p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                    Students</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                    30m</small>
                             </div>
                             <a class="h5" href="">English</a>
                             <div class="border-top mt-4 pt-4">
@@ -326,13 +815,15 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="rounded overflow-hidden mb-2 bg">
-                        <img class="img-fluid photo" src="assets/images/france.png" alt="">
+                        <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}" alt="">
                         <div class="course-content p-4">
                             <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
-                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                    Students</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                    30m</small>
                             </div>
-                            <a class="h5" href="">French</a>
+                            <a class="h5" href="">frensh</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h5 class="m-0">$99</h5>
@@ -341,11 +832,492 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            @elseif($id == 2)
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2 bg">
+
+                        <img class="img-fluid photo" src="{{ asset('assets/images/arabic.png') }}" alt="">
+
+                        <div class="course-content p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                    Students</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                    30m</small>
+                            </div>
+                            <a class="h5" href="">2ndArabic</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+
+                                    <h5 class="m-0">$99</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2 bg">
+                        <img class="img-fluid photo" src="{{ asset('assets/images/maths.png') }}" alt="">
+
+                        <div class="course-content p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                    Students</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                    30m</small>
+                            </div>
+                            <a class="h5" href="">math</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h5 class="m-0">$99</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2 bg">
+                        <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}" alt="">
+                        <div class="course-content p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                    Students</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                    30m</small>
+                            </div>
+                            <a class="h5" href="">sosical studies</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h5 class="m-0">$99</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2 bg">
+                        <img class="img-fluid photo" src="{{ asset('assets/images/physics.png') }}" alt="">
+                        <div class="course-content p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                    Students</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                    30m</small>
+                            </div>
+                            <a class="h5" href="">since</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h5 class="m-0">$99</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2 bg">
+                        <img class="img-fluid photo" src="{{ asset('assets/images/english.png') }}" alt="">
+                        <div class="course-content p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                    Students</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                    30m</small>
+                            </div>
+                            <a class="h5" href="">English </a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h5 class="m-0">$99</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2 bg">
+                        <img class="img-fluid photo" src="assets/images/france.png" alt="">
+                        <div class="course-content p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                    Students</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                    30m</small>
+                            </div>
+                            <a class="h5" href="">frensh</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h5 class="m-0">$99</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @else
+                @if ($sub == 1)
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+
+                            <img class="img-fluid photo" src="assets/images/arabic.png" alt="">
+
+                            <div class="course-content p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                        Students</small>
+                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                        30m</small>
+                                </div>
+                                <a class="h5" href="">3rd arabic 2daby</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+
+                                        <h5 class="m-0">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="assets/images/maths.png" alt="">
+
+                            <div class="course-content p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                        Students</small>
+                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                        30m</small>
+                                </div>
+                                <a class="h5" href="">math 2daby </a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="m-0">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="assets/images/mountain.png" alt="">
+                            <div class="course-content p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                        Students</small>
+                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                        30m</small>
+                                </div>
+                                <a class="h5" href="">دراسات</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="m-0">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="assets/images/physics.png" alt="">
+                            <div class="course-content p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                        Students</small>
+                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                        30m</small>
+                                </div>
+                                <a class="h5" href="">علوم</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="m-0">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="assets/images/english.png" alt="">
+                            <div class="course-content p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                        Students</small>
+                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                        30m</small>
+                                </div>
+                                <a class="h5" href="">انجليزي ثانيه</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="m-0">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="assets/images/france.png" alt="">
+                            <div class="course-content p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                        Students</small>
+                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                        30m</small>
+                                </div>
+                                <a class="h5" href="">فرنساوي</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="m-0">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @else
+                    @if ($sub == 2)
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="rounded overflow-hidden mb-2 bg">
+
+                                <img class="img-fluid photo" src="assets/images/arabic.png" alt="">
+
+                                <div class="course-content p-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                            Students</small>
+                                        <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                            30m</small>
+                                    </div>
+                                    <a class="h5" href="">3rd arbic 3loom</a>
+                                    <div class="border-top mt-4 pt-4">
+                                        <div class="d-flex justify-content-between">
+
+                                            <h5 class="m-0">$99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="rounded overflow-hidden mb-2 bg">
+                                <img class="img-fluid photo" src="assets/images/maths.png" alt="">
+
+                                <div class="course-content p-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                            Students</small>
+                                        <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                            30m</small>
+                                    </div>
+                                    <a class="h5" href="">رياضيات</a>
+                                    <div class="border-top mt-4 pt-4">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="m-0">$99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="rounded overflow-hidden mb-2 bg">
+                                <img class="img-fluid photo" src="assets/images/mountain.png" alt="">
+                                <div class="course-content p-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                            Students</small>
+                                        <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                            30m</small>
+                                    </div>
+                                    <a class="h5" href="">دراسات</a>
+                                    <div class="border-top mt-4 pt-4">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="m-0">$99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="rounded overflow-hidden mb-2 bg">
+                                <img class="img-fluid photo" src="assets/images/physics.png" alt="">
+                                <div class="course-content p-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                            Students</small>
+                                        <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                            30m</small>
+                                    </div>
+                                    <a class="h5" href="">علوم</a>
+                                    <div class="border-top mt-4 pt-4">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="m-0">$99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="rounded overflow-hidden mb-2 bg">
+                                <img class="img-fluid photo" src="assets/images/english.png" alt="">
+                                <div class="course-content p-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                            Students</small>
+                                        <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                            30m</small>
+                                    </div>
+                                    <a class="h5" href="">انجليزي تالته علمي علوم</a>
+                                    <div class="border-top mt-4 pt-4">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="m-0">$99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="rounded overflow-hidden mb-2 bg">
+                                <img class="img-fluid photo" src="assets/images/france.png" alt="">
+                                <div class="course-content p-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                            Students</small>
+                                        <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                            30m</small>
+                                    </div>
+                                    <a class="h5" href="">فرنساوي علمي علوم</a>
+                                    <div class="border-top mt-4 pt-4">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="m-0">$99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @else
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="rounded overflow-hidden mb-2 bg">
+
+                                <img class="img-fluid photo" src="assets/images/arabic.png" alt="">
+
+                                <div class="course-content p-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                            Students</small>
+                                        <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                            30m</small>
+                                    </div>
+                                    <a class="h5" href="">3rd arabic ryada</a>
+                                    <div class="border-top mt-4 pt-4">
+                                        <div class="d-flex justify-content-between">
+
+                                            <h5 class="m-0">$99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="rounded overflow-hidden mb-2 bg">
+                                <img class="img-fluid photo" src="assets/images/maths.png" alt="">
+
+                                <div class="course-content p-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                            Students</small>
+                                        <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                            30m</small>
+                                    </div>
+                                    <a class="h5" href="">رياضيات</a>
+                                    <div class="border-top mt-4 pt-4">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="m-0">$99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="rounded overflow-hidden mb-2 bg">
+                                <img class="img-fluid photo" src="assets/images/mountain.png" alt="">
+                                <div class="course-content p-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                            Students</small>
+                                        <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                            30m</small>
+                                    </div>
+                                    <a class="h5" href="">دراسات</a>
+                                    <div class="border-top mt-4 pt-4">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="m-0">$99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="rounded overflow-hidden mb-2 bg">
+                                <img class="img-fluid photo" src="assets/images/physics.png" alt="">
+                                <div class="course-content p-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                            Students</small>
+                                        <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                            30m</small>
+                                    </div>
+                                    <a class="h5" href="">علوم</a>
+                                    <div class="border-top mt-4 pt-4">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="m-0">$99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="rounded overflow-hidden mb-2 bg">
+                                <img class="img-fluid photo" src="assets/images/english.png" alt="">
+                                <div class="course-content p-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                            Students</small>
+                                        <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                            30m</small>
+                                    </div>
+                                    <a class="h5" href="">انجليزي ثانيه</a>
+                                    <div class="border-top mt-4 pt-4">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="m-0">$99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="rounded overflow-hidden mb-2 bg">
+                                <img class="img-fluid photo" src="assets/images/france.png" alt="">
+                                <div class="course-content p-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
+                                            Students</small>
+                                        <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
+                                            30m</small>
+                                    </div>
+                                    <a class="h5" href="">فرنساوي علمي رياضه</a>
+                                    <div class="border-top mt-4 pt-4">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="m-0">$99</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+                @endif
+
+            @endif
+
     </div>
     <!-- Courses End -->
-    <div class="footer">
+    <div class="footer start-footer">
         <p>Copyright © 2022 beta education Co., Ltd. All Rights Reserved.
             <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">soul</a>
         </p>

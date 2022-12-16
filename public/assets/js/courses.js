@@ -115,7 +115,6 @@ else{
 		console.log("clicked-prep")
 	})
 }
-console.log("no")
 // var url =document.getElementsByClassName('card-link')
 // for(var i=0;i<url.length;i++){
 //     console.log(url[i].href)
