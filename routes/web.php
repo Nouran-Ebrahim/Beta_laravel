@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Show;
+use App\Http\Controllers\DataController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,9 +20,9 @@ Route::get('/', function () {
     return view('index');
 })-> name('index');
 
-Route::get('/about', function () {
-    return view('about');
-})-> name('about');
+// Route::get('/about', function () {
+//     return view('about');
+// })-> name('about');
 
 Route::get('/joinus', function () {
     return view('joinus');
@@ -46,3 +48,4 @@ Route::get('/thanwy-courses',[Show::class,'therd'] )->name('start');
 Route::get('/thanwy12-courses', [Show::class,'firstsecond'])->name('thanwy12-courses');
 
 Route::get('thanwy',[Show::class,'show'])->name('thanwy');
+Route::get('about',[DataController::class,'getAllUser'])->name('about');

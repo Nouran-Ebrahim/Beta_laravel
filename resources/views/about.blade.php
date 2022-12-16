@@ -9,5 +9,8 @@
 <body>
 <img src="{{asset('assets/images/logo2.jpg')}}">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_Tz4cHW500s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+@foreach ($user as $us)
+    <p>{{$us->name}}</p>
+@endforeach
 </body>
 </html>
