@@ -175,7 +175,7 @@ https://templatemo.com/tm-569-edu-meeting
                                 of the
                                 card's
                                 content.</p>
-                            <a href="{{route('thanwy12-courses',['id'=>2])}}" class="card-link"><button type="button"
+                            <a href="{{route('start',['id'=>2])}}" class="card-link"><button type="button"
                                     class="btn btn-outline-primary view">View</button></a>
                         </div>
                     </div>

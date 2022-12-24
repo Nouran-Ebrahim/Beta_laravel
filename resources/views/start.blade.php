@@ -85,16 +85,22 @@
             </div>
         </div>
         <div class="row button-block">
-
-            <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 3, 'sub' => 1]) }}"><button type="button"
-                    class="btn btn-outline-danger">أدبي</button></a>
-            <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 3, 'sub' => 2]) }}"><button type="button"
-                    class="btn btn-outline-danger">علمي
-                    علوم</button></a>
-            <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 3, 'sub' => 3]) }}"><button type="button"
-                    class="btn btn-outline-danger">علمي
-                    رياضه</button></a>
-
+            @if ($id == 3)
+                <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 3, 'sub' => 1]) }}"><button type="button"
+                        class="btn btn-outline-danger">أدبي</button></a>
+                <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 3, 'sub' => 2]) }}"><button type="button"
+                        class="btn btn-outline-danger">علمي
+                        علوم</button></a>
+                <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 3, 'sub' => 3]) }}"><button type="button"
+                        class="btn btn-outline-danger">علمي
+                        رياضه</button></a>
+            @elseif($id == 2)
+                <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 2, 'sub' => 1]) }}"><button type="button"
+                        class="btn btn-outline-danger">أدبي</button></a>
+                <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 2, 'sub' => 2]) }}"><button type="button"
+                        class="btn btn-outline-danger">علمي
+                    </button></a>
+            @endif
         </div>
     </div>
 

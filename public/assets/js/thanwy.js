@@ -78,13 +78,13 @@ if(id==1 ){
 		console.log("clicked-prep")
 	})
 }
-else if(id==2 ){
+else if(id==2 && sub==1){
 	console.log('2st secondry')
 	document.getElementById('thanwy').addEventListener('click', () => {
 		document.getElementById('english').style.display = "block";
 		document.getElementById('english').style.cssText = 'display: flex; flex-direction: row; '
 		document.getElementById('arabic').style.display = "none";
-		document.getElementById('title').innerHTML = "2st secondry";
+		document.getElementById('title').innerHTML = "2st secondry 2daby";
 	
 		document.getElementById('thanwy').style.cssText = "color:#f5a425"
 		document.getElementById('prep').style.cssText = "color:white"
@@ -96,7 +96,32 @@ else if(id==2 ){
 	document.getElementById('prep').addEventListener('click', () => {
 		document.getElementById('arabic').style.display = "block";
 		document.getElementById('arabic').style.cssText = 'display: flex; flex-direction: row;'
-		document.getElementById('title').innerHTML = "ثانيه ثانوي عربى";
+		document.getElementById('title').innerHTML = "ثانيه ثانوي ادبي";
+		document.getElementById('english').style.display = "none";
+		document.getElementById('prep').style.cssText = "color:#f5a425"
+		document.getElementById('thanwy').style.cssText = "color:white"
+		console.log("clicked-prep")
+	})
+}
+else if(id==2 && sub==2){
+	console.log('2st secondry')
+	document.getElementById('thanwy').addEventListener('click', () => {
+		document.getElementById('english').style.display = "block";
+		document.getElementById('english').style.cssText = 'display: flex; flex-direction: row; '
+		document.getElementById('arabic').style.display = "none";
+		document.getElementById('title').innerHTML = "2st secondry 3lmy";
+	
+		document.getElementById('thanwy').style.cssText = "color:#f5a425"
+		document.getElementById('prep').style.cssText = "color:white"
+	
+		console.log("2st")
+	
+	})
+	
+	document.getElementById('prep').addEventListener('click', () => {
+		document.getElementById('arabic').style.display = "block";
+		document.getElementById('arabic').style.cssText = 'display: flex; flex-direction: row;'
+		document.getElementById('title').innerHTML = "ثانيه ثانوي علمي";
 		document.getElementById('english').style.display = "none";
 		document.getElementById('prep').style.cssText = "color:#f5a425"
 		document.getElementById('thanwy').style.cssText = "color:white"
