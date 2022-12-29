@@ -30,27 +30,28 @@
             <a href="{{route('index')}}"><i class="bi bi-arrow-left-circle-fill"></i></a>
             <p>Sign UP</p>
         </div>
-        <form>
+        <form method="POST" action="{{route('login')}}">
+            @csrf
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputEmail4">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+                    <input name="email" type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="formGroupExampleInput">Name</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Full Name" required>
+                    <input name="name" type="text" class="form-control" id="formGroupExampleInput" placeholder="Full Name" required>
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="formGroupExampleInput">Mobile</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Mobile"
+                    <input name="mobile" type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Mobile"
                         required>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="formGroupExampleInput">Perent Mobile</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Perent Mobile"
+                    <input name="parent_mobile" type="text" class="form-control" id="formGroupExampleInput" placeholder="Perent Mobile"
                         required>
                 </div>
             </div>
@@ -58,15 +59,15 @@
             <div class="form-row justify-items-center align-items-center ">
                 <div class="form-group col-md-6">
                     <label for="formGroupExampleInput">Phone</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Phone">
+                    <input name="phone" type="text" class="form-control" id="formGroupExampleInput" placeholder="Phone">
                 </div>
                 <div class="form-check">
-                    <input  type="radio" name="type" id="male"
+                    <input  type="radio" name="gender" id="male"
                         value="option1">
                     <label  for="male">
                         Male
                     </label>
-                    <input  type="radio" name="type" id="female"
+                    <input  type="radio" name="gender" id="female"
                         value="option2">
                     <label  for="female">
                     Female
@@ -78,18 +79,18 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="formGroupExampleInput">City</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="City" required>
+                    <input name="city" type="text" class="form-control" id="formGroupExampleInput" placeholder="City" required>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="formGroupExampleInput">School</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="School Name"
+                    <input name="school" type="text" class="form-control" id="formGroupExampleInput" placeholder="School Name"
                         required>
                 </div>
             </div>
             <div class="form-row justify-items-center align-items-center">
                 <div class="form-group col-md-6">
                     <label for="exampleFormControlSelect1">Your Grade</label>
-                    <select class="form-control" id="exampleFormControlSelect1" required>
+                    <select name="grade" class="form-control" id="exampleFormControlSelect1" required>
                         <option>1st Preparatory </option>
                         <option>2nd Preparatory </option>
                         <option>3th Preparatory </option>
@@ -100,14 +101,14 @@
                 </div>
                 <div>
                     <div class="form-check">
-                        <input type="radio" name="grad" id="exampleRadios2"
+                        <input type="radio" name="type" id="exampleRadios2"
                             value="option4">
                         <label class="form-check-label" for="exampleRadios2">
                             Experimental School
                         </label>
                     </div>
                     <div class="form-check">
-                        <input  type="radio" name="grad" id="exampleRadios2"
+                        <input  type="radio" name="type" id="exampleRadios2"
                             value="option5">
                         <label  for="exampleRadios2">
                             Languege School
@@ -116,9 +117,14 @@
                 </div>
             </div>
             <div class="center">
-                <button type="submit" class="btn btn-primary">Sign Up</button>
+                <button name="submit" type="submit" class="btn btn-primary">Sign Up</button>
             </div>
         </form>
+        {{-- @php
+            if(isset($_POST['submit'])){
+                echo "<script>alert('done');</script>";
+            }
+        @endphp --}}
     </div>
 </body>
 

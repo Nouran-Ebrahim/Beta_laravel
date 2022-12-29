@@ -80,21 +80,5 @@ document.getElementById('prep').addEventListener('click',()=>{
 	document.getElementById('thanwy').style.cssText="color:white"
 console.log("clicked-prep")
 })
-console.log("no")
-// var navItems = document.querySelectorAll(".nav-item");
-// console.log("fbhjvb")
-// for (var i = 0; i < navItems.length; i++) {
-//    navItems[i].addEventListener("click", ()=>{
-// 	// var that = this.style.color="red";
-// 	console.log(navItems[i])
 
-//    });
-// }
-
-// var navItems = document.querySelectorAll(".scroll-to-section");
-// for (var i = 0; i < navItems.length; i++) {
-//    navItems[i].addEventListener("click", function() {
-// 	  this.classList.add("active");
-//    });
-// }
 

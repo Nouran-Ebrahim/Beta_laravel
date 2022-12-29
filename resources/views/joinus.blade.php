@@ -33,8 +33,8 @@
         <a href="{{route('index')}}"><i class="bi bi-arrow-left-circle-fill"></i></a>
         <p>Sign In</p>
         </div>
-
-        <form>
+           {{-- <p>{{$check}}</p>  --}}
+        <form method="POST" action="">
             <div class="form-col">
                 <div class="form-group w-100">
                     <label for="inputEmail4">Email</label>
