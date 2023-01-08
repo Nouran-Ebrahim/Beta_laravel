@@ -78,7 +78,7 @@
                 <div class="text-center mb-5">
 
                     @if ($id == 1)
-                        <h1 class="text" id="title">أولى إعدادى عربي {{ Session::get('id') }}</h1>
+                        <h1 class="text" id="title">أولى إعدادى عربي</h1>
                     @else
                         @if ($id == 2)
                             <h1 class="text" id="title">ثانيه إعدادى عربي </h1>
@@ -457,7 +457,7 @@
             <div class="container py-5">
                 <div class="text-center mb-5">
                     <div class="row button-block">
-                        <a href="{{ route('joinus') }}"><button type="button" class="btn btn-outline-danger">please
+                        <a class="thanwy-btn mr" href="{{ route('joinus') }}"><button type="button" class="btn btn-outline-danger">please
                                 joinus</button></a>
                     </div>
                 </div>

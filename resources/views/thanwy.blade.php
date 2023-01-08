@@ -1673,7 +1673,7 @@
                     <div class="container py-5">
                         <div class="text-center mb-5">
                             <div class="row button-block">
-                                <a href="{{ route('joinus') }}"><button type="button"
+                                <a class="thanwy-btn mr" href="{{ route('joinus') }}"><button type="button"
                                         class="btn btn-outline-danger">please
                                         joinus</button></a>
                             </div>

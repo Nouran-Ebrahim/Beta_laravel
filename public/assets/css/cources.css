@@ -519,3 +519,7 @@ padding-bottom: 1%;
 .start-footer{
 margin-top: 0 !important;
 }
+.mr button{
+  margin-top: 15% !important;
+  font-size: 30px !important;
+}

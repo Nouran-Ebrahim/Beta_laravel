@@ -107,8 +107,8 @@
         <div class="container-fluid py-5">
             <div class="container py-5">
                 <div class="text-center mb-5">
-                    <div class="row button-block">
-                        <a href="{{ route('joinus') }}"><button type="button" class="btn btn-outline-danger">please
+                    <div class="row button-block ">
+                        <a class="thanwy-btn mr " href="{{ route('joinus') }}"><button type="button" class="btn btn-outline-danger">please
                                 joinus</button></a>
                     </div>
                 </div>
