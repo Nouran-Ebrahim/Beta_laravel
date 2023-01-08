@@ -31,6 +31,6 @@ class MailableName extends Mailable
      */
     public function build()
     {
-        return $this->from('beta.eduaction@gmail.com')->subject('Beta Education sign in code')->view('signup');
+        return $this->from('beta.education2022@gmail.com')->subject('Beta Education sign in code')->view('signup');
     }
 }

@@ -24,14 +24,14 @@
     <title>Education Meeting HTML5 Template</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="{{asset('assets/css/fontawesome.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/templatemo-edu-meeting.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/owl.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/lightbox.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/templatemo-edu-meeting.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/lightbox.css') }}">
     <!--
 
 TemplateMo 569 Edu Meeting
@@ -52,17 +52,17 @@ https://templatemo.com/tm-569-edu-meeting
                         <!-- ***** Logo Start ***** -->
 
                         <a href="index.blade.php" class="logo logo-img">
-                        <img src="assets/images/logoo2.png">                          
+                            <img src="assets/images/logoo2.png">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li ><a href="#top" class="active">Home</a></li>
-                            <li ><a href="#levels" id="level">Levels</a></li>
-                            <li ><a href="#courses" id="skill">Skills</a></li>
-                            <li><a href="{{route('joinus')}}">Join Us</a></li>
-                            <li><a href="{{route('about')}}">About</a></li>
-                            <li ><a href="#contact">Contact Us</a></li>
+                            <li><a href="#top" class="active">Home</a></li>
+                            <li><a href="#levels" id="level">Levels</a></li>
+                            <li><a href="#courses" id="skill">Skills</a></li>
+                            <li><a href="{{ route('joinus') }}">Join Us</a></li>
+                            <li><a href="{{ route('about') }}">About</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -78,7 +78,7 @@ https://templatemo.com/tm-569-edu-meeting
     <!-- ***** Main Banner Area Start ***** -->
     <section class="section main-banner" id="top" data-section="section1">
         <video autoplay muted loop id="bg-video">
-            <source src="{{asset('assets/images/course-video.mp4')}}" type="video/mp4" />
+            <source src="{{ asset('assets/images/course-video.mp4') }}" type="video/mp4" />
         </video>
 
         <div class="video-overlay header-text">
@@ -86,14 +86,19 @@ https://templatemo.com/tm-569-edu-meeting
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="caption">
-                            <h6>Hello Students</h6>
+                            @if (Session::has('id'))
+                                <h6>Hello {{$data->name}} </h6>
+                            @else
+                                <h6>Hello student </h6>
+                            @endif
+
                             <h2>Welcome to Education</h2>
                             <p><span style="font-weight: bold">STUDY MORE , EFFORT LESS</span>.... Contribute in a real
                                 and effective way to raising
                                 the level of student achievement by providing them with the best educational services
                                 and videos.</p>
                             <div class="main-button-red">
-                                <div><a href="{{route('joinus')}}">Join Us Now!</a></div>
+                                <div><a href="{{ route('joinus') }}">Join Us Now!</a></div>
                             </div>
                         </div>
                     </div>
@@ -106,10 +111,10 @@ https://templatemo.com/tm-569-edu-meeting
         <div class="container">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a  id="prep" class="nav-link">Preparatory Stage</a>
+                    <a id="prep" class="nav-link">Preparatory Stage</a>
                 </li>
                 <li class="nav-item">
-                    <a  id="thanwy" class="nav-link">Secondary Stage</a>
+                    <a id="thanwy" class="nav-link">Secondary Stage</a>
                 </li>
             </ul>
         </div>
@@ -125,7 +130,7 @@ https://templatemo.com/tm-569-edu-meeting
                                 of the
                                 card's
                                 content.</p>
-                            <a href="{{route('prep-courses',['id'=>1])}}"  class="card-link"><button type="button"
+                            <a href="{{ route('prep-courses', ['id' => 1]) }}" class="card-link"><button type="button"
                                     class="btn btn-outline-primary view" id="prep-1">View</button></a>
                         </div>
                     </div>
@@ -137,8 +142,8 @@ https://templatemo.com/tm-569-edu-meeting
                                 of the
                                 card's
                                 content.</p>
-                            <a href="{{route('prep-courses',['id'=>2])}}"  class="card-link"><button type="button"
-                                    class="btn btn-outline-primary view" id="prep-2" >View</button></a>
+                            <a href="{{ route('prep-courses', ['id' => 2]) }}" class="card-link"><button type="button"
+                                    class="btn btn-outline-primary view" id="prep-2">View</button></a>
                         </div>
                     </div>
                     <div class="card item" style="width: 18rem;">
@@ -148,7 +153,7 @@ https://templatemo.com/tm-569-edu-meeting
                                 of the
                                 card's
                                 content.</p>
-                            <a href="{{route('prep-courses',['id'=>3])}}" class="card-link"><button type="button"
+                            <a href="{{ route('prep-courses', ['id' => 3]) }}" class="card-link"><button type="button"
                                     class="btn btn-outline-primary view" id="prep-3">View</button></a>
                         </div>
                     </div>
@@ -163,30 +168,32 @@ https://templatemo.com/tm-569-edu-meeting
                                 of the
                                 card's
                                 content.</p>
-                            <a href="{{route('thanwy12-courses',['id'=>1])}}" class="card-link"><button type="button"
-                                    class="btn btn-outline-primary view">View</button></a>
+                            <a href="{{ route('thanwy12-courses', ['id' => 1]) }}" class="card-link"><button
+                                    type="button" class="btn btn-outline-primary view">View</button></a>
                         </div>
                     </div>
 
                     <div class="card item" style="width: 18rem;">
                         <div class="card-body">
                             <h5 class="card-title">2nd Gradd</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk
                                 of the
                                 card's
                                 content.</p>
-                            <a href="{{route('start',['id'=>2])}}" class="card-link"><button type="button"
+                            <a href="{{ route('start', ['id' => 2]) }}" class="card-link"><button type="button"
                                     class="btn btn-outline-primary view">View</button></a>
                         </div>
                     </div>
                     <div class="card item" style="width: 18rem;">
                         <div class="card-body">
                             <h5 class="card-title">3rd Grad</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk
                                 of the
                                 card's
                                 content.</p>
-                            <a href="{{route('start',['id'=>3])}}" class="card-link"><button type="button"
+                            <a href="{{ route('start', ['id' => 3]) }}" class="card-link"><button type="button"
                                     class="btn btn-outline-primary view">View</button></a>
                         </div>
                     </div>
@@ -259,7 +266,7 @@ https://templatemo.com/tm-569-edu-meeting
                     <div class="row">
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </section>
@@ -613,31 +620,32 @@ https://templatemo.com/tm-569-edu-meeting
                                     </div>
                                     <div class="col-lg-4">
                                         <fieldset>
-                                            <input name="name" type="text" id="name" placeholder="YOURNAME...*"
-                                                required="">
+                                            <input name="name" type="text" id="name"
+                                                placeholder="YOURNAME...*" required="">
                                         </fieldset>
                                     </div>
                                     <div class="col-lg-4">
                                         <fieldset>
-                                            <input name="email" type="email" id="email" placeholder="YOUR EMAIL..."
-                                                required="">
+                                            <input name="email" type="email" id="email"
+                                                placeholder="YOUR EMAIL..." required="">
                                         </fieldset>
                                     </div>
                                     <div class="col-lg-4">
                                         <fieldset>
-                                            <input name="subject" type="text" id="subject" placeholder="SUBJECT...*"
-                                                required="">
+                                            <input name="subject" type="text" id="subject"
+                                                placeholder="SUBJECT...*" required="">
                                         </fieldset>
                                     </div>
                                     <div class="col-lg-12">
                                         <fieldset>
-                                            <textarea name="message" type="text" class="form-control" id="message"
-                                                placeholder="YOUR MESSAGE..." required=""></textarea>
+                                            <textarea name="message" type="text" class="form-control" id="message" placeholder="YOUR MESSAGE..."
+                                                required=""></textarea>
                                         </fieldset>
                                     </div>
                                     <div class="col-lg-12">
                                         <fieldset>
-                                            <button name='submit' type="submit" id="form-submit" class="button">SEND
+                                            <button name='submit' type="submit" id="form-submit"
+                                                class="button">SEND
                                                 MESSAGE NOW</button>
                                         </fieldset>
                                     </div>
@@ -679,67 +687,65 @@ https://templatemo.com/tm-569-edu-meeting
 
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
-    <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
-    <script src="{{asset('assets/js/isotope.min.js')}}"></script>
-    <script src="{{asset('assets/js/owl-carousel.js')}}"></script>
-    <script src="{{asset('assets/js/lightbox.js')}}"></script>
-    <script src="{{asset('assets/js/tabs.js')}}"></script>
-    <script src="{{asset('assets/js/video.js')}}"></script>
-    <script src="{{asset('assets/js/slick-slider.js')}}"></script>
-    <script src="{{asset('assets/js/customs.js')}}"></script>
-    <script src="{{asset('assets/js/sharedd.js')}} "></script>
+    <script src="{{ asset('assets/js/isotope.min.js') }}"></script>
+    <script src="{{ asset('assets/js/owl-carousel.js') }}"></script>
+    <script src="{{ asset('assets/js/lightbox.js') }}"></script>
+    <script src="{{ asset('assets/js/tabs.js') }}"></script>
+    <script src="{{ asset('assets/js/video.js') }}"></script>
+    <script src="{{ asset('assets/js/slick-slider.js') }}"></script>
+    <script src="{{ asset('assets/js/customs.js') }}"></script>
+    <script src="{{ asset('assets/js/sharedd.js') }} "></script>
 
     <!-- <script src="assets/js/levels.js"></script> -->
     <script>
-    //according to loftblog tut
-    $('.nav li:first').addClass('active');
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
 
-    var showSection = function showSection(section, isAnimate) {
-        var
-            direction = section.replace(/#/, ''),
-            reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-            reqSectionPos = reqSection.offset().top - 0;
-
-        if (isAnimate) {
-            $('body, html').animate({
-                    scrollTop: reqSectionPos
-                },
-                800);
-        } else {
-            $('body, html').scrollTop(reqSectionPos);
-        }
-
-    };
-
-    var checkSection = function checkSection() {
-        $('.section').each(function() {
+        var showSection = function showSection(section, isAnimate) {
             var
-                $this = $(this),
-                topEdge = $this.offset().top - 80,
-                bottomEdge = topEdge + $this.height(),
-                wScroll = $(window).scrollTop();
-            if (topEdge < wScroll && bottomEdge > wScroll) {
-                var
-                    currentId = $this.data('section'),
-                    reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-                reqLink.closest('li').addClass('active').
-                siblings().removeClass('active');
+                direction = section.replace(/#/, ''),
+                reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+                reqSectionPos = reqSection.offset().top - 0;
+
+            if (isAnimate) {
+                $('body, html').animate({
+                        scrollTop: reqSectionPos
+                    },
+                    800);
+            } else {
+                $('body, html').scrollTop(reqSectionPos);
             }
+
+        };
+
+        var checkSection = function checkSection() {
+            $('.section').each(function() {
+                var
+                    $this = $(this),
+                    topEdge = $this.offset().top - 80,
+                    bottomEdge = topEdge + $this.height(),
+                    wScroll = $(window).scrollTop();
+                if (topEdge < wScroll && bottomEdge > wScroll) {
+                    var
+                        currentId = $this.data('section'),
+                        reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+                    reqLink.closest('li').addClass('active').
+                    siblings().removeClass('active');
+                }
+            });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function(e) {
+            e.preventDefault();
+            showSection($(this).attr('href'), true);
         });
-    };
 
-    $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function(e) {
-        e.preventDefault();
-        showSection($(this).attr('href'), true);
-    });
-
-    $(window).scroll(function() {
-        checkSection();
-    });
-
-
+        $(window).scroll(function() {
+            checkSection();
+        });
     </script>
 </body>
 

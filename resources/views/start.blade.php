@@ -69,41 +69,52 @@
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
-
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                @if ($id == 1)
-                    <h1 class="text" id="title">اولي ثانوي </h1>
-                @else
-                    @if ($id == 2)
-                        <h1 class="text" id="title">ثانيه ثانوي</h1>
+    @if (Session::has('id'))
+        <div class="container-fluid py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    @if ($id == 1)
+                        <h1 class="text" id="title">اولي ثانوي </h1>
                     @else
-                        <h1 class="text" id="title">ثالثه ثانوي</h1>
+                        @if ($id == 2)
+                            <h1 class="text" id="title">ثانيه ثانوي</h1>
+                        @else
+                            <h1 class="text" id="title">ثالثه ثانوي</h1>
+                        @endif
                     @endif
+                </div>
+            </div>
+            <div class="row button-block">
+                @if ($id == 3)
+                    <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 3, 'sub' => 1]) }}"><button type="button"
+                            class="btn btn-outline-danger">أدبي</button></a>
+                    <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 3, 'sub' => 2]) }}"><button type="button"
+                            class="btn btn-outline-danger">علمي
+                            علوم</button></a>
+                    <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 3, 'sub' => 3]) }}"><button type="button"
+                            class="btn btn-outline-danger">علمي
+                            رياضه</button></a>
+                @elseif($id == 2)
+                    <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 2, 'sub' => 1]) }}"><button type="button"
+                            class="btn btn-outline-danger">أدبي</button></a>
+                    <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 2, 'sub' => 2]) }}"><button type="button"
+                            class="btn btn-outline-danger">علمي
+                        </button></a>
                 @endif
             </div>
         </div>
-        <div class="row button-block">
-            @if ($id == 3)
-                <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 3, 'sub' => 1]) }}"><button type="button"
-                        class="btn btn-outline-danger">أدبي</button></a>
-                <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 3, 'sub' => 2]) }}"><button type="button"
-                        class="btn btn-outline-danger">علمي
-                        علوم</button></a>
-                <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 3, 'sub' => 3]) }}"><button type="button"
-                        class="btn btn-outline-danger">علمي
-                        رياضه</button></a>
-            @elseif($id == 2)
-                <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 2, 'sub' => 1]) }}"><button type="button"
-                        class="btn btn-outline-danger">أدبي</button></a>
-                <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 2, 'sub' => 2]) }}"><button type="button"
-                        class="btn btn-outline-danger">علمي
-                    </button></a>
-            @endif
+    @else
+        <div class="container-fluid py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <div class="row button-block">
+                        <a href="{{ route('joinus') }}"><button type="button" class="btn btn-outline-danger">please
+                                joinus</button></a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-
+    @endif
     <div class="footer start-footer ">
         <p>Copyright © 2022 beta education Co., Ltd. All Rights Reserved.
             <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">soul</a>
