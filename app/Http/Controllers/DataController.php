@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Student;
+use App\Models\Arpcourse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailableName;
+use App\Mail\Confermation;
 use Illuminate\Support\Facades\Session;
 
 class DataController extends Controller
@@ -63,16 +65,111 @@ class DataController extends Controller
             return back();
         }
     }
-    public function hello(){
-        $data=array();
-        if(Session::has('id')){
-            $data=Student::where('id','=',Session::get('id'))->first();
-            return view('index',compact('data')); 
-        }
-        else{
+    public function hello()
+    {
+        $data = array();
+        if (Session::has('id')) {
+            $data = Student::where('id', '=', Session::get('id'))->first();
+            return view('index', compact('data'));
+        } else {
             return view('index');
+        }
+    }
+
+
+
+
+
+    public function subscribe_course(Request $req)
+    {
+        $id = request('id');
+        $subject = request('subject');
+        $sent = request('sent');
+        if (Session::has('id')) {
+            $data = Student::where('id', '=', Session::get('id'))->first();
+            $studentname = $data->name;
+
+            try {
+
+                Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 0));
+                $data = Arpcourse::where('student_id', '=', Session::get('id'))->first();
+
+               // $subjectName=$subject.$id;
+                if(!($data)){
+                   // Arpcourse::where("student_id", Session::get('id'))->update([$subjectName => "waiting"]);
+                   Arpcourse::create([
+                    'name'=>$studentname,
+                    'student_id' => Session::get('id'),
+                    //$subjectName => "waiting",
+                ]);
+                }
+                
+                // $status=$data-> $subjectName;
+                // if($status=="waiting"){
+                  
+                // }else{
+                //     echo '<div>ggghghghj</div>';
+
+                // }
+        
+                return  redirect()->route('prep-courses', [
+                    'id' => $id,
+                    'subject' => $subject,
+                    'sent' => $sent
+                ])->with(['success' => "تم تسجيل طلبك بنجاح من فضلك افحص الاميل"]);  
+                
+            } catch (\Swift_TransportException $transportExp) {
+                //echo $transportExp->getMessage();
+                return  redirect()->back()->with(['success' => " من فضلك تأكد بأتصالك بالانترنت وحاول مره اخري"]);
+            }
+            
         }
         
     }
 
+
+    public function subscribe_firstcourse()
+    {
+        $id = request('id');
+        $subject = request('subject');
+        // $sub = request('sub');
+        if (Session::has('id')) {
+            $data = Student::where('id', '=', Session::get('id'))->first();
+            $studentname = $data->name;
+            Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 11));
+        }
+        return  redirect()->route('thanwy12-courses', [
+            'id' => $id,
+            'subject' => $subject
+        ])->with(['successth' => "تم تسجيل طلبك بنجاح من فضلك افحص الاميل"]);
+    }
+    public function subscribe_thanwy()
+    {
+        $id = request('id');
+        $subject = request('subject');
+        $sec = request('sec');
+        $sub = request('sub');
+        if (Session::has('id')) {
+            $data = Student::where('id', '=', Session::get('id'))->first();
+            $studentname = $data->name;
+            Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, $sec));
+        }
+        return  redirect()->route('thanwy', [
+            'id' => $id,
+            'subject' => $subject,
+            'sec' => $sec,
+            'sub' => $sub
+        ])->with(['successth' => "تم تسجيل طلبك بنجاح من فضلك افحص الاميل"]);
+    }
+    public function admin(){
+        $FetchData = Arpcourse::all();
+        //dd($FetchData);
+        return view('admin',[
+            'FetchData'=>$FetchData,
+        ]);
+    }
+    // public function adminstore(Request $req){
+
+    //     Arpcourse::where("student_id", Session::get('id'))->update([$subjectName => "waiting"]);
+    // }
 }

@@ -63,6 +63,9 @@ https://templatemo.com/tm-569-edu-meeting
                             <li><a href="{{ route('joinus') }}">Join Us</a></li>
                             <li><a href="{{ route('about') }}">About</a></li>
                             <li><a href="#contact">Contact Us</a></li>
+                            @if (Session::get('id')===70)
+                            <li><a href="{{ route('admin') }}">Admin</a></li>
+                            @endif
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>

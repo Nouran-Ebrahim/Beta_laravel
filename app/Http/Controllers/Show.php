@@ -25,7 +25,7 @@ class Show extends Controller
     ]);
   }
 
-  public function firstsecond()
+  public function first()
   {
     $id = request('id');
     return view('thanwy', [

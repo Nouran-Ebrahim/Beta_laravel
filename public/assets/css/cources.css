@@ -9,6 +9,7 @@ body {
 }
 .course-content{
   background-color: white !important;
+  text-align: center;
 }
 .photo{
  margin: auto; 

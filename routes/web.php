@@ -22,13 +22,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[DataController::class,'hello' ])->name('index') ;
 
-Route::get('/about', function () {
-    return view('about');
-})-> name('about');
-
-
-
-
 Route::get('/courses', function () {
     return view('courses');
 })-> name('courses');
@@ -39,18 +32,23 @@ Route::get('/courses', function () {
 
 Route::get('/prep-courses',[Show::class,'prep'])->name('prep-courses');
 
+Route::get('/prep-courses/subscribe',[DataController::class,'subscribe_course'])->name('subscribe');
+
+
 Route::get('/thanwy-courses',[Show::class,'therd'] )->name('start');
 
-Route::get('/thanwy12-courses', [Show::class,'firstsecond'])->name('thanwy12-courses');
+Route::get('/thanwy12-courses', [Show::class,'first'])->name('thanwy12-courses');
+Route::get('/thanwy12-courses/subscribe',[DataController::class,'subscribe_firstcourse'])->name('firstsubscribe');
+
 
 Route::get('thanwy',[Show::class,'show'])->name('thanwy');
-//Route::get('about',[DataController::class,'getAllUser'])->name('about');
+Route::get('/thanwy/subscribe',[DataController::class,'subscribe_thanwy'])->name('secoundtherdsubscribe');
+
 
 Route::prefix('register')->group(function () {
 
     Route::get('/create',[DataController::class,'create' ])->name('register') ;
     Route::post('/joinus',[DataController::class,'store' ])->name('login') ;
-
 
 });
 Route::get('/joinus', function () {
@@ -58,4 +56,12 @@ Route::get('/joinus', function () {
 })-> name('joinus');
 
 Route::post('login',[DataController::class,'loginstu' ])->name('login-stu') ;
+
+Route::get('/about', function () {
+    return view('about');
+})-> name('about');
   
+Route::get('/admin',[DataController::class,'admin' ])->name('admin') ;
+
+Route::post('admin',[DataController::class,'adminstore' ])->name('adminstore') ;
+

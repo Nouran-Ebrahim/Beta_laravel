@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
+    {{-- @livewireStyles --}}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -88,6 +87,13 @@
                     @endif
 
                 </div>
+                @if (Session::has('success'))
+                    <div class="alert alert-danger" role="alert">
+                        {{ Session::get('success') }}
+                    </div>
+                @endif
+
+
 
                 <div class="container">
                     <ul class="nav nav-tabs">
@@ -109,11 +115,6 @@
                             <img class="img-fluid photo" src="{{ asset('assets/images/arabic.png') }}" alt="">
 
                             <div class="course-content p-4">
-                                <div class="d-flex justify-content-between mb-3">
-                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
-                                        Students</small>
-                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
-                                </div>
                                 @if ($id == 1)
                                     <a class="h5" href="">عربي اولي</a>
                                 @else
@@ -125,8 +126,10 @@
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
+                                        <a  class="btn btn-danger sent" href={{ route('subscribe', ['id'=>$id,'subject'=>'arabic','sent'=>"done"]) }}> اشترك الان </a>
 
-                                        <h5 class="m-0">$99</h5>
+                                        <h5 class="m-1">$99</h5>
+
                                     </div>
                                 </div>
                             </div>
@@ -137,13 +140,11 @@
                             <img class="img-fluid photo" src="{{ asset('assets/images/maths.png') }}" alt="">
 
                             <div class="course-content p-4">
-                                <div class="d-flex justify-content-between mb-3">
-                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
-                                        Students</small>
-                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
-                                </div>
-                                @if ($id == 1)
-                                    <a class="h5" href="">رياضيات اولي</a>
+                                
+                                @if ($_GET['id']==1)
+                                    <a class="h5" href="">رياضيات اولي
+                                   
+                                    </a>
                                 @else
                                     @if ($id == 2)
                                         <a class="h5" href="">رياضيات ثانيه</a>
@@ -151,9 +152,11 @@
                                         <a class="h5" href="">رياضيات</a>
                                     @endif
                                 @endif
+
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
-                                        <h5 class="m-0">$99</h5>
+                                        <a class="btn btn-danger sent" href={{ route('subscribe', ['id'=>$id,'subject'=>'math','sent'=>"done"]) }}> اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
                             </div>
@@ -165,12 +168,7 @@
                             <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}"
                                 alt="">
                             <div class="course-content p-4">
-                                <div class="d-flex justify-content-between mb-3">
-                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
-                                        Students</small>
-                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
-                                        30m</small>
-                                </div>
+
                                 @if ($id == 1)
                                     <a class="h5" href="">دراسات اولي</a>
                                 @else
@@ -182,7 +180,9 @@
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
-                                        <h5 class="m-0">$99</h5>
+                                        <a class="btn btn-danger" href={{ route('subscribe', ['id'=>$id,'subject'=>'دراسات']) }}> اشترك الان </a>
+
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
                             </div>
@@ -210,6 +210,8 @@
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger" href={{ route('subscribe', ['id'=>$id,'subject'=>'علوم']) }}> اشترك الان </a>
+
                                         <h5 class="m-0">$99</h5>
                                     </div>
                                 </div>
@@ -238,6 +240,8 @@
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger" href={{ route('subscribe', ['id'=>$id,'subject'=>'ُenglish']) }}> اشترك الان </a>
+
                                         <h5 class="m-0">$99</h5>
                                     </div>
                                 </div>
@@ -266,6 +270,8 @@
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger" href={{ route('subscribe', ['id'=>$id,'subject'=>'ُfresh']) }}> اشترك الان </a>
+
                                         <h5 class="m-0">$99</h5>
                                     </div>
                                 </div>
@@ -300,7 +306,7 @@
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
-
+                                        <a class="btn btn-danger" href={{ route('subscribe', ['id'=>$id,'subject'=>'ُarabicen']) }}> اشترك الان </a>
                                         <h5 class="m-0">$99</h5>
                                     </div>
                                 </div>
@@ -330,6 +336,8 @@
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger" href={{ route('subscribe', ['id'=>$id,'subject'=>'ُmathen']) }}> اشترك الان </a>
+
                                         <h5 class="m-0">$99</h5>
                                     </div>
                                 </div>
@@ -387,6 +395,8 @@
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger" href={{ route('subscribe', ['id'=>$id,'subject'=>'ُscienceen']) }}> اشترك الان </a>
+
                                         <h5 class="m-0">$99</h5>
                                     </div>
                                 </div>
@@ -457,7 +467,8 @@
             <div class="container py-5">
                 <div class="text-center mb-5">
                     <div class="row button-block">
-                        <a class="thanwy-btn mr" href="{{ route('joinus') }}"><button type="button" class="btn btn-outline-danger">please
+                        <a class="thanwy-btn mr" href="{{ route('joinus') }}"><button type="button"
+                                class="btn btn-outline-danger">please
                                 joinus</button></a>
                     </div>
                 </div>
@@ -475,8 +486,10 @@
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/courses.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     {{-- <script src="../public/assets/js/sharedd.js"></script> --}}
 
+    {{-- @livewireScripts --}}
 
 </body>
 
