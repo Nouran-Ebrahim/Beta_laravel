@@ -76,8 +76,15 @@
     <!-- ***** Header Area End ***** -->
     <div class="container-fluid py-5">
         <div class="container py-5">
-            <form method="post" action="{{route('adminstor')}}">
-            <table class="table table-light">
+            <form method="post" action="{{route('adminstore')}}">
+                @csrf
+                <p>Please select the student:</p>
+
+                @foreach ($FetchData as $data)
+                   <button type="submit" name="id" value="{{$data->student_id}}"> edit </button>
+                    <label style="color: white" for="html">{{$data->name}}</label><br>
+                    @endforeach
+                {{-- <table class="table table-light">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -127,9 +134,9 @@
                 @endforeach
                     
                 </tbody>
-            </table>
-            <input type="submit" value="Submit">
-        </form>
+            </table> --}}
+                
+            </form>
         </div>
     </div>
     <div class="footer start-footer">
@@ -143,7 +150,46 @@
     <script src="{{ asset('assets/js/courses.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-
 </body>
 
 </html>
+{{-- <script>
+    $(document).ready(function() {
+
+        $('#butsave').on('click', function() {
+            var name = $('#name').val();
+            var email = $('#email').val();
+            var phone = $('#phone').val();
+            var city = $('#city').val();
+            var password = $('#password').val();
+            if (name != "" && email != "" && phone != "" && city != "") {
+                /*  $("#butsave").attr("disabled", "disabled"); */
+                $.ajax({
+                    url: "/userData",
+                    type: "POST",
+                    data: {
+                        _token: $("#csrf").val(),
+                        type: 1,
+                        name: name,
+                        email: email,
+                        phone: phone,
+                        city: city
+                    },
+                    cache: false,
+                    success: function(dataResult) {
+                        console.log(dataResult);
+                        var dataResult = JSON.parse(dataResult);
+                        if (dataResult.statusCode == 200) {
+                            window.location = "/userData";
+                        } else if (dataResult.statusCode == 201) {
+                            alert("Error occured !");
+                        }
+
+                    }
+                });
+            } else {
+                alert('Please fill all the field !');
+            }
+        });
+    });
+</script> --}}

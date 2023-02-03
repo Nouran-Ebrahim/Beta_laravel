@@ -168,8 +168,13 @@ class DataController extends Controller
             'FetchData'=>$FetchData,
         ]);
     }
-    // public function adminstore(Request $req){
-
-    //     Arpcourse::where("student_id", Session::get('id'))->update([$subjectName => "waiting"]);
-    // }
+    public function adminstore(Request $req){
+         $selectedid=$req->id;
+         $course_data = Arpcourse::where('student_id', '=',  $selectedid)->first();
+        return view('coursestatus',[
+           'selectedid'=>$selectedid,
+           'course_data'=>$course_data
+        ]);
+        
+    }
 }
