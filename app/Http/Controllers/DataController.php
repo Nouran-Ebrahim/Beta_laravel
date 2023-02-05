@@ -171,10 +171,21 @@ class DataController extends Controller
     public function adminstore(Request $req){
          $selectedid=$req->id;
          $course_data = Arpcourse::where('student_id', '=',  $selectedid)->first();
+          $col_num=DB::getSchemaBuilder()->getColumnListing('arpcourses');
+         
         return view('coursestatus',[
            'selectedid'=>$selectedid,
-           'course_data'=>$course_data
+           'course_data'=>$course_data,
+           'col_names'=>$col_num
         ]);
         
+    }
+
+    public function change_status( Request $req){
+        
+$i=5;
+$value ='cource'.$i;
+        return $req -> $value ;
+
     }
 }

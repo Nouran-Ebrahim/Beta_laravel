@@ -84,57 +84,7 @@
                    <button type="submit" name="id" value="{{$data->student_id}}"> edit </button>
                     <label style="color: white" for="html">{{$data->name}}</label><br>
                     @endforeach
-                {{-- <table class="table table-light">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Student_id</th>
-                        <th scope="col">1math</th>
-                        <th scope="col">1arabic</th>
-                        <th scope="col">2math</th>
-                        <th scope="col">2arabic</th>
-                        <th scope="col">3math</th>
-                        <th scope="col">3arabic</th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                    @foreach ($FetchData as $data)
-                    <tr>
-                        <th scope="row">{{$data->id}}</th>
-                        <td>{{$data->name}}</td>
-                        <td>{{$data->student_id}}</td>
-                        <td><select name="selected" class="form-select" aria-label="Default select example">
-                            <option selected>closed</option>
-                            <option value="1">open</option>
-                          </select>
-                        </td>
-                        <td><select name="selected1" class="form-select" aria-label="Default select example">
-                            <option selected>closed</option>
-                            <option value="1">open</option>
-                          </select></td>
-                        <td><select name="selected2" class="form-select" aria-label="Default select example">
-                            <option selected>closed</option>
-                            <option value="1">open</option>
-                          </select></td>
-                        <td><select name="selected3" class="form-select" aria-label="Default select example">
-                            <option selected>closed</option>
-                            <option value="1">open</option>
-                          </select></td>
-                        <td><select name="selected4" class="form-select" aria-label="Default select example">
-                            <option selected>closed</option>
-                            <option value="1">open</option>
-                          </select></td>
-                        <td><select name="selected5" class="form-select" aria-label="Default select example">
-                            <option selected>closed</option>
-                            <option value="1">open</option>
-                          </select></td>
-                    </tr>
-                @endforeach
-                    
-                </tbody>
-            </table> --}}
+                
                 
             </form>
         </div>

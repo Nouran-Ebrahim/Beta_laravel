@@ -65,3 +65,5 @@ Route::get('/admin',[DataController::class,'admin' ])->name('admin') ;
 
 Route::post('admin',[DataController::class,'adminstore' ])->name('adminstore') ;
 
+Route::post('admin_change',[DataController::class,'change_status' ])->name('change_status') ;
+

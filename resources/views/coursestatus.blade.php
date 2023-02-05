@@ -76,16 +76,30 @@
     <!-- ***** Header Area End ***** -->
     <div class="container-fluid py-5">
         <div style="color: white" class="container py-5">
-         {{$course_data->name}}
+
+
+            {{ $course_data->name }}
         </div>
-        <form method="get">
+        <form method="get" action="{{ route('change_status') }}">
             @csrf
-            <input class="my-class" type="checkbox" id="math1" name="course1" value="math1">
-            <label style="color: white" for="math1"> math1</label><br>
-            <input class="my-class" type="checkbox" id="arabic1" name="course2" value="arabic1">
-            <label style="color: white" for="arabic1"> arabic1</label><br>
-            <input class="my-class" type="checkbox" id="math3" name="course3" value="math3">
-            <label style="color: white" for="math3"> math3</label><br><br>
+            @for ($i = 3; $i < count($col_names) - 2; $i++)
+                @php
+                    $sub = $col_names[$i];
+                    $status = $course_data->$sub;
+                @endphp
+                <label style="color: white">open</label>
+                <input type="radio"  name={{ $col_names[$i]}} value="open">
+                <label style="color: white">closed</label>
+                <input type="radio"  name={{ $col_names[$i]}} value="closed">
+                <label style="color: white" > {{ $col_names[$i] }}</label>
+                <label style="color: white"> {{ $status }}</label><br>
+
+
+                {{-- <input class="my-class" type="checkbox" id="math1" name="cource{{$i}}" value="{{ $col_names[$i] }}">
+            <label style="color: white" for="math1"> {{ $col_names[$i]}}</label>
+            <label style="color: white" > {{ $status}}</label><br>   --}}
+            @endfor
+
             <input class="#butsave" type="submit" value="Submit">
         </form>
     </div>
@@ -101,7 +115,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-    
+
             $('#butsave').on('click', function() {
                 var name = $('.class="my-class"').val();
                 // var email = $('#email').val();
@@ -131,7 +145,7 @@
                 //             } else if (dataResult.statusCode == 201) {
                 //                 alert("Error occured !");
                 //             }
-    
+
                 //         }
                 //     });
                 // } else {
