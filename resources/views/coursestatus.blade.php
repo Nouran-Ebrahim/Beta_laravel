@@ -61,7 +61,7 @@
                             <li><a href="{{ route('about') }}">About</a></li>
                             <li><a href="{{ route('index') }}">Contact Us</a></li>
                             @if (Session::get('id') === 70)
-                                <li><a href="{{ route('admin') }}">Admin</a></li>
+                            <li><a href="{{ route('admin') }}">Admin</a></li>
                             @endif
                         </ul>
                         <a class='menu-trigger'>
@@ -76,16 +76,16 @@
     <!-- ***** Header Area End ***** -->
     <div class="container-fluid py-5">
         <div style="color: white" class="container py-5">
-         {{$course_data->name}}
+            {{$course_data->name}}
         </div>
         <form>
             @csrf
             <input type="checkbox" id="math1" name="course1" value="math1">
-            <label for="math1"> math1</label><br>
+            <label for="math1" style="color: white"> math1</label><br>
             <input type="checkbox" id="arabic1" name="course2" value="arabic1">
-            <label for="arabic1"> arabic1</label><br>
+            <label for="arabic1" style="color: white"> arabic1</label><br>
             <input type="checkbox" id="math3" name="course3" value="math3">
-            <label for="math3"> math3</label><br><br>
+            <label for="math3" style="color: white"> math3</label><br><br>
             <input type="submit" value="Submit">
         </form>
     </div>
@@ -100,44 +100,44 @@
     <script src="{{ asset('assets/js/courses.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
-        $(document).ready(function() {
-    
-            $('#butsave').on('click', function() {
-                var name = $('#name').val();
-                var email = $('#email').val();
-                var phone = $('#phone').val();
-                var city = $('#city').val();
-                var password = $('#password').val();
-                if (name != "" && email != "" && phone != "" && city != "") {
-                    /*  $("#butsave").attr("disabled", "disabled"); */
-                    $.ajax({
-                        url: "/userData",
-                        type: "POST",
-                        data: {
-                            _token: $("#csrf").val(),
-                            type: 1,
-                            name: name,
-                            email: email,
-                            phone: phone,
-                            city: city
-                        },
-                        cache: false,
-                        success: function(dataResult) {
-                            console.log(dataResult);
-                            var dataResult = JSON.parse(dataResult);
-                            if (dataResult.statusCode == 200) {
-                                window.location = "/userData";
-                            } else if (dataResult.statusCode == 201) {
-                                alert("Error occured !");
-                            }
-    
+    $(document).ready(function() {
+
+        $('#butsave').on('click', function() {
+            var name = $('#name').val();
+            var email = $('#email').val();
+            var phone = $('#phone').val();
+            var city = $('#city').val();
+            var password = $('#password').val();
+            if (name != "" && email != "" && phone != "" && city != "") {
+                /*  $("#butsave").attr("disabled", "disabled"); */
+                $.ajax({
+                    url: "/userData",
+                    type: "POST",
+                    data: {
+                        _token: $("#csrf").val(),
+                        type: 1,
+                        name: name,
+                        email: email,
+                        phone: phone,
+                        city: city
+                    },
+                    cache: false,
+                    success: function(dataResult) {
+                        console.log(dataResult);
+                        var dataResult = JSON.parse(dataResult);
+                        if (dataResult.statusCode == 200) {
+                            window.location = "/userData";
+                        } else if (dataResult.statusCode == 201) {
+                            alert("Error occured !");
                         }
-                    });
-                } else {
-                    alert('Please fill all the field !');
-                }
-            });
+
+                    }
+                });
+            } else {
+                alert('Please fill all the field !');
+            }
         });
+    });
     </script>
 </body>
 
