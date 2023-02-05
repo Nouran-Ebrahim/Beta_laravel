@@ -78,15 +78,15 @@
         <div style="color: white" class="container py-5">
          {{$course_data->name}}
         </div>
-        <form>
+        <form method="get">
             @csrf
-            <input type="checkbox" id="math1" name="course1" value="math1">
-            <label for="math1"> math1</label><br>
-            <input type="checkbox" id="arabic1" name="course2" value="arabic1">
-            <label for="arabic1"> arabic1</label><br>
-            <input type="checkbox" id="math3" name="course3" value="math3">
-            <label for="math3"> math3</label><br><br>
-            <input type="submit" value="Submit">
+            <input class="my-class" type="checkbox" id="math1" name="course1" value="math1">
+            <label style="color: white" for="math1"> math1</label><br>
+            <input class="my-class" type="checkbox" id="arabic1" name="course2" value="arabic1">
+            <label style="color: white" for="arabic1"> arabic1</label><br>
+            <input class="my-class" type="checkbox" id="math3" name="course3" value="math3">
+            <label style="color: white" for="math3"> math3</label><br><br>
+            <input class="#butsave" type="submit" value="Submit">
         </form>
     </div>
     <div class="footer start-footer">
@@ -103,39 +103,40 @@
         $(document).ready(function() {
     
             $('#butsave').on('click', function() {
-                var name = $('#name').val();
-                var email = $('#email').val();
-                var phone = $('#phone').val();
-                var city = $('#city').val();
-                var password = $('#password').val();
-                if (name != "" && email != "" && phone != "" && city != "") {
-                    /*  $("#butsave").attr("disabled", "disabled"); */
-                    $.ajax({
-                        url: "/userData",
-                        type: "POST",
-                        data: {
-                            _token: $("#csrf").val(),
-                            type: 1,
-                            name: name,
-                            email: email,
-                            phone: phone,
-                            city: city
-                        },
-                        cache: false,
-                        success: function(dataResult) {
-                            console.log(dataResult);
-                            var dataResult = JSON.parse(dataResult);
-                            if (dataResult.statusCode == 200) {
-                                window.location = "/userData";
-                            } else if (dataResult.statusCode == 201) {
-                                alert("Error occured !");
-                            }
+                var name = $('.class="my-class"').val();
+                // var email = $('#email').val();
+                // var phone = $('#phone').val();
+                // var city = $('#city').val();
+                // var password = $('#password').val();
+                console.log(name)
+                // if (name != "" && email != "" && phone != "" && city != "") {
+                //     /*  $("#butsave").attr("disabled", "disabled"); */
+                //     $.ajax({
+                //         url: "/userData",
+                //         type: "POST",
+                //         data: {
+                //             _token: $("#csrf").val(),
+                //             type: 1,
+                //             name: name,
+                //             email: email,
+                //             phone: phone,
+                //             city: city
+                //         },
+                //         cache: false,
+                //         success: function(dataResult) {
+                //             console.log(dataResult);
+                //             var dataResult = JSON.parse(dataResult);
+                //             if (dataResult.statusCode == 200) {
+                //                 window.location = "/userData";
+                //             } else if (dataResult.statusCode == 201) {
+                //                 alert("Error occured !");
+                //             }
     
-                        }
-                    });
-                } else {
-                    alert('Please fill all the field !');
-                }
+                //         }
+                //     });
+                // } else {
+                //     alert('Please fill all the field !');
+                // }
             });
         });
     </script>
