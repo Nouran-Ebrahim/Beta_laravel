@@ -103,14 +103,7 @@ class DataController extends Controller
                     //$subjectName => "waiting",
                 ]);
                 }
-                
-                // $status=$data-> $subjectName;
-                // if($status=="waiting"){
-                  
-                // }else{
-                //     echo '<div>ggghghghj</div>';
-
-                // }
+    
         
                 return  redirect()->route('prep-courses', [
                     'id' => $id,
@@ -154,6 +147,7 @@ class DataController extends Controller
             $studentname = $data->name;
             Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, $sec));
         }
+        
         return  redirect()->route('thanwy', [
             'id' => $id,
             'subject' => $subject,
@@ -183,9 +177,21 @@ class DataController extends Controller
 
     public function change_status( Request $req){
         
-$i=5;
-$value ='cource'.$i;
-        return $req -> $value ;
+        $user = Arpcourse::where('student_id', '=',  $req->st_id)->first();
+        $keys = array_keys((array)$req->all());
+         
+        foreach($req->all() as $key=>$val){
+            if($key=="st_id" || $key == "_token")
+            {
+                continue;
+            }
+            $user->update(
+                [
+                    $key => $val
+                ]);
+        }
+        
+        // return  $req;
 
     }
 }

@@ -80,7 +80,7 @@
 
             {{ $course_data->name }}
         </div>
-        <form method="post" action="{{ route('change_status') }}">
+        <form method="post" action="{{ route('change_status', ['st_id' =>$course_data->student_id ]) }}">
             @csrf
             @for ($i = 3; $i < count($col_names) - 2; $i++)
                 @php
