@@ -147,7 +147,7 @@ class DataController extends Controller
             $studentname = $data->name;
             Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, $sec));
         }
-        
+
         return  redirect()->route('thanwy', [
             'id' => $id,
             'subject' => $subject,
@@ -178,7 +178,6 @@ class DataController extends Controller
     public function change_status( Request $req){
         
         $user = Arpcourse::where('student_id', '=',  $req->st_id)->first();
-        $keys = array_keys((array)$req->all());
          
         foreach($req->all() as $key=>$val){
             if($key=="st_id" || $key == "_token")
@@ -191,7 +190,7 @@ class DataController extends Controller
                 ]);
         }
         
-        // return  $req;
+        return  redirect()->back();
 
     }
 }
