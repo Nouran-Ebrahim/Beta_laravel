@@ -89,35 +89,48 @@ class DataController extends Controller
             $data = Student::where('id', '=', Session::get('id'))->first();
             $studentname = $data->name;
 
-            try {
 
-                Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 0));
-                $data = Arpcourse::where('student_id', '=', Session::get('id'))->first();
-
-               // $subjectName=$subject.$id;
-                if(!($data)){
-                   // Arpcourse::where("student_id", Session::get('id'))->update([$subjectName => "waiting"]);
-                   Arpcourse::create([
-                    'name'=>$studentname,
+            $subdata = $subject . $id;
+            $data_row = Arpcourse::where('student_id', '=', Session::get('id'))->first();
+            if (!($data_row)) {
+                // Arpcourse::where("student_id", Session::get('id'))->update([$subjectName => "waiting"]);
+                Arpcourse::create([
+                    'name' => $studentname,
                     'student_id' => Session::get('id'),
                     //$subjectName => "waiting",
                 ]);
-                }
-    
-        
-                return  redirect()->route('prep-courses', [
-                    'id' => $id,
-                    'subject' => $subject,
-                    'sent' => $sent
-                ])->with(['success' => "تم تسجيل طلبك بنجاح من فضلك افحص الاميل"]);  
+            }
+            $status_sub = $data_row->$subdata;
+            
+            try {
                 
+                if ($status_sub == 'closed') {
+                    Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 0));
+                    Arpcourse::where("student_id", Session::get('id'))->update([$subdata => "waiting"]);
+
+                    return  redirect()->route('prep-courses', [
+                        'id' => $id,
+                        'subject' => $subject,
+                        'sent' => $sent,
+                        'status_sub' => $status_sub
+                    ])->with(['success' => "تم تسجيل طلبك بنجاح من فضلك افحص الاميل"]);
+
+                } else {
+                    return  redirect()->route('prep-courses', [
+                        'id' => $id,
+                        'subject' => $subject,
+                        'sent' => $sent,
+                        'status_sub' => $status_sub
+                    ])->with(['success' => "تم تسجيل طلبك و جارى التفعيل"]);
+                }
+
+                // $subjectName=$subject.$id;
+               
             } catch (\Swift_TransportException $transportExp) {
                 //echo $transportExp->getMessage();
                 return  redirect()->back()->with(['success' => " من فضلك تأكد بأتصالك بالانترنت وحاول مره اخري"]);
             }
-            
         }
-        
     }
 
 
@@ -125,6 +138,11 @@ class DataController extends Controller
     {
         $id = request('id');
         $subject = request('subject');
+        // $subdata=$subject.$id;
+        // $course_data = Arpcourse::where('student_id', '=',  $id)->first();
+
+        // $status_sub=$course_data->$subdata;
+
         // $sub = request('sub');
         if (Session::has('id')) {
             $data = Student::where('id', '=', Session::get('id'))->first();
@@ -155,42 +173,43 @@ class DataController extends Controller
             'sub' => $sub
         ])->with(['successth' => "تم تسجيل طلبك بنجاح من فضلك افحص الاميل"]);
     }
-    public function admin(){
+    public function admin()
+    {
         $FetchData = Arpcourse::all();
         //dd($FetchData);
-        return view('admin',[
-            'FetchData'=>$FetchData,
+        return view('admin', [
+            'FetchData' => $FetchData,
         ]);
     }
-    public function adminstore(Request $req){
-         $selectedid=$req->id;
-         $course_data = Arpcourse::where('student_id', '=',  $selectedid)->first();
-          $col_num=DB::getSchemaBuilder()->getColumnListing('arpcourses');
-         
-        return view('coursestatus',[
-           'selectedid'=>$selectedid,
-           'course_data'=>$course_data,
-           'col_names'=>$col_num
+    public function adminstore(Request $req)
+    {
+        $selectedid = $req->id;
+        $course_data = Arpcourse::where('student_id', '=',  $selectedid)->first();
+        $col_num = DB::getSchemaBuilder()->getColumnListing('arpcourses');
+
+        return view('coursestatus', [
+            'selectedid' => $selectedid,
+            'course_data' => $course_data,
+            'col_names' => $col_num
         ]);
-        
     }
 
-    public function change_status( Request $req){
-        
+    public function change_status(Request $req)
+    {
+
         $user = Arpcourse::where('student_id', '=',  $req->st_id)->first();
-         
-        foreach($req->all() as $key=>$val){
-            if($key=="st_id" || $key == "_token")
-            {
+
+        foreach ($req->all() as $key => $val) {
+            if ($key == "st_id" || $key == "_token") {
                 continue;
             }
             $user->update(
                 [
                     $key => $val
-                ]);
+                ]
+            );
         }
-        
-        return  redirect()->back();
 
+        return  redirect()->back();
     }
 }

@@ -116,7 +116,15 @@
 
                             <div class="course-content p-4">
                                 @if ($id == 1)
-                                    <a class="h5" href="">عربي اولي</a>
+
+                                <a class="h5" href="">عربي اولي</a>
+
+                                {{-- @if($status_sub=='closed')
+                                <p>عربي اولي</p>
+                                @else
+                                <a class="h5" href="">عربي اولي</a>
+                                @endif
+                                     --}}
                                 @else
                                     @if ($id == 2)
                                         <a class="h5" href="">عربي ثانيه</a>
