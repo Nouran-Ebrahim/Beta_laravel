@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Enpcourse;
 use App\Models\Student;
 use App\Models\Arpcourse;
 use Illuminate\Http\Request;
@@ -84,7 +85,7 @@ class DataController extends Controller
     {
         $id = request('id');
         $subject = request('subject');
-        $sent = request('sent');
+        $lan=request('lan');
         if (Session::has('id')) {
             $data = Student::where('id', '=', Session::get('id'))->first();
             $studentname = $data->name;
@@ -92,39 +93,61 @@ class DataController extends Controller
 
             $subdata = $subject . $id;
             $data_row = Arpcourse::where('student_id', '=', Session::get('id'))->first();
+            $data_row_en = Enpcourse::where('student_id', '=', Session::get('id'))->first();
+
             if (!($data_row)) {
-                // Arpcourse::where("student_id", Session::get('id'))->update([$subjectName => "waiting"]);
                 Arpcourse::create([
                     'name' => $studentname,
                     'student_id' => Session::get('id'),
-                    //$subjectName => "waiting",
+                ]);
+            }
+            if (!($data_row_en)) {
+                Enpcourse::create([
+                    'name' => $studentname,
+                    'student_id' => Session::get('id'),
                 ]);
             }
             $status_sub = $data_row->$subdata;
-            
+            $status_sub_en = $data_row_en->$subdata;
+
             try {
+                // if($lan=='en'){
+                //     if($status_sub_en == 'closed'){
+                //         Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 0));
+                //         Enpcourse::where("student_id", Session::get('id'))->update([$subdata => "waiting"]);
+    
+                //         return  redirect()->route('prep-courses', [
+                //             'id' => $id,
+                //             'subject' => $subject,
+                            
+                //         ])->with(['success' => "sucssfully join the course please check your email"]);
+                //     }else{
+                //         return  redirect()->route('prep-courses', [
+                //             'id' => $id,
+                //             'subject' => $subject,
+                //             'sent' => 'done',
+                //         ])->with(['success' => "already joinning please wait for comfermation"]);
+                //     }
+                // }else{
+                    if ($status_sub == 'closed') {
+                        Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 0));
+                        Arpcourse::where("student_id", Session::get('id'))->update([$subdata => "waiting"]);
+    
+                        return  redirect()->route('prep-courses', [
+                            'id' => $id,
+                            'subject' => $subject,
+                            
+                        ])->with(['success' => "تم تسجيل طلبك بنجاح من فضلك افحص الاميل"]);
+    
+                    } else {
+                        return  redirect()->route('prep-courses', [
+                            'id' => $id,
+                            'subject' => $subject,
+                            'sent' => 'done',
+                        ])->with(['success' => "تم تسجيل طلبك و جارى التفعيل"]);
+                    }
+                // }
                 
-                if ($status_sub == 'closed') {
-                    Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 0));
-                    Arpcourse::where("student_id", Session::get('id'))->update([$subdata => "waiting"]);
-
-                    return  redirect()->route('prep-courses', [
-                        'id' => $id,
-                        'subject' => $subject,
-                        'sent' => $sent,
-                        'status_sub' => $status_sub
-                    ])->with(['success' => "تم تسجيل طلبك بنجاح من فضلك افحص الاميل"]);
-
-                } else {
-                    return  redirect()->route('prep-courses', [
-                        'id' => $id,
-                        'subject' => $subject,
-                        'sent' => $sent,
-                        'status_sub' => $status_sub
-                    ])->with(['success' => "تم تسجيل طلبك و جارى التفعيل"]);
-                }
-
-                // $subjectName=$subject.$id;
                
             } catch (\Swift_TransportException $transportExp) {
                 //echo $transportExp->getMessage();

@@ -118,13 +118,6 @@
                                 @if ($id == 1)
 
                                 <a class="h5" href="">عربي اولي</a>
-
-                                {{-- @if($status_sub=='closed')
-                                <p>عربي اولي</p>
-                                @else
-                                <a class="h5" href="">عربي اولي</a>
-                                @endif
-                                     --}}
                                 @else
                                     @if ($id == 2)
                                         <a class="h5" href="">عربي ثانيه</a>
@@ -134,7 +127,7 @@
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
-                                        <a  class="btn btn-danger sent" href={{ route('subscribe', ['id'=>$id,'subject'=>'arabic','sent'=>"done"]) }}> اشترك الان </a>
+                                        <a  class="btn btn-danger sent" href={{ route('subscribe', ['id'=>$id,'subject'=>'arabic']) }}> اشترك الان </a>
 
                                         <h5 class="m-1">$99</h5>
 
@@ -163,7 +156,7 @@
 
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
-                                        <a class="btn btn-danger sent" href={{ route('subscribe', ['id'=>$id,'subject'=>'math','sent'=>"done"]) }}> اشترك الان </a>
+                                        <a class="btn btn-danger sent" href={{ route('subscribe', ['id'=>$id,'subject'=>'math']) }}> اشترك الان </a>
                                         <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
@@ -188,7 +181,7 @@
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
-                                        <a class="btn btn-danger" href={{ route('subscribe', ['id'=>$id,'subject'=>'دراسات']) }}> اشترك الان </a>
+                                        <a class="btn btn-danger sent" href={{ route('subscribe', ['id'=>$id,'subject'=>'social']) }}> اشترك الان </a>
 
                                         <h5 class="m-1">$99</h5>
                                     </div>
@@ -201,12 +194,7 @@
                             <img class="img-fluid photo" src="{{ asset('assets/images/physics.png') }}"
                                 alt="">
                             <div class="course-content p-4">
-                                <div class="d-flex justify-content-between mb-3">
-                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
-                                        Students</small>
-                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
-                                        30m</small>
-                                </div>
+                                
                                 @if ($id == 1)
                                     <a class="h5" href="">علوم اولي</a>
                                 @else
@@ -218,9 +206,9 @@
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
-                                        <a class="btn btn-danger" href={{ route('subscribe', ['id'=>$id,'subject'=>'علوم']) }}> اشترك الان </a>
+                                        <a class="btn btn-danger sent" href={{ route('subscribe', ['id'=>$id,'subject'=>'science']) }}> اشترك الان </a>
 
-                                        <h5 class="m-0">$99</h5>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
                             </div>
@@ -231,12 +219,7 @@
                             <img class="img-fluid photo" src="{{ asset('assets/images/english.png') }}"
                                 alt="">
                             <div class="course-content p-4">
-                                <div class="d-flex justify-content-between mb-3">
-                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
-                                        Students</small>
-                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
-                                        30m</small>
-                                </div>
+                                
                                 @if ($id == 1)
                                     <a class="h5" href="">انجليزي اولي</a>
                                 @else
@@ -248,9 +231,9 @@
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
-                                        <a class="btn btn-danger" href={{ route('subscribe', ['id'=>$id,'subject'=>'ُenglish']) }}> اشترك الان </a>
+                                        <a class="btn btn-danger sent" href={{ route('subscribe', ['id'=>$id,'subject'=>'english']) }}> اشترك الان </a>
 
-                                        <h5 class="m-0">$99</h5>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
                             </div>
@@ -261,12 +244,7 @@
                             <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
                                 alt="">
                             <div class="course-content p-4">
-                                <div class="d-flex justify-content-between mb-3">
-                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
-                                        Students</small>
-                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
-                                        30m</small>
-                                </div>
+                                
                                 @if ($id == 1)
                                     <a class="h5" href="">فرنساوي اولي</a>
                                 @else
@@ -278,7 +256,7 @@
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
-                                        <a class="btn btn-danger" href={{ route('subscribe', ['id'=>$id,'subject'=>'ُfresh']) }}> اشترك الان </a>
+                                        <a class="btn btn-danger sent" href={{ route('subscribe', ['id'=>$id,'subject'=>'frensh']) }}> اشترك الان </a>
 
                                         <h5 class="m-0">$99</h5>
                                     </div>
@@ -297,12 +275,7 @@
                                 alt="">
 
                             <div class="course-content p-4">
-                                <div class="d-flex justify-content-between mb-3">
-                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25
-                                        Students</small>
-                                    <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h
-                                        30m</small>
-                                </div>
+                                
                                 @if ($id == 1)
                                     <a class="h5" href=""> 1st Arabic</a>
                                 @else
@@ -314,8 +287,8 @@
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
-                                        <a class="btn btn-danger" href={{ route('subscribe', ['id'=>$id,'subject'=>'ُarabicen']) }}> اشترك الان </a>
-                                        <h5 class="m-0">$99</h5>
+                                        <a class="btn btn-danger sent" href={{ route('subscribe', ['id'=>$id,'subject'=>'ُarabic','lan'=>'en']) }}> join now</a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
                             </div>
@@ -344,7 +317,7 @@
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
-                                        <a class="btn btn-danger" href={{ route('subscribe', ['id'=>$id,'subject'=>'ُmathen']) }}> اشترك الان </a>
+                                        <a class="btn btn-danger sent" href={{ route('subscribe', ['id'=>$id,'subject'=>'ُmath','lan'=>'en']) }}> join now </a>
 
                                         <h5 class="m-0">$99</h5>
                                     </div>

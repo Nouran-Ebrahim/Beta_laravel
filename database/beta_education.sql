@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 04, 2023 at 03:57 PM
+-- Generation Time: Feb 16, 2023 at 11:39 PM
 -- Server version: 10.4.16-MariaDB
 -- PHP Version: 7.4.12
 
@@ -37,17 +37,61 @@ CREATE TABLE `arpcourses` (
   `arabic2` varchar(100) NOT NULL DEFAULT 'closed',
   `math3` varchar(100) NOT NULL DEFAULT 'closed',
   `arabic3` varchar(100) NOT NULL DEFAULT 'closed',
+  `english1` varchar(255) NOT NULL DEFAULT 'closed',
+  `english2` varchar(255) NOT NULL DEFAULT 'closed',
+  `english3` varchar(255) NOT NULL DEFAULT 'closed',
+  `science1` varchar(255) NOT NULL DEFAULT 'closed',
+  `science2` varchar(255) NOT NULL DEFAULT 'closed',
+  `science3` varchar(255) NOT NULL DEFAULT 'closed',
+  `social1` varchar(255) NOT NULL DEFAULT 'closed',
+  `social2` varchar(255) NOT NULL DEFAULT 'closed',
+  `social3` varchar(255) NOT NULL DEFAULT 'closed',
+  `frensh1` varchar(255) NOT NULL DEFAULT 'closed',
+  `frensh2` varchar(255) NOT NULL DEFAULT 'closed',
+  `frensh3` varchar(255) NOT NULL DEFAULT 'closed',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `enpcourses`
+--
+
+CREATE TABLE `enpcourses` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `student_id` int(11) NOT NULL,
+  `arabic1` varchar(100) NOT NULL DEFAULT 'closed',
+  `arabic2` varchar(100) NOT NULL DEFAULT 'closed',
+  `arabic3` varchar(100) NOT NULL DEFAULT 'closed',
+  `math1` varchar(100) NOT NULL DEFAULT 'closed',
+  `math2` varchar(100) NOT NULL DEFAULT 'closed',
+  `math3` varchar(100) NOT NULL DEFAULT 'closed',
+  `english1` varchar(100) NOT NULL DEFAULT 'closed',
+  `english2` varchar(100) NOT NULL DEFAULT 'closed',
+  `english3` varchar(100) NOT NULL DEFAULT 'closed',
+  `science1` varchar(100) NOT NULL DEFAULT 'closed',
+  `science2` varchar(100) NOT NULL DEFAULT 'closed',
+  `science3` varchar(100) NOT NULL DEFAULT 'closed',
+  `social1` varchar(100) NOT NULL DEFAULT 'closed',
+  `social2` varchar(100) NOT NULL DEFAULT 'closed',
+  `social3` varchar(100) NOT NULL DEFAULT 'closed',
+  `frensh1` varchar(100) NOT NULL DEFAULT 'closed',
+  `frensh2` varchar(100) NOT NULL DEFAULT 'closed',
+  `frensh3` varchar(100) NOT NULL DEFAULT 'closed',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `arpcourses`
+-- Dumping data for table `enpcourses`
 --
 
-INSERT INTO `arpcourses` (`id`, `name`, `student_id`, `math1`, `arabic1`, `math2`, `arabic2`, `math3`, `arabic3`, `created_at`, `updated_at`) VALUES
-(9, 'Nouran El Mohamady', 67, 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL),
-(10, 'Alaa Osama', 68, 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
+INSERT INTO `enpcourses` (`id`, `name`, `student_id`, `arabic1`, `arabic2`, `arabic3`, `math1`, `math2`, `math3`, `english1`, `english2`, `english3`, `science1`, `science2`, `science3`, `social1`, `social2`, `social3`, `frensh1`, `frensh2`, `frensh3`, `created_at`, `updated_at`) VALUES
+(1, 'Nouran El Mohamady', 67, 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL),
+(2, 'Alaa Osama', 68, 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -180,6 +224,12 @@ ALTER TABLE `arpcourses`
   ADD UNIQUE KEY `student_id` (`student_id`);
 
 --
+-- Indexes for table `enpcourses`
+--
+ALTER TABLE `enpcourses`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
@@ -229,7 +279,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `arpcourses`
 --
 ALTER TABLE `arpcourses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `enpcourses`
+--
+ALTER TABLE `enpcourses`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
