@@ -287,7 +287,7 @@
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
-                                        <a class="btn btn-danger sent" href={{ route('subscribe', ['id'=>$id,'subject'=>'ُarabic','lan'=>'en']) }}> join now</a>
+                                        <a class="btn btn-danger sent" href={{ route('subscribe', ['id'=>$id,'subject'=>'ُarabicen','lan'=>'en']) }}> join now</a>
                                         <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>

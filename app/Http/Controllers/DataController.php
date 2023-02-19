@@ -89,46 +89,30 @@ class DataController extends Controller
         if (Session::has('id')) {
             $data = Student::where('id', '=', Session::get('id'))->first();
             $studentname = $data->name;
-
-
-            $subdata = $subject . $id;
-            $data_row = Arpcourse::where('student_id', '=', Session::get('id'))->first();
-            $data_row_en = Enpcourse::where('student_id', '=', Session::get('id'))->first();
-
-            if (!($data_row)) {
+            if(!Arpcourse::where('student_id',Session::get('id'))->exists()){
                 Arpcourse::create([
                     'name' => $studentname,
                     'student_id' => Session::get('id'),
                 ]);
             }
-            if (!($data_row_en)) {
-                Enpcourse::create([
-                    'name' => $studentname,
-                    'student_id' => Session::get('id'),
-                ]);
-            }
-            $status_sub = $data_row->$subdata;
-            $status_sub_en = $data_row_en->$subdata;
+            
+            // if($lan==='en'){
+            //     if(!Enpcourse::where('student_id',Session::get('id'))->exists()){
+            //         Enpcourse::create([
+            //             'name' => $studentname,
+            //             'student_id' => Session::get('id'),
+            //         ]);
+            //     }
+            // }
+            
 
             try {
-                // if($lan=='en'){
-                //     if($status_sub_en == 'closed'){
-                //         Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 0));
-                //         Enpcourse::where("student_id", Session::get('id'))->update([$subdata => "waiting"]);
-    
-                //         return  redirect()->route('prep-courses', [
-                //             'id' => $id,
-                //             'subject' => $subject,
-                            
-                //         ])->with(['success' => "sucssfully join the course please check your email"]);
-                //     }else{
-                //         return  redirect()->route('prep-courses', [
-                //             'id' => $id,
-                //             'subject' => $subject,
-                //             'sent' => 'done',
-                //         ])->with(['success' => "already joinning please wait for comfermation"]);
-                //     }
-                // }else{
+                $data_row = Arpcourse::where('student_id', '=', Session::get('id'))->first();
+                //$data_row_en = Enpcourse::where('student_id', '=', Session::get('id'))->first();
+                $subdata = $subject . $id;
+                $status_sub = $data_row->$subdata;
+                //$status_sub_en = $data_row_en->$subdata;
+                if ($data_row) {
                     if ($status_sub == 'closed') {
                         Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 0));
                         Arpcourse::where("student_id", Session::get('id'))->update([$subdata => "waiting"]);
@@ -146,9 +130,26 @@ class DataController extends Controller
                             'sent' => 'done',
                         ])->with(['success' => "تم تسجيل طلبك و جارى التفعيل"]);
                     }
+                }
+                // elseif($data_row_en){
+                //     if($status_sub_en == 'closed'){
+                //         Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 0));
+                //         Enpcourse::where("student_id", Session::get('id'))->update([$subdata => "waiting"]);
+    
+                //         return  redirect()->route('prep-courses', [
+                //             'id' => $id,
+                //             'subject' => $subject,
+                //             'lan'=>$lan
+                //         ])->with(['success' => "sucssfully join the course please check your email"]);
+                //     }else{
+                //         return  redirect()->route('prep-courses', [
+                //             'id' => $id,
+                //             'subject' => $subject,
+                //             'sent' => 'done',
+                //         ])->with(['success' => "already joinning please wait for comfermation"]);
+                //     }
                 // }
-                
-               
+
             } catch (\Swift_TransportException $transportExp) {
                 //echo $transportExp->getMessage();
                 return  redirect()->back()->with(['success' => " من فضلك تأكد بأتصالك بالانترنت وحاول مره اخري"]);

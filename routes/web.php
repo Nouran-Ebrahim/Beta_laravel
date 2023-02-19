@@ -31,6 +31,7 @@ Route::get('/courses', function () {
 
 
 Route::get('/prep-courses',[Show::class,'prep'])->name('prep-courses');
+//Route::get('/prep-courses/en',[Show::class,'prep_en'])->name('prep-courses-en');
 
 Route::get('/prep-courses/subscribe',[DataController::class,'subscribe_course'])->name('subscribe');
 

@@ -67,19 +67,22 @@
 let url = window.location.search;
 const urlParams = new URLSearchParams(url);
 let id = urlParams.get('id')
+//let lang=urlParams.get('lang')
 console.log('id=', id)
 if (id == 1) {
 	document.getElementById('thanwy').addEventListener('click', () => {
-		document.getElementById('english').style.display = "block";
-		document.getElementById('english').style.cssText = 'display: flex; flex-direction: row; '
-		document.getElementById('arabic').style.display = "none";
-		document.getElementById('title').innerHTML = "1st Preparatory";
-
-		document.getElementById('thanwy').style.cssText = "color:#f5a425"
-		document.getElementById('prep').style.cssText = "color:white"
-
-
-		console.log("clicked")
+		// if(lang=='en'){
+			document.getElementById('english').style.display = "block";
+			document.getElementById('english').style.cssText = 'display: flex; flex-direction: row; '
+			document.getElementById('arabic').style.display = "none";
+			document.getElementById('title').innerHTML = "1st Preparatory";
+	
+			document.getElementById('thanwy').style.cssText = "color:#f5a425"
+			document.getElementById('prep').style.cssText = "color:white"
+	
+	
+			console.log("clicked")
+		// }
 
 	})
 
