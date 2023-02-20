@@ -65,13 +65,18 @@
 // let id = url.slice(-1);
 // console.log(id)
 let url = window.location.search;
+
 const urlParams = new URLSearchParams(url);
+// urlParams = urlParams + '&lang=eng'
 let id = urlParams.get('id')
 //let lang=urlParams.get('lang')
 console.log('id=', id)
 if (id == 1) {
 	document.getElementById('thanwy').addEventListener('click', () => {
 		// if(lang=='en'){
+		// var test = new URL(location.href)
+		// test.searchParams.append('x', 42)
+			
 			document.getElementById('english').style.display = "block";
 			document.getElementById('english').style.cssText = 'display: flex; flex-direction: row; '
 			document.getElementById('arabic').style.display = "none";

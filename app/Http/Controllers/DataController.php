@@ -85,18 +85,11 @@ class DataController extends Controller
     {
         $id = request('id');
         $subject = request('subject');
-        $lan=request('lan');
+        $lang=request('lang');
         if (Session::has('id')) {
             $data = Student::where('id', '=', Session::get('id'))->first();
             $studentname = $data->name;
-            if(!Arpcourse::where('student_id',Session::get('id'))->exists()){
-                Arpcourse::create([
-                    'name' => $studentname,
-                    'student_id' => Session::get('id'),
-                ]);
-            }
-            
-            // if($lan==='en'){
+            //  if($lang==='en'){
             //     if(!Enpcourse::where('student_id',Session::get('id'))->exists()){
             //         Enpcourse::create([
             //             'name' => $studentname,
@@ -104,6 +97,14 @@ class DataController extends Controller
             //         ]);
             //     }
             // }
+            if(!Arpcourse::where('student_id',Session::get('id'))->exists()){
+                Arpcourse::create([
+                    'name' => $studentname,
+                    'student_id' => Session::get('id'),
+                ]);
+            }
+            
+            
             
 
             try {
@@ -111,7 +112,7 @@ class DataController extends Controller
                 //$data_row_en = Enpcourse::where('student_id', '=', Session::get('id'))->first();
                 $subdata = $subject . $id;
                 $status_sub = $data_row->$subdata;
-                //$status_sub_en = $data_row_en->$subdata;
+               // $status_sub_en = $data_row_en->$subdata;
                 if ($data_row) {
                     if ($status_sub == 'closed') {
                         Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 0));
@@ -120,6 +121,7 @@ class DataController extends Controller
                         return  redirect()->route('prep-courses', [
                             'id' => $id,
                             'subject' => $subject,
+                            
                             
                         ])->with(['success' => "تم تسجيل طلبك بنجاح من فضلك افحص الاميل"]);
     
@@ -139,7 +141,6 @@ class DataController extends Controller
                 //         return  redirect()->route('prep-courses', [
                 //             'id' => $id,
                 //             'subject' => $subject,
-                //             'lan'=>$lan
                 //         ])->with(['success' => "sucssfully join the course please check your email"]);
                 //     }else{
                 //         return  redirect()->route('prep-courses', [
