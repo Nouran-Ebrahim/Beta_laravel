@@ -39,26 +39,26 @@
 
 	function getMessage() {
 		$.ajax({
-		   type:'POST',
-		   url:'/getmsg',
-		   data:'_token = <?php echo csrf_token() ?>',
-		   success:function(data) {
-			  $("#msg").html(data.msg);
-		   }
+			type: 'POST',
+			url: '/getmsg',
+			data: '_token = <?php echo csrf_token() ?>',
+			success: function (data) {
+				$("#msg").html(data.msg);
+			}
 		});
-	 }
-// 	 let url = window.location.search;
-// const urlParams = new URLSearchParams(url);
-// let sent = urlParams.get('sent')
-// console.log(sent)
-// if(sent){
-// 	$('.sent').click( function(e) {
-// 		console.log(e.target)
-// 		e.preventDefault();
-// 		//e.preventDefault();
-// 		alert("لقد قمت بالتسجيل في هذا الكورس من قبل");
-// 	  });
-// }
+	}
+	// 	 let url = window.location.search;
+	// const urlParams = new URLSearchParams(url);
+	// let sent = urlParams.get('sent')
+	// console.log(sent)
+	// if(sent){
+	// 	$('.sent').click( function(e) {
+	// 		console.log(e.target)
+	// 		e.preventDefault();
+	// 		//e.preventDefault();
+	// 		alert("لقد قمت بالتسجيل في هذا الكورس من قبل");
+	// 	  });
+	// }
 
 })(window.jQuery);
 // let url = window.location.href;
@@ -69,24 +69,20 @@ let url = window.location.search;
 const urlParams = new URLSearchParams(url);
 // urlParams = urlParams + '&lang=eng'
 let id = urlParams.get('id')
-//let lang=urlParams.get('lang')
 console.log('id=', id)
 if (id == 1) {
 	document.getElementById('thanwy').addEventListener('click', () => {
-		// if(lang=='en'){
-		// var test = new URL(location.href)
-		// test.searchParams.append('x', 42)
-			
-			document.getElementById('english').style.display = "block";
-			document.getElementById('english').style.cssText = 'display: flex; flex-direction: row; '
-			document.getElementById('arabic').style.display = "none";
-			document.getElementById('title').innerHTML = "1st Preparatory";
-	
-			document.getElementById('thanwy').style.cssText = "color:#f5a425"
-			document.getElementById('prep').style.cssText = "color:white"
-	
-	
-			console.log("clicked")
+		
+		document.getElementById('english').style.display = "block";
+		document.getElementById('english').style.cssText = 'display: flex; flex-direction: row; '
+		document.getElementById('arabic').style.display = "none";
+		document.getElementById('title').innerHTML = "1st Preparatory";
+
+		document.getElementById('thanwy').style.cssText = "color:#f5a425"
+		document.getElementById('prep').style.cssText = "color:white"
+
+
+		console.log("clicked")
 		// }
 
 	})

@@ -63,12 +63,12 @@
                 </div>
                 <div class="form-check">
                     <input  type="radio" name="gender" id="male"
-                        value="option1">
+                        value="male">
                     <label  for="male">
                         Male
                     </label>
                     <input  type="radio" name="gender" id="female"
-                        value="option2">
+                        value="female">
                     <label  for="female">
                     Female
                     </label>
@@ -102,14 +102,14 @@
                 <div>
                     <div class="form-check">
                         <input type="radio" name="type" id="exampleRadios2"
-                            value="option4">
+                            value="Experimental School">
                         <label class="form-check-label" for="exampleRadios2">
                             Experimental School
                         </label>
                     </div>
                     <div class="form-check">
                         <input  type="radio" name="type" id="exampleRadios2"
-                            value="option5">
+                            value="Languege School">
                         <label  for="exampleRadios2">
                             Languege School
                         </label>

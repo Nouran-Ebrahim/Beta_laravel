@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Enpcourse;
 use App\Models\Student;
 use App\Models\Arpcourse;
+use App\Models\Arth1coure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
@@ -85,46 +86,46 @@ class DataController extends Controller
     {
         $id = request('id');
         $subject = request('subject');
-        $lang=request('lang');
+        $lang = request('lang');
+        //dd($lang);
         if (Session::has('id')) {
             $data = Student::where('id', '=', Session::get('id'))->first();
             $studentname = $data->name;
-            //  if($lang==='en'){
-            //     if(!Enpcourse::where('student_id',Session::get('id'))->exists()){
-            //         Enpcourse::create([
-            //             'name' => $studentname,
-            //             'student_id' => Session::get('id'),
-            //         ]);
-            //     }
-            // }
-            if(!Arpcourse::where('student_id',Session::get('id'))->exists()){
-                Arpcourse::create([
-                    'name' => $studentname,
-                    'student_id' => Session::get('id'),
-                ]);
+            if ($lang === 'en') {
+                if (!Enpcourse::where('student_id', Session::get('id'))->exists()) {
+                    Enpcourse::create([
+                        'name' => $studentname,
+                        'student_id' => Session::get('id'),
+                    ]);
+                } else {
+                    echo '<script>alert("faild to join this course please try again")</script>';
+                }
+            } elseif ($lang === 'ar') {
+                if (!Arpcourse::where('student_id', Session::get('id'))->exists()) {
+                    Arpcourse::create([
+                        'name' => $studentname,
+                        'student_id' => Session::get('id'),
+                    ]);
+                } else {
+                    echo '<script>alert("تعذر تسجيل الماده حاول مره اخره")</script>';
+                }
+            } else {
+                echo '<script>alert("تعذر الاتصال حاول مره اخره")</script>';
             }
-            
-            
-            
-
+            $data_row = Arpcourse::where('student_id', '=', Session::get('id'))->first();
+            $data_row_en = Enpcourse::where('student_id', '=', Session::get('id'))->first();
+            $subdata = $subject . $id;
             try {
-                $data_row = Arpcourse::where('student_id', '=', Session::get('id'))->first();
-                //$data_row_en = Enpcourse::where('student_id', '=', Session::get('id'))->first();
-                $subdata = $subject . $id;
-                $status_sub = $data_row->$subdata;
-               // $status_sub_en = $data_row_en->$subdata;
-                if ($data_row) {
-                    if ($status_sub == 'closed') {
+                if ($data_row && $lang == 'ar') {
+                    if ($data_row->$subdata == 'closed') {
                         Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 0));
                         Arpcourse::where("student_id", Session::get('id'))->update([$subdata => "waiting"]);
-    
+
                         return  redirect()->route('prep-courses', [
                             'id' => $id,
                             'subject' => $subject,
-                            
-                            
+
                         ])->with(['success' => "تم تسجيل طلبك بنجاح من فضلك افحص الاميل"]);
-    
                     } else {
                         return  redirect()->route('prep-courses', [
                             'id' => $id,
@@ -132,29 +133,30 @@ class DataController extends Controller
                             'sent' => 'done',
                         ])->with(['success' => "تم تسجيل طلبك و جارى التفعيل"]);
                     }
-                }
-                // elseif($data_row_en){
-                //     if($status_sub_en == 'closed'){
-                //         Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 0));
-                //         Enpcourse::where("student_id", Session::get('id'))->update([$subdata => "waiting"]);
-    
-                //         return  redirect()->route('prep-courses', [
-                //             'id' => $id,
-                //             'subject' => $subject,
-                //         ])->with(['success' => "sucssfully join the course please check your email"]);
-                //     }else{
-                //         return  redirect()->route('prep-courses', [
-                //             'id' => $id,
-                //             'subject' => $subject,
-                //             'sent' => 'done',
-                //         ])->with(['success' => "already joinning please wait for comfermation"]);
-                //     }
-                // }
+                } elseif ($data_row_en  && $lang == 'en') {
 
+                    if ($data_row_en->$subdata == 'closed') {
+                        Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 0));
+                        Enpcourse::where("student_id", Session::get('id'))->update([$subdata => "waiting"]);
+
+                        return  redirect()->route('prep-courses', [
+                            'id' => $id,
+                            'subject' => $subject,
+
+                        ])->with(['success' => "sucssfully join the course please check your email"]);
+                    } else {
+                        return  redirect()->route('prep-courses', [
+                            'id' => $id,
+                            'subject' => $subject,
+                            'sent' => 'done',
+                        ])->with(['success' => "already joinning please wait for comfermation"]);
+                    }
+                }
             } catch (\Swift_TransportException $transportExp) {
                 //echo $transportExp->getMessage();
                 return  redirect()->back()->with(['success' => " من فضلك تأكد بأتصالك بالانترنت وحاول مره اخري"]);
             }
+            
         }
     }
 
@@ -163,21 +165,79 @@ class DataController extends Controller
     {
         $id = request('id');
         $subject = request('subject');
-        // $subdata=$subject.$id;
-        // $course_data = Arpcourse::where('student_id', '=',  $id)->first();
-
-        // $status_sub=$course_data->$subdata;
-
-        // $sub = request('sub');
+        $lang = request('lang');
         if (Session::has('id')) {
             $data = Student::where('id', '=', Session::get('id'))->first();
             $studentname = $data->name;
-            Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 11));
+
+            if ($lang === 'en') {
+                if (!Enpcourse::where('student_id', Session::get('id'))->exists()) {
+                    Enpcourse::create([
+                        'name' => $studentname,
+                        'student_id' => Session::get('id'),
+                    ]);
+                } else {
+                    echo '<script>alert("faild to join this course please try again")</script>';
+                }
+            } elseif ($lang === 'ar') {
+                if (!Arth1coure::where('student_id', Session::get('id'))->exists()) {
+                    Arth1coure::create([
+                        'name' => $studentname,
+                        'student_id' => Session::get('id'),
+                    ]);
+                } else {
+                    echo '<script>alert("تعذر تسجيل الماده حاول مره اخره")</script>';
+                }
+            } else {
+                echo '<script>alert("تعذر الاتصال حاول مره اخره")</script>';
+            }
+
+            $data_row = Arth1coure::where('student_id', '=', Session::get('id'))->first();
+            $data_row_en = Enpcourse::where('student_id', '=', Session::get('id'))->first();
+            //$subdata = $subject . $id;
+            try {
+                if ($data_row && $lang == 'ar') {
+                    if ($data_row->$subject == 'closed') {
+                        Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 11));
+                        Arth1coure::where("student_id", Session::get('id'))->update([$subject => "waiting"]);
+
+                        return  redirect()->route('thanwy12-courses', [
+                            'id' => $id,
+                            'subject' => $subject,
+
+                        ])->with(['successth' => "تم تسجيل طلبك بنجاح من فضلك افحص الاميل"]);
+                    } else {
+                        return  redirect()->route('thanwy12-courses', [
+                            'id' => $id,
+                            'subject' => $subject,
+                            'sent' => 'done',
+                        ])->with(['successth' => "تم تسجيل طلبك و جارى التفعيل"]);
+                    }
+                } elseif ($data_row_en  && $lang == 'en') {
+
+                    if ($data_row_en->$subject == 'closed') {
+                        Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 11));
+                        Enpcourse::where("student_id", Session::get('id'))->update([$subject => "waiting"]);
+
+                        return  redirect()->route('thanwy12-courses', [
+                            'id' => $id,
+                            'subject' => $subject,
+
+                        ])->with(['successth' => "sucssfully join the course please check your email"]);
+                    } else {
+                        return  redirect()->route('thanwy12-courses', [
+                            'id' => $id,
+                            'subject' => $subject,
+                            'sent' => 'done',
+                        ])->with(['successth' => "already joinning please wait for comfermation"]);
+                    }
+                }
+            } catch (\Swift_TransportException $transportExp) {
+                //echo $transportExp->getMessage();
+                return  redirect()->back()->with(['success' => " من فضلك تأكد بأتصالك بالانترنت وحاول مره اخري"]);
+            }
         }
-        return  redirect()->route('thanwy12-courses', [
-            'id' => $id,
-            'subject' => $subject
-        ])->with(['successth' => "تم تسجيل طلبك بنجاح من فضلك افحص الاميل"]);
+   
     }
     public function subscribe_thanwy()
     {
