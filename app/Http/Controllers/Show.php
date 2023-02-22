@@ -24,15 +24,17 @@ class Show extends Controller
       
     ]);
   }
-  // public function prep_en()
-  // {
-  //   $id = request('id');
-  //   $lang = request('lang');
-  //   return view('courses', [
-  //     'id' => $id,
-  //     'lang'=>$lang
-  //   ]);
-  // }
+  public function details()
+  {
+    $id = request('id');
+    $subject = request('subject');
+    $status=request('status');
+    return view('pcoursedetails', [
+      'id' => $id,
+      'subject'=>$subject,
+      'status'=>$status
+    ]);
+  }
   public function first()
   {
     $id = request('id');

@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    {{-- @livewireStyles --}}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -124,12 +123,12 @@
                             <div class="course-content p-4">
                                 @if ($id == 1)
 
-                                    <a class="h5" href="">عربي اولي</a>
+                                    <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'arabic']) }}">عربي اولي</a>
                                 @else
                                     @if ($id == 2)
-                                        <a class="h5" href="">عربي ثانيه</a>
+                                        <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'arabic']) }}">عربي ثانيه</a>
                                     @else
-                                        <a class="h5" href="">عربي ثالثه</a>
+                                        <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'arabic']) }}">عربي ثالثه</a>
                                     @endif
                                 @endif
                                 <div class="border-top mt-4 pt-4">
@@ -152,14 +151,13 @@
                             <div class="course-content p-4">
 
                                 @if ($_GET['id'] == 1)
-                                    <a class="h5" href="">رياضيات اولي
-
+                                    <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'math']) }}">رياضيات اولي
                                     </a>
                                 @else
                                     @if ($id == 2)
-                                        <a class="h5" href="">رياضيات ثانيه</a>
+                                        <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'math']) }}">رياضيات ثانيه</a>
                                     @else
-                                        <a class="h5" href="">رياضيات</a>
+                                        <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'math']) }}">رياضيات</a>
                                     @endif
                                 @endif
 
@@ -472,9 +470,7 @@
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/courses.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    {{-- <script src="../public/assets/js/sharedd.js"></script> --}}
 
-    {{-- @livewireScripts --}}
 
 </body>
 

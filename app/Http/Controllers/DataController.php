@@ -6,6 +6,7 @@ use App\Models\Enpcourse;
 use App\Models\Student;
 use App\Models\Arpcourse;
 use App\Models\Arth1coure;
+use App\Models\Enth1coure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
@@ -156,11 +157,42 @@ class DataController extends Controller
                 //echo $transportExp->getMessage();
                 return  redirect()->back()->with(['success' => " من فضلك تأكد بأتصالك بالانترنت وحاول مره اخري"]);
             }
-            
         }
     }
 
-
+    public function pcoursedetails()
+    {
+        $id = request('id');
+        $subject = request('subject');
+        if (Session::has('id')) {
+            $subdata = $subject . $id;
+            $data_row = Arpcourse::where('student_id', '=', Session::get('id'))->first();
+            // dd($data_row);
+            
+            if ($data_row ) {
+                $status = $data_row->$subdata;
+                if ($status == 'closed') {
+                    return redirect()->route('details', [
+                        'id' => $id,
+                        'subject' => $subject,
+                        'status' => $status
+                    ])->with(['confirm' => "من فضلك اشترك في الكورس"]);
+                } elseif ($status == 'waiting') {
+                    return redirect()->route('details', [
+                        'id' => $id,
+                        'subject' => $subject,
+                        'status' => $status
+                    ])->with(['confirm' => "جاري الاشتراك في الكورس"]);
+                }
+            } else {
+                
+                return redirect()->route('details', [
+                    'id' => $id,
+                    'subject' => $subject
+                ])->with(['confirm' => "من فضلك اشترك في الكورس"]);
+            }
+        }
+    }
     public function subscribe_firstcourse()
     {
         $id = request('id');
@@ -171,8 +203,8 @@ class DataController extends Controller
             $studentname = $data->name;
 
             if ($lang === 'en') {
-                if (!Enpcourse::where('student_id', Session::get('id'))->exists()) {
-                    Enpcourse::create([
+                if (!Enth1coure::where('student_id', Session::get('id'))->exists()) {
+                    Enth1coure::create([
                         'name' => $studentname,
                         'student_id' => Session::get('id'),
                     ]);
@@ -193,7 +225,7 @@ class DataController extends Controller
             }
 
             $data_row = Arth1coure::where('student_id', '=', Session::get('id'))->first();
-            $data_row_en = Enpcourse::where('student_id', '=', Session::get('id'))->first();
+            $data_row_en = Enth1coure::where('student_id', '=', Session::get('id'))->first();
             //$subdata = $subject . $id;
             try {
                 if ($data_row && $lang == 'ar') {
@@ -217,7 +249,7 @@ class DataController extends Controller
 
                     if ($data_row_en->$subject == 'closed') {
                         Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 11));
-                        Enpcourse::where("student_id", Session::get('id'))->update([$subject => "waiting"]);
+                        Enth1coure::where("student_id", Session::get('id'))->update([$subject => "waiting"]);
 
                         return  redirect()->route('thanwy12-courses', [
                             'id' => $id,
@@ -237,7 +269,6 @@ class DataController extends Controller
                 return  redirect()->back()->with(['success' => " من فضلك تأكد بأتصالك بالانترنت وحاول مره اخري"]);
             }
         }
-   
     }
     public function subscribe_thanwy()
     {
