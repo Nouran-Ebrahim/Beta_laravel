@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 16, 2023 at 11:39 PM
+-- Generation Time: Feb 23, 2023 at 08:16 PM
 -- Server version: 10.4.16-MariaDB
 -- PHP Version: 7.4.12
 
@@ -53,6 +53,48 @@ CREATE TABLE `arpcourses` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `arpcourses`
+--
+
+INSERT INTO `arpcourses` (`id`, `name`, `student_id`, `math1`, `arabic1`, `math2`, `arabic2`, `math3`, `arabic3`, `english1`, `english2`, `english3`, `science1`, `science2`, `science3`, `social1`, `social2`, `social3`, `frensh1`, `frensh2`, `frensh3`, `created_at`, `updated_at`) VALUES
+(74, 'Nouran El Mohamady', 71, 'closed', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `arth1coures`
+--
+
+CREATE TABLE `arth1coures` (
+  `id` int(11) NOT NULL,
+  `student_id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `arabic` varchar(100) NOT NULL DEFAULT 'closed',
+  `philosophyLogic` varchar(100) NOT NULL DEFAULT 'closed',
+  `algebratrigonometry` varchar(100) NOT NULL DEFAULT 'closed',
+  `analyticalengineering` varchar(100) NOT NULL DEFAULT 'closed',
+  `history` varchar(100) NOT NULL DEFAULT 'closed',
+  `geography` varchar(100) NOT NULL DEFAULT 'closed',
+  `physics` varchar(100) NOT NULL DEFAULT 'closed',
+  `chemistry` varchar(100) NOT NULL DEFAULT 'closed',
+  `biology` varchar(100) NOT NULL DEFAULT 'closed',
+  `english` varchar(100) NOT NULL DEFAULT 'closed',
+  `frensh` varchar(100) NOT NULL DEFAULT 'closed',
+  `italian` varchar(100) NOT NULL DEFAULT 'closed',
+  `german` varchar(100) NOT NULL DEFAULT 'closed',
+  `spanish` varchar(100) NOT NULL DEFAULT 'closed',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `arth1coures`
+--
+
+INSERT INTO `arth1coures` (`id`, `student_id`, `name`, `arabic`, `philosophyLogic`, `algebratrigonometry`, `analyticalengineering`, `history`, `geography`, `physics`, `chemistry`, `biology`, `english`, `frensh`, `italian`, `german`, `spanish`, `created_at`, `updated_at`) VALUES
+(2, 71, 'Nouran El Mohamady', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -90,8 +132,42 @@ CREATE TABLE `enpcourses` (
 --
 
 INSERT INTO `enpcourses` (`id`, `name`, `student_id`, `arabic1`, `arabic2`, `arabic3`, `math1`, `math2`, `math3`, `english1`, `english2`, `english3`, `science1`, `science2`, `science3`, `social1`, `social2`, `social3`, `frensh1`, `frensh2`, `frensh3`, `created_at`, `updated_at`) VALUES
-(1, 'Nouran El Mohamady', 67, 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL),
-(2, 'Alaa Osama', 68, 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
+(27, 'Nouran El Mohamady', 71, 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `enth1coures`
+--
+
+CREATE TABLE `enth1coures` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `student_id` int(11) NOT NULL,
+  `arabic` varchar(100) NOT NULL DEFAULT 'closed',
+  `philosophyLogic` varchar(100) NOT NULL DEFAULT 'closed',
+  `algebratrigonometry` varchar(100) NOT NULL DEFAULT 'closed',
+  `analyticalengineering` varchar(100) NOT NULL DEFAULT 'closed',
+  `history` varchar(100) NOT NULL DEFAULT 'closed',
+  `geography` varchar(100) NOT NULL DEFAULT 'closed',
+  `physics` varchar(100) NOT NULL DEFAULT 'closed',
+  `chemistry` varchar(100) NOT NULL DEFAULT 'closed',
+  `biology` varchar(100) NOT NULL DEFAULT 'closed',
+  `english` varchar(100) NOT NULL DEFAULT 'closed',
+  `frensh` varchar(100) NOT NULL DEFAULT 'closed',
+  `italian` varchar(100) NOT NULL DEFAULT 'closed',
+  `german` varchar(100) NOT NULL DEFAULT 'closed',
+  `spanish` varchar(100) NOT NULL DEFAULT 'closed',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `enth1coures`
+--
+
+INSERT INTO `enth1coures` (`id`, `name`, `student_id`, `arabic`, `philosophyLogic`, `algebratrigonometry`, `analyticalengineering`, `history`, `geography`, `physics`, `chemistry`, `biology`, `english`, `frensh`, `italian`, `german`, `spanish`, `created_at`, `updated_at`) VALUES
+(1, 'Nouran El Mohamady', 71, 'closed', 'closed', 'closed', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -189,11 +265,10 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`id`, `email`, `name`, `mobile`, `parent_mobile`, `phone`, `gender`, `city`, `school`, `grade`, `type`, `created_at`, `updated_at`, `code`) VALUES
-(46, 'mohamedlokman474@gmail.com', 'Mohamed loqman', 1552662566, 1223701860, 5914989, 'option1', 'Alexandria', 'nabawya mosa', '1st Preparatory', 'option5', NULL, NULL, 'be0d4def'),
-(67, 'nouran.ssp@gmail.com', 'Nouran El Mohamady', 1218944211, 1017944211, 5914989, 'option2', 'Alexandria', 'nabawya mosa', '1st Preparatory', 'option4', NULL, NULL, 'e0e98c63'),
-(68, 'alaaosama2121998@gmail.com', 'Alaa Osama', 1017944211, 1222701960, 5914989, 'option2', 'Alexandria', 'nabawya mosa', '1st Preparatory', 'option4', NULL, NULL, '215bffae'),
-(69, 'akh52888@gmail.com', 'Ahmed Mohamed khalia', 1003846544, 1003846544, 1017944211, 'option1', 'Alexandria', 'gjgv jjn', '1st Preparatory', 'option4', NULL, NULL, '227e10f8'),
-(70, 'beta.education2022@gmail.com', 'admain', 1223881860, 1277701850, 5914910, 'option1', 'Alexandria', 'bbbb', '3th Secoundary', 'option4', NULL, NULL, 'nA$1&5yn');
+(68, 'alaaosama2121998@gmail.com', 'Alaa Osama', 1017944211, 1222701960, 5914989, 'female', 'Alexandria', 'nabawya mosa', '3th Secoundary', 'Experimental School', NULL, NULL, '215bffae'),
+(69, 'akh52888@gmail.com', 'Ahmed Mohamed khalia', 1003846544, 1003846544, 1017944211, 'male', 'Alexandria', 'gjgv jjn', '2nd Secoundary', 'Experimental School\r\n', NULL, NULL, '227e10f8'),
+(70, 'beta.education2022@gmail.com', 'admain', 1223881860, 1277701850, 5914910, 'male', 'Alexandria', 'bbbb', '3th Secoundary', 'Experimental School', NULL, NULL, 'nA$1&5yn'),
+(71, 'nouran.ssp@gmail.com', 'Nouran El Mohamady', 1017944211, 1223701860, 5914989, 'female', 'Alexandria', 'nabawya mosa', '2nd Preparatory', 'Experimental School', NULL, NULL, '7092b73f');
 
 -- --------------------------------------------------------
 
@@ -224,9 +299,21 @@ ALTER TABLE `arpcourses`
   ADD UNIQUE KEY `student_id` (`student_id`);
 
 --
+-- Indexes for table `arth1coures`
+--
+ALTER TABLE `arth1coures`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `enpcourses`
 --
 ALTER TABLE `enpcourses`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `enth1coures`
+--
+ALTER TABLE `enth1coures`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -279,13 +366,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `arpcourses`
 --
 ALTER TABLE `arpcourses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
+
+--
+-- AUTO_INCREMENT for table `arth1coures`
+--
+ALTER TABLE `arth1coures`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `enpcourses`
 --
 ALTER TABLE `enpcourses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+--
+-- AUTO_INCREMENT for table `enth1coures`
+--
+ALTER TABLE `enth1coures`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -309,7 +408,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT for table `users`
