@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Feb 23, 2023 at 08:16 PM
--- Server version: 10.4.16-MariaDB
--- PHP Version: 7.4.12
+-- Host: 127.0.0.1:3306
+-- Generation Time: Mar 02, 2023 at 04:27 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -51,14 +51,15 @@ CREATE TABLE `arpcourses` (
   `frensh3` varchar(255) NOT NULL DEFAULT 'closed',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `arpcourses`
 --
 
 INSERT INTO `arpcourses` (`id`, `name`, `student_id`, `math1`, `arabic1`, `math2`, `arabic2`, `math3`, `arabic3`, `english1`, `english2`, `english3`, `science1`, `science2`, `science3`, `social1`, `social2`, `social3`, `frensh1`, `frensh2`, `frensh3`, `created_at`, `updated_at`) VALUES
-(74, 'Nouran El Mohamady', 71, 'closed', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
+(74, 'Nouran El Mohamady', 71, 'closed', 'open', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL),
+(75, 'Alaa Osama', 72, 'closed', 'open', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -86,14 +87,62 @@ CREATE TABLE `arth1coures` (
   `spanish` varchar(100) NOT NULL DEFAULT 'closed',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `arth1coures`
 --
 
 INSERT INTO `arth1coures` (`id`, `student_id`, `name`, `arabic`, `philosophyLogic`, `algebratrigonometry`, `analyticalengineering`, `history`, `geography`, `physics`, `chemistry`, `biology`, `english`, `frensh`, `italian`, `german`, `spanish`, `created_at`, `updated_at`) VALUES
-(2, 71, 'Nouran El Mohamady', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
+(3, 71, 'Nouran El Mohamady', 'closed', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `arth2courses`
+--
+
+CREATE TABLE `arth2courses` (
+  `id` int(15) NOT NULL,
+  `student_id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `arabic` varchar(100) NOT NULL,
+  `english` varchar(100) NOT NULL,
+  `frensh` varchar(100) NOT NULL,
+  `italy` varchar(100) NOT NULL,
+  `math` varchar(100) NOT NULL,
+  `physics` varchar(100) NOT NULL,
+  `chemistry` varchar(100) NOT NULL,
+  `biology` varchar(100) NOT NULL,
+  `history` varchar(100) NOT NULL,
+  `psychology` varchar(100) NOT NULL,
+  `geography` varchar(100) NOT NULL,
+  `philosophy` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `arth3courses`
+--
+
+CREATE TABLE `arth3courses` (
+  `id` int(15) NOT NULL,
+  `student_id` int(11) NOT NULL,
+  `name` int(150) NOT NULL,
+  `arabic` varchar(100) NOT NULL,
+  `english` varchar(100) NOT NULL,
+  `frensh` varchar(100) NOT NULL,
+  `italy` varchar(100) NOT NULL,
+  `math` varchar(100) NOT NULL,
+  `physics` varchar(100) NOT NULL,
+  `chemistry` varchar(100) NOT NULL,
+  `biology` varchar(100) NOT NULL,
+  `history` varchar(100) NOT NULL,
+  `psychology` varchar(100) NOT NULL,
+  `geography` varchar(100) NOT NULL,
+  `philosophy` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -125,7 +174,7 @@ CREATE TABLE `enpcourses` (
   `frensh3` varchar(100) NOT NULL DEFAULT 'closed',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `enpcourses`
@@ -160,14 +209,62 @@ CREATE TABLE `enth1coures` (
   `spanish` varchar(100) NOT NULL DEFAULT 'closed',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `enth1coures`
 --
 
 INSERT INTO `enth1coures` (`id`, `name`, `student_id`, `arabic`, `philosophyLogic`, `algebratrigonometry`, `analyticalengineering`, `history`, `geography`, `physics`, `chemistry`, `biology`, `english`, `frensh`, `italian`, `german`, `spanish`, `created_at`, `updated_at`) VALUES
-(1, 'Nouran El Mohamady', 71, 'closed', 'closed', 'closed', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
+(2, 'Nouran El Mohamady', 71, 'closed', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `enth2courses`
+--
+
+CREATE TABLE `enth2courses` (
+  `id` int(11) NOT NULL,
+  `student_id` int(11) NOT NULL,
+  `name` varchar(150) NOT NULL,
+  `arabic` varchar(100) NOT NULL,
+  `english` varchar(100) NOT NULL,
+  `frensh` varchar(100) NOT NULL,
+  `italy` varchar(100) NOT NULL,
+  `math` varchar(100) NOT NULL,
+  `physics` varchar(100) NOT NULL,
+  `chemistry` varchar(100) NOT NULL,
+  `biology` varchar(100) NOT NULL,
+  `history` varchar(100) NOT NULL,
+  `psychology` varchar(100) NOT NULL,
+  `geography` varchar(100) NOT NULL,
+  `philosophy` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `enth3courses`
+--
+
+CREATE TABLE `enth3courses` (
+  `id` int(15) NOT NULL,
+  `student_id` int(11) NOT NULL,
+  `name` varchar(150) NOT NULL,
+  `arabic` varchar(100) NOT NULL,
+  `english` varchar(100) NOT NULL,
+  `frensh` varchar(100) NOT NULL,
+  `italy` varchar(100) NOT NULL,
+  `math` varchar(100) NOT NULL,
+  `physics` varchar(100) NOT NULL,
+  `chemistry` varchar(100) NOT NULL,
+  `biology` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NOT NULL,
+  `history` varchar(100) NOT NULL,
+  `psychology` varchar(100) NOT NULL,
+  `geography` varchar(100) NOT NULL,
+  `philosophy` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -177,11 +274,11 @@ INSERT INTO `enth1coures` (`id`, `name`, `student_id`, `arabic`, `philosophyLogi
 
 CREATE TABLE `failed_jobs` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `uuid` varchar(255) NOT NULL,
+  `connection` text NOT NULL,
+  `queue` text NOT NULL,
+  `payload` longtext NOT NULL,
+  `exception` longtext NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -193,7 +290,7 @@ CREATE TABLE `failed_jobs` (
 
 CREATE TABLE `migrations` (
   `id` int(10) UNSIGNED NOT NULL,
-  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `migration` varchar(255) NOT NULL,
   `batch` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -214,8 +311,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 --
 
 CREATE TABLE `password_resets` (
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `token` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -227,11 +324,11 @@ CREATE TABLE `password_resets` (
 
 CREATE TABLE `personal_access_tokens` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `tokenable_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tokenable_type` varchar(255) NOT NULL,
   `tokenable_id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `abilities` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  `token` varchar(64) NOT NULL,
+  `abilities` text DEFAULT NULL,
   `last_used_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -258,17 +355,17 @@ CREATE TABLE `students` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `code` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `students`
 --
 
 INSERT INTO `students` (`id`, `email`, `name`, `mobile`, `parent_mobile`, `phone`, `gender`, `city`, `school`, `grade`, `type`, `created_at`, `updated_at`, `code`) VALUES
-(68, 'alaaosama2121998@gmail.com', 'Alaa Osama', 1017944211, 1222701960, 5914989, 'female', 'Alexandria', 'nabawya mosa', '3th Secoundary', 'Experimental School', NULL, NULL, '215bffae'),
 (69, 'akh52888@gmail.com', 'Ahmed Mohamed khalia', 1003846544, 1003846544, 1017944211, 'male', 'Alexandria', 'gjgv jjn', '2nd Secoundary', 'Experimental School\r\n', NULL, NULL, '227e10f8'),
 (70, 'beta.education2022@gmail.com', 'admain', 1223881860, 1277701850, 5914910, 'male', 'Alexandria', 'bbbb', '3th Secoundary', 'Experimental School', NULL, NULL, 'nA$1&5yn'),
-(71, 'nouran.ssp@gmail.com', 'Nouran El Mohamady', 1017944211, 1223701860, 5914989, 'female', 'Alexandria', 'nabawya mosa', '2nd Preparatory', 'Experimental School', NULL, NULL, '7092b73f');
+(71, 'nouran.ssp@gmail.com', 'Nouran El Mohamady', 1017944211, 1223701860, 5914989, 'female', 'Alexandria', 'nabawya mosa', '2nd Preparatory', 'Experimental School', NULL, NULL, '7092b73f'),
+(72, 'alaaosama2121998@gmail.com', 'Alaa Osama', 1554312399, 1554312399, 1554312399, 'female', 'Alexandria', 'نبوية موسى', '2nd Preparatory', 'Experimental School', NULL, NULL, '11646305');
 
 -- --------------------------------------------------------
 
@@ -278,11 +375,11 @@ INSERT INTO `students` (`id`, `email`, `name`, `mobile`, `parent_mobile`, `phone
 
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(255) NOT NULL,
+  `remember_token` varchar(100) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -305,6 +402,18 @@ ALTER TABLE `arth1coures`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `arth2courses`
+--
+ALTER TABLE `arth2courses`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `arth3courses`
+--
+ALTER TABLE `arth3courses`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `enpcourses`
 --
 ALTER TABLE `enpcourses`
@@ -314,6 +423,18 @@ ALTER TABLE `enpcourses`
 -- Indexes for table `enth1coures`
 --
 ALTER TABLE `enth1coures`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `enth2courses`
+--
+ALTER TABLE `enth2courses`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `enth3courses`
+--
+ALTER TABLE `enth3courses`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -366,13 +487,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `arpcourses`
 --
 ALTER TABLE `arpcourses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
 -- AUTO_INCREMENT for table `arth1coures`
 --
 ALTER TABLE `arth1coures`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `arth2courses`
+--
+ALTER TABLE `arth2courses`
+  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `arth3courses`
+--
+ALTER TABLE `arth3courses`
+  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `enpcourses`
@@ -384,7 +517,19 @@ ALTER TABLE `enpcourses`
 -- AUTO_INCREMENT for table `enth1coures`
 --
 ALTER TABLE `enth1coures`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `enth2courses`
+--
+ALTER TABLE `enth2courses`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `enth3courses`
+--
+ALTER TABLE `enth3courses`
+  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -408,7 +553,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT for table `users`
