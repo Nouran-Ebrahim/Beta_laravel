@@ -14,6 +14,8 @@
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="{{ asset('assets/css/cources.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/course-details.css') }}">
+
     !-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -74,25 +76,68 @@
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
-    {{-- <p style="color:wheat">{{ $status }}</p> --}}
-    {{-- @if (Session::has('confirm'))
-        <div class="alert alert-danger" role="alert">
-            {{ Session::get('confirm') }}
-        </div>
-    @endif --}}
+
     @if ($status == 'open')
-        <div
-            class="d-flex "style="
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 91px;
-    ">
-            <div class="row list col-l-5" style="color: white;background-color:red">
-                jgftyfyt
+        <div class="container-detail">
+
+            <div class="main-video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/SPRwCvM3Zkc"
+                    title="YouTube video player" frameborder="0" class="main-video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                {{-- <video src="https://www.youtube.com/embed/SPRwCvM3Zkc" loop controls class="main-video"></video> --}}
+                <h3 class="main-vid-title">house flood animation</h3>
             </div>
-            <div class="row vedios col-l-7" style="color: white">
-                hvjgvk
+
+            <div class="video-list-container">
+
+                <div class="list active">
+                    <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video>
+                    <h3 class="list-title">house flood animation</h3>
+                </div>
+
+                <div class="list">
+                    <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video>
+                    <h3 class="list-title">zoombie walking animation</h3>
+                </div>
+
+                {{-- <div class="list">
+              <video src="images/vid-3.mp4" class="list-video"></video>
+              <h3 class="list-title">emoji falling animation</h3>
+           </div>
+     
+           <div class="list">
+              <video src="images/vid-4.mp4" class="list-video"></video>
+              <h3 class="list-title">3D town animation</h3>
+           </div>
+     
+           <div class="list">
+              <video src="images/vid-5.mp4" class="list-video"></video>
+              <h3 class="list-title">man chasing carrot animation</h3>
+           </div>
+     
+           <div class="list">
+              <video src="images/vid-6.mp4" class="list-video"></video>
+              <h3 class="list-title">door hinge animation</h3>
+           </div>
+     
+           <div class="list">
+              <video src="images/vid-7.mp4" class="list-video"></video>
+              <h3 class="list-title">poeple walking in town animation</h3>
+           </div>
+     
+           <div class="list">
+              <video src="images/vid-8.mp4" class="list-video"></video>
+              <h3 class="list-title">knight chasing virus animation</h3>
+           </div>
+     
+           <div class="list">
+              <video src="images/vid-9.mp4" class="list-video"></video>
+              <h3 class="list-title">3D helicopter animation</h3>
+           </div> --}}
+
             </div>
+
         </div>
     @endif
     <div class="footer start-footer">
@@ -104,6 +149,8 @@
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/courses.js') }}"></script>
+    <script src="{{ asset('assets/js/course-details.js') }}"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 
