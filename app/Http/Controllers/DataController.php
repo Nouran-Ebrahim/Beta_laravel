@@ -122,31 +122,31 @@ class DataController extends Controller
                         Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 0));
                         Arpcourse::where("student_id", Session::get('id'))->update([$subdata => "waiting"]);
 
-                        return  redirect()->route('prep-courses', [
+                        return redirect()->route('prep-courses', [
                             'id' => $id,
                             'subject' => $subject,
 
                         ])->with(['success' => "تم تسجيل طلبك بنجاح من فضلك افحص الاميل"]);
                     } else {
-                        return  redirect()->route('prep-courses', [
+                        return redirect()->route('prep-courses', [
                             'id' => $id,
                             'subject' => $subject,
                             'sent' => 'done',
                         ])->with(['success' => "تم تسجيل طلبك و جارى التفعيل"]);
                     }
-                } elseif ($data_row_en  && $lang == 'en') {
+                } elseif ($data_row_en && $lang == 'en') {
 
                     if ($data_row_en->$subdata == 'closed') {
                         Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 0));
                         Enpcourse::where("student_id", Session::get('id'))->update([$subdata => "waiting"]);
 
-                        return  redirect()->route('prep-courses', [
+                        return redirect()->route('prep-courses', [
                             'id' => $id,
                             'subject' => $subject,
 
                         ])->with(['success' => "sucssfully join the course please check your email"]);
                     } else {
-                        return  redirect()->route('prep-courses', [
+                        return redirect()->route('prep-courses', [
                             'id' => $id,
                             'subject' => $subject,
                             'sent' => 'done',
@@ -155,7 +155,7 @@ class DataController extends Controller
                 }
             } catch (\Swift_TransportException $transportExp) {
                 //echo $transportExp->getMessage();
-                return  redirect()->back()->with(['success' => " من فضلك تأكد بأتصالك بالانترنت وحاول مره اخري"]);
+                return redirect()->back()->with(['success' => " من فضلك تأكد بأتصالك بالانترنت وحاول مره اخري"]);
             }
         }
     }
@@ -168,29 +168,35 @@ class DataController extends Controller
             $subdata = $subject . $id;
             $data_row = Arpcourse::where('student_id', '=', Session::get('id'))->first();
             // dd($data_row);
-            
-            if ($data_row ) {
-                $status = $data_row->$subdata;
-                if ($status == 'closed') {
-                    return redirect()->route('details', [
-                        'id' => $id,
-                        'subject' => $subject,
-                        'status' => $status
-                    ])->with(['confirm' => "من فضلك اشترك في الكورس"]);
-                } elseif ($status == 'waiting') {
-                    return redirect()->route('details', [
-                        'id' => $id,
-                        'subject' => $subject,
-                        'status' => $status
-                    ])->with(['confirm' => "جاري الاشتراك في الكورس"]);
-                }
-            } else {
-                
-                return redirect()->route('details', [
-                    'id' => $id,
-                    'subject' => $subject
-                ])->with(['confirm' => "من فضلك اشترك في الكورس"]);
-            }
+            $status = $data_row->$subdata;
+            // if ($data_row) {
+            //     $status = $data_row->$subdata;
+            //     if ($status == 'closed') {
+            //         return redirect()->route('details', [
+            //             'id' => $id,
+            //             'subject' => $subject,
+            //             'status' => $status
+            //         ])->with(['confirm' => "من فضلك اشترك في الكورس"]);
+            //     } elseif ($status == 'waiting') {
+            //         return redirect()->route('details', [
+            //             'id' => $id,
+            //             'subject' => $subject,
+            //             'status' => $status
+            //         ])->with(['confirm' => "جاري الاشتراك في الكورس"]);
+            //     }
+            // } else {
+            //     return redirect()->route('details', [
+            //         'id' => $id,
+            //         'subject' => $subject,
+
+            //     ])->with(['confirm' => "جاري الاشتراك في الكورس"]);
+            // }
+            return redirect()->route('details', [
+                'id' => $id,
+                'subject' => $subject,
+                'status' => $status
+            ]);
+
         }
     }
     public function subscribe_firstcourse()
@@ -233,31 +239,31 @@ class DataController extends Controller
                         Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 11));
                         Arth1coure::where("student_id", Session::get('id'))->update([$subject => "waiting"]);
 
-                        return  redirect()->route('thanwy12-courses', [
+                        return redirect()->route('thanwy12-courses', [
                             'id' => $id,
                             'subject' => $subject,
 
                         ])->with(['successth' => "تم تسجيل طلبك بنجاح من فضلك افحص الاميل"]);
                     } else {
-                        return  redirect()->route('thanwy12-courses', [
+                        return redirect()->route('thanwy12-courses', [
                             'id' => $id,
                             'subject' => $subject,
                             'sent' => 'done',
                         ])->with(['successth' => "تم تسجيل طلبك و جارى التفعيل"]);
                     }
-                } elseif ($data_row_en  && $lang == 'en') {
+                } elseif ($data_row_en && $lang == 'en') {
 
                     if ($data_row_en->$subject == 'closed') {
                         Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 11));
                         Enth1coure::where("student_id", Session::get('id'))->update([$subject => "waiting"]);
 
-                        return  redirect()->route('thanwy12-courses', [
+                        return redirect()->route('thanwy12-courses', [
                             'id' => $id,
                             'subject' => $subject,
 
                         ])->with(['successth' => "sucssfully join the course please check your email"]);
                     } else {
-                        return  redirect()->route('thanwy12-courses', [
+                        return redirect()->route('thanwy12-courses', [
                             'id' => $id,
                             'subject' => $subject,
                             'sent' => 'done',
@@ -266,7 +272,7 @@ class DataController extends Controller
                 }
             } catch (\Swift_TransportException $transportExp) {
                 //echo $transportExp->getMessage();
-                return  redirect()->back()->with(['success' => " من فضلك تأكد بأتصالك بالانترنت وحاول مره اخري"]);
+                return redirect()->back()->with(['success' => " من فضلك تأكد بأتصالك بالانترنت وحاول مره اخري"]);
             }
         }
     }
@@ -282,7 +288,7 @@ class DataController extends Controller
             Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, $sec));
         }
 
-        return  redirect()->route('thanwy', [
+        return redirect()->route('thanwy', [
             'id' => $id,
             'subject' => $subject,
             'sec' => $sec,
@@ -300,7 +306,7 @@ class DataController extends Controller
     public function adminstore(Request $req)
     {
         $selectedid = $req->id;
-        $course_data = Arpcourse::where('student_id', '=',  $selectedid)->first();
+        $course_data = Arpcourse::where('student_id', '=', $selectedid)->first();
         $col_num = DB::getSchemaBuilder()->getColumnListing('arpcourses');
 
         return view('coursestatus', [
@@ -313,7 +319,7 @@ class DataController extends Controller
     public function change_status(Request $req)
     {
 
-        $user = Arpcourse::where('student_id', '=',  $req->st_id)->first();
+        $user = Arpcourse::where('student_id', '=', $req->st_id)->first();
 
         foreach ($req->all() as $key => $val) {
             if ($key == "st_id" || $key == "_token") {
@@ -326,6 +332,6 @@ class DataController extends Controller
             );
         }
 
-        return  redirect()->back();
+        return redirect()->back();
     }
 }

@@ -31,9 +31,15 @@ Route::get('/courses', function () {
 
 
 Route::get('/prep-courses',[Show::class,'prep'])->name('prep-courses');
+
+
+
 Route::get('/pcoursedetails',[Show::class,'details'])->name('details');
 
 Route::get('/preparatorycourses/course details',[DataController::class,'pcoursedetails'])->name('showdetails');
+
+
+
 
 Route::get('/prep-courses/subscribe',[DataController::class,'subscribe_course'])->name('subscribe');
 
@@ -63,7 +69,7 @@ Route::post('login',[DataController::class,'loginstu' ])->name('login-stu') ;
 Route::get('/about', function () {
     return view('about');
 })-> name('about');
-  
+
 Route::get('/admin',[DataController::class,'admin' ])->name('admin') ;
 
 Route::post('admin',[DataController::class,'adminstore' ])->name('adminstore') ;

@@ -22,6 +22,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
         integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous">
     </script>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
 
@@ -69,10 +74,25 @@
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
-    <p style="color:wheat">{{ $status }}</p>
-    @if (Session::has('confirm'))
+    {{-- <p style="color:wheat">{{ $status }}</p> --}}
+    {{-- @if (Session::has('confirm'))
         <div class="alert alert-danger" role="alert">
             {{ Session::get('confirm') }}
+        </div>
+    @endif --}}
+    @if ($status == 'open')
+        <div
+            class="d-flex "style="
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 91px;
+    ">
+            <div class="row list col-l-5" style="color: white;background-color:red">
+                jgftyfyt
+            </div>
+            <div class="row vedios col-l-7" style="color: white">
+                hvjgvk
+            </div>
         </div>
     @endif
     <div class="footer start-footer">
