@@ -92,27 +92,6 @@
                     </div>
                 @endif
 
-
-
-                {{-- <div class="container">
-                    <ul class="nav nav-tabs">
-
-                        <li class="nav-item">
-                            <a id="prep" class="nav-link">عربى</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="thanwy" class="nav-link">لغات</a>
-                        </li>
-
-                    </ul>
-                    {{-- <form method="GET" action="">
-                      <label style="color: white">عربي</label>
-                      <input  type="radio" name="lang" value="عربي">
-                      <label  style="color: white">انجليزي</label>
-                      <input  type="radio" name="lang" value="انجليزي">
-                      <button id="subm" type="submit">change</button>
-                    </form> 
-                </div> --}}
                 <h2 style="direction: rtl;color:white;">قسم المدارس العربي</h2>
                 <div class="row">
                     <div class="col-lg-3 col-md-6 mb-4">
@@ -180,12 +159,12 @@
                             <div class="course-content p-4">
 
                                 @if ($id == 1)
-                                    <a class="h5" href="">دراسات اولي</a>
+                                    <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'social']) }}">دراسات اولي</a>
                                 @else
                                     @if ($id == 2)
-                                        <a class="h5" href="">دراسات تانيه</a>
+                                        <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'social']) }}">دراسات تانيه</a>
                                     @else
-                                        <a class="h5" href="">دراسات</a>
+                                        <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'social']) }}">دراسات</a>
                                     @endif
                                 @endif
                                 <div class="border-top mt-4 pt-4">
@@ -207,12 +186,12 @@
                             <div class="course-content p-4">
 
                                 @if ($id == 1)
-                                    <a class="h5" href="">علوم اولي</a>
+                                    <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'science']) }}">علوم اولي</a>
                                 @else
                                     @if ($id == 2)
-                                        <a class="h5" href="">علوم ثانيه</a>
+                                        <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'science']) }}">علوم ثانيه</a>
                                     @else
-                                        <a class="h5" href="">علوم</a>
+                                        <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'science']) }}">علوم</a>
                                     @endif
                                 @endif
                                 <div class="border-top mt-4 pt-4">
@@ -234,12 +213,12 @@
                             <div class="course-content p-4">
 
                                 @if ($id == 1)
-                                    <a class="h5" href="">انجليزي اولي</a>
+                                    <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'english']) }}">انجليزي اولي</a>
                                 @else
                                     @if ($id == 2)
-                                        <a class="h5" href="">انجليزي ثانيه </a>
+                                        <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'english']) }}">انجليزي ثانيه </a>
                                     @else
-                                        <a class="h5" href="">انجليزي</a>
+                                        <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'english']) }}">انجليزي</a>
                                     @endif
                                 @endif
                                 <div class="border-top mt-4 pt-4">
@@ -261,12 +240,12 @@
                             <div class="course-content p-4">
 
                                 @if ($id == 1)
-                                    <a class="h5" href="">فرنساوي اولي</a>
+                                    <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'frensh']) }}">فرنساوي اولي</a>
                                 @else
                                     @if ($id == 2)
-                                        <a class="h5" href="">فرنساوي ثانيه</a>
+                                        <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'frensh']) }}">فرنساوي ثانيه</a>
                                     @else
-                                        <a class="h5" href="">فرنساوي</a>
+                                        <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'frensh']) }}">فرنساوي</a>
                                     @endif
                                 @endif
                                 <div class="border-top mt-4 pt-4">

@@ -164,33 +164,12 @@ class DataController extends Controller
     {
         $id = request('id');
         $subject = request('subject');
+        // $lang = request('lang');
         if (Session::has('id')) {
             $subdata = $subject . $id;
             $data_row = Arpcourse::where('student_id', '=', Session::get('id'))->first();
-            // dd($data_row);
+            //dd($lang);
             $status = $data_row->$subdata;
-            // if ($data_row) {
-            //     $status = $data_row->$subdata;
-            //     if ($status == 'closed') {
-            //         return redirect()->route('details', [
-            //             'id' => $id,
-            //             'subject' => $subject,
-            //             'status' => $status
-            //         ])->with(['confirm' => "من فضلك اشترك في الكورس"]);
-            //     } elseif ($status == 'waiting') {
-            //         return redirect()->route('details', [
-            //             'id' => $id,
-            //             'subject' => $subject,
-            //             'status' => $status
-            //         ])->with(['confirm' => "جاري الاشتراك في الكورس"]);
-            //     }
-            // } else {
-            //     return redirect()->route('details', [
-            //         'id' => $id,
-            //         'subject' => $subject,
-
-            //     ])->with(['confirm' => "جاري الاشتراك في الكورس"]);
-            // }
             return redirect()->route('details', [
                 'id' => $id,
                 'subject' => $subject,

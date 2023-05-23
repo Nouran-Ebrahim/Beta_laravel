@@ -29,10 +29,12 @@ class Show extends Controller
     $id = request('id');
     $subject = request('subject');
     $status=request('status');
+   
     return view('pcoursedetails', [
       'id' => $id,
       'subject'=>$subject,
-      'status'=>$status
+      'status'=>$status,
+
     ]);
   }
   public function first()

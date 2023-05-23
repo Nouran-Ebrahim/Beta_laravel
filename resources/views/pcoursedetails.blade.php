@@ -79,151 +79,2238 @@
 
     @if ($status == 'open')
         <div class="container-detail">
+            @if ($id == 1)
+                @if ($subject == 'arabic')
+                    <div class="main-video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SPRwCvM3Zkc"
+                            title="YouTube video player" frameborder="0" class="main-video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <h3 class="main-vid-title">المقدمه عربي اولي</h3>
+                    </div>
 
-            <div class="main-video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/SPRwCvM3Zkc"
-                    title="YouTube video player" frameborder="0" class="main-video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-                {{-- <video src="https://www.youtube.com/embed/SPRwCvM3Zkc" loop controls class="main-video"></video> --}}
-                <h3 class="main-vid-title">المقدمه</h3>
-            </div>
+                    <div class="video-list-container">
+                        <nav>
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الاولي</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/SPRwCvM3Zkc" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/w9ghRG9Foiw" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg" title="YouTube video player"
+                                            frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/5IMXpp3rohQ"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
 
-            <div class="video-list-container">
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الثانية</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/G5-pt_sjeLo" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/CeUGlSl2i4Q" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/lqNztI7BMf8"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                @elseif ($subject == 'math')
+                    <div class="main-video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SPRwCvM3Zkc"
+                            title="YouTube video player" frameborder="0" class="main-video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <h3 class="main-vid-title">المقدمه رياضه اولي</h3>
+                    </div>
 
-                {{-- <div class="list active">
-                    <iframe width="100" height="100"
-                        src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1"
-                        class="list-video" title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                    </iframe>
-                    <h3 class="list-title">house flood animation</h3>
-                </div>
+                    <div class="video-list-container">
+                        <nav>
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الاولي</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/SPRwCvM3Zkc" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/w9ghRG9Foiw" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/5IMXpp3rohQ"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
 
-                <div class="list">
-                    <iframe width="100" height="100"
-                        src="https://www.youtube.com/embed/n7ug8GSufIg?controls=0&mute=1&playsinline=1"
-                        title="YouTube video player" frameborder="0" class="list-video"
-                        allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                    </iframe>
-                    <h3 class="list-title">zoombie walking animation</h3>
-                </div> --}}
-                @if($id==1)
-                @if($subject=='arabic')
-                <nav>
-                    <ul class="drop-down closed">
-                      <li><a href="#" class="nav-button">الوحده الاولي</a></li>
-                      <li>
-                        <div class="list active">
-                            {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
-                            <iframe style="display: none" width="100" height="100"
-                                src="https://www.youtube.com/embed/SPRwCvM3Zkc"
-                                class="list-video" title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen>
-                            </iframe>
-                            {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
-                            <h3 class="list-title"> المقدمه</h3>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="list">
-                            {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
-                            <iframe style="display: none" width="100" height="100"
-                                src="https://www.youtube.com/embed/w9ghRG9Foiw"
-                                class="list-video" title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen>
-                            </iframe>
-                            {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
-                            <h3 class="list-title">الدرس الاول</h3>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="list">
-                        <iframe style="display: none" width="100" height="100"
-                            src="https://www.youtube.com/embed/n7ug8GSufIg"
-                            title="YouTube video player" frameborder="0" class="list-video"
-                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen>
-                        </iframe>
-                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
-                        <h3 class="list-title">الدرس الثاني</h3>
-                          </div>
-                      </li>
-                      <li>
-                        <div class="list">
-                            <iframe style="display: none" width="100" height="100"
-                                src="https://www.youtube.com/embed/5IMXpp3rohQ"
-                                title="YouTube video player" frameborder="0" class="list-video"
-                                allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen>
-                            </iframe>
-                            {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
-                            <h3 class="list-title">الدرس الثالث</h3>
-                      </li>
-                    </ul>
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الثانية</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/G5-pt_sjeLo" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/CeUGlSl2i4Q" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/lqNztI7BMf8"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                @elseif ($subject == 'social')
+                    <div class="main-video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SPRwCvM3Zkc"
+                            title="YouTube video player" frameborder="0" class="main-video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <h3 class="main-vid-title">المقدمه دراسات اولي</h3>
+                    </div>
 
-                    <ul class="drop-down closed">
-                        <li><a href="#" class="nav-button">الوحده الثانية</a></li>
-                        <li>
-                          <div class="list active">
-                              {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
-                              <iframe style="display: none" width="100" height="100"
-                                  src="https://www.youtube.com/embed/G5-pt_sjeLo"
-                                  class="list-video" title="YouTube video player" frameborder="0"
-                                  allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                  allowfullscreen>
-                              </iframe>
-                              {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
-                              <h3 class="list-title"> المقدمه</h3>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="list">
-                              {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
-                              <iframe style="display: none" width="100" height="100"
-                                  src="https://www.youtube.com/embed/CeUGlSl2i4Q"
-                                  class="list-video" title="YouTube video player" frameborder="0"
-                                  allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                  allowfullscreen>
-                              </iframe>
-                              {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
-                              <h3 class="list-title">الدرس الاول</h3>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="list">
-                          <iframe style="display: none" width="100" height="100"
-                              src="https://www.youtube.com/embed/n7ug8GSufIg"
-                              title="YouTube video player" frameborder="0" class="list-video"
-                              allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                              allowfullscreen>
-                          </iframe>
-                          {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
-                          <h3 class="list-title">الدرس الثاني</h3>
-                            </div>
-                        </li>
-                        <li>
-                          <div class="list">
-                              <iframe style="display: none" width="100" height="100"
-                                  src="https://www.youtube.com/embed/lqNztI7BMf8"
-                                  title="YouTube video player" frameborder="0" class="list-video"
-                                  allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                  allowfullscreen>
-                              </iframe>
-                              {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
-                              <h3 class="list-title">الدرس الثالث</h3>
-                        </li>
-                      </ul>
-                </nav>
+                    <div class="video-list-container">
+                        <nav>
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الاولي</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/SPRwCvM3Zkc" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/w9ghRG9Foiw" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/5IMXpp3rohQ"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الثانية</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/G5-pt_sjeLo" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/CeUGlSl2i4Q" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/lqNztI7BMf8"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                @elseif ($subject == 'science')
+                    <div class="main-video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SPRwCvM3Zkc"
+                            title="YouTube video player" frameborder="0" class="main-video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <h3 class="main-vid-title">المقدمه علوم اولي</h3>
+                    </div>
+
+                    <div class="video-list-container">
+                        <nav>
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الاولي</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/SPRwCvM3Zkc" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/w9ghRG9Foiw" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/5IMXpp3rohQ"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الثانية</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/G5-pt_sjeLo" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/CeUGlSl2i4Q" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/lqNztI7BMf8"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                @elseif ($subject == 'english')
+                    <div class="main-video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SPRwCvM3Zkc"
+                            title="YouTube video player" frameborder="0" class="main-video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <h3 class="main-vid-title">المقدمه انجليزي اولي</h3>
+                    </div>
+
+                    <div class="video-list-container">
+                        <nav>
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الاولي</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/SPRwCvM3Zkc" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/w9ghRG9Foiw" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/5IMXpp3rohQ"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الثانية</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/G5-pt_sjeLo" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/CeUGlSl2i4Q" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/lqNztI7BMf8"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                @else
+                    <div class="main-video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SPRwCvM3Zkc"
+                            title="YouTube video player" frameborder="0" class="main-video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <h3 class="main-vid-title">المقدمه فرنساوي اولي</h3>
+                    </div>
+
+                    <div class="video-list-container">
+                        <nav>
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الاولي</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/SPRwCvM3Zkc" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/w9ghRG9Foiw" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/5IMXpp3rohQ"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الثانية</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/G5-pt_sjeLo" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/CeUGlSl2i4Q" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/lqNztI7BMf8"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 @endif
-                @endif
-            </div>
+            @elseif($id == 2)
+                @if ($subject == 'arabic')
+                    <div class="main-video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SPRwCvM3Zkc"
+                            title="YouTube video player" frameborder="0" class="main-video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <h3 class="main-vid-title">المقدمه عربي ثانيه</h3>
+                    </div>
 
+                    <div class="video-list-container">
+                        <nav>
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الاولي</a></li>
+                                <li>
+                                    <div class="list active">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/SPRwCvM3Zkc" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/w9ghRG9Foiw" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/5IMXpp3rohQ"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الثانية</a></li>
+                                <li>
+                                    <div class="list active">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/G5-pt_sjeLo" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/CeUGlSl2i4Q" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/lqNztI7BMf8"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                @elseif ($subject == 'math')
+                    <div class="main-video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SPRwCvM3Zkc"
+                            title="YouTube video player" frameborder="0" class="main-video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <h3 class="main-vid-title">المقدمه رياضه ثانيه</h3>
+                    </div>
+
+                    <div class="video-list-container">
+                        <nav>
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الاولي</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/SPRwCvM3Zkc" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/w9ghRG9Foiw" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/5IMXpp3rohQ"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الثانية</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/G5-pt_sjeLo" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/CeUGlSl2i4Q" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/lqNztI7BMf8"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                @elseif ($subject == 'social')
+                    <div class="main-video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SPRwCvM3Zkc"
+                            title="YouTube video player" frameborder="0" class="main-video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <h3 class="main-vid-title">المقدمه دراسات ثانيه</h3>
+                    </div>
+
+                    <div class="video-list-container">
+                        <nav>
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الاولي</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/SPRwCvM3Zkc" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/w9ghRG9Foiw" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/5IMXpp3rohQ"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الثانية</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/G5-pt_sjeLo" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/CeUGlSl2i4Q" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/lqNztI7BMf8"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="main-video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SPRwCvM3Zkc"
+                            title="YouTube video player" frameborder="0" class="main-video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <h3 class="main-vid-title">المقدمه علوم ثانيه</h3>
+                    </div>
+
+                    <div class="video-list-container">
+                        <nav>
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الاولي</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/SPRwCvM3Zkc" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/w9ghRG9Foiw" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/5IMXpp3rohQ"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الثانية</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/G5-pt_sjeLo" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/CeUGlSl2i4Q" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/lqNztI7BMf8"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                @elseif ($subject == 'science')
+                    <div class="main-video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SPRwCvM3Zkc"
+                            title="YouTube video player" frameborder="0" class="main-video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <h3 class="main-vid-title">المقدمه علوم ثانيه</h3>
+                    </div>
+
+                    <div class="video-list-container">
+                        <nav>
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الاولي</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/SPRwCvM3Zkc" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/w9ghRG9Foiw" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/5IMXpp3rohQ"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الثانية</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/G5-pt_sjeLo" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/CeUGlSl2i4Q" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/lqNztI7BMf8"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                @elseif ($subject == 'english')
+                    <div class="main-video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SPRwCvM3Zkc"
+                            title="YouTube video player" frameborder="0" class="main-video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <h3 class="main-vid-title">المقدمه انجليزي اولي</h3>
+                    </div>
+
+                    <div class="video-list-container">
+                        <nav>
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الاولي</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/SPRwCvM3Zkc" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/w9ghRG9Foiw" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/5IMXpp3rohQ"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الثانية</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/G5-pt_sjeLo" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/CeUGlSl2i4Q" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/lqNztI7BMf8"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                @else
+                    <div class="main-video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SPRwCvM3Zkc"
+                            title="YouTube video player" frameborder="0" class="main-video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <h3 class="main-vid-title">المقدمه فرنساوي ثانيه</h3>
+                    </div>
+
+                    <div class="video-list-container">
+                        <nav>
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الاولي</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/SPRwCvM3Zkc" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/w9ghRG9Foiw" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/5IMXpp3rohQ"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الثانية</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/G5-pt_sjeLo" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/CeUGlSl2i4Q" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/lqNztI7BMf8"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                @endif
+            @else
+                @if ($subject == 'arabic')
+                    <div class="main-video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SPRwCvM3Zkc"
+                            title="YouTube video player" frameborder="0" class="main-video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <h3 class="main-vid-title">المقدمه عربي ثالثه</h3>
+                    </div>
+
+                    <div class="video-list-container">
+                        <nav>
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الاولي</a></li>
+                                <li>
+                                    <div class="list active">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/SPRwCvM3Zkc" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/w9ghRG9Foiw" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/5IMXpp3rohQ"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الثانية</a></li>
+                                <li>
+                                    <div class="list active">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/G5-pt_sjeLo" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/CeUGlSl2i4Q" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/lqNztI7BMf8"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                @elseif ($subject == 'math')
+                    <div class="main-video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SPRwCvM3Zkc"
+                            title="YouTube video player" frameborder="0" class="main-video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <h3 class="main-vid-title">المقدمه رياضه ثالثه</h3>
+                    </div>
+
+                    <div class="video-list-container">
+                        <nav>
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الاولي</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/SPRwCvM3Zkc" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/w9ghRG9Foiw" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/5IMXpp3rohQ"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الثانية</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/G5-pt_sjeLo" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/CeUGlSl2i4Q" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/lqNztI7BMf8"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                @elseif ($subject == 'social')
+                    <div class="main-video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SPRwCvM3Zkc"
+                            title="YouTube video player" frameborder="0" class="main-video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <h3 class="main-vid-title">المقدمه دراسات ثالثه</h3>
+                    </div>
+
+                    <div class="video-list-container">
+                        <nav>
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الاولي</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/SPRwCvM3Zkc" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/w9ghRG9Foiw" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/5IMXpp3rohQ"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الثانية</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/G5-pt_sjeLo" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/CeUGlSl2i4Q" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/lqNztI7BMf8"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                @elseif ($subject == 'science')
+                    <div class="main-video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SPRwCvM3Zkc"
+                            title="YouTube video player" frameborder="0" class="main-video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <h3 class="main-vid-title">المقدمه علوم ثالثه</h3>
+                    </div>
+
+                    <div class="video-list-container">
+                        <nav>
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الاولي</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/SPRwCvM3Zkc" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/w9ghRG9Foiw" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/5IMXpp3rohQ"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الثانية</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/G5-pt_sjeLo" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/CeUGlSl2i4Q" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/lqNztI7BMf8"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                @elseif ($subject == 'english')
+                    <div class="main-video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SPRwCvM3Zkc"
+                            title="YouTube video player" frameborder="0" class="main-video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <h3 class="main-vid-title">المقدمه انجليزي ثالثه</h3>
+                    </div>
+
+                    <div class="video-list-container">
+                        <nav>
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الاولي</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/SPRwCvM3Zkc" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/w9ghRG9Foiw" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/5IMXpp3rohQ"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الثانية</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/G5-pt_sjeLo" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/CeUGlSl2i4Q" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/lqNztI7BMf8"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                @else
+                    <div class="main-video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SPRwCvM3Zkc"
+                            title="YouTube video player" frameborder="0" class="main-video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <h3 class="main-vid-title">المقدمه فرنساوي ثالثه</h3>
+                    </div>
+
+                    <div class="video-list-container">
+                        <nav>
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الاولي</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/SPRwCvM3Zkc" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/w9ghRG9Foiw" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/5IMXpp3rohQ"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+
+                            <ul class="drop-down closed">
+                                <li><a href="#" class="nav-button">الوحده الثانية</a></li>
+                                <li>
+                                    <div class="list active">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/G5-pt_sjeLo" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title"> المقدمه</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/CeUGlSl2i4Q" class="list-video"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
+                                        <h3 class="list-title">الدرس الاول</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/n7ug8GSufIg"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثاني</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list">
+                                        <iframe style="display: none" width="100" height="100"
+                                            src="https://www.youtube.com/embed/lqNztI7BMf8"
+                                            title="YouTube video player" frameborder="0" class="list-video"
+                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
+                                        <h3 class="list-title">الدرس الثالث</h3>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                @endif
+            @endif
         </div>
+
+
     @endif
     <div class="footer start-footer">
         <p>Copyright © 2022 beta education Co., Ltd. All Rights Reserved.
