@@ -82,7 +82,7 @@
             @if ($id == 1)
                 @if ($subject == 'arabic')
                     <div class="main-video-container">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SPRwCvM3Zkc"
+                        <iframe width="560" height="480" src="https://www.youtube.com/embed/SPRwCvM3Zkc"
                             title="YouTube video player" frameborder="0" class="main-video"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>
@@ -2311,6 +2311,22 @@
         </div>
 
 
+    @endif
+    @if ($status == 'waitting')
+    <div style="color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 500px;
+                font-size: 37px;text-align: center; "> تم تسجيل طلبك و جارى تفعيل الكورس <br>برجاء التاكد انك قمت بجميع خطوات التسجيل </div>
+    @endif
+    @if ($status == 'closed')
+    <div style="color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 500px;
+                font-size: 37px;text-align: center; "> "يرجى الرجوع للصفحة السابقة و الضغط على زر "اشترك الان </div>
     @endif
     <div class="footer start-footer">
         <p>Copyright © 2022 beta education Co., Ltd. All Rights Reserved.

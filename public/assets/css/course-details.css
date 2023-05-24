@@ -18,6 +18,7 @@
    flex-wrap: wrap;
    align-items: flex-start;
    gap: 20px;
+   align-items: center;
 }
 
 .container-detail .main-video-container {
@@ -26,6 +27,7 @@
    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
    background-color: #fff;
    padding: 15px;
+   height: 550px;
 }
 
 .container-detail .main-video-container .main-video {
@@ -48,6 +50,7 @@
    background-color: #fff;
    padding: 15px;
    width: 350px;
+   height: 480px;
 }
 
 .container-detail .video-list-container::-webkit-scrollbar {
