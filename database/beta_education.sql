@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 02, 2023 at 04:27 AM
+-- Generation Time: May 24, 2023 at 08:45 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -59,7 +59,7 @@ CREATE TABLE `arpcourses` (
 
 INSERT INTO `arpcourses` (`id`, `name`, `student_id`, `math1`, `arabic1`, `math2`, `arabic2`, `math3`, `arabic3`, `english1`, `english2`, `english3`, `science1`, `science2`, `science3`, `social1`, `social2`, `social3`, `frensh1`, `frensh2`, `frensh3`, `created_at`, `updated_at`) VALUES
 (74, 'Nouran El Mohamady', 71, 'closed', 'open', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL),
-(75, 'Alaa Osama', 72, 'closed', 'open', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
+(75, 'Alaa Osama', 72, 'open', 'open', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -106,19 +106,30 @@ CREATE TABLE `arth2courses` (
   `id` int(15) NOT NULL,
   `student_id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
-  `arabic` varchar(100) NOT NULL,
-  `english` varchar(100) NOT NULL,
-  `frensh` varchar(100) NOT NULL,
-  `italy` varchar(100) NOT NULL,
-  `math` varchar(100) NOT NULL,
-  `physics` varchar(100) NOT NULL,
-  `chemistry` varchar(100) NOT NULL,
-  `biology` varchar(100) NOT NULL,
-  `history` varchar(100) NOT NULL,
-  `psychology` varchar(100) NOT NULL,
-  `geography` varchar(100) NOT NULL,
-  `philosophy` varchar(100) NOT NULL
+  `arabic` varchar(100) NOT NULL DEFAULT 'closed',
+  `english` varchar(100) NOT NULL DEFAULT 'closed',
+  `frensh` varchar(100) NOT NULL DEFAULT 'closed',
+  `italy` varchar(100) NOT NULL DEFAULT 'closed',
+  `spanish` varchar(100) NOT NULL DEFAULT 'closed',
+  `german` varchar(100) NOT NULL DEFAULT 'closed',
+  `math` varchar(100) NOT NULL DEFAULT 'closed',
+  `physics` varchar(100) DEFAULT 'closed',
+  `chemistry` varchar(100) NOT NULL DEFAULT 'closed',
+  `biology` varchar(100) NOT NULL DEFAULT 'closed',
+  `history` varchar(100) NOT NULL DEFAULT 'closed',
+  `psychology` varchar(100) NOT NULL DEFAULT 'closed',
+  `geography` varchar(100) NOT NULL DEFAULT 'closed',
+  `philosophy` varchar(100) NOT NULL DEFAULT 'closed',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `arth2courses`
+--
+
+INSERT INTO `arth2courses` (`id`, `student_id`, `name`, `arabic`, `english`, `frensh`, `italy`, `spanish`, `german`, `math`, `physics`, `chemistry`, `biology`, `history`, `psychology`, `geography`, `philosophy`, `created_at`, `updated_at`) VALUES
+(6, 72, 'Alaa Osama', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -141,7 +152,9 @@ CREATE TABLE `arth3courses` (
   `history` varchar(100) NOT NULL,
   `psychology` varchar(100) NOT NULL,
   `geography` varchar(100) NOT NULL,
-  `philosophy` varchar(100) NOT NULL
+  `philosophy` varchar(100) NOT NULL,
+  `created_at` timestamp(5) NULL DEFAULT NULL,
+  `updated_at` timestamp(5) NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
@@ -228,19 +241,26 @@ CREATE TABLE `enth2courses` (
   `id` int(11) NOT NULL,
   `student_id` int(11) NOT NULL,
   `name` varchar(150) NOT NULL,
-  `arabic` varchar(100) NOT NULL,
-  `english` varchar(100) NOT NULL,
-  `frensh` varchar(100) NOT NULL,
-  `italy` varchar(100) NOT NULL,
-  `math` varchar(100) NOT NULL,
-  `physics` varchar(100) NOT NULL,
-  `chemistry` varchar(100) NOT NULL,
-  `biology` varchar(100) NOT NULL,
-  `history` varchar(100) NOT NULL,
-  `psychology` varchar(100) NOT NULL,
-  `geography` varchar(100) NOT NULL,
-  `philosophy` varchar(100) NOT NULL
+  `arabic` varchar(100) NOT NULL DEFAULT 'closed',
+  `english` varchar(100) NOT NULL DEFAULT 'closed',
+  `frensh` varchar(100) NOT NULL DEFAULT 'closed',
+  `italy` varchar(100) NOT NULL DEFAULT 'closed',
+  `math` varchar(100) NOT NULL DEFAULT 'closed',
+  `physics` varchar(100) NOT NULL DEFAULT 'closed',
+  `chemistry` varchar(100) NOT NULL DEFAULT 'closed',
+  `biology` varchar(100) NOT NULL DEFAULT 'closed',
+  `history` varchar(100) NOT NULL DEFAULT 'closed',
+  `psychology` varchar(100) NOT NULL DEFAULT 'closed',
+  `geography` varchar(100) NOT NULL DEFAULT 'closed',
+  `philosophy` varchar(100) NOT NULL DEFAULT 'closed'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `enth2courses`
+--
+
+INSERT INTO `enth2courses` (`id`, `student_id`, `name`, `arabic`, `english`, `frensh`, `italy`, `math`, `physics`, `chemistry`, `biology`, `history`, `psychology`, `geography`, `philosophy`) VALUES
+(1, 72, 'Alaa Osama', 'waiting', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed');
 
 -- --------------------------------------------------------
 
@@ -263,7 +283,9 @@ CREATE TABLE `enth3courses` (
   `history` varchar(100) NOT NULL,
   `psychology` varchar(100) NOT NULL,
   `geography` varchar(100) NOT NULL,
-  `philosophy` varchar(100) NOT NULL
+  `philosophy` varchar(100) NOT NULL,
+  `created_at` timestamp(5) NULL DEFAULT NULL,
+  `updated_at` timestamp(5) NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
@@ -333,6 +355,63 @@ CREATE TABLE `personal_access_tokens` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `plessons`
+--
+
+CREATE TABLE `plessons` (
+  `id` int(10) NOT NULL,
+  `lesson_name` varchar(100) NOT NULL,
+  `link` varchar(1000) NOT NULL,
+  `unit_id` int(10) NOT NULL,
+  `created_at` time NOT NULL DEFAULT current_timestamp(),
+  `updated_at` time NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `plessons`
+--
+
+INSERT INTO `plessons` (`id`, `lesson_name`, `link`, `unit_id`, `created_at`, `updated_at`) VALUES
+(1, 'الدرس الأول', 'https://youtu.be/Bq4WD9c-3qg', 1, '00:00:00', '00:00:00'),
+(2, 'الدرس الثانى', 'https://youtu.be/gDODiKkuBLM', 1, '00:00:00', '00:00:00'),
+(3, 'الدرس الثالث', 'https://youtu.be/cBVKv-ppNeI', 1, '00:00:00', '00:00:00'),
+(4, 'الدرس الرابع', 'https://youtu.be/Yd9iccf59qo', 1, '00:00:00', '00:00:00'),
+(5, 'الدرس الأول', 'https://youtu.be/DftlOK7fCtc', 2, '00:00:00', '00:00:00'),
+(6, 'الدرس الثانى', 'https://youtu.be/z4j4S6GsxaU', 2, '00:00:00', '00:00:00'),
+(7, 'الدرس الاول', 'https://youtu.be/_Nj7laDeRBQ', 3, '00:00:00', '00:00:00'),
+(8, 'الدرس الثانى', 'https://youtu.be/mDEKMonYf1w', 3, '00:00:00', '00:00:00'),
+(9, 'الدرس الاول', 'https://youtu.be/QStpeLp25A4', 4, '00:00:00', '00:00:00'),
+(10, 'الدرس الثانى', 'https://youtu.be/yCUpnvBkfEM', 4, '00:00:00', '00:00:00'),
+(11, 'الدرس الاول', 'https://youtu.be/VE7pgB9tvLU', 5, '00:00:00', '00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `punits`
+--
+
+CREATE TABLE `punits` (
+  `id` int(10) NOT NULL,
+  `unit_name` varchar(100) NOT NULL,
+  `level` int(5) NOT NULL,
+  `created_at` time NOT NULL DEFAULT current_timestamp(),
+  `updated_at` time NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `punits`
+--
+
+INSERT INTO `punits` (`id`, `unit_name`, `level`, `created_at`, `updated_at`) VALUES
+(1, 'الوحدة الأولى', 1, '00:00:00', '00:00:00'),
+(2, 'الوحدة الثانية', 1, '00:00:00', '00:00:00'),
+(3, 'الوحدة الأولى', 2, '00:00:00', '00:00:00'),
+(4, 'الوحدة الثانية', 2, '00:00:00', '00:00:00'),
+(5, 'الوحدة الأولى', 3, '00:00:00', '00:00:00');
 
 -- --------------------------------------------------------
 
@@ -465,6 +544,19 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
+-- Indexes for table `plessons`
+--
+ALTER TABLE `plessons`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `unit_lessons` (`unit_id`);
+
+--
+-- Indexes for table `punits`
+--
+ALTER TABLE `punits`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `students`
 --
 ALTER TABLE `students`
@@ -499,7 +591,7 @@ ALTER TABLE `arth1coures`
 -- AUTO_INCREMENT for table `arth2courses`
 --
 ALTER TABLE `arth2courses`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `arth3courses`
@@ -523,7 +615,7 @@ ALTER TABLE `enth1coures`
 -- AUTO_INCREMENT for table `enth2courses`
 --
 ALTER TABLE `enth2courses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `enth3courses`
@@ -550,6 +642,18 @@ ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `plessons`
+--
+ALTER TABLE `plessons`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `punits`
+--
+ALTER TABLE `punits`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
@@ -560,6 +664,16 @@ ALTER TABLE `students`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `plessons`
+--
+ALTER TABLE `plessons`
+  ADD CONSTRAINT `unit_lessons` FOREIGN KEY (`unit_id`) REFERENCES `punits` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
