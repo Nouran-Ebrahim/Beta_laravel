@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Plesson;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
@@ -21,7 +22,7 @@ class Show extends Controller
     $id = request('id');
     return view('courses', [
       'id' => $id,
-      
+
     ]);
   }
   public function details()
@@ -29,12 +30,12 @@ class Show extends Controller
     $id = request('id');
     $subject = request('subject');
     $status=request('status');
-   
+    $plesseons = Plesson::where("unit_id",1)->get();
     return view('pcoursedetails', [
       'id' => $id,
       'subject'=>$subject,
       'status'=>$status,
-
+      'plessons'=>$plesseons
     ]);
   }
   public function first()

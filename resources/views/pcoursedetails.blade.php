@@ -81,6 +81,7 @@
         <div class="container-detail">
             @if ($id == 1)
                 @if ($subject == 'arabic')
+
                     <div class="main-video-container">
                         <iframe width="560" height="480" src="https://www.youtube.com/embed/SPRwCvM3Zkc"
                             title="YouTube video player" frameborder="0" class="main-video"
@@ -95,53 +96,30 @@
                                 <li><a href="#" class="nav-button">الوحده الاولي</a></li>
                                 <li>
                                     <div class="list active">
-                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
                                         <iframe style="display: none" width="100" height="100"
                                             src="https://www.youtube.com/embed/SPRwCvM3Zkc" class="list-video"
                                             title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             allowfullscreen>
                                         </iframe>
-                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
                                         <h3 class="list-title"> المقدمه</h3>
                                     </div>
                                 </li>
+                                @foreach ($plessons as $lesson )
                                 <li>
                                     <div class="list">
-                                        {{-- <video style="display: none" src="https://www.youtube.com/embed/w9ghRG9Foiw?controls=0&mute=1&playsinline=1" class="list-video"></video> --}}
                                         <iframe style="display: none" width="100" height="100"
-                                            src="https://www.youtube.com/embed/w9ghRG9Foiw" class="list-video"
+                                            src="{{url($lesson->link)}}" class="list-video"
                                             title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             allowfullscreen>
                                         </iframe>
-                                        {{-- <video src="https://youtu.be/SPRwCvM3Zkc" class="list-video"></video> --}}
-                                        <h3 class="list-title">الدرس الاول</h3>
+                                        <h3 class="list-title">{{$lesson->lesson_name}} </h3>
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="list">
-                                        <iframe style="display: none" width="100" height="100"
-                                            src="https://www.youtube.com/embed/n7ug8GSufIg" title="YouTube video player"
-                                            frameborder="0" class="list-video"
-                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen>
-                                        </iframe>
-                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
-                                        <h3 class="list-title">الدرس الثاني</h3>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="list">
-                                        <iframe style="display: none" width="100" height="100"
-                                            src="https://www.youtube.com/embed/5IMXpp3rohQ"
-                                            title="YouTube video player" frameborder="0" class="list-video"
-                                            allow="accelerometer; autoplay;modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen>
-                                        </iframe>
-                                        {{-- <div class="video-placeholder" ><img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?w=2000"></div> --}}
-                                        <h3 class="list-title">الدرس الثالث</h3>
-                                </li>
+                                @endforeach
+
+
                             </ul>
 
                             <ul class="drop-down closed">

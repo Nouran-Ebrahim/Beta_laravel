@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Enpcourse;
+use App\Models\Plesson;
 use App\Models\Student;
 use App\Models\Arpcourse;
 use App\Models\Arth1coure;
@@ -164,7 +165,8 @@ class DataController extends Controller
     {
         $id = request('id');
         $subject = request('subject');
-        // $lang = request('lang');
+
+        //$lang = request('lang');
         if (Session::has('id')) {
             $subdata = $subject . $id;
             $data_row = Arpcourse::where('student_id', '=', Session::get('id'))->first();
@@ -173,10 +175,14 @@ class DataController extends Controller
             return redirect()->route('details', [
                 'id' => $id,
                 'subject' => $subject,
-                'status' => $status
+                'status' => $status,
+             
             ]);
 
         }
+        // foreach ($plesseons as $lesson) {
+        //     echo $lesson->unit->unit_name;
+        // }
     }
     public function subscribe_firstcourse()
     {

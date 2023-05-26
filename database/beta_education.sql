@@ -2,8 +2,8 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: May 24, 2023 at 08:45 PM
+-- Host: 127.0.0.1
+-- Generation Time: May 26, 2023 at 09:06 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -367,26 +367,27 @@ CREATE TABLE `plessons` (
   `lesson_name` varchar(100) NOT NULL,
   `link` varchar(1000) NOT NULL,
   `unit_id` int(10) NOT NULL,
-  `created_at` time NOT NULL DEFAULT current_timestamp(),
-  `updated_at` time NOT NULL DEFAULT current_timestamp()
+  `level` int(5) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `plessons`
 --
 
-INSERT INTO `plessons` (`id`, `lesson_name`, `link`, `unit_id`, `created_at`, `updated_at`) VALUES
-(1, 'الدرس الأول', 'https://youtu.be/Bq4WD9c-3qg', 1, '00:00:00', '00:00:00'),
-(2, 'الدرس الثانى', 'https://youtu.be/gDODiKkuBLM', 1, '00:00:00', '00:00:00'),
-(3, 'الدرس الثالث', 'https://youtu.be/cBVKv-ppNeI', 1, '00:00:00', '00:00:00'),
-(4, 'الدرس الرابع', 'https://youtu.be/Yd9iccf59qo', 1, '00:00:00', '00:00:00'),
-(5, 'الدرس الأول', 'https://youtu.be/DftlOK7fCtc', 2, '00:00:00', '00:00:00'),
-(6, 'الدرس الثانى', 'https://youtu.be/z4j4S6GsxaU', 2, '00:00:00', '00:00:00'),
-(7, 'الدرس الاول', 'https://youtu.be/_Nj7laDeRBQ', 3, '00:00:00', '00:00:00'),
-(8, 'الدرس الثانى', 'https://youtu.be/mDEKMonYf1w', 3, '00:00:00', '00:00:00'),
-(9, 'الدرس الاول', 'https://youtu.be/QStpeLp25A4', 4, '00:00:00', '00:00:00'),
-(10, 'الدرس الثانى', 'https://youtu.be/yCUpnvBkfEM', 4, '00:00:00', '00:00:00'),
-(11, 'الدرس الاول', 'https://youtu.be/VE7pgB9tvLU', 5, '00:00:00', '00:00:00');
+INSERT INTO `plessons` (`id`, `lesson_name`, `link`, `unit_id`, `level`, `created_at`, `updated_at`) VALUES
+(1, 'الدرس الأول', 'https://www.youtube.com/embed/Bq4WD9c-3qg', 1, 1, '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(2, 'الدرس الثانى', 'https://www.youtube.com/embed/gDODiKkuBLM', 1, 1, '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(3, 'الدرس الثالث', 'https://www.youtube.com/embed/cBVKv-ppNeI', 1, 1, '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(4, 'الدرس الرابع', 'https://www.youtube.com/embed/Yd9iccf59qo', 1, 1, '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(5, 'الدرس الأول', 'https://www.youtube.com/embed/DftlOK7fCtc', 2, 1, '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(6, 'الدرس الثانى', 'https://www.youtube.com/embed/z4j4S6GsxaU', 2, 1, '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(7, 'الدرس الاول', 'https://www.youtube.com/embed/_Nj7laDeRBQ', 3, 2, '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(8, 'الدرس الثانى', 'https://www.youtube.com/embed/mDEKMonYf1w', 3, 2, '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(9, 'الدرس الاول', 'https://www.youtube.com/embed/QStpeLp25A4', 4, 2, '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(10, 'الدرس الثانى', 'https://www.youtube.com/embed/yCUpnvBkfEM', 4, 2, '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(11, 'الدرس الاول', 'https://www.youtube.com/embed/VE7pgB9tvLU', 5, 3, '2023-05-25 21:00:00', '2023-05-25 21:00:00');
 
 -- --------------------------------------------------------
 
@@ -397,21 +398,20 @@ INSERT INTO `plessons` (`id`, `lesson_name`, `link`, `unit_id`, `created_at`, `u
 CREATE TABLE `punits` (
   `id` int(10) NOT NULL,
   `unit_name` varchar(100) NOT NULL,
-  `level` int(5) NOT NULL,
-  `created_at` time NOT NULL DEFAULT current_timestamp(),
-  `updated_at` time NOT NULL DEFAULT current_timestamp()
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `punits`
 --
 
-INSERT INTO `punits` (`id`, `unit_name`, `level`, `created_at`, `updated_at`) VALUES
-(1, 'الوحدة الأولى', 1, '00:00:00', '00:00:00'),
-(2, 'الوحدة الثانية', 1, '00:00:00', '00:00:00'),
-(3, 'الوحدة الأولى', 2, '00:00:00', '00:00:00'),
-(4, 'الوحدة الثانية', 2, '00:00:00', '00:00:00'),
-(5, 'الوحدة الأولى', 3, '00:00:00', '00:00:00');
+INSERT INTO `punits` (`id`, `unit_name`, `created_at`, `updated_at`) VALUES
+(1, 'الوحدة الأولى', '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(2, 'الوحدة الثانية', '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(3, 'الوحدة الأولى', '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(4, 'الوحدة الثانية', '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(5, 'الوحدة الأولى', '2023-05-25 21:00:00', '2023-05-25 21:00:00');
 
 -- --------------------------------------------------------
 
