@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2023 at 09:06 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: May 28, 2023 at 03:53 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -51,14 +51,14 @@ CREATE TABLE `arpcourses` (
   `frensh3` varchar(255) NOT NULL DEFAULT 'closed',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `arpcourses`
 --
 
 INSERT INTO `arpcourses` (`id`, `name`, `student_id`, `math1`, `arabic1`, `math2`, `arabic2`, `math3`, `arabic3`, `english1`, `english2`, `english3`, `science1`, `science2`, `science3`, `social1`, `social2`, `social3`, `frensh1`, `frensh2`, `frensh3`, `created_at`, `updated_at`) VALUES
-(74, 'Nouran El Mohamady', 71, 'closed', 'open', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL),
+(74, 'Nouran El Mohamady', 71, 'open', 'open', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL),
 (75, 'Alaa Osama', 72, 'open', 'open', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
 
 -- --------------------------------------------------------
@@ -87,7 +87,7 @@ CREATE TABLE `arth1coures` (
   `spanish` varchar(100) NOT NULL DEFAULT 'closed',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `arth1coures`
@@ -122,7 +122,7 @@ CREATE TABLE `arth2courses` (
   `philosophy` varchar(100) NOT NULL DEFAULT 'closed',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `arth2courses`
@@ -155,7 +155,7 @@ CREATE TABLE `arth3courses` (
   `philosophy` varchar(100) NOT NULL,
   `created_at` timestamp(5) NULL DEFAULT NULL,
   `updated_at` timestamp(5) NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -187,7 +187,7 @@ CREATE TABLE `enpcourses` (
   `frensh3` varchar(100) NOT NULL DEFAULT 'closed',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `enpcourses`
@@ -222,7 +222,7 @@ CREATE TABLE `enth1coures` (
   `spanish` varchar(100) NOT NULL DEFAULT 'closed',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `enth1coures`
@@ -253,7 +253,7 @@ CREATE TABLE `enth2courses` (
   `psychology` varchar(100) NOT NULL DEFAULT 'closed',
   `geography` varchar(100) NOT NULL DEFAULT 'closed',
   `philosophy` varchar(100) NOT NULL DEFAULT 'closed'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `enth2courses`
@@ -279,14 +279,14 @@ CREATE TABLE `enth3courses` (
   `math` varchar(100) NOT NULL,
   `physics` varchar(100) NOT NULL,
   `chemistry` varchar(100) NOT NULL,
-  `biology` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NOT NULL,
+  `biology` varchar(100) CHARACTER SET utf32 NOT NULL,
   `history` varchar(100) NOT NULL,
   `psychology` varchar(100) NOT NULL,
   `geography` varchar(100) NOT NULL,
   `philosophy` varchar(100) NOT NULL,
   `created_at` timestamp(5) NULL DEFAULT NULL,
   `updated_at` timestamp(5) NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -296,11 +296,11 @@ CREATE TABLE `enth3courses` (
 
 CREATE TABLE `failed_jobs` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `uuid` varchar(255) NOT NULL,
-  `connection` text NOT NULL,
-  `queue` text NOT NULL,
-  `payload` longtext NOT NULL,
-  `exception` longtext NOT NULL,
+  `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -312,7 +312,7 @@ CREATE TABLE `failed_jobs` (
 
 CREATE TABLE `migrations` (
   `id` int(10) UNSIGNED NOT NULL,
-  `migration` varchar(255) NOT NULL,
+  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -333,8 +333,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 --
 
 CREATE TABLE `password_resets` (
-  `email` varchar(255) NOT NULL,
-  `token` varchar(255) NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -346,11 +346,11 @@ CREATE TABLE `password_resets` (
 
 CREATE TABLE `personal_access_tokens` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `tokenable_type` varchar(255) NOT NULL,
+  `tokenable_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `tokenable_id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `token` varchar(64) NOT NULL,
-  `abilities` text DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `abilities` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `last_used_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -368,26 +368,29 @@ CREATE TABLE `plessons` (
   `link` varchar(1000) NOT NULL,
   `unit_id` int(10) NOT NULL,
   `level` int(5) NOT NULL,
+  `subject` varchar(300) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `plessons`
 --
 
-INSERT INTO `plessons` (`id`, `lesson_name`, `link`, `unit_id`, `level`, `created_at`, `updated_at`) VALUES
-(1, 'الدرس الأول', 'https://www.youtube.com/embed/Bq4WD9c-3qg', 1, 1, '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
-(2, 'الدرس الثانى', 'https://www.youtube.com/embed/gDODiKkuBLM', 1, 1, '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
-(3, 'الدرس الثالث', 'https://www.youtube.com/embed/cBVKv-ppNeI', 1, 1, '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
-(4, 'الدرس الرابع', 'https://www.youtube.com/embed/Yd9iccf59qo', 1, 1, '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
-(5, 'الدرس الأول', 'https://www.youtube.com/embed/DftlOK7fCtc', 2, 1, '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
-(6, 'الدرس الثانى', 'https://www.youtube.com/embed/z4j4S6GsxaU', 2, 1, '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
-(7, 'الدرس الاول', 'https://www.youtube.com/embed/_Nj7laDeRBQ', 3, 2, '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
-(8, 'الدرس الثانى', 'https://www.youtube.com/embed/mDEKMonYf1w', 3, 2, '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
-(9, 'الدرس الاول', 'https://www.youtube.com/embed/QStpeLp25A4', 4, 2, '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
-(10, 'الدرس الثانى', 'https://www.youtube.com/embed/yCUpnvBkfEM', 4, 2, '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
-(11, 'الدرس الاول', 'https://www.youtube.com/embed/VE7pgB9tvLU', 5, 3, '2023-05-25 21:00:00', '2023-05-25 21:00:00');
+INSERT INTO `plessons` (`id`, `lesson_name`, `link`, `unit_id`, `level`, `subject`, `created_at`, `updated_at`) VALUES
+(1, 'الدرس الأول', 'https://www.youtube.com/embed/Bq4WD9c-3qg', 1, 1, 'arabic', '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(2, 'الدرس الثانى', 'https://www.youtube.com/embed/gDODiKkuBLM', 1, 1, 'arabic', '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(3, 'الدرس الثالث', 'https://www.youtube.com/embed/cBVKv-ppNeI', 1, 1, 'arabic', '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(4, 'الدرس الرابع', 'https://www.youtube.com/embed/Yd9iccf59qo', 1, 1, 'arabic', '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(5, 'الدرس الأول', 'https://www.youtube.com/embed/DftlOK7fCtc', 2, 1, 'arabic', '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(6, 'الدرس الثانى', 'https://www.youtube.com/embed/z4j4S6GsxaU', 2, 1, 'arabic', '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(7, 'الدرس الاول', 'https://www.youtube.com/embed/_Nj7laDeRBQ', 3, 2, 'arabic', '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(8, 'الدرس الثانى', 'https://www.youtube.com/embed/mDEKMonYf1w', 3, 2, 'arabic', '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(9, 'الدرس الاول', 'https://www.youtube.com/embed/QStpeLp25A4', 4, 2, 'arabic', '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(10, 'الدرس الثانى', 'https://www.youtube.com/embed/yCUpnvBkfEM', 4, 2, 'arabic', '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(11, 'الدرس الاول', 'https://www.youtube.com/embed/VE7pgB9tvLU', 5, 3, 'math', '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(12, 'الدرس الاول', 'https://www.youtube.com/embed/TMubSggUOVE', 1, 1, 'math', '0000-00-00 00:00:00', NULL),
+(13, 'الدرس الثاني', 'https://www.youtube.com/embed/H2eXzc2PfEQ', 2, 1, 'math', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -400,7 +403,7 @@ CREATE TABLE `punits` (
   `unit_name` varchar(100) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `punits`
@@ -409,9 +412,9 @@ CREATE TABLE `punits` (
 INSERT INTO `punits` (`id`, `unit_name`, `created_at`, `updated_at`) VALUES
 (1, 'الوحدة الأولى', '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
 (2, 'الوحدة الثانية', '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
-(3, 'الوحدة الأولى', '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
-(4, 'الوحدة الثانية', '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
-(5, 'الوحدة الأولى', '2023-05-25 21:00:00', '2023-05-25 21:00:00');
+(3, 'الوحدة التالته', '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(4, 'الوحدة الرابعه', '2023-05-25 21:00:00', '2023-05-25 21:00:00'),
+(5, 'الوحدة الخامسه', '2023-05-25 21:00:00', '2023-05-25 21:00:00');
 
 -- --------------------------------------------------------
 
@@ -434,7 +437,7 @@ CREATE TABLE `students` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `code` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `students`
@@ -454,11 +457,11 @@ INSERT INTO `students` (`id`, `email`, `name`, `mobile`, `parent_mobile`, `phone
 
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
-  `password` varchar(255) NOT NULL,
-  `remember_token` varchar(100) DEFAULT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -645,7 +648,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `plessons`
 --
 ALTER TABLE `plessons`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `punits`

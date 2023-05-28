@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Plesson;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-
+use App\Models\punit;
 class Show extends Controller
 {
   public function show( )
@@ -30,12 +30,14 @@ class Show extends Controller
     $id = request('id');
     $subject = request('subject');
     $status=request('status');
-    $plesseons = Plesson::where("unit_id",1)->get();
+    $plesseons = Plesson::where("subject",$subject)->where('level',$id)->get();
+   $units= Punit::all();
     return view('pcoursedetails', [
       'id' => $id,
       'subject'=>$subject,
       'status'=>$status,
-      'plessons'=>$plesseons
+      'plessons'=>$plesseons,
+      'units'=>$units
     ]);
   }
   public function first()

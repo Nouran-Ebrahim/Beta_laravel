@@ -59,8 +59,8 @@
 	  })
 })(window.jQuery);
 document.getElementById('thanwy').addEventListener('click',()=>{
-	document.getElementById('thawy-content').style.display="block";
-    document.getElementById('thawy-content').style.cssText='display: flex; flex-direction: row; justify-content: space-around;width: 100%;'
+	document.getElementById('thawy-content').style.display="flex";
+   
 	document.getElementById('prep-content').style.display="none";
 
 document.getElementById('thanwy').style.cssText="color:#f5a425"
@@ -72,8 +72,8 @@ console.log("clicked")
 })
 
 document.getElementById('prep').addEventListener('click',()=>{
-	document.getElementById('prep-content').style.display="block";
-    document.getElementById('prep-content').style.cssText='display: flex; flex-direction: row; justify-content: space-around;width: 100%;'
+	document.getElementById('prep-content').style.display="flex";
+   
 
 	document.getElementById('thawy-content').style.display="none";
 	document.getElementById('prep').style.cssText="color:#f5a425"

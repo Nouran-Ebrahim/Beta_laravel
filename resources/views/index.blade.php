@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,8 +62,8 @@ https://templatemo.com/tm-569-edu-meeting
                             <li><a href="{{ route('joinus') }}">Join Us</a></li>
                             <li><a href="{{ route('about') }}">About</a></li>
                             <li><a href="#contact">Contact Us</a></li>
-                            @if (Session::get('id')===70)
-                            <li><a href="{{ route('admin') }}">Admin</a></li>
+                            @if (Session::get('id') === 70)
+                                <li><a href="{{ route('admin') }}">Admin</a></li>
                             @endif
                         </ul>
                         <a class='menu-trigger'>
@@ -90,7 +89,7 @@ https://templatemo.com/tm-569-edu-meeting
                     <div class="col-lg-12">
                         <div class="caption">
                             @if (Session::has('id'))
-                                <h6>Hello {{$data->name}} </h6>
+                                <h6>Hello {{ $data->name }} </h6>
                             @else
                                 <h6>Hello student </h6>
                             @endif
@@ -121,88 +120,120 @@ https://templatemo.com/tm-569-edu-meeting
                 </li>
             </ul>
         </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="dir" id="prep-content">
-
-                    <div class="card item" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">1st Grad</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk
-                                of the
-                                card's
-                                content.</p>
-                            <a href="{{ route('prep-courses', ['id' => 1]) }}" class="card-link"><button type="button"
-                                    class="btn btn-outline-primary view" id="prep-1">View</button></a>
+      
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="dir" id="prep-content">
+                        <div class="row">
+                            <div class="col-lg-4 justify-content-center align-items-center d-flex">
+                                <div class="card item" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">1st Grad</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up
+                                            the
+                                            bulk
+                                            of the
+                                            card's
+                                            content.</p>
+                                        <a href="{{ route('prep-courses', ['id' => 1]) }}" class="card-link"><button
+                                                type="button" class="btn btn-outline-primary view"
+                                                id="prep-1">View</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 justify-content-center align-items-center d-flex">
+                                <div class="card item" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">2nd Grad</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up
+                                            the
+                                            bulk
+                                            of the
+                                            card's
+                                            content.</p>
+                                        <a href="{{ route('prep-courses', ['id' => 2]) }}" class="card-link"><button
+                                                type="button" class="btn btn-outline-primary view"
+                                                id="prep-2">View</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 justify-content-center align-items-center d-flex">
+                                <div class="card item" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">3rd Grad</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and
+                                            make up
+                                            the
+                                            bulk
+                                            of the
+                                            card's
+                                            content.</p>
+                                        <a href="{{ route('prep-courses', ['id' => 3]) }}" class="card-link"><button
+                                                type="button" class="btn btn-outline-primary view"
+                                                id="prep-3">View</button></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="card item" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">2nd Grad</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the
-                                card's
-                                content.</p>
-                            <a href="{{ route('prep-courses', ['id' => 2]) }}" class="card-link"><button type="button"
-                                    class="btn btn-outline-primary view" id="prep-2">View</button></a>
-                        </div>
-                    </div>
-                    <div class="card item" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">3rd Grad</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the
-                                card's
-                                content.</p>
-                            <a href="{{ route('prep-courses', ['id' => 3]) }}" class="card-link"><button type="button"
-                                    class="btn btn-outline-primary view" id="prep-3">View</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dir" id="thawy-content">
-
-                    <div class="card item" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">1st Grad</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk
-                                of the
-                                card's
-                                content.</p>
-                            <a href="{{ route('thanwy12-courses', ['id' => 1]) }}" class="card-link"><button
-                                    type="button" class="btn btn-outline-primary view">View</button></a>
-                        </div>
-                    </div>
-
-                    <div class="card item" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">2nd Gradd</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk
-                                of the
-                                card's
-                                content.</p>
-                            <a href="{{ route('start', ['id' => 2]) }}" class="card-link"><button type="button"
-                                    class="btn btn-outline-primary view">View</button></a>
-                        </div>
-                    </div>
-                    <div class="card item" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">3rd Grad</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk
-                                of the
-                                card's
-                                content.</p>
-                            <a href="{{ route('start', ['id' => 3]) }}" class="card-link"><button type="button"
-                                    class="btn btn-outline-primary view">View</button></a>
+                    <div class="dir" id="thawy-content">
+                        <div class="row">
+                            <div class="col-lg-4 justify-content-center align-items-center d-flex">
+                                <div class="card item" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">1st Grad</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and
+                                            make up
+                                            the
+                                            bulk
+                                            of the
+                                            card's
+                                            content.</p>
+                                        <a href="{{ route('thanwy12-courses', ['id' => 1]) }}"
+                                            class="card-link"><button type="button"
+                                                class="btn btn-outline-primary view">View</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 justify-content-center align-items-center d-flex" >
+                                <div class="card item" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">2nd Gradd</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and
+                                            make up
+                                            the
+                                            bulk
+                                            of the
+                                            card's
+                                            content.</p>
+                                        <a href="{{ route('start', ['id' => 2]) }}" class="card-link"><button
+                                                type="button" class="btn btn-outline-primary view">View</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 justify-content-center align-items-center d-flex">
+                                <div class="card item" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">3rd Grad</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and
+                                            make up
+                                            the
+                                            bulk
+                                            of the
+                                            card's
+                                            content.</p>
+                                        <a href="{{ route('start', ['id' => 3]) }}" class="card-link"><button
+                                                type="button" class="btn btn-outline-primary view">View</button></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+       
     </section>
     <section class="upcoming-meetings" id="meetings">
         <div class="container">
