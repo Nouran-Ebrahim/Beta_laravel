@@ -695,6 +695,7 @@ header
 @media (min-width: 767px) {
   .header-area .main-nav .nav {
     display: flex !important;
+    margin-right: 3%
   }
 }
 
@@ -845,8 +846,20 @@ services
   position: absolute;
   width: 100%;
 }
+.level-sec{
+  background-image: url(../images/meetings-bg.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.level-sec .container{
+  position: relative;
+    z-index: 5;
+    top: 110px;
+}
 
-.services .item {
+ .level-sec .item {
   background-image: url(../images/service-item-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -857,19 +870,19 @@ services
   padding: 40px;
 }
 
-.services .item .icon {
+ .level-sec .item .icon {
   max-width: 60px;
   margin: 0 auto;
 }
 
-.services .item h4 {
+ .level-sec .item h4 {
   margin-top: 25px;
   margin-bottom: 15px;
   font-size: 18px;
   font-weight: 600;
 }
 
-.services .item p {
+ .level-sec .item p {
   color: #fff;
   font-size: 13px;
 }
@@ -961,7 +974,7 @@ section.upcoming-meetings {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 230px;
+  padding-top: 220px;
   padding-bottom: 110px;
 }
 
@@ -1773,7 +1786,16 @@ section.meetings-page .pagination ul li a:hover {
 		width: 100%;
 	}
 }
+@media (max-width: 992px) {
+  .header-area .main-nav .logo{
+    margin-left: 40%;
+  }
+  .header-area .main-nav .nav {
+    /* display: flex !important; */
+    margin-right: 3%
+  }
 
+}
 /* 
 ---------------------------------------------
 responsive
@@ -1860,9 +1882,9 @@ responsive
     margin-top: 60px;
   }
 
-  section.upcoming-meetings {
+  /* section.upcoming-meetings {
     padding-top: 400px;
-  }
+  } */
 
   section.upcoming-meetings .categories {
     margin-right: 0px;
