@@ -46,7 +46,7 @@ https://templatemo.com/tm-569-edu-meeting
     <header class="header-area header-sticky">
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 head">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
 
@@ -63,7 +63,7 @@ https://templatemo.com/tm-569-edu-meeting
                             <li><a href="{{ route('about') }}">About</a></li>
                             <li><a href="#contact">Contact Us</a></li>
                             @if (Session::get('id') === 70)
-                                <li><a href="{{ route('admin') }}">Admin</a></li>
+                            <li><a href="{{ route('admin') }}">Admin</a></li>
                             @endif
                         </ul>
                         <a class='menu-trigger'>
@@ -89,9 +89,9 @@ https://templatemo.com/tm-569-edu-meeting
                     <div class="col-lg-12">
                         <div class="caption">
                             @if (Session::has('id'))
-                                <h6>Hello {{ $data->name }} </h6>
+                            <h6>Hello {{ $data->name }} </h6>
                             @else
-                                <h6>Hello student </h6>
+                            <h6>Hello student </h6>
                             @endif
 
                             <h2>Welcome to Education</h2>
@@ -120,121 +120,124 @@ https://templatemo.com/tm-569-edu-meeting
                 </li>
             </ul>
         </div>
-      
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="dir" id="prep-content">
-                        <div class="row">
-                            <div class="col-lg-4 justify-content-center align-items-center d-flex">
-                                <div class="card item" style="width: 18rem;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">1st Grad</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up
-                                            the
-                                            bulk
-                                            of the
-                                            card's
-                                            content.</p>
-                                        <a href="{{ route('prep-courses', ['id' => 1]) }}" class="card-link"><button
-                                                type="button" class="btn btn-outline-primary view"
-                                                id="prep-1">View</button></a>
-                                    </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="dir" id="prep-content">
+                    <div class="row" style="row-gap: 10px;">
+                        <div class="col-lg-4 justify-content-center align-items-center d-flex">
+                            <div class="card item" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">1st Grad</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make
+                                        up
+                                        the
+                                        bulk
+                                        of the
+                                        card's
+                                        content.</p>
+                                    <a href="{{ route('prep-courses', ['id' => 1]) }}" class="card-link">
+                                        <button type="button" class="btn btn-outline-primary view"
+                                            id="prep-1">View</button>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="col-lg-4 justify-content-center align-items-center d-flex">
-                                <div class="card item" style="width: 18rem;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">2nd Grad</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up
-                                            the
-                                            bulk
-                                            of the
-                                            card's
-                                            content.</p>
-                                        <a href="{{ route('prep-courses', ['id' => 2]) }}" class="card-link"><button
-                                                type="button" class="btn btn-outline-primary view"
-                                                id="prep-2">View</button></a>
-                                    </div>
+                        </div>
+                        <div class="col-lg-4 justify-content-center align-items-center d-flex">
+                            <div class="card item" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">2nd Grad</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make
+                                        up
+                                        the
+                                        bulk
+                                        of the
+                                        card's
+                                        content.</p>
+                                    <a href="{{ route('prep-courses', ['id' => 2]) }}" class="card-link"><button
+                                            type="button" class="btn btn-outline-primary view"
+                                            id="prep-2">View</button></a>
                                 </div>
                             </div>
-                            <div class="col-lg-4 justify-content-center align-items-center d-flex">
-                                <div class="card item" style="width: 18rem;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">3rd Grad</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up
-                                            the
-                                            bulk
-                                            of the
-                                            card's
-                                            content.</p>
-                                        <a href="{{ route('prep-courses', ['id' => 3]) }}" class="card-link"><button
-                                                type="button" class="btn btn-outline-primary view"
-                                                id="prep-3">View</button></a>
-                                    </div>
+                        </div>
+                        <div class="col-lg-4 justify-content-center align-items-center d-flex">
+                            <div class="card item" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">3rd Grad</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and
+                                        make up
+                                        the
+                                        bulk
+                                        of the
+                                        card's
+                                        content.</p>
+                                    <a href="{{ route('prep-courses', ['id' => 3]) }}" class="card-link"><button
+                                            type="button" class="btn btn-outline-primary view"
+                                            id="prep-3">View</button></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="dir" id="thawy-content">
-                        <div class="row">
-                            <div class="col-lg-4 justify-content-center align-items-center d-flex">
-                                <div class="card item" style="width: 18rem;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">1st Grad</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up
-                                            the
-                                            bulk
-                                            of the
-                                            card's
-                                            content.</p>
-                                        <a href="{{ route('thanwy12-courses', ['id' => 1]) }}"
-                                            class="card-link"><button type="button"
-                                                class="btn btn-outline-primary view">View</button></a>
-                                    </div>
+                </div>
+                <div class="dir" id="thawy-content">
+                    <div class="row">
+                        <div class="col-lg-4 justify-content-center align-items-center d-flex">
+                            <div class="card item" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">1st Grad</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and
+                                        make up
+                                        the
+                                        bulk
+                                        of the
+                                        card's
+                                        content.</p>
+                                    <a href="{{ route('thanwy12-courses', ['id' => 1]) }}" class="card-link"><button
+                                            type="button" class="btn btn-outline-primary view">View</button></a>
                                 </div>
                             </div>
-                            <div class="col-lg-4 justify-content-center align-items-center d-flex" >
-                                <div class="card item" style="width: 18rem;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">2nd Gradd</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up
-                                            the
-                                            bulk
-                                            of the
-                                            card's
-                                            content.</p>
-                                        <a href="{{ route('start', ['id' => 2]) }}" class="card-link"><button
-                                                type="button" class="btn btn-outline-primary view">View</button></a>
-                                    </div>
+                        </div>
+                        <div class="col-lg-4 justify-content-center align-items-center d-flex">
+                            <div class="card item" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">2nd Gradd</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and
+                                        make up
+                                        the
+                                        bulk
+                                        of the
+                                        card's
+                                        content.</p>
+                                    <a href="{{ route('start', ['id' => 2]) }}" class="card-link"><button type="button"
+                                            class="btn btn-outline-primary view">View</button></a>
                                 </div>
                             </div>
-                            <div class="col-lg-4 justify-content-center align-items-center d-flex">
-                                <div class="card item" style="width: 18rem;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">3rd Grad</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up
-                                            the
-                                            bulk
-                                            of the
-                                            card's
-                                            content.</p>
-                                        <a href="{{ route('start', ['id' => 3]) }}" class="card-link"><button
-                                                type="button" class="btn btn-outline-primary view">View</button></a>
-                                    </div>
+                        </div>
+                        <div class="col-lg-4 justify-content-center align-items-center d-flex">
+                            <div class="card item" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">3rd Grad</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and
+                                        make up
+                                        the
+                                        bulk
+                                        of the
+                                        card's
+                                        content.</p>
+                                    <a href="{{ route('start', ['id' => 3]) }}" class="card-link"><button type="button"
+                                            class="btn btn-outline-primary view">View</button></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-       
+        </div>
+
     </section>
+
+
+    
     <section class="upcoming-meetings" id="meetings">
         <div class="container">
             <div class="row">
@@ -654,32 +657,31 @@ https://templatemo.com/tm-569-edu-meeting
                                     </div>
                                     <div class="col-lg-4">
                                         <fieldset>
-                                            <input name="name" type="text" id="name"
-                                                placeholder="YOURNAME...*" required="">
+                                            <input name="name" type="text" id="name" placeholder="YOURNAME...*"
+                                                required="">
                                         </fieldset>
                                     </div>
                                     <div class="col-lg-4">
                                         <fieldset>
-                                            <input name="email" type="email" id="email"
-                                                placeholder="YOUR EMAIL..." required="">
+                                            <input name="email" type="email" id="email" placeholder="YOUR EMAIL..."
+                                                required="">
                                         </fieldset>
                                     </div>
                                     <div class="col-lg-4">
                                         <fieldset>
-                                            <input name="subject" type="text" id="subject"
-                                                placeholder="SUBJECT...*" required="">
+                                            <input name="subject" type="text" id="subject" placeholder="SUBJECT...*"
+                                                required="">
                                         </fieldset>
                                     </div>
                                     <div class="col-lg-12">
                                         <fieldset>
-                                            <textarea name="message" type="text" class="form-control" id="message" placeholder="YOUR MESSAGE..."
-                                                required=""></textarea>
+                                            <textarea name="message" type="text" class="form-control" id="message"
+                                                placeholder="YOUR MESSAGE..." required=""></textarea>
                                         </fieldset>
                                     </div>
                                     <div class="col-lg-12">
                                         <fieldset>
-                                            <button name='submit' type="submit" id="form-submit"
-                                                class="button">SEND
+                                            <button name='submit' type="submit" id="form-submit" class="button">SEND
                                                 MESSAGE NOW</button>
                                         </fieldset>
                                     </div>
@@ -735,51 +737,51 @@ https://templatemo.com/tm-569-edu-meeting
 
     <!-- <script src="assets/js/levels.js"></script> -->
     <script>
-        //according to loftblog tut
-        $('.nav li:first').addClass('active');
+    //according to loftblog tut
+    $('.nav li:first').addClass('active');
 
-        var showSection = function showSection(section, isAnimate) {
+    var showSection = function showSection(section, isAnimate) {
+        var
+            direction = section.replace(/#/, ''),
+            reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+            reqSectionPos = reqSection.offset().top - 0;
+
+        if (isAnimate) {
+            $('body, html').animate({
+                    scrollTop: reqSectionPos
+                },
+                800);
+        } else {
+            $('body, html').scrollTop(reqSectionPos);
+        }
+
+    };
+
+    var checkSection = function checkSection() {
+        $('.section').each(function() {
             var
-                direction = section.replace(/#/, ''),
-                reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-                reqSectionPos = reqSection.offset().top - 0;
-
-            if (isAnimate) {
-                $('body, html').animate({
-                        scrollTop: reqSectionPos
-                    },
-                    800);
-            } else {
-                $('body, html').scrollTop(reqSectionPos);
-            }
-
-        };
-
-        var checkSection = function checkSection() {
-            $('.section').each(function() {
+                $this = $(this),
+                topEdge = $this.offset().top - 80,
+                bottomEdge = topEdge + $this.height(),
+                wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
                 var
-                    $this = $(this),
-                    topEdge = $this.offset().top - 80,
-                    bottomEdge = topEdge + $this.height(),
-                    wScroll = $(window).scrollTop();
-                if (topEdge < wScroll && bottomEdge > wScroll) {
-                    var
-                        currentId = $this.data('section'),
-                        reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-                    reqLink.closest('li').addClass('active').
-                    siblings().removeClass('active');
-                }
-            });
-        };
-
-        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function(e) {
-            e.preventDefault();
-            showSection($(this).attr('href'), true);
+                    currentId = $this.data('section'),
+                    reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+                reqLink.closest('li').addClass('active').
+                siblings().removeClass('active');
+            }
         });
+    };
 
-        $(window).scroll(function() {
-            checkSection();
-        });
+    $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function(e) {
+        e.preventDefault();
+        showSection($(this).attr('href'), true);
+    });
+
+    $(window).scroll(function() {
+        checkSection();
+    });
     </script>
 </body>
 
