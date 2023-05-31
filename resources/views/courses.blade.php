@@ -22,6 +22,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
         integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous">
     </script>
+    
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
 
@@ -39,7 +40,7 @@
 
 <body>
     <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
+    {{-- <header class="header-area header-sticky">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -63,6 +64,40 @@
                             <span>Menu</span>
                         </a>
                         <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header> --}}
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <div class="row  justify-content-center align-items-center">
+
+                            <div class="col-lg-2 col-12  d-flex  align-items-center iconn ">
+                                <div class="logo logo-img">
+                                    <a href="index.blade.php" >
+                                        <img src="assets/images/logoo2.png" class="img-responsive">
+                                    </a>
+                                 </div>
+                                 <a class='menu-trigger'>
+                                    <span>Menu</span>
+                                </a>
+                            </div>
+                            <div class="offset-lg-1 col-lg-9 col-12 justify-content-center d-flex align-items-center">
+                                <ul class="nav">
+                                    <li><a href="{{ route('index') }}">Home</a></li>
+                                    <li><a href="{{ route('index') }}" class="active" id="level">Levels</a></li>
+                                    <li><a href="{{ route('index') }}" id="skill">Skills</a></li>
+                                    <li><a href="{{ route('joinus') }}">Join Us</a></li>
+                                    <li><a href="{{ route('about') }}">About</a></li>
+                                    <li><a href="{{ route('index') }}">Contact Us</a></li>
+                                </ul>
+                               
+                            </div>
+                        </div>
                     </nav>
                 </div>
             </div>

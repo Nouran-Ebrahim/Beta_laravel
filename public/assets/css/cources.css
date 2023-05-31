@@ -24,9 +24,52 @@ h1{
   color:white;
 }
 /* header */
+.head{
+  width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex !important;
+
+}
+.sub-header {
+  background-color: #1f272b;
+  position: relative;
+  z-index: 1111;
+}
+
+.sub-header .left-content p {
+  color: #fff;
+  padding: 8px 0px;
+  font-size: 13px;
+}
+
+.sub-header .right-icons {
+  text-align: right;
+  padding: 8px 0px;
+}
+
+.sub-header .right-icons ul li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.sub-header .right-icons ul li a {
+  color: #fff;
+  font-size: 14px;
+  transition: all .3s;
+}
+
+.sub-header .right-icons ul li a:hover {
+  color: #f5a425;
+}
+
+.sub-header .left-content p em {
+   font-style: normal;
+   color: #f5a425;
+}
+
 .background-header {
   background-color:#1f262c!important;
-  height: 80px!important;
   position: fixed!important;
   top: 0!important;
   left: 0;
@@ -50,6 +93,7 @@ h1{
 .background-header .nav li a.active {
   color: #fb5849!important;
 }
+
 .header-area {
   background-color: rgba(250,250,250,0.15);
   position: absolute;
@@ -64,18 +108,14 @@ h1{
 }
 
 .header-area .main-nav {
-  min-height: 80px;
+  /* min-height: 80px; */
   background: transparent;
 }
 
 .header-area .main-nav .logo {
   /* line-height: 100px; */
-  color: #fff;
-  font-size: 28px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  float: left;
+  /* float: left; */
+  width: 65%;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -86,7 +126,7 @@ h1{
   line-height: 75px;
 } */
 .logo-img img{
-  width: 45%;
+  width: 100%;
     /* padding: 1%; */
     /* background-color: yellow; */
     margin-top: 1%;
@@ -97,8 +137,8 @@ h1{
 }
 
 .header-area .main-nav .nav {
-  float: right;
-  margin-top: 30px;
+  /* float: right; */
+  /* margin-top: 30px; */
   margin-right: 0px;
   background-color: transparent;
   -webkit-transition: all 0.3s ease 0s;
@@ -121,7 +161,7 @@ h1{
 .header-area .main-nav .nav li a {
   display: block;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 20px;
   text-transform: uppercase;
   color: #fff;
   -webkit-transition: all 0.3s ease 0s;
@@ -338,9 +378,9 @@ h1{
   min-height: 92px;
 }
 
-.header-area .nav {
+/* .header-area .nav {
   margin-top: 30px;
-}
+} */
 
 .header-area.header-sticky .nav li a.active {
   color: #f5a425;
@@ -356,10 +396,96 @@ h1{
   }
 }
 
-@media (max-width: 767px) {
+
+@media screen and (max-width: 992px) {
+
+.header-area .main-nav .logo {
+  width: 20%;
+}
+.accordion-head .icon {
+  float: right;
+  transition: transform 200ms ease-in-out;
+}
+.accordion-head.is-open {
+  color: #f5a425;
+  border-bottom: none;
+}
+.accordion-head.is-open .icon {
+  transform: rotate(45deg);
+}
+.accordion-body {
+  overflow: hidden;
+  height: 0;
+  transition: height 300ms ease-in-out;
+  border-bottom: 1px solid #fff;
+}
+.accordion-body > .content {
+  padding: 20px;
+  padding-top: 0;
+}
+}
+/*********** Footer  ***********/
+
+.footer {
+  text-align: center;
+  margin-top: 140px;
+  border-top: 1px solid rgba(250,250,250,0.15);
+  padding: 50px 0px;
+}
+.footer p {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fff;
+}
+
+.footer p a {
+  color: #f5a425;
+}
+
+#english{
+display: none;
+}
+.nav li a{
+text-decoration: none;
+}
+#prep{
+color: #f5a425;
+}
+#thanwy{
+color: white;
+}
+
+.thanwy-btn{
+display: block !important;
+text-align: center;
+margin-bottom: 2%;
+}
+.thanwy-btn button{
+color: white !important;
+width: 50%;
+font-size: 20px;
+font-weight: bold;
+padding-top: 1%;
+padding-bottom: 1%;
+}
+.start-footer{
+margin-top: 0 !important;
+}
+.mr button{
+  margin-top: 15% !important;
+  font-size: 30px !important;
+}
+.text-center{
+  padding-top: 30px;
+}
+@media only screen and (min-width:450px) and (max-width:766px){
   .header-area .main-nav .logo {
     color:white;
+    width: 20%;
   }
+}
+@media (max-width: 766px) {
+
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
     color: #f5a425!important;
@@ -371,13 +497,14 @@ h1{
   .header-area {
     background-color: transparent;
     padding: 0px 15px;
-    height: 100px;
+    /* height: 100px; */
     box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
     text-align: center;
   }
   .header-area .container {
     padding: 0px;
   }
+  
   .header-area .logo {
     margin-left: 30px;
   }
@@ -388,7 +515,7 @@ h1{
     overflow: hidden;
   }
   .header-area .main-nav .nav {
-    float: none;
+    /* float: none; */
     width: 100%;
     display: none;
     -webkit-transition: all 0s ease 0s;
@@ -401,8 +528,10 @@ h1{
     border-top: 1px solid #eee;
   }
   .header-area.header-sticky .nav {
-    margin-top: 100px !important;
+   
+    margin-top: 35px !important;
   }
+
   .header-area .main-nav .nav li {
     width: 100%;
     background: #fff;
@@ -461,67 +590,27 @@ h1{
  
 }
 }
+.iconn{
+  justify-content: center;
+}
+@media (max-width: 449px) {
 
+  .header-area .main-nav .logo {
+    width: 30%;
+}
+
+}
 @media (min-width: 767px) {
   .header-area .main-nav .nav {
     display: flex !important;
+    margin-right: 3%
   }
+ 
 }
-
-
-.container ul a{
-  font-size: 20px !important;
-  font-weight: bold;
-}
-
-/*********** Footer  ***********/
-
-.footer {
-  text-align: center;
-  margin-top: 140px;
-  border-top: 1px solid rgba(250,250,250,0.15);
-  padding: 50px 0px;
-}
-.footer p {
-  text-transform: uppercase;
-  font-size: 14px;
-  color: #fff;
-}
-
-.footer p a {
-  color: #f5a425;
-}
-
-#english{
-display: none;
-}
-.nav li a{
-text-decoration: none;
-}
-#prep{
-color: #f5a425;
-}
-#thanwy{
-color: white;
-}
-
-.thanwy-btn{
-display: block !important;
-text-align: center;
-margin-bottom: 2%;
-}
-.thanwy-btn button{
-color: white !important;
-width: 50%;
-font-size: 20px;
-font-weight: bold;
-padding-top: 1%;
-padding-bottom: 1%;
-}
-.start-footer{
-margin-top: 0 !important;
-}
-.mr button{
-  margin-top: 15% !important;
-  font-size: 30px !important;
+@media (max-width: 767px) {
+  .iconn{
+    justify-content: flex-start;
+    padding-top: 20px;
+  }
+ 
 }

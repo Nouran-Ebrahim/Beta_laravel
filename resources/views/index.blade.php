@@ -43,16 +43,17 @@ https://templatemo.com/tm-569-edu-meeting
 <body>
 
     <!-- ***** Header Area Start ***** -->
-    <nav class="navbar navbar-expand-lg  header-area header-sticky">
+    {{-- <nav class="navbar navbar-expand-lg  header-area header-sticky">
         <div class="container">
             <a class="navbar-brand  me-auto" href="index.blade.php" style='width:7%'>
                 <img src="assets/images/logoo2.png" class='w-100'>
             </a>
-            <a class='menu-trigger'>
-                            <span >Menu</span>
-                        </a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <a class='menu-trigger' data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span>Menu</span>
+            </a>
+        
+            <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+                <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a href="#top" class="nav-link active" aria-current="page">Home</a>
                     </li>
@@ -73,7 +74,7 @@ https://templatemo.com/tm-569-edu-meeting
                     </li>
 
                     @if (Session::get('id') === 70)
-                    <li class="nav-item"><a class="nav-link" href="{{ route('admin') }}">Admin</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('admin') }}">Admin</a></li>
                     @endif
 
 
@@ -81,41 +82,45 @@ https://templatemo.com/tm-569-edu-meeting
 
             </div>
         </div>
-    </nav>
-    <!-- <header class="header-area header-sticky">
+    </nav> --}}
+
+    <header class="header-area header-sticky">
         <div class="container">
             <div class="row">
-                <div class="col-12 head">
+                <div class="col-12">
                     <nav class="main-nav">
-                        <div class="row">
+                        <div class="row  justify-content-center align-items-center">
 
-                    <div class="col-lg-6 col-12">
-                    <a href="index.blade.php" class="logo logo-img">
-                            <img src="assets/images/logoo2.png">
-                        </a>
-                    </div>
-                        <div class="col-lg-6 col-12">
-                        <ul class="nav">
-                            <li><a href="#top" class="active">Home</a></li>
-                            <li><a href="#levels" id="level">Levels</a></li>
-                            <li><a href="#courses" id="skill">Skills</a></li>
-                            <li><a href="{{ route('joinus') }}">Join Us</a></li>
-                            <li><a href="{{ route('about') }}">About</a></li>
-                            <li><a href="#contact">Contact Us</a></li>
-                            @if (Session::get('id') === 70)
-                                <li><a href="{{ route('admin') }}">Admin</a></li>
-                            @endif
-                        </ul>
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        </div>
+                            <div class="col-lg-2 col-12  d-flex  align-items-center iconn ">
+                                <div class="logo logo-img">
+                                    <a href="index.blade.php" >
+                                        <img src="assets/images/logoo2.png" class="img-responsive">
+                                    </a>
+                                 </div>
+                                 <a class='menu-trigger'>
+                                    <span>Menu</span>
+                                </a>
+                            </div>
+                            <div class="offset-lg-1 col-lg-9 col-12 justify-content-center d-flex align-items-center">
+                                <ul class="nav">
+                                    <li><a href="#top" class="active">Home</a></li>
+                                    <li><a href="#levels" id="level">Levels</a></li>
+                                    <li><a href="#courses" id="skill">Skills</a></li>
+                                    <li><a href="{{ route('joinus') }}">Join Us</a></li>
+                                    <li><a href="{{ route('about') }}">About</a></li>
+                                    <li><a href="#contact">Contact Us</a></li>
+                                    @if (Session::get('id') === 70)
+                                        <li><a href="{{ route('admin') }}">Admin</a></li>
+                                    @endif
+                                </ul>
+                               
+                            </div>
                         </div>
                     </nav>
                 </div>
             </div>
         </div>
-    </header> -->
+    </header>
     <!-- ***** Header Area End ***** -->
 
     <!-- ***** Main Banner Area Start ***** -->
@@ -130,9 +135,9 @@ https://templatemo.com/tm-569-edu-meeting
                     <div class="col-lg-12">
                         <div class="caption">
                             @if (Session::has('id'))
-                            <h6>Hello {{ $data->name }} </h6>
+                                <h6>Hello {{ $data->name }} </h6>
                             @else
-                            <h6>Hello student </h6>
+                                <h6>Hello student </h6>
                             @endif
 
                             <h2>Welcome to Education</h2>
@@ -369,8 +374,8 @@ https://templatemo.com/tm-569-edu-meeting
                                         of the
                                         card's
                                         content.</p>
-                                    <a href="{{ route('start', ['id' => 2]) }}" class="card-link"><button type="button"
-                                            class="btn btn-outline-primary view">View</button></a>
+                                    <a href="{{ route('start', ['id' => 2]) }}" class="card-link"><button
+                                            type="button" class="btn btn-outline-primary view">View</button></a>
                                 </div>
                             </div>
                         </div>
@@ -385,8 +390,8 @@ https://templatemo.com/tm-569-edu-meeting
                                         of the
                                         card's
                                         content.</p>
-                                    <a href="{{ route('start', ['id' => 3]) }}" class="card-link"><button type="button"
-                                            class="btn btn-outline-primary view">View</button></a>
+                                    <a href="{{ route('start', ['id' => 3]) }}" class="card-link"><button
+                                            type="button" class="btn btn-outline-primary view">View</button></a>
                                 </div>
                             </div>
                         </div>
@@ -816,31 +821,32 @@ https://templatemo.com/tm-569-edu-meeting
                                     </div>
                                     <div class="col-lg-4">
                                         <fieldset>
-                                            <input name="name" type="text" id="name" placeholder="YOURNAME...*"
-                                                required="">
+                                            <input name="name" type="text" id="name"
+                                                placeholder="YOURNAME...*" required="">
                                         </fieldset>
                                     </div>
                                     <div class="col-lg-4">
                                         <fieldset>
-                                            <input name="email" type="email" id="email" placeholder="YOUR EMAIL..."
-                                                required="">
+                                            <input name="email" type="email" id="email"
+                                                placeholder="YOUR EMAIL..." required="">
                                         </fieldset>
                                     </div>
                                     <div class="col-lg-4">
                                         <fieldset>
-                                            <input name="subject" type="text" id="subject" placeholder="SUBJECT...*"
-                                                required="">
+                                            <input name="subject" type="text" id="subject"
+                                                placeholder="SUBJECT...*" required="">
                                         </fieldset>
                                     </div>
                                     <div class="col-lg-12">
                                         <fieldset>
-                                            <textarea name="message" type="text" class="form-control" id="message"
-                                                placeholder="YOUR MESSAGE..." required=""></textarea>
+                                            <textarea name="message" type="text" class="form-control" id="message" placeholder="YOUR MESSAGE..."
+                                                required=""></textarea>
                                         </fieldset>
                                     </div>
                                     <div class="col-lg-12">
                                         <fieldset>
-                                            <button name='submit' type="submit" id="form-submit" class="button">SEND
+                                            <button name='submit' type="submit" id="form-submit"
+                                                class="button">SEND
                                                 MESSAGE NOW</button>
                                         </fieldset>
                                     </div>
@@ -896,51 +902,51 @@ https://templatemo.com/tm-569-edu-meeting
 
     <!-- <script src="assets/js/levels.js"></script> -->
     <script>
-    //according to loftblog tut
-    $('.nav li:first').addClass('active');
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
 
-    var showSection = function showSection(section, isAnimate) {
-        var
-            direction = section.replace(/#/, ''),
-            reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-            reqSectionPos = reqSection.offset().top - 0;
-
-        if (isAnimate) {
-            $('body, html').animate({
-                    scrollTop: reqSectionPos
-                },
-                800);
-        } else {
-            $('body, html').scrollTop(reqSectionPos);
-        }
-
-    };
-
-    var checkSection = function checkSection() {
-        $('.section').each(function() {
+        var showSection = function showSection(section, isAnimate) {
             var
-                $this = $(this),
-                topEdge = $this.offset().top - 80,
-                bottomEdge = topEdge + $this.height(),
-                wScroll = $(window).scrollTop();
-            if (topEdge < wScroll && bottomEdge > wScroll) {
-                var
-                    currentId = $this.data('section'),
-                    reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-                reqLink.closest('li').addClass('active').
-                siblings().removeClass('active');
+                direction = section.replace(/#/, ''),
+                reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+                reqSectionPos = reqSection.offset().top - 0;
+
+            if (isAnimate) {
+                $('body, html').animate({
+                        scrollTop: reqSectionPos
+                    },
+                    800);
+            } else {
+                $('body, html').scrollTop(reqSectionPos);
             }
+
+        };
+
+        var checkSection = function checkSection() {
+            $('.section').each(function() {
+                var
+                    $this = $(this),
+                    topEdge = $this.offset().top - 80,
+                    bottomEdge = topEdge + $this.height(),
+                    wScroll = $(window).scrollTop();
+                if (topEdge < wScroll && bottomEdge > wScroll) {
+                    var
+                        currentId = $this.data('section'),
+                        reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+                    reqLink.closest('li').addClass('active').
+                    siblings().removeClass('active');
+                }
+            });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function(e) {
+            e.preventDefault();
+            showSection($(this).attr('href'), true);
         });
-    };
 
-    $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function(e) {
-        e.preventDefault();
-        showSection($(this).attr('href'), true);
-    });
-
-    $(window).scroll(function() {
-        checkSection();
-    });
+        $(window).scroll(function() {
+            checkSection();
+        });
     </script>
 </body>
 
