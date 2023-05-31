@@ -43,18 +43,58 @@ https://templatemo.com/tm-569-edu-meeting
 <body>
 
     <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
+    <nav class="navbar navbar-expand-lg  header-area header-sticky">
+        <div class="container">
+            <a class="navbar-brand  me-auto" href="index.blade.php" style='width:7%'>
+                <img src="assets/images/logoo2.png" class='w-100'>
+            </a>
+            <a class='menu-trigger'>
+                            <span >Menu</span>
+                        </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="#top" class="nav-link active" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#levels" id="level" class="nav-link">Levels</a>
+                    </li>
+                    <li class="nav-item">
+                    <li><a href="#courses" id="skill" class="nav-link">Skills</a></li>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('joinus') }}" class="nav-link">Join Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('about') }}" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact Us</a>
+                    </li>
+
+                    @if (Session::get('id') === 70)
+                    <li class="nav-item"><a class="nav-link" href="{{ route('admin') }}">Admin</a></li>
+                    @endif
+
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- <header class="header-area header-sticky">
         <div class="container">
             <div class="row">
                 <div class="col-12 head">
                     <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
+                        <div class="row">
 
-                        <a href="index.blade.php" class="logo logo-img">
+                    <div class="col-lg-6 col-12">
+                    <a href="index.blade.php" class="logo logo-img">
                             <img src="assets/images/logoo2.png">
                         </a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
+                    </div>
+                        <div class="col-lg-6 col-12">
                         <ul class="nav">
                             <li><a href="#top" class="active">Home</a></li>
                             <li><a href="#levels" id="level">Levels</a></li>
@@ -69,12 +109,13 @@ https://templatemo.com/tm-569-edu-meeting
                         <a class='menu-trigger'>
                             <span>Menu</span>
                         </a>
-                        <!-- ***** Menu End ***** -->
+                        </div>
+                        </div>
                     </nav>
                 </div>
             </div>
         </div>
-    </header>
+    </header> -->
     <!-- ***** Header Area End ***** -->
 
     <!-- ***** Main Banner Area Start ***** -->
@@ -89,9 +130,9 @@ https://templatemo.com/tm-569-edu-meeting
                     <div class="col-lg-12">
                         <div class="caption">
                             @if (Session::has('id'))
-                                <h6>Hello {{ $data->name }} </h6>
+                            <h6>Hello {{ $data->name }} </h6>
                             @else
-                                <h6>Hello student </h6>
+                            <h6>Hello student </h6>
                             @endif
 
                             <h2>Welcome to Education</h2>
@@ -137,102 +178,99 @@ https://templatemo.com/tm-569-edu-meeting
                                         card's
                                         content.</p>
                                     <a href="{{ route('prep-courses', ['id' => 1]) }}" class="card-link">
-                                        <button type="button" class="btn btn-outline-primary view"
-                                            id="prep-1">View</button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 justify-content-center align-items-center d-flex">
-                            <div class="card item" style="width: 18rem;">
-                                <div class="card-body">
-                                    <h5 class="card-title">2nd Grad</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make
-                                        up
-                                        the
-                                        bulk
-                                        of the
-                                        card's
-                                        content.</p>
-                                    <a href="{{ route('prep-courses', ['id' => 2]) }}" class="card-link"><button
-                                            type="button" class="btn btn-outline-primary view"
-                                            id="prep-2">View</button></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 justify-content-center align-items-center d-flex">
-                            <div class="card item" style="width: 18rem;">
-                                <div class="card-body">
-                                    <h5 class="card-title">3rd Grad</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and
-                                        make up
-                                        the
-                                        bulk
-                                        of the
-                                        card's
-                                        content.</p>
-                                    <a href="{{ route('prep-courses', ['id' => 3]) }}" class="card-link"><button
-                                            type="button" class="btn btn-outline-primary view"
-                                            id="prep-3">View</button></a>
-                                </div>
-                            </div>
-                        </div>
+    <button type="button" class="btn btn-outline-primary view" id="prep-1">View</button>
+    </a>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-4 justify-content-center align-items-center d-flex">
+        <div class="card item" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">2nd Grad</h5>
+                <p class="card-text">Some quick example text to build on the card title and make
+                    up
+                    the
+                    bulk
+                    of the
+                    card's
+                    content.</p>
+                <a href="{{ route('prep-courses', ['id' => 2]) }}" class="card-link"><button type="button"
+                        class="btn btn-outline-primary view" id="prep-2">View</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 justify-content-center align-items-center d-flex">
+        <div class="card item" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">3rd Grad</h5>
+                <p class="card-text">Some quick example text to build on the card title and
+                    make up
+                    the
+                    bulk
+                    of the
+                    card's
+                    content.</p>
+                <a href="{{ route('prep-courses', ['id' => 3]) }}" class="card-link"><button type="button"
+                        class="btn btn-outline-primary view" id="prep-3">View</button></a>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="dir" id="thawy-content">
+        <div class="row">
+            <div class="col-lg-4 justify-content-center align-items-center d-flex">
+                <div class="card item" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">1st Grad</h5>
+                        <p class="card-text">Some quick example text to build on the card title and
+                            make up
+                            the
+                            bulk
+                            of the
+                            card's
+                            content.</p>
+                        <a href="{{ route('thanwy12-courses', ['id' => 1]) }}" class="card-link"><button type="button"
+                                class="btn btn-outline-primary view">View</button></a>
                     </div>
                 </div>
-                <div class="dir" id="thawy-content">
-                    <div class="row">
-                        <div class="col-lg-4 justify-content-center align-items-center d-flex">
-                            <div class="card item" style="width: 18rem;">
-                                <div class="card-body">
-                                    <h5 class="card-title">1st Grad</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and
-                                        make up
-                                        the
-                                        bulk
-                                        of the
-                                        card's
-                                        content.</p>
-                                    <a href="{{ route('thanwy12-courses', ['id' => 1]) }}" class="card-link"><button
-                                            type="button" class="btn btn-outline-primary view">View</button></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 justify-content-center align-items-center d-flex">
-                            <div class="card item" style="width: 18rem;">
-                                <div class="card-body">
-                                    <h5 class="card-title">2nd Gradd</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and
-                                        make up
-                                        the
-                                        bulk
-                                        of the
-                                        card's
-                                        content.</p>
-                                    <a href="{{ route('start', ['id' => 2]) }}" class="card-link"><button
-                                            type="button" class="btn btn-outline-primary view">View</button></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 justify-content-center align-items-center d-flex">
-                            <div class="card item" style="width: 18rem;">
-                                <div class="card-body">
-                                    <h5 class="card-title">3rd Grad</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and
-                                        make up
-                                        the
-                                        bulk
-                                        of the
-                                        card's
-                                        content.</p>
-                                    <a href="{{ route('start', ['id' => 3]) }}" class="card-link"><button
-                                            type="button" class="btn btn-outline-primary view">View</button></a>
-                                </div>
-                            </div>
-                        </div>
+            </div>
+            <div class="col-lg-4 justify-content-center align-items-center d-flex">
+                <div class="card item" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">2nd Gradd</h5>
+                        <p class="card-text">Some quick example text to build on the card title and
+                            make up
+                            the
+                            bulk
+                            of the
+                            card's
+                            content.</p>
+                        <a href="{{ route('start', ['id' => 2]) }}" class="card-link"><button type="button"
+                                class="btn btn-outline-primary view">View</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 justify-content-center align-items-center d-flex">
+                <div class="card item" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">3rd Grad</h5>
+                        <p class="card-text">Some quick example text to build on the card title and
+                            make up
+                            the
+                            bulk
+                            of the
+                            card's
+                            content.</p>
+                        <a href="{{ route('start', ['id' => 3]) }}" class="card-link"><button type="button"
+                                class="btn btn-outline-primary view">View</button></a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    </div>
+    </div>
 
     </section> --}}
     <section id="levels" class="level-sec">
@@ -269,7 +307,7 @@ https://templatemo.com/tm-569-edu-meeting
                             </div>
                         </div>
                         <div class="col-lg-4 ">
-                            <div class="card item" >
+                            <div class="card item">
                                 <div class="card-body">
                                     <h5 class="card-title">2nd Grad</h5>
                                     <p class="card-text">Some quick example text to build on the card title and make
@@ -286,7 +324,7 @@ https://templatemo.com/tm-569-edu-meeting
                             </div>
                         </div>
                         <div class="col-lg-4 ">
-                            <div class="card item" >
+                            <div class="card item">
                                 <div class="card-body">
                                     <h5 class="card-title">3rd Grad</h5>
                                     <p class="card-text">Some quick example text to build on the card title and
@@ -305,7 +343,7 @@ https://templatemo.com/tm-569-edu-meeting
                     </div>
                     <div class="row" id="thawy-content" style="row-gap: 8px;">
                         <div class="col-lg-4 ">
-                            <div class="card item" >
+                            <div class="card item">
                                 <div class="card-body">
                                     <h5 class="card-title">1st Grad</h5>
                                     <p class="card-text">Some quick example text to build on the card title and
@@ -321,7 +359,7 @@ https://templatemo.com/tm-569-edu-meeting
                             </div>
                         </div>
                         <div class="col-lg-4 ">
-                            <div class="card item" >
+                            <div class="card item">
                                 <div class="card-body">
                                     <h5 class="card-title">2nd Gradd</h5>
                                     <p class="card-text">Some quick example text to build on the card title and
@@ -331,13 +369,13 @@ https://templatemo.com/tm-569-edu-meeting
                                         of the
                                         card's
                                         content.</p>
-                                    <a href="{{ route('start', ['id' => 2]) }}" class="card-link"><button
-                                            type="button" class="btn btn-outline-primary view">View</button></a>
+                                    <a href="{{ route('start', ['id' => 2]) }}" class="card-link"><button type="button"
+                                            class="btn btn-outline-primary view">View</button></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 ">
-                            <div class="card item" >
+                            <div class="card item">
                                 <div class="card-body">
                                     <h5 class="card-title">3rd Grad</h5>
                                     <p class="card-text">Some quick example text to build on the card title and
@@ -347,8 +385,8 @@ https://templatemo.com/tm-569-edu-meeting
                                         of the
                                         card's
                                         content.</p>
-                                    <a href="{{ route('start', ['id' => 3]) }}" class="card-link"><button
-                                            type="button" class="btn btn-outline-primary view">View</button></a>
+                                    <a href="{{ route('start', ['id' => 3]) }}" class="card-link"><button type="button"
+                                            class="btn btn-outline-primary view">View</button></a>
                                 </div>
                             </div>
                         </div>
@@ -771,39 +809,38 @@ https://templatemo.com/tm-569-edu-meeting
                 <div class="col-lg-9 align-self-center">
                     <div class="row">
                         <div class="col-lg-12">
-                            <form id="contact" action="mailto:beta.eduaction@gmail.com" method="post">
+                            <form id="contact" action="mailto:beta.education2022@gmail.com" method="post">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <h2>Let's get in touch</h2>
                                     </div>
                                     <div class="col-lg-4">
                                         <fieldset>
-                                            <input name="name" type="text" id="name"
-                                                placeholder="YOURNAME...*" required="">
+                                            <input name="name" type="text" id="name" placeholder="YOURNAME...*"
+                                                required="">
                                         </fieldset>
                                     </div>
                                     <div class="col-lg-4">
                                         <fieldset>
-                                            <input name="email" type="email" id="email"
-                                                placeholder="YOUR EMAIL..." required="">
+                                            <input name="email" type="email" id="email" placeholder="YOUR EMAIL..."
+                                                required="">
                                         </fieldset>
                                     </div>
                                     <div class="col-lg-4">
                                         <fieldset>
-                                            <input name="subject" type="text" id="subject"
-                                                placeholder="SUBJECT...*" required="">
+                                            <input name="subject" type="text" id="subject" placeholder="SUBJECT...*"
+                                                required="">
                                         </fieldset>
                                     </div>
                                     <div class="col-lg-12">
                                         <fieldset>
-                                            <textarea name="message" type="text" class="form-control" id="message" placeholder="YOUR MESSAGE..."
-                                                required=""></textarea>
+                                            <textarea name="message" type="text" class="form-control" id="message"
+                                                placeholder="YOUR MESSAGE..." required=""></textarea>
                                         </fieldset>
                                     </div>
                                     <div class="col-lg-12">
                                         <fieldset>
-                                            <button name='submit' type="submit" id="form-submit"
-                                                class="button">SEND
+                                            <button name='submit' type="submit" id="form-submit" class="button">SEND
                                                 MESSAGE NOW</button>
                                         </fieldset>
                                     </div>
@@ -859,51 +896,51 @@ https://templatemo.com/tm-569-edu-meeting
 
     <!-- <script src="assets/js/levels.js"></script> -->
     <script>
-        //according to loftblog tut
-        $('.nav li:first').addClass('active');
+    //according to loftblog tut
+    $('.nav li:first').addClass('active');
 
-        var showSection = function showSection(section, isAnimate) {
+    var showSection = function showSection(section, isAnimate) {
+        var
+            direction = section.replace(/#/, ''),
+            reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+            reqSectionPos = reqSection.offset().top - 0;
+
+        if (isAnimate) {
+            $('body, html').animate({
+                    scrollTop: reqSectionPos
+                },
+                800);
+        } else {
+            $('body, html').scrollTop(reqSectionPos);
+        }
+
+    };
+
+    var checkSection = function checkSection() {
+        $('.section').each(function() {
             var
-                direction = section.replace(/#/, ''),
-                reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-                reqSectionPos = reqSection.offset().top - 0;
-
-            if (isAnimate) {
-                $('body, html').animate({
-                        scrollTop: reqSectionPos
-                    },
-                    800);
-            } else {
-                $('body, html').scrollTop(reqSectionPos);
-            }
-
-        };
-
-        var checkSection = function checkSection() {
-            $('.section').each(function() {
+                $this = $(this),
+                topEdge = $this.offset().top - 80,
+                bottomEdge = topEdge + $this.height(),
+                wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
                 var
-                    $this = $(this),
-                    topEdge = $this.offset().top - 80,
-                    bottomEdge = topEdge + $this.height(),
-                    wScroll = $(window).scrollTop();
-                if (topEdge < wScroll && bottomEdge > wScroll) {
-                    var
-                        currentId = $this.data('section'),
-                        reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-                    reqLink.closest('li').addClass('active').
-                    siblings().removeClass('active');
-                }
-            });
-        };
-
-        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function(e) {
-            e.preventDefault();
-            showSection($(this).attr('href'), true);
+                    currentId = $this.data('section'),
+                    reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+                reqLink.closest('li').addClass('active').
+                siblings().removeClass('active');
+            }
         });
+    };
 
-        $(window).scroll(function() {
-            checkSection();
-        });
+    $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function(e) {
+        e.preventDefault();
+        showSection($(this).attr('href'), true);
+    });
+
+    $(window).scroll(function() {
+        checkSection();
+    });
     </script>
 </body>
 
