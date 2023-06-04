@@ -27,6 +27,7 @@
 
 
     <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/templatemo-edu-meeting.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/owl.css') }}">
@@ -93,11 +94,11 @@ https://templatemo.com/tm-569-edu-meeting
 
                             <div class="col-lg-2 col-12  d-flex  align-items-center iconn ">
                                 <div class="logo logo-img">
-                                    <a href="index.blade.php" >
+                                    <a href="index.blade.php">
                                         <img src="assets/images/logoo2.png" class="img-responsive">
                                     </a>
-                                 </div>
-                                 <a class='menu-trigger'>
+                                </div>
+                                <a class='menu-trigger'>
                                     <span>Menu</span>
                                 </a>
                             </div>
@@ -113,7 +114,7 @@ https://templatemo.com/tm-569-edu-meeting
                                         <li><a href="{{ route('admin') }}">Admin</a></li>
                                     @endif
                                 </ul>
-                               
+
                             </div>
                         </div>
                     </nav>
@@ -410,44 +411,96 @@ https://templatemo.com/tm-569-edu-meeting
                         <h2>why us</h2>
                     </div>
                 </div>
-                <div class="col-lg-8 d-flex justify-items-center align-items-center">
+                <ul class="tilesWrap">
+                    <li>
+                        <h2>01</h2>
+                        {{-- <h3>Title 1</h3> --}}
+                        <p>
+                            Make periodic exams after the end of the class to measure the student's level after
+                            each lesson.
+                        </p>
+                    </li>
+                    <li>
+                        <h2>02</h2>
+                        {{-- <h3>Title 2</h3> --}}
+                        <p>
+                            Facilitate communication between the teacher and parents, informing parents of the
+                            results of their children.
+                        </p>
+                    </li>
+                    <li>
+                        <h2>03</h2>
+                        {{-- <h3>Title 3</h3> --}}
+                        <p>
+                            Easy access to scientific material.
+                        </p>
+
+                    </li>
+
+                    <li>
+                        <h2>04</h2>
+                        {{-- <h3>Title 4</h3> --}}
+                        <p>
+                            Support the interaction between the teacher and the student.
+                        </p>
+
+                    </li>
+                    <li>
+                        <h2>05</h2>
+                        {{-- <h3>Title 5</h3> --}}
+                        <p>
+                            Giving students the opportunity to retrieve what has been studied at any time.
+                        </p>
+
+                    </li>
+                    <li>
+                        <h2>06</h2>
+                        {{-- <h3>Title 6</h3> --}}
+                        <p>
+                            Solving the problem of private lessons is to create new educational methods replacing
+                            traditional ones.
+                        </p>
+
+                    </li>
+                </ul>
+                {{-- <div class="col-lg-8 d-flex justify-items-center align-items-center">
                     <div class="categories w-100">
-
-                        <ul style="list-style-type: circle;">
-                            <li>- Make periodic exams after the end of the class to measure the student's level after
+                       
+                        {{-- <ul style="list-style-type: circle;">
+                            <li>Make periodic exams after the end of the class to measure the student's level after
                                 each lesson.</li>
-                            <li>- Facilitate communication between the teacher and parents, informing parents of the
+                            <li>Facilitate communication between the teacher and parents, informing parents of the
                                 results of their children.</li>
-                            <li>- Easy access to scientific material.</li>
-                            <li>- Support the interaction between the teacher and the student.</li>
-                            <li>- Giving students the opportunity to retrieve what has been studied at any time.</li>
-                            <li>- Solving the problem of private lessons is to create new educational methods replacing
+                            <li>Easy access to scientific material.</li>
+                            <li>Support the interaction between the teacher and the student.</li>
+                            <li>Giving students the opportunity to retrieve what has been studied at any time.</li>
+                            <li>Solving the problem of private lessons is to create new educational methods replacing
                                 traditional ones.</li>
-                        </ul>
+                        </ul> --}}
 
-                    </div>
-                </div>
-                <div class="col-lg-4">
+                {{-- </div>
+                </div> --}}
+                <div class="col-lg-12">
                     <div class="row">
-                        <div>
-                            <div class="meeting-item">
-                                <div class="thumb">
 
-                                    <img src="assets/images/meeting-01.jpg" alt="New Lecturer Meeting">
-                                </div>
+                        <div class="meeting-item col-12 col-lg-6">
+                            <div class="thumb">
 
+                                <img src="assets/images/1.jpg" alt="New Lecturer Meeting">
                             </div>
+
                         </div>
 
-                        <div>
-                            <div class="meeting-item">
-                                <div class="thumb">
 
-                                    <img src="assets/images/meeting-03.jpg" alt="Higher Education">
-                                </div>
 
+                        <div class="meeting-item col-12 col-lg-6">
+                            <div class="thumb">
+
+                                <img src="assets/images/2.jpg" alt="Higher Education">
                             </div>
+
                         </div>
+
 
                     </div>
                 </div>
@@ -483,9 +536,15 @@ https://templatemo.com/tm-569-edu-meeting
                 <div class="col-lg-12">
                     <div class="owl-courses-item owl-carousel">
                         <div class="item">
-                            <img src="assets/images/course-01.jpg" alt="Course One">
+                            <div class="tenor-gif-embed" data-postid="26716817" data-share-method="host"
+                                data-aspect-ratio="2.64463" data-width="100%"><a
+                                    href="https://tenor.com/view/coming-soon-clerks-iii-to-be-released-stay-tuned-it-will-be-out-soon-gif-26716817">Coming
+                                    Soon Clerks Iii Sticker</a>from <a
+                                    href="https://tenor.com/search/coming+soon-stickers">Coming Soon Stickers</a></div>
+                            <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+                            <img src="assets/images/english-course.jpg" alt="Course One">
                             <div class="down-content">
-                                <h4>Morbi tincidunt elit vitae justo rhoncus</h4>
+                                <h4>English course</h4>
                                 <div class="info">
                                     <div class="row">
                                         <div class="col-8">
@@ -498,16 +557,21 @@ https://templatemo.com/tm-569-edu-meeting
                                             </ul>
                                         </div>
                                         <div class="col-4">
-                                            <span>$160</span>
+                                            <span></span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
-                            <img src="assets/images/course-02.jpg" alt="Course Two">
+                            <div class="tenor-gif-embed" data-postid="26716817" data-share-method="host"
+                                data-aspect-ratio="2.64463" data-width="100%"><a
+                                    href="https://tenor.com/view/coming-soon-clerks-iii-to-be-released-stay-tuned-it-will-be-out-soon-gif-26716817">Coming
+                                    Soon Clerks Iii Sticker</a></div>
+
+                            <img src="assets/images/computer-course.jpg" alt="Course Two">
                             <div class="down-content">
-                                <h4>Curabitur molestie dignissim purus vel</h4>
+                                <h4>Computer course</h4>
                                 <div class="info">
                                     <div class="row">
                                         <div class="col-8">
@@ -518,13 +582,13 @@ https://templatemo.com/tm-569-edu-meeting
                                             </ul>
                                         </div>
                                         <div class="col-4">
-                                            <span>$180</span>
+                                            <span></span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
+                        {{-- <div class="item">
                             <img src="assets/images/course-03.jpg" alt="">
                             <div class="down-content">
                                 <h4>Nulla at ipsum a mauris egestas tempor</h4>
@@ -698,51 +762,8 @@ https://templatemo.com/tm-569-edu-meeting
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <img src="assets/images/course-03.jpg" alt="">
-                            <div class="down-content">
-                                <h4>Morbi in libero blandit lectus cursus</h4>
-                                <div class="info">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-4">
-                                            <span>$480</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="assets/images/course-04.jpg" alt="">
-                            <div class="down-content">
-                                <h4>Curabitur molestie dignissim purus</h4>
-                                <div class="info">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-4">
-                                            <span>$560</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </div> --}}
+
                     </div>
                 </div>
             </div>
@@ -859,20 +880,63 @@ https://templatemo.com/tm-569-edu-meeting
                     <div class="right-info">
                         <ul>
                             <li>
-                                <h6>Phone Number</h6>
-                                <span>000000000</span>
+
+                                <div class="d-flex"
+                                    style="gap: 25px;
+                                align-items: center;
+                                justify-content: center;
+                                color: white;">
+                                    <i class="fa-solid fa-phone fa-beat-fade fs-3"></i>
+                                    <div>
+                                        <h6>Phone Number</h6>
+                                        <span>000000000</span>
+                                    </div>
+
+                                </div>
                             </li>
                             <li>
-                                <h6>Email Address</h6>
-                                <span>nnnnnnn</span>
+                                <div class="d-flex"
+                                    style="gap: 25px;
+                                align-items: center;
+                                justify-content: center;
+                                color: white;">
+                                    <i class="fa-regular fa-envelope-open fa-beat-fade fs-3"></i>
+                                    <div>
+                                        <h6>Email Address</h6>
+                                        <span>Lorem ipsum dolor sit amet.</span>
+                                    </div>
+
+                                </div>
                             </li>
                             <li>
-                                <h6>Street Address</h6>
-                                <span>center adress</span>
+
+                                <div class="d-flex"
+                                    style="gap: 25px;
+                                align-items: center;
+                                justify-content: center;
+                                color: white;">
+                                   <i class="fa-solid fa-location-dot fa-beat-fade fs-3"></i>
+                                    <div>
+                                        <h6>Street Address</h6>
+                                        <span>Lorem ipsum dolor sit amet.</span>
+                                    </div>
+
+                                </div>
                             </li>
                             <li>
-                                <h6>Website URL</h6>
-                                <span>hvhjvg</span>
+                                
+                                <div class="d-flex"
+                                    style="gap: 25px;
+                                align-items: center;
+                                justify-content: center;
+                                color: white;">
+                                   <i class="fa-solid fa-globe fa-beat-fade fs-3"></i>
+                                    <div>
+                                        <h6>Website URL</h6>
+                                        <span>Lorem ipsum dolor sit amet.</span>
+                                    </div>
+
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -888,6 +952,7 @@ https://templatemo.com/tm-569-edu-meeting
 
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
+    <script src="{{ asset('assets/js/all.min.js') }}"></script>
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
