@@ -1,4 +1,5 @@
 
+{{-- confirmation mail to enroll to the course  --}}
 @if (Route::has('prep-courses')&&$sec===0)
 
 <h1>Beta Education course registration</h1>
@@ -11,6 +12,7 @@
 <p dir="rtl">للشكاوي او الاستفسارات يرجي ارسال رساله علي الواتساب علي هذا الرقم <span style="font-weight: bold">01017944211</span></p>
 <p dir="rtl">اسم الماده: {{ $subjectName . $id }}</p>
 @endif 
+
 @if (Route::has('thanwy12-courses')&&$sec===11)
     <h1>Beta Education course registration</h1>
     <h2 dir="rtl">مرحبا بك {{ $studentname }}</h2>

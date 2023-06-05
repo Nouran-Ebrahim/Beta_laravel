@@ -39,37 +39,7 @@
 </head>
 
 <body>
-    <!-- ***** Header Area Start ***** -->
-    {{-- <header class="header-area header-sticky">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-
-                        <a href="index.blade.php" class="logo logo-img">
-                            <img src="{{ asset('assets/images/logoo2.png') }}">
-                        </a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            <li><a href="{{ route('index') }}">Home</a></li>
-                            <li><a href="{{ route('index') }}" class="active" id="level">Levels</a></li>
-                            <li><a href="{{ route('index') }}" id="skill">Skills</a></li>
-                            <li><a href="{{ route('joinus') }}">Join Us</a></li>
-                            <li><a href="{{ route('about') }}">About</a></li>
-                            <li><a href="{{ route('index') }}">Contact Us</a></li>
-                        </ul>
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header> --}}
-
+ 
     <header class="header-area header-sticky">
         <div class="container">
             <div class="row">

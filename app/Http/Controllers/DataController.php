@@ -69,6 +69,7 @@ class DataController extends Controller
             return back();
         }
     }
+// show student name in home page 
     public function hello()
     {
         $data = array();
@@ -117,25 +118,43 @@ class DataController extends Controller
             $data_row = Arpcourse::where('student_id', '=', Session::get('id'))->first();
             $data_row_en = Enpcourse::where('student_id', '=', Session::get('id'))->first();
             $subdata = $subject . $id;
+            // dd($subdata);
             try {
                 if ($data_row && $lang == 'ar') {
+                    //  dd($req);
                     if ($data_row->$subdata == 'closed') {
                         Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 0));
                         Arpcourse::where("student_id", Session::get('id'))->update([$subdata => "waiting"]);
-
+                        
                         return redirect()->route('prep-courses', [
                             'id' => $id,
                             'subject' => $subject,
 
                         ])->with(['success' => "تم تسجيل طلبك بنجاح من فضلك افحص الاميل"]);
-                    } else {
+                    }
+                     elseif($data_row->$subdata == 'waiting') {
                         return redirect()->route('prep-courses', [
                             'id' => $id,
                             'subject' => $subject,
                             'sent' => 'done',
-                        ])->with(['success' => "تم تسجيل طلبك و جارى التفعيل"]);
+                            ])->with(['success' => "تم تسجيل طلبك و جارى التفعيل"]);
+                        }
+                        elseif($data_row->$subdata == 'open') {
+                            // echo "7777";die;
+                        return redirect()->route('prep-courses', [
+                            'id' => $id,
+                            'subject' => $subject,
+                            'sent' => 'done',
+                        ])->with(['success' => "تم الاشتراك و فتح الكورس ابدا الان"]);
+                    }else {
+                        return redirect()->route('prep-courses', [
+                            'id' => $id,
+                            'subject' => $subject,
+                            'sent' => 'done',
+                        ])->with(['success' => "done"]);
                     }
-                } elseif ($data_row_en && $lang == 'en') {
+                }
+                 elseif ($data_row_en && $lang == 'en') {
 
                     if ($data_row_en->$subdata == 'closed') {
                         Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 0));
@@ -146,16 +165,23 @@ class DataController extends Controller
                             'subject' => $subject,
 
                         ])->with(['success' => "sucssfully join the course please check your email"]);
-                    } else {
+                    } elseif($data_row_en->$subdata == 'waiting') {
                         return redirect()->route('prep-courses', [
                             'id' => $id,
                             'subject' => $subject,
                             'sent' => 'done',
                         ])->with(['success' => "already joinning please wait for comfermation"]);
+                    }elseif($data_row_en->$subdata == 'open') {
+                        return redirect()->route('prep-courses', [
+                            'id' => $id,
+                            'subject' => $subject,
+                            'sent' => 'done',
+                        ])->with(['success' => "You are joined already start now"]);
                     }
                 }
-            } catch (\Swift_TransportException $transportExp) {
-                //echo $transportExp->getMessage();
+            } 
+            catch (\ErrorException $err) {
+                echo $err->getMessage();
                 return redirect()->back()->with(['success' => " من فضلك تأكد بأتصالك بالانترنت وحاول مره اخري"]);
             }
         }

@@ -42,49 +42,7 @@ https://templatemo.com/tm-569-edu-meeting
 </head>
 
 <body>
-
     <!-- ***** Header Area Start ***** -->
-    {{-- <nav class="navbar navbar-expand-lg  header-area header-sticky">
-        <div class="container">
-            <a class="navbar-brand  me-auto" href="index.blade.php" style='width:7%'>
-                <img src="assets/images/logoo2.png" class='w-100'>
-            </a>
-            <a class='menu-trigger' data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span>Menu</span>
-            </a>
-        
-            <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
-                <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a href="#top" class="nav-link active" aria-current="page">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#levels" id="level" class="nav-link">Levels</a>
-                    </li>
-                    <li class="nav-item">
-                    <li><a href="#courses" id="skill" class="nav-link">Skills</a></li>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('joinus') }}" class="nav-link">Join Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('about') }}" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link">Contact Us</a>
-                    </li>
-
-                    @if (Session::get('id') === 70)
-                        <li class="nav-item"><a class="nav-link" href="{{ route('admin') }}">Admin</a></li>
-                    @endif
-
-
-                </ul>
-
-            </div>
-        </div>
-    </nav> --}}
-
     <header class="header-area header-sticky">
         <div class="container">
             <div class="row">
@@ -124,7 +82,7 @@ https://templatemo.com/tm-569-edu-meeting
     </header>
     <!-- ***** Header Area End ***** -->
 
-    <!-- ***** Main Banner Area Start ***** -->
+    <!-- ***** Welcome Area Start ***** -->
     <section class="section main-banner" id="top" data-section="section1">
         <video autoplay muted loop id="bg-video">
             <source src="{{ asset('assets/images/course-video.mp4') }}" type="video/mp4" />
@@ -155,130 +113,8 @@ https://templatemo.com/tm-569-edu-meeting
             </div>
         </div>
     </section>
-    <!-- ***** Main Banner Area End ***** -->
-    {{-- <section class="services" id="levels">
-        <div class="container">
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a id="prep" class="nav-link">Preparatory Stage</a>
-                </li>
-                <li class="nav-item">
-                    <a id="thanwy" class="nav-link">Secondary Stage</a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="dir" id="prep-content">
-                    <div class="row" style="row-gap: 10px;">
-                        <div class="col-lg-4 justify-content-center align-items-center d-flex">
-                            <div class="card item" style="width: 18rem;">
-                                <div class="card-body">
-                                    <h5 class="card-title">1st Grad</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make
-                                        up
-                                        the
-                                        bulk
-                                        of the
-                                        card's
-                                        content.</p>
-                                    <a href="{{ route('prep-courses', ['id' => 1]) }}" class="card-link">
-    <button type="button" class="btn btn-outline-primary view" id="prep-1">View</button>
-    </a>
-    </div>
-    </div>
-    </div>
-    <div class="col-lg-4 justify-content-center align-items-center d-flex">
-        <div class="card item" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">2nd Grad</h5>
-                <p class="card-text">Some quick example text to build on the card title and make
-                    up
-                    the
-                    bulk
-                    of the
-                    card's
-                    content.</p>
-                <a href="{{ route('prep-courses', ['id' => 2]) }}" class="card-link"><button type="button"
-                        class="btn btn-outline-primary view" id="prep-2">View</button></a>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4 justify-content-center align-items-center d-flex">
-        <div class="card item" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">3rd Grad</h5>
-                <p class="card-text">Some quick example text to build on the card title and
-                    make up
-                    the
-                    bulk
-                    of the
-                    card's
-                    content.</p>
-                <a href="{{ route('prep-courses', ['id' => 3]) }}" class="card-link"><button type="button"
-                        class="btn btn-outline-primary view" id="prep-3">View</button></a>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
-    <div class="dir" id="thawy-content">
-        <div class="row">
-            <div class="col-lg-4 justify-content-center align-items-center d-flex">
-                <div class="card item" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">1st Grad</h5>
-                        <p class="card-text">Some quick example text to build on the card title and
-                            make up
-                            the
-                            bulk
-                            of the
-                            card's
-                            content.</p>
-                        <a href="{{ route('thanwy12-courses', ['id' => 1]) }}" class="card-link"><button type="button"
-                                class="btn btn-outline-primary view">View</button></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 justify-content-center align-items-center d-flex">
-                <div class="card item" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">2nd Gradd</h5>
-                        <p class="card-text">Some quick example text to build on the card title and
-                            make up
-                            the
-                            bulk
-                            of the
-                            card's
-                            content.</p>
-                        <a href="{{ route('start', ['id' => 2]) }}" class="card-link"><button type="button"
-                                class="btn btn-outline-primary view">View</button></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 justify-content-center align-items-center d-flex">
-                <div class="card item" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">3rd Grad</h5>
-                        <p class="card-text">Some quick example text to build on the card title and
-                            make up
-                            the
-                            bulk
-                            of the
-                            card's
-                            content.</p>
-                        <a href="{{ route('start', ['id' => 3]) }}" class="card-link"><button type="button"
-                                class="btn btn-outline-primary view">View</button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
-
-    </section> --}}
+    <!-- ***** Welcome Area End ***** -->
+    <!-- ***** Levels Area Start ***** -->
     <section id="levels" class="level-sec">
         <div class="container">
             <div class="row">
@@ -293,6 +129,7 @@ https://templatemo.com/tm-569-edu-meeting
                     </ul>
                 </div>
                 <div class="col-lg-12">
+                    {{-- prepratory levels  --}}
                     <div class="row" id="prep-content" style="row-gap: 8px;">
                         <div class="col-lg-4">
                             <div class="card item">
@@ -347,18 +184,20 @@ https://templatemo.com/tm-569-edu-meeting
                             </div>
                         </div>
                     </div>
+                    {{-- thanwy levels  --}}
                     <div class="row" id="thawy-content" style="row-gap: 8px;">
+                        {{-- frist level thanawy  --}}
                         <div class="col-lg-4 ">
                             <div class="card item">
                                 <div class="card-body">
-                                    <h5 class="card-title">1st Grad</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and
+                                    <h5 class="card-title">الصف الاول الثانوى</h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and
                                         make up
                                         the
                                         bulk
                                         of the
                                         card's
-                                        content.</p>
+                                        content.</p> --}}
                                     <a href="{{ route('thanwy12-courses', ['id' => 1]) }}" class="card-link"><button
                                             type="button" class="btn btn-outline-primary view">View</button></a>
                                 </div>
@@ -367,14 +206,14 @@ https://templatemo.com/tm-569-edu-meeting
                         <div class="col-lg-4 ">
                             <div class="card item">
                                 <div class="card-body">
-                                    <h5 class="card-title">2nd Gradd</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and
+                                    <h5 class="card-title">الصف الثانى الثانوى</h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and
                                         make up
                                         the
                                         bulk
                                         of the
                                         card's
-                                        content.</p>
+                                        content.</p> --}}
                                     <a href="{{ route('start', ['id' => 2]) }}" class="card-link"><button
                                             type="button" class="btn btn-outline-primary view">View</button></a>
                                 </div>
@@ -383,14 +222,14 @@ https://templatemo.com/tm-569-edu-meeting
                         <div class="col-lg-4 ">
                             <div class="card item">
                                 <div class="card-body">
-                                    <h5 class="card-title">3rd Grad</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and
+                                    <h5 class="card-title">الصف الثالث الثانوى</h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and
                                         make up
                                         the
                                         bulk
                                         of the
                                         card's
-                                        content.</p>
+                                        content.</p> --}}
                                     <a href="{{ route('start', ['id' => 3]) }}" class="card-link"><button
                                             type="button" class="btn btn-outline-primary view">View</button></a>
                                 </div>
@@ -401,8 +240,8 @@ https://templatemo.com/tm-569-edu-meeting
             </div>
         </div>
     </section>
-
-
+    <!-- ***** Levels Area End ***** -->
+    <!-- ***** Why us Area Start ***** -->
     <section class="upcoming-meetings" id="meetings">
         <div class="container">
             <div class="row">
@@ -414,7 +253,6 @@ https://templatemo.com/tm-569-edu-meeting
                 <ul class="tilesWrap">
                     <li>
                         <h2>01</h2>
-                        {{-- <h3>Title 1</h3> --}}
                         <p>
                             Make periodic exams after the end of the class to measure the student's level after
                             each lesson.
@@ -422,7 +260,6 @@ https://templatemo.com/tm-569-edu-meeting
                     </li>
                     <li>
                         <h2>02</h2>
-                        {{-- <h3>Title 2</h3> --}}
                         <p>
                             Facilitate communication between the teacher and parents, informing parents of the
                             results of their children.
@@ -430,7 +267,6 @@ https://templatemo.com/tm-569-edu-meeting
                     </li>
                     <li>
                         <h2>03</h2>
-                        {{-- <h3>Title 3</h3> --}}
                         <p>
                             Easy access to scientific material.
                         </p>
@@ -439,7 +275,6 @@ https://templatemo.com/tm-569-edu-meeting
 
                     <li>
                         <h2>04</h2>
-                        {{-- <h3>Title 4</h3> --}}
                         <p>
                             Support the interaction between the teacher and the student.
                         </p>
@@ -447,7 +282,6 @@ https://templatemo.com/tm-569-edu-meeting
                     </li>
                     <li>
                         <h2>05</h2>
-                        {{-- <h3>Title 5</h3> --}}
                         <p>
                             Giving students the opportunity to retrieve what has been studied at any time.
                         </p>
@@ -455,7 +289,6 @@ https://templatemo.com/tm-569-edu-meeting
                     </li>
                     <li>
                         <h2>06</h2>
-                        {{-- <h3>Title 6</h3> --}}
                         <p>
                             Solving the problem of private lessons is to create new educational methods replacing
                             traditional ones.
@@ -463,23 +296,7 @@ https://templatemo.com/tm-569-edu-meeting
 
                     </li>
                 </ul>
-                {{-- <div class="col-lg-8 d-flex justify-items-center align-items-center">
-                    <div class="categories w-100">
-                       
-                        {{-- <ul style="list-style-type: circle;">
-                            <li>Make periodic exams after the end of the class to measure the student's level after
-                                each lesson.</li>
-                            <li>Facilitate communication between the teacher and parents, informing parents of the
-                                results of their children.</li>
-                            <li>Easy access to scientific material.</li>
-                            <li>Support the interaction between the teacher and the student.</li>
-                            <li>Giving students the opportunity to retrieve what has been studied at any time.</li>
-                            <li>Solving the problem of private lessons is to create new educational methods replacing
-                                traditional ones.</li>
-                        </ul> --}}
-
-                {{-- </div>
-                </div> --}}
+               
                 <div class="col-lg-12">
                     <div class="row">
 
@@ -507,7 +324,7 @@ https://templatemo.com/tm-569-edu-meeting
             </div>
         </div>
     </section>
-
+    <!-- ***** Why us Area End  ***** -->
     <section class="apply-now" id="apply">
         <div class="container">
             <div class="row">
@@ -516,14 +333,10 @@ https://templatemo.com/tm-569-edu-meeting
                         <h2>STUDY MORE, EFFORT LESS</h2>
                     </div>
                 </div>
-                <div class="col-lg-6 align-self-center">
-                    <div class="row">
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
+    <!-- ***** Skills cources Area Start ***** -->
 
     <section class="our-courses" id="courses">
         <div class="container">
@@ -536,12 +349,7 @@ https://templatemo.com/tm-569-edu-meeting
                 <div class="col-lg-12">
                     <div class="owl-courses-item owl-carousel">
                         <div class="item">
-                            <div class="tenor-gif-embed" data-postid="26716817" data-share-method="host"
-                                data-aspect-ratio="2.64463" data-width="100%"><a
-                                    href="https://tenor.com/view/coming-soon-clerks-iii-to-be-released-stay-tuned-it-will-be-out-soon-gif-26716817">Coming
-                                    Soon Clerks Iii Sticker</a>from <a
-                                    href="https://tenor.com/search/coming+soon-stickers">Coming Soon Stickers</a></div>
-                            <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+                            <img src="assets/images/coming-soon-clerks-iii.gif" style="height: 95px;" alt="Course Two">
                             <img src="assets/images/english-course.jpg" alt="Course One">
                             <div class="down-content">
                                 <h4>English course</h4>
@@ -564,11 +372,8 @@ https://templatemo.com/tm-569-edu-meeting
                             </div>
                         </div>
                         <div class="item">
-                            <div class="tenor-gif-embed" data-postid="26716817" data-share-method="host"
-                                data-aspect-ratio="2.64463" data-width="100%"><a
-                                    href="https://tenor.com/view/coming-soon-clerks-iii-to-be-released-stay-tuned-it-will-be-out-soon-gif-26716817">Coming
-                                    Soon Clerks Iii Sticker</a></div>
-
+                            <img src="assets/images/coming-soon-clerks-iii.gif" style="height: 95px;" alt="Course Two">
+                            
                             <img src="assets/images/computer-course.jpg" alt="Course Two">
                             <div class="down-content">
                                 <h4>Computer course</h4>
@@ -769,6 +574,8 @@ https://templatemo.com/tm-569-edu-meeting
             </div>
         </div>
     </section>
+    <!-- ***** Skills cources Area End ***** -->
+    <!-- ***** Teacher Area Start ***** -->
 
     <section class="our-courses">
         <div class="container">
@@ -828,6 +635,8 @@ https://templatemo.com/tm-569-edu-meeting
             </div>
         </div>
     </section>
+    <!-- ***** Teacher Area End ***** -->
+    <!-- ***** Contact us/footer Area Start ***** -->
 
     <section class="contact-us" id="contact">
         <div class="container">
@@ -915,7 +724,7 @@ https://templatemo.com/tm-569-edu-meeting
                                 align-items: center;
                                 justify-content: center;
                                 color: white;">
-                                   <i class="fa-solid fa-location-dot fa-beat-fade fs-3"></i>
+                                    <i class="fa-solid fa-location-dot fa-beat-fade fs-3"></i>
                                     <div>
                                         <h6>Street Address</h6>
                                         <span>Lorem ipsum dolor sit amet.</span>
@@ -924,13 +733,13 @@ https://templatemo.com/tm-569-edu-meeting
                                 </div>
                             </li>
                             <li>
-                                
+
                                 <div class="d-flex"
                                     style="gap: 25px;
                                 align-items: center;
                                 justify-content: center;
                                 color: white;">
-                                   <i class="fa-solid fa-globe fa-beat-fade fs-3"></i>
+                                    <i class="fa-solid fa-globe fa-beat-fade fs-3"></i>
                                     <div>
                                         <h6>Website URL</h6>
                                         <span>Lorem ipsum dolor sit amet.</span>
@@ -943,12 +752,14 @@ https://templatemo.com/tm-569-edu-meeting
                 </div>
             </div>
         </div>
+        {{-- footer area --}}
         <div class="footer">
             <p>Copyright © 2022 beta education Co., Ltd. All Rights Reserved.
                 <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">soul</a>
             </p>
         </div>
     </section>
+    <!-- ***** Contact us/footer  Area End ***** -->
 
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->

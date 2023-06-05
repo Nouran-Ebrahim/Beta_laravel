@@ -22,7 +22,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
         integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous">
     </script>
-    
+
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
 
@@ -39,36 +39,9 @@
 </head>
 
 <body>
+    {{--  كورسات المرحلة الاعدادية  --}}
     <!-- ***** Header Area Start ***** -->
-    {{-- <header class="header-area header-sticky">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
 
-                        <a href="index.php" class="logo logo-img">
-                            <img src="{{ asset('assets/images/logoo2.png') }}">
-                        </a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            <li><a href="{{ route('index') }}">Home</a></li>
-                            <li><a href="{{ route('index') }}" class="active" id="level">Levels</a></li>
-                            <li><a href="{{ route('index') }}" id="skill">Skills</a></li>
-                            <li><a href="{{ route('joinus') }}">Join Us</a></li>
-                            <li><a href="{{ route('about') }}">About</a></li>
-                            <li><a href="{{ route('index') }}">Contact Us</a></li>
-                        </ul>
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header> --}}
     <header class="header-area header-sticky">
         <div class="container">
             <div class="row">
@@ -78,11 +51,11 @@
 
                             <div class="col-lg-2 col-12  d-flex  align-items-center iconn ">
                                 <div class="logo logo-img">
-                                    <a href="index.blade.php" >
+                                    <a href="index.blade.php">
                                         <img src="assets/images/logoo2.png" class="img-responsive">
                                     </a>
-                                 </div>
-                                 <a class='menu-trigger'>
+                                </div>
+                                <a class='menu-trigger'>
                                     <span>Menu</span>
                                 </a>
                             </div>
@@ -95,7 +68,7 @@
                                     <li><a href="{{ route('about') }}">About</a></li>
                                     <li><a href="{{ route('index') }}">Contact Us</a></li>
                                 </ul>
-                               
+
                             </div>
                         </div>
                     </nav>
@@ -114,9 +87,9 @@
                         <h1 class="text" id="title">أولى إعدادى </h1>
                     @else
                         @if ($id == 2)
-                            <h1 class="text" id="title">ثانيه إعدادى  </h1>
+                            <h1 class="text" id="title">ثانيه إعدادى </h1>
                         @else
-                            <h1 class="text" id="title">ثالثه إعدادى  </h1>
+                            <h1 class="text" id="title">ثالثه إعدادى </h1>
                         @endif
                     @endif
 
@@ -136,19 +109,25 @@
 
                             <div class="course-content p-4">
                                 @if ($id == 1)
-
-                                    <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'arabic']) }}">عربي اولي</a>
+                                    <a class="h5"
+                                        href="{{ route('showdetails', ['id' => $id, 'subject' => 'arabic']) }}">عربي
+                                        اولي</a>
                                 @else
                                     @if ($id == 2)
-                                        <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'arabic']) }}">عربي ثانيه</a>
+                                        <a class="h5"
+                                            href="{{ route('showdetails', ['id' => $id, 'subject' => 'arabic']) }}">عربي
+                                            ثانيه</a>
                                     @else
-                                        <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'arabic']) }}">عربي ثالثه</a>
+                                        <a class="h5"
+                                            href="{{ route('showdetails', ['id' => $id, 'subject' => 'arabic']) }}">عربي
+                                            ثالثه</a>
                                     @endif
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
                                         <a class="btn btn-danger sent"
-                                            href={{ route('subscribe', ['id' => $id, 'subject' => 'arabic','lang'=>'ar']) }}> اشترك الان
+                                            href={{ route('subscribe', ['id' => $id, 'subject' => 'arabic', 'lang' => 'ar']) }}>
+                                            اشترك الان
                                         </a>
 
                                         <h5 class="m-1">$99</h5>
@@ -165,20 +144,26 @@
                             <div class="course-content p-4">
 
                                 @if ($_GET['id'] == 1)
-                                    <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'math']) }}">رياضيات اولي
+                                    <a class="h5"
+                                        href="{{ route('showdetails', ['id' => $id, 'subject' => 'math']) }}">رياضيات
+                                        اولي
                                     </a>
                                 @else
                                     @if ($id == 2)
-                                        <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'math']) }}">رياضيات ثانيه</a>
+                                        <a class="h5"
+                                            href="{{ route('showdetails', ['id' => $id, 'subject' => 'math']) }}">رياضيات
+                                            ثانيه</a>
                                     @else
-                                        <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'math']) }}">رياضيات</a>
+                                        <a class="h5"
+                                            href="{{ route('showdetails', ['id' => $id, 'subject' => 'math']) }}">رياضيات</a>
                                     @endif
                                 @endif
 
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
                                         <a class="btn btn-danger sent"
-                                            href={{ route('subscribe', ['id' => $id, 'subject' => 'math','lang'=>'ar']) }}> اشترك الان
+                                            href="{{ route('subscribe', ['id' => $id, 'subject' => 'math', 'lang' => 'ar']) }}">
+                                            اشترك الان
                                         </a>
                                         <h5 class="m-1">$99</h5>
                                     </div>
@@ -186,7 +171,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-3 col-md-6 mb-4">
                         <div class="rounded overflow-hidden mb-2 bg">
                             <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}"
@@ -194,21 +178,28 @@
                             <div class="course-content p-4">
 
                                 @if ($id == 1)
-                                    <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'social']) }}">دراسات اولي</a>
+                                    <a class="h5"
+                                        href="{{ route('showdetails', ['id' => $id, 'subject' => 'social']) }}">دراسات
+                                        اولي</a>
                                 @else
                                     @if ($id == 2)
-                                        <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'social']) }}">دراسات تانيه</a>
+                                        <a class="h5"
+                                            href="{{ route('showdetails', ['id' => $id, 'subject' => 'social']) }}">دراسات
+                                            تانيه</a>
                                     @else
-                                        <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'social']) }}">دراسات</a>
+                                        <a class="h5"
+                                            href="{{ route('showdetails', ['id' => $id, 'subject' => 'social']) }}">دراسات</a>
                                     @endif
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
                                         <a class="btn btn-danger sent"
-                                            href={{ route('subscribe', ['id' => $id, 'subject' => 'social' ,'lang'=>'ar']) }}> اشترك الان
+                                            href="{{ route('subscribe', ['id' => $id, 'subject' => 'social', 'lang' => 'ar']) }}">
+                                            اشترك الان
                                         </a>
 
                                         <h5 class="m-1">$99</h5>
+
                                     </div>
                                 </div>
                             </div>
@@ -221,18 +212,24 @@
                             <div class="course-content p-4">
 
                                 @if ($id == 1)
-                                    <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'science']) }}">علوم اولي</a>
+                                    <a class="h5"
+                                        href="{{ route('showdetails', ['id' => $id, 'subject' => 'science']) }}">علوم
+                                        اولي</a>
                                 @else
                                     @if ($id == 2)
-                                        <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'science']) }}">علوم ثانيه</a>
+                                        <a class="h5"
+                                            href="{{ route('showdetails', ['id' => $id, 'subject' => 'science']) }}">علوم
+                                            ثانيه</a>
                                     @else
-                                        <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'science']) }}">علوم</a>
+                                        <a class="h5"
+                                            href="{{ route('showdetails', ['id' => $id, 'subject' => 'science']) }}">علوم</a>
                                     @endif
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
                                         <a class="btn btn-danger sent"
-                                            href={{ route('subscribe', ['id' => $id, 'subject' => 'science','lang'=>'ar']) }}> اشترك الان
+                                            href={{ route('subscribe', ['id' => $id, 'subject' => 'science', 'lang' => 'ar']) }}>
+                                            اشترك الان
                                         </a>
 
                                         <h5 class="m-1">$99</h5>
@@ -248,20 +245,25 @@
                             <div class="course-content p-4">
 
                                 @if ($id == 1)
-                                    <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'english']) }}">انجليزي اولي</a>
+                                    <a class="h5"
+                                        href="{{ route('showdetails', ['id' => $id, 'subject' => 'english']) }}">انجليزي
+                                        اولي</a>
                                 @else
                                     @if ($id == 2)
-                                        <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'english']) }}">انجليزي ثانيه </a>
+                                        <a class="h5"
+                                            href="{{ route('showdetails', ['id' => $id, 'subject' => 'english']) }}">انجليزي
+                                            ثانيه </a>
                                     @else
-                                        <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'english']) }}">انجليزي</a>
+                                        <a class="h5"
+                                            href="{{ route('showdetails', ['id' => $id, 'subject' => 'english']) }}">انجليزي</a>
                                     @endif
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
                                         <a class="btn btn-danger sent"
-                                            href={{ route('subscribe', ['id' => $id, 'subject' => 'english','lang'=>'ar']) }}> اشترك الان
+                                            href={{ route('subscribe', ['id' => $id, 'subject' => 'english', 'lang' => 'ar']) }}>
+                                            اشترك الان
                                         </a>
-
                                         <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
@@ -275,18 +277,24 @@
                             <div class="course-content p-4">
 
                                 @if ($id == 1)
-                                    <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'frensh']) }}">فرنساوي اولي</a>
+                                    <a class="h5"
+                                        href="{{ route('showdetails', ['id' => $id, 'subject' => 'frensh']) }}">فرنساوي
+                                        اولي</a>
                                 @else
                                     @if ($id == 2)
-                                        <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'frensh']) }}">فرنساوي ثانيه</a>
+                                        <a class="h5"
+                                            href="{{ route('showdetails', ['id' => $id, 'subject' => 'frensh']) }}">فرنساوي
+                                            ثانيه</a>
                                     @else
-                                        <a class="h5" href="{{ route('showdetails', ['id' => $id,'subject' => 'frensh']) }}">فرنساوي</a>
+                                        <a class="h5"
+                                            href="{{ route('showdetails', ['id' => $id, 'subject' => 'frensh']) }}">فرنساوي</a>
                                     @endif
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
                                         <a class="btn btn-danger sent"
-                                            href={{ route('subscribe', ['id' => $id, 'subject' => 'frensh','lang'=>'ar']) }}> اشترك الان
+                                            href={{ route('subscribe', ['id' => $id, 'subject' => 'frensh', 'lang' => 'ar']) }}>
+                                            اشترك الان
                                         </a>
 
                                         <h5 class="m-0">$99</h5>
@@ -299,7 +307,7 @@
                 <!-- قسم اللغاااات -->
                 <!-- Courses Start -->
                 <h2 style="color:white;">Language school section</h2>
-                <div class="row" >
+                <div class="row">
                     <div class="col-lg-3 col-md-6 mb-4">
                         <div class="rounded overflow-hidden mb-2 bg">
 
@@ -320,7 +328,9 @@
 
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
-                                        <a class="btn btn-danger sent" href={{ route('subscribe', ['id' => $id, 'subject' => 'arabic','lang'=>'en']) }}> join now </a>
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('subscribe', ['id' => $id, 'subject' => 'arabic', 'lang' => 'en']) }}>
+                                            join now </a>
 
                                         <h5 class="m-1">$99</h5>
                                     </div>
@@ -334,7 +344,7 @@
                                 alt="">
 
                             <div class="course-content p-4">
-                                
+
                                 @if ($id == 1)
                                     <a class="h5" href=""> 1st Math</a>
                                 @else
@@ -346,7 +356,9 @@
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
-                                        <a class="btn btn-danger sent" href={{ route('subscribe', ['id' => $id, 'subject' => 'math','lang'=>'en']) }}> join now </a>
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('subscribe', ['id' => $id, 'subject' => 'math', 'lang' => 'en']) }}>
+                                            join now </a>
 
                                         <h5 class="m-1">$99</h5>
                                     </div>
@@ -360,7 +372,7 @@
                             <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}"
                                 alt="">
                             <div class="course-content p-4">
-                               
+
                                 @if ($id == 1)
                                     <a class="h5" href=""> 1st Scoial Studies</a>
                                 @else
@@ -372,7 +384,9 @@
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
-                                        <a class="btn btn-danger sent" href={{ route('subscribe', ['id' => $id, 'subject' => 'social','lang'=>'en']) }}> join now </a>
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('subscribe', ['id' => $id, 'subject' => 'social', 'lang' => 'en']) }}>
+                                            join now </a>
 
                                         <h5 class="m-1">$99</h5>
                                     </div>
@@ -385,7 +399,7 @@
                             <img class="img-fluid photo" src="{{ asset('assets/images/physics.png') }}"
                                 alt="">
                             <div class="course-content p-4">
-                               
+
                                 @if ($id == 1)
                                     <a class="h5" href=""> 1st Science</a>
                                 @else
@@ -398,7 +412,8 @@
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
                                         <a class="btn btn-danger sent"
-                                            href={{ route('subscribe', ['id' => $id, 'subject' => 'science','lang'=>'en']) }}> join now </a>
+                                            href={{ route('subscribe', ['id' => $id, 'subject' => 'science', 'lang' => 'en']) }}>
+                                            join now </a>
 
                                         <h5 class="m-1">$99</h5>
                                     </div>
@@ -411,7 +426,7 @@
                             <img class="img-fluid photo" src="{{ asset('assets/images/english.png') }}"
                                 alt="">
                             <div class="course-content p-4">
-                               
+
                                 @if ($id == 1)
                                     <a class="h5" href=""> 1st English</a>
                                 @else
@@ -423,7 +438,9 @@
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
-                                        <a class="btn btn-danger sent" href={{ route('subscribe', ['id' => $id, 'subject' => 'english','lang'=>'en']) }}> join now </a>
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('subscribe', ['id' => $id, 'subject' => 'english', 'lang' => 'en']) }}>
+                                            join now </a>
 
                                         <h5 class="m-1">$99</h5>
                                     </div>
@@ -436,7 +453,7 @@
                             <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
                                 alt="">
                             <div class="course-content p-4">
-                                
+
                                 @if ($id == 1)
                                     <a class="h5" href=""> 1st French</a>
                                 @else
@@ -448,7 +465,9 @@
                                 @endif
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
-                                        <a class="btn btn-danger sent" href={{ route('subscribe', ['id' => $id, 'subject' => 'frensh','lang'=>'en']) }}> join now </a>
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('subscribe', ['id' => $id, 'subject' => 'frensh', 'lang' => 'en']) }}>
+                                            join now </a>
 
                                         <h5 class="m-1">$99</h5>
                                     </div>
@@ -460,6 +479,7 @@
             </div>
         </div>
     @else
+        {{-- لتسجيل الدخول اولا على الموقع  --}}
         <div class="container-fluid py-5">
             <div class="container py-5">
                 <div class="text-center mb-5">
