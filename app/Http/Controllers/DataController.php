@@ -210,6 +210,36 @@ class DataController extends Controller
         //     echo $lesson->unit->unit_name;
         // }
     }
+    public function thcoursedetails()
+    {
+        $id = request('id');
+        $subject = request('subject');
+        $sub=request('sub');
+        $lang=request('lang');
+
+        //$lang = request('lang');
+        if (Session::has('id')) {
+            $subdata = $subject;
+            if($sub==1 && $lang=='ar' && $id==1){
+                $data_row = Arth1coure::where('student_id', '=', Session::get('id'))->first();
+            }elseif($sub==1 && $lang=='ar' && $id==2){
+                $data_row = Arth1coure::where('student_id', '=', Session::get('id'))->first();
+            }
+            $status = $data_row->$subdata;
+            // dd($status);die;
+            return redirect()->route('details_th', [
+                'id' => $id,
+                'subject' => $subject,
+                'status' => $status,
+                
+             
+            ]);
+
+        }
+        // foreach ($plesseons as $lesson) {
+        //     echo $lesson->unit->unit_name;
+        // }
+    }
     public function subscribe_firstcourse()
     {
         $id = request('id');
@@ -255,12 +285,18 @@ class DataController extends Controller
                             'subject' => $subject,
 
                         ])->with(['successth' => "تم تسجيل طلبك بنجاح من فضلك افحص الاميل"]);
-                    } else {
+                    } elseif($data_row->$subject == 'waiting') {
                         return redirect()->route('thanwy12-courses', [
                             'id' => $id,
                             'subject' => $subject,
                             'sent' => 'done',
                         ])->with(['successth' => "تم تسجيل طلبك و جارى التفعيل"]);
+                    } elseif($data_row->$subject == 'open') {
+                        return redirect()->route('thanwy12-courses', [
+                            'id' => $id,
+                            'subject' => $subject,
+                            'sent' => 'done',
+                        ])->with(['successth' => "تم الاشتراك و فتح الكورس ابدا الان"]);
                     }
                 } elseif ($data_row_en && $lang == 'en') {
 

@@ -119,7 +119,9 @@
 
                                 <div class="course-content p-4">
 
-                                    <a class="h5" href="">عربي</a>
+                                    <a class="h5"
+                                    href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'arabic', 'sub'=> '1' , 'lang' =>'ar']) }}">عربي
+                                    اولي</a>
                                     <div class="border-top mt-4 pt-4">
                                         <div class="d-flex justify-content-between">
                                             <a class="btn btn-danger sent"
@@ -139,7 +141,7 @@
 
                                 <div class="course-content p-4">
 
-                                    <a class="h5" href="">الفلسفه والمنطق</a>
+                                    <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'philosophyLogic', 'sub'=> '1' , 'lang' =>'ar']) }}">الفلسفه والمنطق</a>
                                     <div class="border-top mt-4 pt-4">
                                         <div class="d-flex justify-content-between">
                                             <a class="btn btn-danger sent"
@@ -158,7 +160,7 @@
 
                                 <div class="course-content p-4">
 
-                                    <a class="h5" href="">جبر وحساب مثلثات</a>
+                                    <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'algebratrigonometry', 'sub'=> '1' , 'lang' =>'ar']) }}">جبر وحساب مثلثات</a>
                                     <div class="border-top mt-4 pt-4">
                                         <div class="d-flex justify-content-between">
                                             <a class="btn btn-danger sent"
@@ -177,7 +179,7 @@
 
                                 <div class="course-content p-4">
 
-                                    <a class="h5" href="">الهندسه التحليلية</a>
+                                    <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'analyticalengineering', 'sub'=> '1' , 'lang' =>'ar']) }}">الهندسه التحليلية</a>
                                     <div class="border-top mt-4 pt-4">
                                         <div class="d-flex justify-content-between">
                                             <a class="btn btn-danger sent"
@@ -195,7 +197,7 @@
                                     alt="">
                                 <div class="course-content p-4">
 
-                                    <a class="h5" href="">تاريخ</a>
+                                    <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'history', 'sub'=> '1' , 'lang' =>'ar']) }}">تاريخ</a>
                                     <div class="border-top mt-4 pt-4">
                                         <div class="d-flex justify-content-between">
                                             <a class="btn btn-danger sent"
@@ -213,7 +215,7 @@
                                     alt="">
                                 <div class="course-content p-4">
 
-                                    <a class="h5" href="">جغرفيا</a>
+                                    <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'geography', 'sub'=> '1' , 'lang' =>'ar']) }}">جغرفيا</a>
                                     <div class="border-top mt-4 pt-4">
                                         <div class="d-flex justify-content-between">
                                             <a class="btn btn-danger sent"
@@ -231,7 +233,7 @@
                                     alt="">
                                 <div class="course-content p-4">
 
-                                    <a class="h5" href="">الفزياء</a>
+                                    <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'physics', 'sub'=> '1' , 'lang' =>'ar']) }}">الفزياء</a>
                                     <div class="border-top mt-4 pt-4">
                                         <div class="d-flex justify-content-between">
                                             <a class="btn btn-danger sent"
@@ -249,7 +251,7 @@
                                     alt="">
                                 <div class="course-content p-4">
 
-                                    <a class="h5" href="">الكمياء</a>
+                                    <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'chemistry', 'sub'=> '1' , 'lang' =>'ar']) }}">الكمياء</a>
                                     <div class="border-top mt-4 pt-4">
                                         <div class="d-flex justify-content-between">
                                             <a class="btn btn-danger sent"
@@ -267,7 +269,7 @@
                                     alt="">
                                 <div class="course-content p-4">
 
-                                    <a class="h5" href="">الاجياء</a>
+                                    <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'biology', 'sub'=> '1' , 'lang' =>'ar']) }}">الاجياء</a>
                                     <div class="border-top mt-4 pt-4">
                                         <div class="d-flex justify-content-between">
                                             <a class="btn btn-danger sent"
@@ -285,7 +287,7 @@
                                     alt="">
                                 <div class="course-content p-4">
 
-                                    <a class="h5" href="">انجليزي</a>
+                                    <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'english', 'sub'=> '1' , 'lang' =>'ar']) }}">انجليزي</a>
                                     <div class="border-top mt-4 pt-4">
                                         <div class="d-flex justify-content-between">
                                             <a class="btn btn-danger sent"
@@ -303,7 +305,7 @@
                                     alt="">
                                 <div class="course-content p-4">
 
-                                    <a class="h5" href="">فرنساوي</a>
+                                    <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'frensh', 'sub'=> '1' , 'lang' =>'ar']) }}">فرنساوي</a>
                                     <div class="border-top mt-4 pt-4">
                                         <div class="d-flex justify-content-between">
                                             <a class="btn btn-danger sent"
@@ -321,7 +323,7 @@
                                     alt="">
                                 <div class="course-content p-4">
 
-                                    <a class="h5" href="">ايطالي</a>
+                                    <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'italian', 'sub'=> '1' , 'lang' =>'ar']) }}">ايطالي</a>
                                     <div class="border-top mt-4 pt-4">
                                         <div class="d-flex justify-content-between">
                                             <a class="btn btn-danger sent"
@@ -339,7 +341,7 @@
                                     alt="">
                                 <div class="course-content p-4">
 
-                                    <a class="h5" href="">اللماني</a>
+                                    <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'german', 'sub'=> '1' , 'lang' =>'ar']) }}">اللغة الالمانية</a>
                                     <div class="border-top mt-4 pt-4">
                                         <div class="d-flex justify-content-between">
                                             <a class="btn btn-danger sent"
@@ -357,7 +359,7 @@
                                     alt="">
                                 <div class="course-content p-4">
 
-                                    <a class="h5" href="">اسباني</a>
+                                    <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'spanish', 'sub'=> '1' , 'lang' =>'ar']) }}">اسباني</a>
                                     <div class="border-top mt-4 pt-4">
                                         <div class="d-flex justify-content-between">
                                             <a class="btn btn-danger sent"
@@ -369,6 +371,7 @@
                                 </div>
                             </div>
                         </div>
+                        {{-- الصف الثانى الثانوى ادبى  --}}
                     @elseif($id == 2 && $sub == 1)
                         <div class="col-lg-3 col-md-6 mb-4">
                             <div class="rounded overflow-hidden mb-2 bg">
@@ -378,7 +381,7 @@
 
                                 <div class="course-content p-4">
 
-                                    <a class="h5" href="">عربي ادبي{{ $sub }}</a>
+                                    <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'arabic', 'sub'=> '1' , 'lang' =>'ar']) }}">عربي ادبي{{ $sub }}</a>
                                     <div class="border-top mt-4 pt-4">
                                         <div class="d-flex justify-content-between">
                                             <a class="btn btn-danger"

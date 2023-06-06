@@ -55,9 +55,9 @@ Route::get('/thanwy/subscribe',[DataController::class,'subscribe_thanwy'])->name
 
 
 //  show the page of courses for praporatory levels
-Route::get('/thcoursedetails',[Show::class,'details'])->name('details');
+Route::get('/thcoursedetails',[Show::class,'details_th'])->name('details_th');
 
-// Route::get('/preparatorycourses/course details',[DataController::class,'thcoursedetails'])->name('showdetails');
+Route::get('/details_th',[DataController::class,'thcoursedetails'])->name('showdetails_th');
 // *****************************************************
 
 Route::prefix('register')->group(function () {

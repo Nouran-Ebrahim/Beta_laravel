@@ -160,7 +160,7 @@
             </div>
         </div>
     @endif
-    @if ($status == 'waitting')
+    @if ($status == 'waiting')
         <div
             style="color: white;
                 display: flex;

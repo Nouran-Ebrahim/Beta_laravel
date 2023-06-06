@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 28, 2023 at 03:53 PM
+-- Generation Time: Jun 06, 2023 at 03:36 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -43,7 +43,7 @@ CREATE TABLE `arpcourses` (
   `science1` varchar(255) NOT NULL DEFAULT 'closed',
   `science2` varchar(255) NOT NULL DEFAULT 'closed',
   `science3` varchar(255) NOT NULL DEFAULT 'closed',
-  `social1` varchar(255) NOT NULL DEFAULT 'closed',
+  `social1` varchar(100) NOT NULL DEFAULT 'closed',
   `social2` varchar(255) NOT NULL DEFAULT 'closed',
   `social3` varchar(255) NOT NULL DEFAULT 'closed',
   `frensh1` varchar(255) NOT NULL DEFAULT 'closed',
@@ -58,8 +58,9 @@ CREATE TABLE `arpcourses` (
 --
 
 INSERT INTO `arpcourses` (`id`, `name`, `student_id`, `math1`, `arabic1`, `math2`, `arabic2`, `math3`, `arabic3`, `english1`, `english2`, `english3`, `science1`, `science2`, `science3`, `social1`, `social2`, `social3`, `frensh1`, `frensh2`, `frensh3`, `created_at`, `updated_at`) VALUES
-(74, 'Nouran El Mohamady', 71, 'open', 'open', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL),
-(75, 'Alaa Osama', 72, 'open', 'open', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
+(74, 'Nouran El Mohamady', 71, 'waiting', 'open', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL),
+(75, 'Alaa Osama', 72, 'waiting', 'open', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'waiting', 'closed', 'closed', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL),
+(76, 'admain', 70, 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -94,42 +95,37 @@ CREATE TABLE `arth1coures` (
 --
 
 INSERT INTO `arth1coures` (`id`, `student_id`, `name`, `arabic`, `philosophyLogic`, `algebratrigonometry`, `analyticalengineering`, `history`, `geography`, `physics`, `chemistry`, `biology`, `english`, `frensh`, `italian`, `german`, `spanish`, `created_at`, `updated_at`) VALUES
-(3, 71, 'Nouran El Mohamady', 'closed', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
+(3, 71, 'Nouran El Mohamady', 'closed', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL),
+(4, 70, 'admain', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL),
+(5, 72, 'Alaa Osama', 'open', 'open', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'open', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `arth2courses`
+-- Table structure for table `arth2course`
 --
 
-CREATE TABLE `arth2courses` (
-  `id` int(15) NOT NULL,
+CREATE TABLE `arth2course` (
+  `id` int(11) NOT NULL,
   `student_id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `arabic` varchar(100) NOT NULL DEFAULT 'closed',
-  `english` varchar(100) NOT NULL DEFAULT 'closed',
-  `frensh` varchar(100) NOT NULL DEFAULT 'closed',
-  `italy` varchar(100) NOT NULL DEFAULT 'closed',
-  `spanish` varchar(100) NOT NULL DEFAULT 'closed',
-  `german` varchar(100) NOT NULL DEFAULT 'closed',
-  `math` varchar(100) NOT NULL DEFAULT 'closed',
-  `physics` varchar(100) DEFAULT 'closed',
+  `philosophyLogic` varchar(100) NOT NULL DEFAULT 'closed',
+  `algebratrigonometry` varchar(100) NOT NULL DEFAULT 'closed',
+  `analyticalengineering` varchar(100) NOT NULL DEFAULT 'closed',
+  `history` varchar(100) NOT NULL DEFAULT 'closed',
+  `geography` varchar(100) NOT NULL DEFAULT 'closed',
+  `physics` varchar(100) NOT NULL DEFAULT 'closed',
   `chemistry` varchar(100) NOT NULL DEFAULT 'closed',
   `biology` varchar(100) NOT NULL DEFAULT 'closed',
-  `history` varchar(100) NOT NULL DEFAULT 'closed',
-  `psychology` varchar(100) NOT NULL DEFAULT 'closed',
-  `geography` varchar(100) NOT NULL DEFAULT 'closed',
-  `philosophy` varchar(100) NOT NULL DEFAULT 'closed',
+  `english` varchar(100) NOT NULL DEFAULT 'closed',
+  `frensh` varchar(100) NOT NULL DEFAULT 'closed',
+  `italian` varchar(100) NOT NULL DEFAULT 'closed',
+  `german` varchar(100) NOT NULL DEFAULT 'closed',
+  `spanish` varchar(100) NOT NULL DEFAULT 'closed',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `arth2courses`
---
-
-INSERT INTO `arth2courses` (`id`, `student_id`, `name`, `arabic`, `english`, `frensh`, `italy`, `spanish`, `german`, `math`, `physics`, `chemistry`, `biology`, `history`, `psychology`, `geography`, `philosophy`, `created_at`, `updated_at`) VALUES
-(6, 72, 'Alaa Osama', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -145,6 +141,8 @@ CREATE TABLE `arth3courses` (
   `english` varchar(100) NOT NULL,
   `frensh` varchar(100) NOT NULL,
   `italy` varchar(100) NOT NULL,
+  `spanish` varchar(100) NOT NULL,
+  `german` varchar(100) NOT NULL,
   `math` varchar(100) NOT NULL,
   `physics` varchar(100) NOT NULL,
   `chemistry` varchar(100) NOT NULL,
@@ -194,7 +192,8 @@ CREATE TABLE `enpcourses` (
 --
 
 INSERT INTO `enpcourses` (`id`, `name`, `student_id`, `arabic1`, `arabic2`, `arabic3`, `math1`, `math2`, `math3`, `english1`, `english2`, `english3`, `science1`, `science2`, `science3`, `social1`, `social2`, `social3`, `frensh1`, `frensh2`, `frensh3`, `created_at`, `updated_at`) VALUES
-(27, 'Nouran El Mohamady', 71, 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
+(27, 'Nouran El Mohamady', 71, 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL),
+(28, 'Alaa Osama', 72, 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'open', 'closed', 'closed', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -484,9 +483,9 @@ ALTER TABLE `arth1coures`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `arth2courses`
+-- Indexes for table `arth2course`
 --
-ALTER TABLE `arth2courses`
+ALTER TABLE `arth2course`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -582,19 +581,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `arpcourses`
 --
 ALTER TABLE `arpcourses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
 -- AUTO_INCREMENT for table `arth1coures`
 --
 ALTER TABLE `arth1coures`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `arth2courses`
+-- AUTO_INCREMENT for table `arth2course`
 --
-ALTER TABLE `arth2courses`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+ALTER TABLE `arth2course`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `arth3courses`
@@ -606,7 +605,7 @@ ALTER TABLE `arth3courses`
 -- AUTO_INCREMENT for table `enpcourses`
 --
 ALTER TABLE `enpcourses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `enth1coures`

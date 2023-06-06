@@ -125,8 +125,8 @@
 
             <div class="video-list-container">
                 <nav>
-                    {{-- @foreach ($plessons as $lesson)
-                        <ul class="drop-down closed"> --}}
+                    @foreach ($plessons as $lesson)
+                        <ul class="drop-down closed">
 
                             {{-- <li><a href="#" class="nav-button"> {{ }} </a></li> --}}
 
@@ -142,7 +142,7 @@
                                 </div>
                             </li> --}}
 
-                            {{-- <li>
+                            <li>
                                 <div class="list">
                                     <iframe style="display: none" width="100" height="100"
                                         src="{{ url($lesson->link) }}" class="list-video" title="YouTube video player"
@@ -154,13 +154,13 @@
                                 </div>
                             </li>
                         </ul>
-                    @endforeach --}}
+                    @endforeach
 
                 </nav>
             </div>
         </div>
     @endif
-    @if ($status == 'waitting')
+    @if ($status == 'waiting')
         <div
             style="color: white;
                 display: flex;
@@ -180,6 +180,7 @@
                 font-size: 37px;text-align: center; ">
             "يرجى الرجوع للصفحة السابقة و الضغط على زر "اشترك الان </div>
     @endif
+    
     <div class="footer start-footer">
         <p>Copyright © 2022 beta education Co., Ltd. All Rights Reserved.
             <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">soul</a>

@@ -40,6 +40,26 @@ class Show extends Controller
       'units'=>$units
     ]);
   }
+  //  
+  public function details_th()
+  {
+    $id = request('id');
+    $subject = request('subject');
+    $status=request('status');
+    $sub=request('sub');
+    $lang=request('lang');
+    $plesseons = Plesson::where("subject",$subject)->where('level',$id)->get();
+   $units= Punit::all();
+    return view('thcoursedetails', [
+      'id' => $id,
+      'sub'=> $sub,
+      'lang'=>$lang,
+      'subject'=>$subject,
+      'status'=>$status,
+      'plessons'=>$plesseons,
+      'units'=>$units
+    ]);
+  }
   public function first()
   {
     $id = request('id');
