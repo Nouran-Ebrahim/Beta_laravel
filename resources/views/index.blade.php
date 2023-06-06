@@ -296,7 +296,7 @@ https://templatemo.com/tm-569-edu-meeting
 
                     </li>
                 </ul>
-               
+
                 <div class="col-lg-12">
                     <div class="row">
 
@@ -373,7 +373,7 @@ https://templatemo.com/tm-569-edu-meeting
                         </div>
                         <div class="item">
                             <img src="assets/images/coming-soon-clerks-iii.gif" style="height: 95px;" alt="Course Two">
-                            
+
                             <img src="assets/images/computer-course.jpg" alt="Course Two">
                             <div class="down-content">
                                 <h4>Computer course</h4>
@@ -593,7 +593,7 @@ https://templatemo.com/tm-569-edu-meeting
                         <div class="carousel-inner d-flex-col justify-content-center align-items-center w-100 techer">
                             <div class="carousel-item active w-100" data-bs-interval="10000">
                                 <div class="pic">
-                                    <img src="assets/images/customer-img.jpg" class="w-25" alt="...">
+                                    <img src="assets/images/customer-img.jpg" class="w-100 h-100" alt="...">
                                 </div>
                                 <div class="label">
                                     <h5>First slide label</h5>
@@ -602,7 +602,7 @@ https://templatemo.com/tm-569-edu-meeting
                             </div>
                             <div class="carousel-item  w-100" data-bs-interval="10000">
                                 <div class="pic">
-                                    <img src="assets/images/customer-img.jpg" class="w-25" alt="...">
+                                    <img src="assets/images/customer-img.jpg" class="w-100 h-100" alt="...">
                                 </div>
                                 <div class="label">
                                     <h5>First slide label2</h5>
@@ -611,7 +611,7 @@ https://templatemo.com/tm-569-edu-meeting
                             </div>
                             <div class="carousel-item  w-100" data-bs-interval="10000">
                                 <div class="pic">
-                                    <img src="assets/images/customer-img.jpg" class="w-25" alt="...">
+                                    <img src="assets/images/customer-img.jpg" class="w-100 h-100" alt="...">
                                 </div>
                                 <div class="label">
                                     <h5>First slide label3</h5>
