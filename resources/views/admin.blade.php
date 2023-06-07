@@ -40,7 +40,7 @@
 
 <body>
     <!-- ***** Header Area Start ***** -->
-
+    {{--
     <header class="header-area header-sticky">
         <div class="container">
             <div class="row">
@@ -72,20 +72,58 @@
                 </div>
             </div>
         </div>
+    </header> --}}
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <div class="row  justify-content-center align-items-center">
+
+                            <div class="col-lg-2 col-12  d-flex  align-items-center iconn ">
+                                <div class="logo logo-img">
+                                    <a href="index.blade.php">
+                                        <img src="assets/images/logoo2.png" class="img-responsive">
+                                    </a>
+                                </div>
+                                <a class='menu-trigger'>
+                                    <span>Menu</span>
+                                </a>
+                            </div>
+                            <div class="offset-lg-1 col-lg-9 col-12 justify-content-center d-flex align-items-center">
+                                <ul class="nav">
+                                    <li><a href="{{ route('index') }}">Home</a></li>
+                                    <li><a href="{{ route('index') }}" class="active" id="level">Levels</a></li>
+                                    <li><a href="{{ route('index') }}" id="skill">Skills</a></li>
+                                    <li><a href="{{ route('joinus') }}">Join Us</a></li>
+                                    <li><a href="{{ route('about') }}">About</a></li>
+                                    <li><a href="{{ route('index') }}">Contact Us</a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
     </header>
     <!-- ***** Header Area End ***** -->
     <div class="container-fluid py-5">
         <div class="container py-5">
-            <form method="post" action="{{route('adminstore')}}">
+            <form method="post" action="{{ route('adminstore') }}">
                 @csrf
-                <p>Please select the student:</p>
+                <p style="color: white">Please select the student for preparatory grad:</p>
 
                 @foreach ($FetchData as $data)
-                   <button type="submit" name="id" value="{{$data->student_id}}"> edit </button>
-                    <label style="color: white" for="html">{{$data->name}}</label><br>
-                    @endforeach
-                
-                
+                    <button type="submit" name="id" value="{{ $data->student_id }}"> edit </button>
+                    <label style="color: white" for="html">{{ $data->name }}</label><br>
+                @endforeach
+                <br>
+                <p style="color: white">Please select the student for 1thanwy grad:</p>
+                @foreach ($thanwy1 as $data)
+                    <button type="submit" name="id" value="{{ $data->student_id }}"> edit </button>
+                    <label style="color: white" for="html">{{ $data->name }}</label><br>
+                @endforeach
             </form>
         </div>
     </div>

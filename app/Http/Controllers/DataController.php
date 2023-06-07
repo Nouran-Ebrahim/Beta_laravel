@@ -70,7 +70,7 @@ class DataController extends Controller
             return back();
         }
     }
-// show student name in home page 
+    // show student name in home page
     public function hello()
     {
         $data = array();
@@ -126,36 +126,33 @@ class DataController extends Controller
                     if ($data_row->$subdata == 'closed') {
                         Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 0));
                         Arpcourse::where("student_id", Session::get('id'))->update([$subdata => "waiting"]);
-                        
+
                         return redirect()->route('prep-courses', [
                             'id' => $id,
                             'subject' => $subject,
 
                         ])->with(['success' => "تم تسجيل طلبك بنجاح من فضلك افحص الاميل"]);
-                    }
-                     elseif($data_row->$subdata == 'waiting') {
+                    } elseif ($data_row->$subdata == 'waiting') {
                         return redirect()->route('prep-courses', [
                             'id' => $id,
                             'subject' => $subject,
                             'sent' => 'done',
-                            ])->with(['success' => "تم تسجيل طلبك و جارى التفعيل"]);
-                        }
-                        elseif($data_row->$subdata == 'open') {
-                            // echo "7777";die;
+                        ])->with(['success' => "تم تسجيل طلبك و جارى التفعيل"]);
+                    } elseif ($data_row->$subdata == 'open') {
+                        // echo "7777";die;
                         return redirect()->route('prep-courses', [
                             'id' => $id,
                             'subject' => $subject,
                             'sent' => 'done',
                         ])->with(['success' => "تم الاشتراك و فتح الكورس ابدا الان"]);
-                    }else {
+                    } else {
                         return redirect()->route('prep-courses', [
                             'id' => $id,
                             'subject' => $subject,
                             'sent' => 'done',
                         ])->with(['success' => "done"]);
                     }
-                }
-                 elseif ($data_row_en && $lang == 'en') {
+                } elseif ($data_row_en && $lang == 'en') {
 
                     if ($data_row_en->$subdata == 'closed') {
                         Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 0));
@@ -166,13 +163,13 @@ class DataController extends Controller
                             'subject' => $subject,
 
                         ])->with(['success' => "sucssfully join the course please check your email"]);
-                    } elseif($data_row_en->$subdata == 'waiting') {
+                    } elseif ($data_row_en->$subdata == 'waiting') {
                         return redirect()->route('prep-courses', [
                             'id' => $id,
                             'subject' => $subject,
                             'sent' => 'done',
                         ])->with(['success' => "already joinning please wait for comfermation"]);
-                    }elseif($data_row_en->$subdata == 'open') {
+                    } elseif ($data_row_en->$subdata == 'open') {
                         return redirect()->route('prep-courses', [
                             'id' => $id,
                             'subject' => $subject,
@@ -180,8 +177,7 @@ class DataController extends Controller
                         ])->with(['success' => "You are joined already start now"]);
                     }
                 }
-            } 
-            catch (\ErrorException $err) {
+            } catch (\ErrorException $err) {
                 echo $err->getMessage();
                 return redirect()->back()->with(['success' => " من فضلك تأكد بأتصالك بالانترنت وحاول مره اخري"]);
             }
@@ -203,7 +199,7 @@ class DataController extends Controller
                 'id' => $id,
                 'subject' => $subject,
                 'status' => $status,
-             
+
             ]);
 
         }
@@ -211,13 +207,15 @@ class DataController extends Controller
         //     echo $lesson->unit->unit_name;
         // }
     }
-   
+
     public function admin()
     {
         $FetchData = Arpcourse::all();
+        $thanwy1 = Arth1coure::all();
         //dd($FetchData);
         return view('admin', [
             'FetchData' => $FetchData,
+            'thanwy1' => $thanwy1
         ]);
     }
     public function adminstore(Request $req)

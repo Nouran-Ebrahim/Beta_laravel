@@ -134,14 +134,14 @@ https://templatemo.com/tm-569-edu-meeting
                         <div class="col-lg-4">
                             <div class="card item">
                                 <div class="card-body">
-                                    <h5 class="card-title">1st Grad</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make
+                                    <h5 class="card-title"> الصف الاول الاعدادي </h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and make
                                         up
                                         the
                                         bulk
                                         of the
                                         card's
-                                        content.</p>
+                                        content.</p> --}}
                                     <a href="{{ route('prep-courses', ['id' => 1]) }}" class="card-link">
                                         <button type="button" class="btn btn-outline-primary view"
                                             id="prep-1">View</button>
@@ -152,14 +152,14 @@ https://templatemo.com/tm-569-edu-meeting
                         <div class="col-lg-4 ">
                             <div class="card item">
                                 <div class="card-body">
-                                    <h5 class="card-title">2nd Grad</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make
+                                    <h5 class="card-title">الصف الثاني الاعدادي </h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and make
                                         up
                                         the
                                         bulk
                                         of the
                                         card's
-                                        content.</p>
+                                        content.</p> --}}
                                     <a href="{{ route('prep-courses', ['id' => 2]) }}" class="card-link"><button
                                             type="button" class="btn btn-outline-primary view"
                                             id="prep-2">View</button></a>
@@ -169,14 +169,14 @@ https://templatemo.com/tm-569-edu-meeting
                         <div class="col-lg-4 ">
                             <div class="card item">
                                 <div class="card-body">
-                                    <h5 class="card-title">3rd Grad</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and
+                                    <h5 class="card-title">الصف الثالث الاعدادي </h5>
+                                    {{-- <p class="card-text">Some quick example text to build on the card title and
                                         make up
                                         the
                                         bulk
                                         of the
                                         card's
-                                        content.</p>
+                                        content.</p> --}}
                                     <a href="{{ route('prep-courses', ['id' => 3]) }}" class="card-link"><button
                                             type="button" class="btn btn-outline-primary view"
                                             id="prep-3">View</button></a>
