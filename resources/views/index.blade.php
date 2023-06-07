@@ -349,7 +349,7 @@ https://templatemo.com/tm-569-edu-meeting
                 <div class="col-lg-12">
                     <div class="owl-courses-item owl-carousel">
                         <div class="item">
-                            <img src="assets/images/coming-soon-clerks-iii.gif" style="height: 95px;" alt="Course Two">
+                            <img src="assets/images/coming-soon-clerks-iii.gif" style="height: 95px !important;" alt="Course Two">
                             <img src="assets/images/english-course.jpg" alt="Course One">
                             <div class="down-content">
                                 <h4>English course</h4>
@@ -372,7 +372,7 @@ https://templatemo.com/tm-569-edu-meeting
                             </div>
                         </div>
                         <div class="item">
-                            <img src="assets/images/coming-soon-clerks-iii.gif" style="height: 95px;" alt="Course Two">
+                            <img src="assets/images/coming-soon-clerks-iii.gif" style="height: 95px !important;" alt="Course Two">
 
                             <img src="assets/images/computer-course.jpg" alt="Course Two">
                             <div class="down-content">
@@ -393,182 +393,6 @@ https://templatemo.com/tm-569-edu-meeting
                                 </div>
                             </div>
                         </div>
-                        {{-- <div class="item">
-                            <img src="assets/images/course-03.jpg" alt="">
-                            <div class="down-content">
-                                <h4>Nulla at ipsum a mauris egestas tempor</h4>
-                                <div class="info">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-4">
-                                            <span>$140</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="assets/images/course-04.jpg" alt="">
-                            <div class="down-content">
-                                <h4>Aenean molestie quis libero gravida</h4>
-                                <div class="info">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-4">
-                                            <span>$120</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="assets/images/course-01.jpg" alt="">
-                            <div class="down-content">
-                                <h4>Lorem ipsum dolor sit amet adipiscing elit</h4>
-                                <div class="info">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-4">
-                                            <span>$250</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="assets/images/course-02.jpg" alt="">
-                            <div class="down-content">
-                                <h4>TemplateMo is the best website for Free CSS</h4>
-                                <div class="info">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-4">
-                                            <span>$270</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="assets/images/course-03.jpg" alt="">
-                            <div class="down-content">
-                                <h4>Web Design Templates at your finger tips</h4>
-                                <div class="info">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-4">
-                                            <span>$340</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="assets/images/course-04.jpg" alt="">
-                            <div class="down-content">
-                                <h4>Please visit our website again</h4>
-                                <div class="info">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-4">
-                                            <span>$360</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="assets/images/course-01.jpg" alt="">
-                            <div class="down-content">
-                                <h4>Responsive HTML Templates for you</h4>
-                                <div class="info">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-4">
-                                            <span>$400</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="assets/images/course-02.jpg" alt="">
-                            <div class="down-content">
-                                <h4>Download Free CSS Layouts for your business</h4>
-                                <div class="info">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-4">
-                                            <span>$430</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> --}}
-
                     </div>
                 </div>
             </div>
@@ -593,7 +417,7 @@ https://templatemo.com/tm-569-edu-meeting
                         <div class="carousel-inner d-flex-col justify-content-center align-items-center w-100 techer">
                             <div class="carousel-item active w-100" data-bs-interval="10000">
                                 <div class="pic">
-                                    <img src="assets/images/customer-img.jpg" class="w-100 h-100" alt="...">
+                                    <img src="assets/images/customer-img.jpg" class="" alt="...">
                                 </div>
                                 <div class="label">
                                     <h5>First slide label</h5>
@@ -602,7 +426,7 @@ https://templatemo.com/tm-569-edu-meeting
                             </div>
                             <div class="carousel-item  w-100" data-bs-interval="10000">
                                 <div class="pic">
-                                    <img src="assets/images/customer-img.jpg" class="w-100 h-100" alt="...">
+                                    <img src="assets/images/customer-img.jpg" class="" alt="...">
                                 </div>
                                 <div class="label">
                                     <h5>First slide label2</h5>
@@ -611,7 +435,7 @@ https://templatemo.com/tm-569-edu-meeting
                             </div>
                             <div class="carousel-item  w-100" data-bs-interval="10000">
                                 <div class="pic">
-                                    <img src="assets/images/customer-img.jpg" class="w-100 h-100" alt="...">
+                                    <img src="assets/images/customer-img.jpg" class="" alt="...">
                                 </div>
                                 <div class="label">
                                     <h5>First slide label3</h5>
@@ -640,8 +464,13 @@ https://templatemo.com/tm-569-edu-meeting
 
     <section class="contact-us" id="contact">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-9 align-self-center">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h2>Contact Us</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                {{-- <div class="col-lg-9 align-self-center">
                     <div class="row">
                         <div class="col-lg-12">
                             <form id="contact" action="mailto:beta.education2022@gmail.com" method="post">
@@ -684,16 +513,16 @@ https://templatemo.com/tm-569-edu-meeting
                             </form>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3">
+                </div> --}}
+                <div class="col-12 col-lg-6 ">
                     <div class="right-info">
                         <ul>
-                            <li>
+                            <li class="col-12">
 
                                 <div class="d-flex"
                                     style="gap: 25px;
                                 align-items: center;
-                                justify-content: center;
+                                justify-content:flex-start;
                                 color: white;">
                                     <i class="fa-solid fa-phone fa-beat-fade fs-3"></i>
                                     <div>
@@ -703,26 +532,26 @@ https://templatemo.com/tm-569-edu-meeting
 
                                 </div>
                             </li>
-                            <li>
+                            <li class="col-12">
                                 <div class="d-flex"
                                     style="gap: 25px;
                                 align-items: center;
-                                justify-content: center;
+                                justify-content:flex-start;
                                 color: white;">
                                     <i class="fa-regular fa-envelope-open fa-beat-fade fs-3"></i>
                                     <div>
                                         <h6>Email Address</h6>
-                                        <span>Lorem ipsum dolor sit amet.</span>
+                                        <span>beta.education2022@gmail.com</span>
                                     </div>
 
                                 </div>
                             </li>
-                            <li>
+                            <li class="col-12">
 
                                 <div class="d-flex"
                                     style="gap: 25px;
                                 align-items: center;
-                                justify-content: center;
+                                justify-content: flex-start;
                                 color: white;">
                                     <i class="fa-solid fa-location-dot fa-beat-fade fs-3"></i>
                                     <div>
@@ -732,12 +561,12 @@ https://templatemo.com/tm-569-edu-meeting
 
                                 </div>
                             </li>
-                            <li>
+                            <li class="col-12">
 
                                 <div class="d-flex"
                                     style="gap: 25px;
                                 align-items: center;
-                                justify-content: center;
+                                justify-content: flex-start;
                                 color: white;">
                                     <i class="fa-solid fa-globe fa-beat-fade fs-3"></i>
                                     <div>

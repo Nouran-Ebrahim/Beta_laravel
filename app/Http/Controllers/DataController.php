@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailableName;
 use App\Mail\Confermation;
+use App\Models\Arth2course;
 use Illuminate\Support\Facades\Session;
 
 class DataController extends Controller
@@ -210,138 +211,7 @@ class DataController extends Controller
         //     echo $lesson->unit->unit_name;
         // }
     }
-    public function thcoursedetails()
-    {
-        $id = request('id');
-        $subject = request('subject');
-        $sub=request('sub');
-        $lang=request('lang');
-
-        //$lang = request('lang');
-        if (Session::has('id')) {
-            $subdata = $subject;
-            if($sub==1 && $lang=='ar' && $id==1){
-                $data_row = Arth1coure::where('student_id', '=', Session::get('id'))->first();
-            }elseif($sub==1 && $lang=='ar' && $id==2){
-                $data_row = Arth1coure::where('student_id', '=', Session::get('id'))->first();
-            }
-            $status = $data_row->$subdata;
-            // dd($status);die;
-            return redirect()->route('details_th', [
-                'id' => $id,
-                'subject' => $subject,
-                'status' => $status,
-                
-             
-            ]);
-
-        }
-        // foreach ($plesseons as $lesson) {
-        //     echo $lesson->unit->unit_name;
-        // }
-    }
-    public function subscribe_firstcourse()
-    {
-        $id = request('id');
-        $subject = request('subject');
-        $lang = request('lang');
-        if (Session::has('id')) {
-            $data = Student::where('id', '=', Session::get('id'))->first();
-            $studentname = $data->name;
-
-            if ($lang === 'en') {
-                if (!Enth1coure::where('student_id', Session::get('id'))->exists()) {
-                    Enth1coure::create([
-                        'name' => $studentname,
-                        'student_id' => Session::get('id'),
-                    ]);
-                } else {
-                    echo '<script>alert("faild to join this course please try again")</script>';
-                }
-            } elseif ($lang === 'ar') {
-                if (!Arth1coure::where('student_id', Session::get('id'))->exists()) {
-                    Arth1coure::create([
-                        'name' => $studentname,
-                        'student_id' => Session::get('id'),
-                    ]);
-                } else {
-                    echo '<script>alert("تعذر تسجيل الماده حاول مره اخره")</script>';
-                }
-            } else {
-                echo '<script>alert("تعذر الاتصال حاول مره اخره")</script>';
-            }
-
-            $data_row = Arth1coure::where('student_id', '=', Session::get('id'))->first();
-            $data_row_en = Enth1coure::where('student_id', '=', Session::get('id'))->first();
-            //$subdata = $subject . $id;
-            try {
-                if ($data_row && $lang == 'ar') {
-                    if ($data_row->$subject == 'closed') {
-                        Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 11));
-                        Arth1coure::where("student_id", Session::get('id'))->update([$subject => "waiting"]);
-
-                        return redirect()->route('thanwy12-courses', [
-                            'id' => $id,
-                            'subject' => $subject,
-
-                        ])->with(['successth' => "تم تسجيل طلبك بنجاح من فضلك افحص الاميل"]);
-                    } elseif($data_row->$subject == 'waiting') {
-                        return redirect()->route('thanwy12-courses', [
-                            'id' => $id,
-                            'subject' => $subject,
-                            'sent' => 'done',
-                        ])->with(['successth' => "تم تسجيل طلبك و جارى التفعيل"]);
-                    } elseif($data_row->$subject == 'open') {
-                        return redirect()->route('thanwy12-courses', [
-                            'id' => $id,
-                            'subject' => $subject,
-                            'sent' => 'done',
-                        ])->with(['successth' => "تم الاشتراك و فتح الكورس ابدا الان"]);
-                    }
-                } elseif ($data_row_en && $lang == 'en') {
-
-                    if ($data_row_en->$subject == 'closed') {
-                        Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, 11));
-                        Enth1coure::where("student_id", Session::get('id'))->update([$subject => "waiting"]);
-
-                        return redirect()->route('thanwy12-courses', [
-                            'id' => $id,
-                            'subject' => $subject,
-
-                        ])->with(['successth' => "sucssfully join the course please check your email"]);
-                    } else {
-                        return redirect()->route('thanwy12-courses', [
-                            'id' => $id,
-                            'subject' => $subject,
-                            'sent' => 'done',
-                        ])->with(['successth' => "already joinning please wait for comfermation"]);
-                    }
-                }
-            } catch (\Swift_TransportException $transportExp) {
-                //echo $transportExp->getMessage();
-                return redirect()->back()->with(['success' => " من فضلك تأكد بأتصالك بالانترنت وحاول مره اخري"]);
-            }
-        }
-    }
-    public function subscribe_thanwy()
-    {
-        $id = request('id');
-        $subject = request('subject');
-        $sec = request('sec');
-        $sub = request('sub');
-        if (Session::has('id')) {
-            $data = Student::where('id', '=', Session::get('id'))->first();
-            $studentname = $data->name;
-            Mail::to($data->email)->send(new Confermation($id, $subject, $studentname, $sec));
-        }
-
-        return redirect()->route('thanwy', [
-            'id' => $id,
-            'subject' => $subject,
-            'sec' => $sec,
-            'sub' => $sub
-        ])->with(['successth' => "تم تسجيل طلبك بنجاح من فضلك افحص الاميل"]);
-    }
+   
     public function admin()
     {
         $FetchData = Arpcourse::all();

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 06, 2023 at 03:36 PM
+-- Generation Time: Jun 07, 2023 at 03:13 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -59,8 +59,8 @@ CREATE TABLE `arpcourses` (
 
 INSERT INTO `arpcourses` (`id`, `name`, `student_id`, `math1`, `arabic1`, `math2`, `arabic2`, `math3`, `arabic3`, `english1`, `english2`, `english3`, `science1`, `science2`, `science3`, `social1`, `social2`, `social3`, `frensh1`, `frensh2`, `frensh3`, `created_at`, `updated_at`) VALUES
 (74, 'Nouran El Mohamady', 71, 'waiting', 'open', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL),
-(75, 'Alaa Osama', 72, 'waiting', 'open', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'waiting', 'closed', 'closed', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL),
-(76, 'admain', 70, 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
+(76, 'admain', 70, 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL),
+(77, 'Alaa Osama', 72, 'closed', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -97,15 +97,15 @@ CREATE TABLE `arth1coures` (
 INSERT INTO `arth1coures` (`id`, `student_id`, `name`, `arabic`, `philosophyLogic`, `algebratrigonometry`, `analyticalengineering`, `history`, `geography`, `physics`, `chemistry`, `biology`, `english`, `frensh`, `italian`, `german`, `spanish`, `created_at`, `updated_at`) VALUES
 (3, 71, 'Nouran El Mohamady', 'closed', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL),
 (4, 70, 'admain', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL),
-(5, 72, 'Alaa Osama', 'open', 'open', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'open', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
+(6, 72, 'Alaa Osama', 'waiting', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `arth2course`
+-- Table structure for table `arth2courses`
 --
 
-CREATE TABLE `arth2course` (
+CREATE TABLE `arth2courses` (
   `id` int(11) NOT NULL,
   `student_id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
@@ -127,6 +127,13 @@ CREATE TABLE `arth2course` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `arth2courses`
+--
+
+INSERT INTO `arth2courses` (`id`, `student_id`, `name`, `arabic`, `philosophyLogic`, `algebratrigonometry`, `analyticalengineering`, `history`, `geography`, `physics`, `chemistry`, `biology`, `english`, `frensh`, `italian`, `german`, `spanish`, `created_at`, `updated_at`) VALUES
+(1, 72, 'Alaa Osama', 'open', 'waiting', 'closed', 'waiting', 'waiting', 'waiting', 'closed', 'closed', 'waiting', 'closed', 'closed', 'closed', 'waiting', 'closed', NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -134,26 +141,33 @@ CREATE TABLE `arth2course` (
 --
 
 CREATE TABLE `arth3courses` (
-  `id` int(15) NOT NULL,
+  `id` int(11) NOT NULL,
   `student_id` int(11) NOT NULL,
-  `name` int(150) NOT NULL,
-  `arabic` varchar(100) NOT NULL,
-  `english` varchar(100) NOT NULL,
-  `frensh` varchar(100) NOT NULL,
-  `italy` varchar(100) NOT NULL,
-  `spanish` varchar(100) NOT NULL,
-  `german` varchar(100) NOT NULL,
-  `math` varchar(100) NOT NULL,
-  `physics` varchar(100) NOT NULL,
-  `chemistry` varchar(100) NOT NULL,
-  `biology` varchar(100) NOT NULL,
-  `history` varchar(100) NOT NULL,
-  `psychology` varchar(100) NOT NULL,
-  `geography` varchar(100) NOT NULL,
-  `philosophy` varchar(100) NOT NULL,
-  `created_at` timestamp(5) NULL DEFAULT NULL,
-  `updated_at` timestamp(5) NULL DEFAULT NULL
+  `name` varchar(100) NOT NULL,
+  `arabic` varchar(100) NOT NULL DEFAULT 'closed',
+  `philosophyLogic` varchar(100) NOT NULL DEFAULT 'closed',
+  `algebratrigonometry` varchar(100) NOT NULL DEFAULT 'closed',
+  `analyticalengineering` varchar(100) NOT NULL DEFAULT 'closed',
+  `history` varchar(100) NOT NULL DEFAULT 'closed',
+  `geography` varchar(100) NOT NULL DEFAULT 'closed',
+  `physics` varchar(100) NOT NULL DEFAULT 'closed',
+  `chemistry` varchar(100) NOT NULL DEFAULT 'closed',
+  `biology` varchar(100) NOT NULL DEFAULT 'closed',
+  `english` varchar(100) NOT NULL DEFAULT 'closed',
+  `frensh` varchar(100) NOT NULL DEFAULT 'closed',
+  `italian` varchar(100) NOT NULL DEFAULT 'closed',
+  `german` varchar(100) NOT NULL DEFAULT 'closed',
+  `spanish` varchar(100) NOT NULL DEFAULT 'closed',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `arth3courses`
+--
+
+INSERT INTO `arth3courses` (`id`, `student_id`, `name`, `arabic`, `philosophyLogic`, `algebratrigonometry`, `analyticalengineering`, `history`, `geography`, `physics`, `chemistry`, `biology`, `english`, `frensh`, `italian`, `german`, `spanish`, `created_at`, `updated_at`) VALUES
+(2, 72, 'Alaa Osama', 'open', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'open', 'waiting', 'closed', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -323,7 +337,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2014_10_12_000000_create_users_table', 1),
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (3, '2019_08_19_000000_create_failed_jobs_table', 1),
-(4, '2019_12_14_000001_create_personal_access_tokens_table', 1);
+(4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+(5, '2023_06_07_084103_create_arth2courses_table', 2);
 
 -- --------------------------------------------------------
 
@@ -483,9 +498,9 @@ ALTER TABLE `arth1coures`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `arth2course`
+-- Indexes for table `arth2courses`
 --
-ALTER TABLE `arth2course`
+ALTER TABLE `arth2courses`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -581,25 +596,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `arpcourses`
 --
 ALTER TABLE `arpcourses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 --
 -- AUTO_INCREMENT for table `arth1coures`
 --
 ALTER TABLE `arth1coures`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `arth2course`
+-- AUTO_INCREMENT for table `arth2courses`
 --
-ALTER TABLE `arth2course`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `arth2courses`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `arth3courses`
 --
 ALTER TABLE `arth3courses`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `enpcourses`
@@ -635,7 +650,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`

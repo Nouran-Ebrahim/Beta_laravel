@@ -122,7 +122,7 @@
                 @if ($id == 3)
                     <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 3, 'sub' => 1]) }}"><button type="button"
                             class="btn btn-outline-danger">أدبي</button></a>
-                    <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 3, 'sub' => 2]) }}"><button type="button"
+                    <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 3, 'sub' => 4]) }}"><button type="button"
                             class="btn btn-outline-danger">علمي
                             علوم</button></a>
                     <a class="thanwy-btn" href="{{ route('thanwy', ['id' => 3, 'sub' => 3]) }}"><button type="button"

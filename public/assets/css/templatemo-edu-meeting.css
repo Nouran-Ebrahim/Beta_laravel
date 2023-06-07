@@ -1230,7 +1230,8 @@ section.our-courses {
   padding-bottom: 0px !important;
 }
 .our-courses img{
-  height: 175px;
+  height: 175px !important;
+  width: auto;
 }
 .our-courses .item .down-content {
   background-color: #fff;

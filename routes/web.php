@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Show;
 use App\Http\Controllers\DataController;
+use App\Http\Controllers\Thanawy;
 // use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,34 +32,30 @@ Route::get('/courses', function () {
 // })-> name('thanwy');
 
 
+
+//  *********************** routes of preparatory levels ************************
 Route::get('/prep-courses',[Show::class,'prep'])->name('prep-courses');
-
-
 //  show the page of courses for praporatory levels
 Route::get('/pcoursedetails',[Show::class,'details'])->name('details');
-
 Route::get('/preparatorycourses/course details',[DataController::class,'pcoursedetails'])->name('showdetails');
-// ***********************************************************
-
 Route::get('/prep-courses/subscribe',[DataController::class,'subscribe_course'])->name('subscribe');  //  زر اشترك الان فى المرحلة الاعدادية 
 
 
-Route::get('/thanwy-courses',[Show::class,'therd'] )->name('start');
 
+//  *********************** routes of thanwy levels ************************
+
+Route::get('/thanwy-courses',[Show::class,'therd'] )->name('start');
 // view button in home page for thanawy levels
 Route::get('/thanwy12-courses', [Show::class,'first'])->name('thanwy12-courses');
-Route::get('/thanwy12-courses/subscribe',[DataController::class,'subscribe_firstcourse'])->name('firstsubscribe');
-
-
+Route::get('/thanwy12-courses/subscribe',[Thanawy::class,'subscribe_firstcourse'])->name('firstsubscribe');
 Route::get('thanwy',[Show::class,'show'])->name('thanwy');
-Route::get('/thanwy/subscribe',[DataController::class,'subscribe_thanwy'])->name('secoundtherdsubscribe');
-
-
+Route::get('/thanwy/subscribe',[Thanawy::class,'subscribe_thanwy'])->name('secoundtherdsubscribe');
 //  show the page of courses for praporatory levels
 Route::get('/thcoursedetails',[Show::class,'details_th'])->name('details_th');
-
-Route::get('/details_th',[DataController::class,'thcoursedetails'])->name('showdetails_th');
+Route::get('/details_th',[Thanawy::class,'thcoursedetails'])->name('showdetails_th');
 // *****************************************************
+
+
 
 Route::prefix('register')->group(function () {
 

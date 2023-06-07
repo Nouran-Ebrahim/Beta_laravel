@@ -110,6 +110,7 @@
                 @endif
                 <h2 style="direction: rtl;color:white;">قسم المدارس العربي</h2>
                 <div class="row">
+                    {{-- الصف الاول الثانوى  --}}
                     @if ($id == 1)
                         <div class="col-lg-3 col-md-6 mb-4">
                             <div class="rounded overflow-hidden mb-2 bg">
@@ -373,513 +374,908 @@
                         </div>
                         {{-- الصف الثانى الثانوى ادبى  --}}
                     @elseif($id == 2 && $sub == 1)
-                        <div class="col-lg-3 col-md-6 mb-4">
-                            <div class="rounded overflow-hidden mb-2 bg">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
 
-                                <img class="img-fluid photo" src="{{ asset('assets/images/arabic.png') }}"
-                                    alt="">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/arabic.png') }}"
+                                alt="">
 
-                                <div class="course-content p-4">
+                            <div class="course-content p-4">
 
-                                    <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'arabic', 'sub'=> '1' , 'lang' =>'ar']) }}">عربي ادبي{{ $sub }}</a>
-                                    <div class="border-top mt-4 pt-4">
-                                        <div class="d-flex justify-content-between">
-                                            <a class="btn btn-danger"
-                                                href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'arabic', 'sec' => 'ادبي', 'sub' => $sub]) }}>
-                                                اشترك الان </a>
-                                            <h5 class="m-1">$99</h5>
-                                        </div>
+                                <a class="h5"
+                                href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'arabic', 'sub'=> '1' , 'lang' =>'ar']) }}">عربي تانية ادبى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'arabic', 'lang' => 'ar' , 'sub'=>'1']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4">
-                            <div class="rounded overflow-hidden mb-2 bg">
-                                <img class="img-fluid photo" src="{{ asset('assets/images/maths.png') }}"
-                                    alt="">
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
 
-                                <div class="course-content p-4">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/arabic.png') }}"
+                                alt="">
 
-                                    <a class="h5" href="">رياضيات</a>
-                                    <div class="border-top mt-4 pt-4">
-                                        <div class="d-flex justify-content-between">
-                                            <a class="btn btn-danger"
-                                                href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'رياضيات', 'sec' => 'ادبي', 'sub' => $sub]) }}>
-                                                اشترك الان </a>
+                            <div class="course-content p-4">
 
-                                            <h5 class="m-1">$99</h5>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'philosophyLogic', 'sub'=> '1' , 'lang' =>'ar']) }}">الفلسفه والمنطق تانية ادبى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'philosophyLogic', 'lang' => 'ar', 'sub'=> '1']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4">
-                            <div class="rounded overflow-hidden mb-2 bg">
-                                <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}"
-                                    alt="">
-                                <div class="course-content p-4">
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
 
-                                    <a class="h5" href="">دراسات</a>
-                                    <div class="border-top mt-4 pt-4">
-                                        <div class="d-flex justify-content-between">
-                                            <h5 class="m-1">$99</h5>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'history', 'sub'=> '1' , 'lang' =>'ar']) }}"> تاريخ تانية ادبى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'history', 'lang' => 'ar', 'sub'=> '1']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4">
-                            <div class="rounded overflow-hidden mb-2 bg">
-                                <img class="img-fluid photo" src="{{ asset('assets/images/physics.png') }}"
-                                    alt="">
-                                <div class="course-content p-4">
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
 
-                                    <a class="h5" href="">علوم</a>
-                                    <div class="border-top mt-4 pt-4">
-                                        <div class="d-flex justify-content-between">
-                                            <h5 class="m-1">$99</h5>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'geography', 'sub'=> '1' , 'lang' =>'ar']) }}">جغرفيا تانية ادبى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'geography', 'lang' => 'ar', 'sub'=> '1']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4">
-                            <div class="rounded overflow-hidden mb-2 bg">
-                                <img class="img-fluid photo" src="{{ asset('assets/images/english.png') }}"
-                                    alt="">
-                                <div class="course-content p-4">
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/english.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
 
-                                    <a class="h5" href="">انجليزي ثانيه</a>
-                                    <div class="border-top mt-4 pt-4">
-                                        <div class="d-flex justify-content-between">
-                                            <h5 class="m-1">$99</h5>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'english', 'sub'=> '1' , 'lang' =>'ar']) }}">انجليزي تانية ادبى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'english', 'lang' => 'ar' , 'sub'=> '1']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4">
-                            <div class="rounded overflow-hidden mb-2 bg">
-                                <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
-                                    alt="">
-                                <div class="course-content p-4">
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
 
-                                    <a class="h5" href="">فرنساوي</a>
-                                    <div class="border-top mt-4 pt-4">
-                                        <div class="d-flex justify-content-between">
-                                            <h5 class="m-1">$99</h5>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'frensh', 'sub'=> '1' , 'lang' =>'ar']) }}">فرنساوي تانية ادبى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'frensh', 'lang' => 'ar', 'sub'=> '1']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
+
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'italian', 'sub'=> '1' , 'lang' =>'ar']) }}"> ايطالي تانية ادبى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'italian', 'lang' => 'ar', 'sub'=> '1']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
+
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'german', 'sub'=> '1' , 'lang' =>'ar']) }}"> اللغة الالمانية تانية ادبى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'german', 'lang' => 'ar', 'sub'=> '1']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
+
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'spanish', 'sub'=> '1' , 'lang' =>'ar']) }}"> اسباني تانية ادبى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'spanish', 'lang' => 'ar', 'sub'=> '1']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- الصف الثانى الثانوى علمى  --}}
                     @elseif($id == 2 && $sub == 2)
-                        <div class="col-lg-3 col-md-6 mb-4">
-                            <div class="rounded overflow-hidden mb-2 bg">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
 
-                                <img class="img-fluid photo" src="{{ asset('assets/images/arabic.png') }}"
-                                    alt="">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/arabic.png') }}"
+                                alt="">
 
-                                <div class="course-content p-4">
+                            <div class="course-content p-4">
 
-                                    <a class="h5" href="">عربي علمي</a>
-                                    <div class="border-top mt-4 pt-4">
-                                        <div class="d-flex justify-content-between">
-                                            <a class="btn btn-danger"
-                                                href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'اللغه العربيه', 'sec' => 'علمي', 'sub' => $sub]) }}>
-                                                اشترك الان </a>
-
-                                            <h5 class="m-1">$99</h5>
-                                        </div>
+                                <a class="h5"
+                                href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'arabic', 'sub'=> '2' , 'lang' =>'ar']) }}">عربي تانية علمى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'arabic', 'lang' => 'ar' , 'sub'=>'2']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4">
-                            <div class="rounded overflow-hidden mb-2 bg">
-                                <img class="img-fluid photo" src="{{ asset('assets/images/maths.png') }}"
-                                    alt="">
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
 
-                                <div class="course-content p-4">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/arabic.png') }}"
+                                alt="">
 
-                                    <a class="h5" href="">رياضيات</a>
-                                    <div class="border-top mt-4 pt-4">
-                                        <div class="d-flex justify-content-between">
-                                            <a class="btn btn-danger"
-                                                href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'الرياضيات', 'sec' => 'علمي', 'sub' => $sub]) }}>
-                                                اشترك الان </a>
+                            <div class="course-content p-4">
 
-                                            <h5 class="m-1">$99</h5>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'algebratrigonometry', 'sub'=> '2' , 'lang' =>'ar']) }}">جبر وحساب مثلثات تانية علمى </a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'algebratrigonometry', 'lang' => 'ar', 'sub'=> '2']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4">
-                            <div class="rounded overflow-hidden mb-2 bg">
-                                <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}"
-                                    alt="">
-                                <div class="course-content p-4">
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
 
-                                    <a class="h5" href="">دراسات</a>
-                                    <div class="border-top mt-4 pt-4">
-                                        <div class="d-flex justify-content-between">
-                                            <h5 class="m-1">$99</h5>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'analyticalengineering', 'sub'=> '2' , 'lang' =>'ar']) }}"> الهندسة التحليلية تانية علمى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'analyticalengineering', 'lang' => 'ar', 'sub'=> '2']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4">
-                            <div class="rounded overflow-hidden mb-2 bg">
-                                <img class="img-fluid photo" src="{{ asset('assets/images/physics.png') }}"
-                                    alt="">
-                                <div class="course-content p-4">
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
 
-                                    <a class="h5" href="">علوم</a>
-                                    <div class="border-top mt-4 pt-4">
-                                        <div class="d-flex justify-content-between">
-                                            <h5 class="m-1">$99</h5>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'physics', 'sub'=> '2' , 'lang' =>'ar']) }}">فيزياء تانية علمى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'physics', 'lang' => 'ar', 'sub'=> '2']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4">
-                            <div class="rounded overflow-hidden mb-2 bg">
-                                <img class="img-fluid photo" src="{{ asset('assets/images/english.png') }}"
-                                    alt="">
-                                <div class="course-content p-4">
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
 
-                                    <a class="h5" href="">انجليزي ثانيه</a>
-                                    <div class="border-top mt-4 pt-4">
-                                        <div class="d-flex justify-content-between">
-                                            <h5 class="m-1">$99</h5>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'chemistry', 'sub'=> '2' , 'lang' =>'ar']) }}">كيمياء تانية علمى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'chemistry', 'lang' => 'ar', 'sub'=> '2']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4">
-                            <div class="rounded overflow-hidden mb-2 bg">
-                                <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
-                                    alt="">
-                                <div class="course-content p-4">
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
 
-                                    <a class="h5" href="">فرنساوي</a>
-                                    <div class="border-top mt-4 pt-4">
-                                        <div class="d-flex justify-content-between">
-                                            <h5 class="m-1">$99</h5>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'biology', 'sub'=> '2' , 'lang' =>'ar']) }}">أحياء تانية علمى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'biology', 'lang' => 'ar', 'sub'=> '2']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    @else
-                        @if ($sub == 1)
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="rounded overflow-hidden mb-2 bg">
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/english.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
 
-                                    <img class="img-fluid photo" src="{{ asset('assets/images/arabic.png') }}"
-                                        alt="">
-
-                                    <div class="course-content p-4">
-
-                                        <a class="h5" href="">عربي تالته ادبي</a>
-                                        <div class="border-top mt-4 pt-4">
-                                            <div class="d-flex justify-content-between">
-                                                <a class="btn btn-danger"
-                                                    href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'اللغه العربيه', 'sec' => 'ادبي', 'sub' => $sub]) }}>
-                                                    اشترك الان </a>
-
-                                                <h5 class="m-1">$99</h5>
-                                            </div>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'english', 'sub'=> '2' , 'lang' =>'ar']) }}">انجليزي تانية علمى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'english', 'lang' => 'ar' , 'sub'=> '2']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="rounded overflow-hidden mb-2 bg">
-                                    <img class="img-fluid photo" src="{{ asset('assets/images/maths.png') }}"
-                                        alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
 
-                                    <div class="course-content p-4">
-
-                                        <a class="h5" href="">رياضيات ادبي</a>
-                                        <div class="border-top mt-4 pt-4">
-                                            <div class="d-flex justify-content-between">
-                                                <h5 class="m-1">$99</h5>
-                                            </div>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'frensh', 'sub'=> '2' , 'lang' =>'ar']) }}">فرنساوي تانية علمى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'frensh', 'lang' => 'ar', 'sub'=> '2']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="rounded overflow-hidden mb-2 bg">
-                                    <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}"
-                                        alt="">
-                                    <div class="course-content p-4">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
 
-                                        <a class="h5" href="">دراسات</a>
-                                        <div class="border-top mt-4 pt-4">
-                                            <div class="d-flex justify-content-between">
-                                                <h5 class="m-1">$99</h5>
-                                            </div>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'italian', 'sub'=> '2' , 'lang' =>'ar']) }}"> ايطالي تانية علمى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'italian', 'lang' => 'ar', 'sub'=> '2']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="rounded overflow-hidden mb-2 bg">
-                                    <img class="img-fluid photo" src="{{ asset('assets/images/physics.png') }}"
-                                        alt="">
-                                    <div class="course-content p-4">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
 
-                                        <a class="h5" href="">علوم</a>
-                                        <div class="border-top mt-4 pt-4">
-                                            <div class="d-flex justify-content-between">
-                                                <h5 class="m-1">$99</h5>
-                                            </div>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'german', 'sub'=> '2' , 'lang' =>'ar']) }}"> اللغة الالمانية تانية علمى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'german', 'lang' => 'ar', 'sub'=> '2']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="rounded overflow-hidden mb-2 bg">
-                                    <img class="img-fluid photo" src="{{ asset('assets/images/english.png') }}"
-                                        alt="">
-                                    <div class="course-content p-4">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
 
-                                        <a class="h5" href="">انجليزي ثانيه</a>
-                                        <div class="border-top mt-4 pt-4">
-                                            <div class="d-flex justify-content-between">
-                                                <h5 class="m-1">$99</h5>
-                                            </div>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'spanish', 'sub'=> '2' , 'lang' =>'ar']) }}"> اسباني تانية علمى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'spanish', 'lang' => 'ar', 'sub'=> '2']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="rounded overflow-hidden mb-2 bg">
-                                    <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
-                                        alt="">
-                                    <div class="course-content p-4">
+                        </div>
+                    </div>
+                    {{-- **********************************************الصف الثالث الثانوى ادبى ****************************************** --}}
+                    @elseif($id == 3 && $sub == 1)
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
 
-                                        <a class="h5" href="">فرنساوي</a>
-                                        <div class="border-top mt-4 pt-4">
-                                            <div class="d-flex justify-content-between">
-                                                <h5 class="m-1">$99</h5>
-                                            </div>
-                                        </div>
+                            <img class="img-fluid photo" src="{{ asset('assets/images/arabic.png') }}"
+                                alt="">
+
+                            <div class="course-content p-4">
+
+                                <a class="h5"
+                                href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'arabic', 'sub'=> '1' , 'lang' =>'ar']) }}">عربي ثالته ادبى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'arabic', 'lang' => 'ar' , 'sub'=>'1']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
                             </div>
-                        @else
-                            @if ($sub == 2)
-                                <div class="col-lg-3 col-md-6 mb-4">
-                                    <div class="rounded overflow-hidden mb-2 bg">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
 
-                                        <img class="img-fluid photo" src="{{ asset('assets/images/arabic.png') }}"
-                                            alt="">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/arabic.png') }}"
+                                alt="">
 
-                                        <div class="course-content p-4">
+                            <div class="course-content p-4">
 
-                                            <a class="h5" href="">عربي</a>
-                                            <div class="border-top mt-4 pt-4">
-                                                <div class="d-flex justify-content-between">
-                                                    <a class="btn btn-danger"
-                                                        href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'اللغه العربيه', 'sec' => 'علمي علوم', 'sub' => $sub]) }}>
-                                                        اشترك الان </a>
-
-                                                    <h5 class="m-1">$99</h5>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'philosophyLogic', 'sub'=> '1' , 'lang' =>'ar']) }}">الفلسفه والمنطق تالته ادبى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'philosophyLogic', 'lang' => 'ar', 'sub'=> '1']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 mb-4">
-                                    <div class="rounded overflow-hidden mb-2 bg">
-                                        <img class="img-fluid photo" src="{{ asset('assets/images/maths.png') }}"
-                                            alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
 
-                                        <div class="course-content p-4">
-
-                                            <a class="h5" href="">رياضيات</a>
-                                            <div class="border-top mt-4 pt-4">
-                                                <div class="d-flex justify-content-between">
-                                                    <h5 class="m-1">$99</h5>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'history', 'sub'=> '1' , 'lang' =>'ar']) }}"> تاريخ تالته ادبى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'history', 'lang' => 'ar', 'sub'=> '1']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 mb-4">
-                                    <div class="rounded overflow-hidden mb-2 bg">
-                                        <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}"
-                                            alt="">
-                                        <div class="course-content p-4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
 
-                                            <a class="h5" href="">دراسات</a>
-                                            <div class="border-top mt-4 pt-4">
-                                                <div class="d-flex justify-content-between">
-                                                    <h5 class="m-1">$99</h5>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'geography', 'sub'=> '1' , 'lang' =>'ar']) }}">جغرفيا تالته ادبى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'geography', 'lang' => 'ar', 'sub'=> '1']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 mb-4">
-                                    <div class="rounded overflow-hidden mb-2 bg">
-                                        <img class="img-fluid photo" src="{{ asset('assets/images/physics.png') }}"
-                                            alt="">
-                                        <div class="course-content p-4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/english.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
 
-                                            <a class="h5" href="">علوم</a>
-                                            <div class="border-top mt-4 pt-4">
-                                                <div class="d-flex justify-content-between">
-                                                    <h5 class="m-1">$99</h5>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'english', 'sub'=> '1' , 'lang' =>'ar']) }}">انجليزي تالته ادبى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'english', 'lang' => 'ar' , 'sub'=> '1']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 mb-4">
-                                    <div class="rounded overflow-hidden mb-2 bg">
-                                        <img class="img-fluid photo" src="{{ asset('assets/images/english.png') }}"
-                                            alt="">
-                                        <div class="course-content p-4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
 
-                                            <a class="h5" href="">انجليزي تالته علمي علوم</a>
-                                            <div class="border-top mt-4 pt-4">
-                                                <div class="d-flex justify-content-between">
-                                                    <h5 class="m-1">$99</h5>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'frensh', 'sub'=> '1' , 'lang' =>'ar']) }}">فرنساوي تالتة ادبى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'frensh', 'lang' => 'ar', 'sub'=> '1']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 mb-4">
-                                    <div class="rounded overflow-hidden mb-2 bg">
-                                        <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
-                                            alt="">
-                                        <div class="course-content p-4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
 
-                                            <a class="h5" href="">فرنساوي علمي علوم</a>
-                                            <div class="border-top mt-4 pt-4">
-                                                <div class="d-flex justify-content-between">
-                                                    <h5 class="m-1">$99</h5>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'italian', 'sub'=> '1' , 'lang' =>'ar']) }}"> ايطالي تالته ادبى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'italian', 'lang' => 'ar', 'sub'=> '1']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
-                            @else
-                                <div class="col-lg-3 col-md-6 mb-4">
-                                    <div class="rounded overflow-hidden mb-2 bg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
 
-                                        <img class="img-fluid photo" src="{{ asset('assets/images/arabic.png') }}"
-                                            alt="">
-
-                                        <div class="course-content p-4">
-
-                                            <a class="h5" href="">عربي</a>
-                                            <div class="border-top mt-4 pt-4">
-                                                <div class="d-flex justify-content-between">
-                                                    <a class="btn btn-danger"
-                                                        href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'اللغه العربيه', 'sec' => 'علمي رياضه', 'sub' => $sub]) }}>
-                                                        اشترك الان </a>
-
-                                                    <h5 class="m-1">$99</h5>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'german', 'sub'=> '1' , 'lang' =>'ar']) }}"> اللغة الالمانية تالتة ادبى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'german', 'lang' => 'ar', 'sub'=> '1']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 mb-4">
-                                    <div class="rounded overflow-hidden mb-2 bg">
-                                        <img class="img-fluid photo" src="{{ asset('assets/images/maths.png') }}"
-                                            alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
 
-                                        <div class="course-content p-4">
-
-                                            <a class="h5" href="">رياضيات</a>
-                                            <div class="border-top mt-4 pt-4">
-                                                <div class="d-flex justify-content-between">
-                                                    <h5 class="m-1">$99</h5>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'spanish', 'sub'=> '1' , 'lang' =>'ar']) }}"> اسباني تالتة ادبى</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'spanish', 'lang' => 'ar', 'sub'=> '1']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 mb-4">
-                                    <div class="rounded overflow-hidden mb-2 bg">
-                                        <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}"
-                                            alt="">
-                                        <div class="course-content p-4">
+                            </div>
+                        </div>
+                    </div>
+                    {{-- **********************************************الصف الثالث الثانوى علمى رياضة ****************************************** --}}
+                    @elseif($id== 3 && $sub==3)
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
 
-                                            <a class="h5" href="">دراسات</a>
-                                            <div class="border-top mt-4 pt-4">
-                                                <div class="d-flex justify-content-between">
-                                                    <h5 class="m-1">$99</h5>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <img class="img-fluid photo" src="{{ asset('assets/images/arabic.png') }}"
+                                alt="">
+
+                            <div class="course-content p-4">
+
+                                <a class="h5"
+                                href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'arabic', 'sub'=> '3' , 'lang' =>'ar']) }}">عربي تالته علمى رياضة </a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'arabic', 'lang' => 'ar' , 'sub'=>'3']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 mb-4">
-                                    <div class="rounded overflow-hidden mb-2 bg">
-                                        <img class="img-fluid photo" src="{{ asset('assets/images/physics.png') }}"
-                                            alt="">
-                                        <div class="course-content p-4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
 
-                                            <a class="h5" href="">علوم</a>
-                                            <div class="border-top mt-4 pt-4">
-                                                <div class="d-flex justify-content-between">
-                                                    <h5 class="m-1">$99</h5>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <img class="img-fluid photo" src="{{ asset('assets/images/arabic.png') }}"
+                                alt="">
+
+                            <div class="course-content p-4">
+
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'algebratrigonometry', 'sub'=> '3' , 'lang' =>'ar']) }}">جبر وحساب مثلثات تالته علمى رياضة</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'algebratrigonometry', 'lang' => 'ar', 'sub'=> '3']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 mb-4">
-                                    <div class="rounded overflow-hidden mb-2 bg">
-                                        <img class="img-fluid photo" src="{{ asset('assets/images/english.png') }}"
-                                            alt="">
-                                        <div class="course-content p-4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
 
-                                            <a class="h5" href="">انجليزي ثانيه</a>
-                                            <div class="border-top mt-4 pt-4">
-                                                <div class="d-flex justify-content-between">
-                                                    <h5 class="m-1">$99</h5>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'analyticalengineering', 'sub'=> '3' , 'lang' =>'ar']) }}"> الهندسة التحليلية تالته علمى رياضة</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'analyticalengineering', 'lang' => 'ar', 'sub'=> '3']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 mb-4">
-                                    <div class="rounded overflow-hidden mb-2 bg">
-                                        <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
-                                            alt="">
-                                        <div class="course-content p-4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
 
-                                            <a class="h5" href="">فرنساوي علمي رياضه</a>
-                                            <div class="border-top mt-4 pt-4">
-                                                <div class="d-flex justify-content-between">
-                                                    <h5 class="m-1">$99</h5>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'physics', 'sub'=> '3' , 'lang' =>'ar']) }}">فيزياء تالته علمى رياضة</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'physics', 'lang' => 'ar', 'sub'=> '3']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
                                     </div>
                                 </div>
-                            @endif
-                        @endif
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
+
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'chemistry', 'sub'=> '3' , 'lang' =>'ar']) }}">كيمياء تالته علمى رياضة</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'chemistry', 'lang' => 'ar', 'sub'=> '3']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/english.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
+
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'english', 'sub'=> '3' , 'lang' =>'ar']) }}">انجليزي تالته علمى رياضة</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'english', 'lang' => 'ar' , 'sub'=> '3']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
+
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'frensh', 'sub'=> '3' , 'lang' =>'ar']) }}">فرنساوي تالته علمى رياضة</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'frensh', 'lang' => 'ar', 'sub'=> '3']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
+
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'italian', 'sub'=> '3' , 'lang' =>'ar']) }}"> ايطالي تالته علمى رياضة</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'italian', 'lang' => 'ar', 'sub'=> '3']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
+
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'german', 'sub'=> '3' , 'lang' =>'ar']) }}"> اللغة الالمانية تالته علمى رياضة</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'german', 'lang' => 'ar', 'sub'=> '3']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
+
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'spanish', 'sub'=> '3' , 'lang' =>'ar']) }}"> اسباني تالته علمى رياضة</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'spanish', 'lang' => 'ar', 'sub'=> '3']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- **********************************************الصف الثالث الثانوى علمى رياضة ****************************************** --}}
+                    @elseif($id == 3 && $sub == 4)
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+
+                            <img class="img-fluid photo" src="{{ asset('assets/images/arabic.png') }}"
+                                alt="">
+
+                            <div class="course-content p-4">
+
+                                <a class="h5"
+                                href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'arabic', 'sub'=> '4' , 'lang' =>'ar']) }}">عربي تالته علمى علوم </a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'arabic', 'lang' => 'ar' , 'sub'=>'4']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>            
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
+
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'physics', 'sub'=> '4' , 'lang' =>'ar']) }}">فيزياء تالته علمى علوم</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'physics', 'lang' => 'ar', 'sub'=> '4']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
+
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'chemistry', 'sub'=> '4' , 'lang' =>'ar']) }}">كيمياء تالته علمى علوم</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'chemistry', 'lang' => 'ar', 'sub'=> '4']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/mountain.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
+
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'biology', 'sub'=> '4' , 'lang' =>'ar']) }}">أحياء تالته علمى علوم</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'biology', 'lang' => 'ar', 'sub'=> '4']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/english.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
+
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'english', 'sub'=> '4' , 'lang' =>'ar']) }}">انجليزي تالته علمى علوم</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'english', 'lang' => 'ar' , 'sub'=> '4']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
+
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'frensh', 'sub'=> '4' , 'lang' =>'ar']) }}">فرنساوي تالته علمى علوم</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'frensh', 'lang' => 'ar', 'sub'=> '4']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
+
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'italian', 'sub'=> '4' , 'lang' =>'ar']) }}"> ايطالي تالته علمى علوم</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'italian', 'lang' => 'ar', 'sub'=> '4']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
+
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'german', 'sub'=> '4' , 'lang' =>'ar']) }}"> اللغة الالمانية تالته علمى علوم</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'german', 'lang' => 'ar', 'sub'=> '4']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="rounded overflow-hidden mb-2 bg">
+                            <img class="img-fluid photo" src="{{ asset('assets/images/france.png') }}"
+                                alt="">
+                            <div class="course-content p-4">
+
+                                <a class="h5" href="{{ route('showdetails_th', ['id' => $id, 'subject' => 'spanish', 'sub'=> '4' , 'lang' =>'ar']) }}"> اسباني تالته علمى علوم</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-danger sent"
+                                            href={{ route('secoundtherdsubscribe', ['id' => $id, 'subject' => 'spanish', 'lang' => 'ar', 'sub'=> '4']) }}>
+                                            اشترك الان </a>
+                                        <h5 class="m-1">$99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     @endif
 
                 </div>
                 <!-- قسم اللغاااات -->
                 <!-- Courses Start -->
-                <h2 style="color:white;">Language school section</h2>
+                {{-- <h2 style="color:white;">Language school section</h2>
                 <div class="row">
                     @if ($id == 1)
                         <div class="col-lg-3 col-md-6 mb-4">
@@ -1622,7 +2018,7 @@
 
                     @endif
 
-                </div>
+                </div> --}}
                 <!-- Courses End -->
             @else
                 <div class="container-fluid py-5">

@@ -14,7 +14,7 @@ class Show extends Controller
     $sub = request('sub');
     return view('thanwy', [
       'id' => $id,
-      'sub' => $sub
+      'sub'=>$sub,
     ]);
   }
   public function prep()
@@ -65,6 +65,15 @@ class Show extends Controller
     $id = request('id');
     return view('thanwy', [
       'id' => $id,
+    ]);
+  }
+  public function third_second()
+  {
+    $id = request('id');
+    $sub=request('sub');
+    return view('thanwy', [
+      'id' => $id,
+      'sub'=>$sub,
     ]);
   }
   public function therd()
