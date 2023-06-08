@@ -111,7 +111,6 @@ class Thanawy extends Controller
         if (Session::has('id')) {
             $data = Student::where('id', '=', Session::get('id'))->first();
             $studentname = $data->name;
-           
             
             try {
                 //  زرار الاشتراك للصف الثانى الثانوى ادبى عربى 

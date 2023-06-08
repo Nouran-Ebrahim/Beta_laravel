@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin;
 use App\Http\Controllers\Show;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\Thanawy;
@@ -73,9 +74,12 @@ Route::get('/about', function () {
     return view('about');
 })-> name('about');
 
-Route::get('/admin',[DataController::class,'admin' ])->name('admin') ;
 
-Route::post('admin',[DataController::class,'adminstore' ])->name('adminstore') ;
+// ********************************  Admin routes *************************************** 
+Route::get('/admin',[Admin::class,'admin' ])->name('admin') ;
 
-Route::post('admin_change',[DataController::class,'change_status' ])->name('change_status') ;
+Route::post('admin',[Admin::class,'adminstore' ])->name('adminstore') ;
+
+Route::post('admin_change',[Admin::class,'change_status' ])->name('change_status') ;
+
 
