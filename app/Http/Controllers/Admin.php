@@ -11,6 +11,7 @@ use App\Models\Arth3course;
 use App\Models\Enpcourse;
 use App\Models\Plesson;
 use App\Models\Arpcourse;
+use App\Models\Link;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailableName;
@@ -60,5 +61,23 @@ class Admin extends Controller
 
         return redirect()->back();
     }
-
+    public function  sub_links(Request $req)
+    {
+        $link=[];
+        if ($req->level) {
+            $link=Link::where('sub_name',$req->sub_name)->get()->all();
+        }
+       
+    //    $unit_num=$link->sub_name;
+    //    dd($unit_num);
+    //    dd(
+    //     $link->level
+    //    );
+        return view('subLinks',[
+            'link'=>$link,
+            'unit'=>'2',
+            'lesson'=>'2',
+        ]);
+    }
+   
 }

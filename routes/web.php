@@ -83,3 +83,5 @@ Route::post('admin',[Admin::class,'adminstore' ])->name('adminstore') ;
 Route::post('admin_change',[Admin::class,'change_status' ])->name('change_status') ;
 
 
+//  route to update subject's links
+Route::get('/links',[Admin::class,'sub_links' ])->name('links') ;
