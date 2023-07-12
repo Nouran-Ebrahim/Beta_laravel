@@ -153,26 +153,35 @@
                     </tr>
                 </thead>
                 <tbody>
-
-                    {{-- @for ($i = 1; $i <= $unit; $i++)
-                        @foreach ($link as $links)
-                            @if ($i == $links->unit_number)
-                                <tr>
-                                    <th scope="row">{{ $links->sub_name }}</th>
-                                    <td scope="row">unit {{ $links->unit_number }}</td>
-                                    <td scope="row">{{ $links->lesson_number }}</td>
-                                    <td scope="row" id="link" style="width: 500px;">{{ $links->link }}</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success" id="edit-btn">Edit</button>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-success" id="delete-btn">Delete</button>
-                                    </td>
-                                    
-                                </tr>
-                            @endif
-                        @endforeach
-                    @endfor --}}
+@if ($status == 'exist')
+        @for ($i = 1; $i <= $unit; $i++)
+        @foreach ($link as $links)
+         @if ($i == $links->unit_number)
+        <tr>
+            <th scope="row">{{ $links->sub_name }}</th>
+            <td scope="row">unit {{ $links->unit_number }}</td>
+            <td scope="row">{{ $links->lesson_number }}</td>
+            <td scope="row" id="link" style="width: 500px;">{{ $links->link }}</td>
+            <td>
+                <button type="button" class="btn btn-success" id="edit-btn">Edit</button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-success" id="delete-btn">Delete</button>
+            </td>
+            
+        </tr>
+         @endif
+        @endforeach
+            @endfor
+       
+            
+        @else
+            
+        <p style="color: #fff;">there are no data for this subject </p>
+                
+           
+@endif
+                  
 
 
                 </tbody>

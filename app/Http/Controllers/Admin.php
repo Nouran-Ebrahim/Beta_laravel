@@ -65,17 +65,25 @@ class Admin extends Controller
     public function  sub_links(Request $req)
     {
         $link=[];
-        if ($req->level) {
+            $unit=0;
+            $lesson=0;
+            $status='not exist';
+        if ($req) {
             $link=Link::where('sub_name',$req->sub_name)->get()->all();
-        }else{
-            $link=['empaty'];
+            if ($link!=[]) {
+                $status='exist';
+                $unit=$link[1] -> all_unit;
+                $lesson=$link[1] -> all_lesson;
+            }
         }
         
     
+    
         return view('subLinks',[
             'link'=>$link,
-            'unit'=>'2',
-            'lesson'=>'2',
+            'unit'=>$unit,
+            'lesson'=>$lesson,
+            'status'=> $status,
         ]);
     }
    

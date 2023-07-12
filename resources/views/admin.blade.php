@@ -74,13 +74,13 @@
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
-    <div class="container-fluid " style="margin-top: 6%;
+    <div class="container-fluid "  style="margin-top: 6%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;">
-        <a href="{{ route('links') }}"><button type="submit" > show subject details  </button></a>
-        <div class="container" >
+        <button type="submit" onclick='subForm()'> show subject details  </button>
+        <div class="container" id="sub-form" style="display:none;">
             <form method="GET" action="{{ route('links') }}"
                              style="color: white;
                              position: relative;
@@ -164,6 +164,8 @@
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/courses.js') }}"></script>
+    <script src="{{ asset('assets/js/admin.js') }}"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 </body>
