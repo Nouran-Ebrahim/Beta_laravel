@@ -139,6 +139,9 @@
     width: fit-content;
     left: 110px;">
         <div>
+            <button type="" class="btn btn-success show"  >add lesson</button>
+            <button type="" class="btn btn-success show"  >add unit</button>
+
             <table class="table" style="color: white;">
                 <thead>
                     <tr>
@@ -151,7 +154,7 @@
                 </thead>
                 <tbody>
 
-                    @for ($i = 1; $i <= $unit; $i++)
+                    {{-- @for ($i = 1; $i <= $unit; $i++)
                         @foreach ($link as $links)
                             @if ($i == $links->unit_number)
                                 <tr>
@@ -159,21 +162,19 @@
                                     <td scope="row">unit {{ $links->unit_number }}</td>
                                     <td scope="row">{{ $links->lesson_number }}</td>
                                     <td scope="row" id="link" style="width: 500px;">{{ $links->link }}</td>
-
-                                    <td scope="row" style="display: none" class='show'><input type=""
-                                            class="form-control" id="new-link" aria-describedby="emailHelp"
-                                            placeholder="inter the new link">
-                                    </td>
                                     <td>
                                         <button type="button" class="btn btn-success" id="edit-btn">Edit</button>
                                     </td>
                                     <td>
-                                        <button type="submit" class="btn btn-success show" id="save-btn" style="display: none">save</button>
+                                        <button type="button" class="btn btn-success" id="delete-btn">Delete</button>
                                     </td>
+                                    
                                 </tr>
                             @endif
                         @endforeach
-                    @endfor
+                    @endfor --}}
+
+
                 </tbody>
             </table>
         </div>
@@ -204,19 +205,6 @@
                 console.log(name)
             });
         });
-        $("#edit-btn").click(function() {
-            console.log('name')
-            $(".show").css('display', 'block');
-            $("#edit-btn").css('display', 'none');
-            $("#edit-btn").css('pointer-events', 'none');
-
-            // $("#id").attr("placeholder","inter the new link");
-        });
-        //  function edit(link , unit , lesson) {
-
-        //   $("#link").append(" <input type="" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="inter the new link">");
-
-        //  }
     </script>
 </body>
 

@@ -39,40 +39,6 @@
 </head>
 
 <body>
-    <!-- ***** Header Area Start ***** -->
-    {{--
-    <header class="header-area header-sticky">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-
-                        <a href="index.php" class="logo logo-img">
-                            <img src="{{ asset('assets/images/logoo2.png') }}">
-                        </a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            <li><a href="{{ route('index') }}">Home</a></li>
-                            <li><a href="{{ route('index') }}" class="active" id="level">Levels</a></li>
-                            <li><a href="{{ route('index') }}" id="skill">Skills</a></li>
-                            <li><a href="{{ route('joinus') }}">Join Us</a></li>
-                            <li><a href="{{ route('about') }}">About</a></li>
-                            <li><a href="{{ route('index') }}">Contact Us</a></li>
-                            @if (Session::get('id') === 70)
-                                <li><a href="{{ route('admin') }}">Admin</a></li>
-                            @endif
-                        </ul>
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header> --}}
     <header class="header-area header-sticky">
         <div class="container">
             <div class="row">
@@ -108,7 +74,68 @@
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
-    <div class="container-fluid py-5">
+    <div class="container-fluid " style="margin-top: 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;">
+        <a href="{{ route('links') }}"><button type="submit" > show subject details  </button></a>
+        <div class="container" >
+            <form method="GET" action="{{ route('links') }}"
+                             style="color: white;
+                             position: relative;
+                             top: 50px;
+                             display: flex;
+                             justify-content: center;
+                             align-items: center;
+                             flex-direction: column;
+                             margin-bottom: 50px;">
+            @csrf
+            <div class="row" style="width: 100%;justify-content: center;">
+                <div class="col-3">
+                    <select class="form-select form-select-lg mb-3" name='sub_name' aria-label=".form-select-lg example">
+                        {{-- <option selected>اسم المادة</option> --}}
+                        <option value="arabic">اللغة العربية</option>
+                        <option value="english">انجليزى</option>
+                        <option value="math">رياضة</option>
+                        <option value="physics">فيزياء</option>
+                        <option value="chemistry">كيمياء</option>
+                        <option value="biology">احياء</option>
+                        <option value="philosophyLogic">علم نفس و فلسفة </option>
+                        <option value="geography">جغرافيا</option>
+                        <option value="history">تاريخ</option>
+                        <option value="analyticalengineering"> هندسة تحليلية</option>
+                        <option value="algebratrigonometry">جبر</option>
+                        <option value="frensh">فرنساوى</option>
+                        <option value="german">المانى</option>
+                        <option value="spanish">اسبانى</option>
+                        <option value="italian">ايطالى</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                    <select class="form-select form-select-lg mb-3" name='prep_or_thanwy'
+                        aria-label=".form-select-lg example">
+                        {{-- <option selected>المرحلة</option> --}}
+                        <option value="prep">الاعدادية</option>
+                        <option value="thanwy">الثانوية</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                    <select class="form-select form-select-lg mb-3" name='level' aria-label=".form-select-lg example">
+                        {{-- <option selected>السنة الدراسية</option> --}}
+                        <option value="1">الصف الاول</option>
+                        <option value="2">الصف الثانى</option>
+                        <option value="3">الصف الثالث</option>
+                    </select>
+                </div>
+    
+            </div>
+            <div class="row">
+                <input class="btn btn-primary" type="submit" value="Submit">
+            </div>
+    
+        </form>
+        </div>
         <div class="container py-5">
             <form method="post" action="{{ route('adminstore') }}">
                 @csrf
@@ -127,6 +154,7 @@
             </form>
         </div>
     </div>
+    
     <div class="footer start-footer">
         <p>Copyright © 2022 beta education Co., Ltd. All Rights Reserved.
             <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">soul</a>

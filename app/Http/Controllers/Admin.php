@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailableName;
 use App\Mail\Confermation;
+use Attribute;
 use Illuminate\Support\Facades\Session;
 
 class Admin extends Controller
@@ -66,13 +67,11 @@ class Admin extends Controller
         $link=[];
         if ($req->level) {
             $link=Link::where('sub_name',$req->sub_name)->get()->all();
+        }else{
+            $link=['empaty'];
         }
-       
-    //    $unit_num=$link->sub_name;
-    //    dd($unit_num);
-    //    dd(
-    //     $link->level
-    //    );
+        
+    
         return view('subLinks',[
             'link'=>$link,
             'unit'=>'2',
