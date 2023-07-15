@@ -70,8 +70,9 @@ class Admin extends Controller
             $unit=0;
             $lesson=0;
             $status='not exist';
-        if ($req) {
-            $link=Link::where('sub_name',$req->sub_name)->get()->all();
+            // dd($req->sub_name,$req->level);
+        if ($req && $req->sub_name != 'null' && $req->level != 'null') {
+            $link=Link::where(['sub_name'=>$req->sub_name , 'level' =>$req->level])->get()->all();
             if ($link!=[]) {
                 $status='exist';
                 $unit=$link[1] -> all_unit;
