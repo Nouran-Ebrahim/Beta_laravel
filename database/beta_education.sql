@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 07, 2023 at 03:13 PM
+-- Generation Time: Jul 15, 2023 at 02:10 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -58,7 +58,7 @@ CREATE TABLE `arpcourses` (
 --
 
 INSERT INTO `arpcourses` (`id`, `name`, `student_id`, `math1`, `arabic1`, `math2`, `arabic2`, `math3`, `arabic3`, `english1`, `english2`, `english3`, `science1`, `science2`, `science3`, `social1`, `social2`, `social3`, `frensh1`, `frensh2`, `frensh3`, `created_at`, `updated_at`) VALUES
-(74, 'Nouran El Mohamady', 71, 'waiting', 'open', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL),
+(74, 'Nouran El Mohamady', 71, 'open', 'open', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL),
 (76, 'admain', 70, 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL),
 (77, 'Alaa Osama', 72, 'closed', 'waiting', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', 'closed', NULL, NULL);
 
@@ -320,6 +320,37 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `links`
+--
+
+CREATE TABLE `links` (
+  `id` int(10) NOT NULL,
+  `sub_name` varchar(100) NOT NULL,
+  `prep_or_thanwy` varchar(20) NOT NULL,
+  `level` int(1) NOT NULL,
+  `unit_number` int(10) NOT NULL,
+  `all_unit` int(10) NOT NULL,
+  `lesson_number` int(10) NOT NULL,
+  `all_lesson` int(10) NOT NULL,
+  `link` varchar(500) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `links`
+--
+
+INSERT INTO `links` (`id`, `sub_name`, `prep_or_thanwy`, `level`, `unit_number`, `all_unit`, `lesson_number`, `all_lesson`, `link`, `created_at`, `updated_at`) VALUES
+(1, 'arabic', 'prep', 1, 1, 4, 1, 4, 'https://www.youtube.com/watch?v=lbkDmrckrnA&list=PLCm7ZeRfGSP4NNEikwx3wUAskQHB3p-LK&index=64', NULL, NULL),
+(2, 'arabic', 'prep', 1, 1, 4, 2, 4, 'https://www.youtube.com/watch?v=jffKw_NMfnw', NULL, NULL),
+(3, 'arabic', 'prep', 1, 2, 4, 1, 4, 'https://www.youtube.com/watch?v=p3gc0CGhr80&list=RDCMUCYeDPubBiFCZXIOgGYoyADw&start_radio=1&rv=p3gc0CGhr80&t=346', NULL, NULL),
+(4, 'arabic', 'prep', 1, 2, 4, 2, 4, 'https://www.youtube.com/watch?v=NDPFZ09BjiI&list=RDCMUCYeDPubBiFCZXIOgGYoyADw&index=6', NULL, NULL),
+(5, 'arabic', 'prep', 1, 1, 4, 3, 4, 'https://www.youtube.com/watch?v=NDPFZ09BjiI&list=RDCMUCYeDPubBiFCZXIOgGYoyADw&index=6', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `migrations`
 --
 
@@ -541,6 +572,12 @@ ALTER TABLE `failed_jobs`
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
+-- Indexes for table `links`
+--
+ALTER TABLE `links`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
@@ -645,6 +682,12 @@ ALTER TABLE `enth3courses`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `links`
+--
+ALTER TABLE `links`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `migrations`
