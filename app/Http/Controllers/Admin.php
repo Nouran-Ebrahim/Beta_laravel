@@ -18,6 +18,7 @@ use App\Mail\MailableName;
 use App\Mail\Confermation;
 use Attribute;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
 
 class Admin extends Controller
 {
@@ -64,6 +65,7 @@ class Admin extends Controller
     }
     public function  sub_links(Request $req)
     {
+        
         $link=[];
             $unit=0;
             $lesson=0;
@@ -86,5 +88,27 @@ class Admin extends Controller
             'status'=> $status,
         ]);
     }
-   
+    public function  edit_link(Request $req)
+    {
+        // dd($req->link);
+        
+        if ($req->link != 'null') {
+        Link::where('id',$req->id)->update(['link' => $req->link]);
+        }
+        $linkEdit=Link::where('id',$req->id)->get()->all();
+        $link=Link::where('sub_name',$linkEdit[0]->sub_name)->get()->all();
+        if ($link!=[]) {
+            $status='exist';
+            $unit=$link[1] -> all_unit;
+            $lesson=$link[1] -> all_lesson;
+        }
+        return view('subLinks',[
+            'link'=>$link,
+            'unit'=>$unit,
+            'lesson'=>$lesson,
+            'status'=> $status,
+        ]);
+        
+    }
+    
 }

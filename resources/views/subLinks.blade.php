@@ -82,12 +82,12 @@
 
     <form method="GET" action="{{ route('links') }}"
         style="color: white;
-    position: relative;
-    top: 125px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction:column;">
+        position: relative;
+        top: 125px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction:column;">
         @csrf
         <div class="row" style="width: 100%;justify-content: center;">
             <div class="col-3">
@@ -129,7 +129,7 @@
 
         </div>
         <div class="row">
-            <input class="btn btn-primary" type="submit" value="Submit">
+            <input class="btn btn-primary" type="submit" value="Show">
         </div>
 
     </form>
@@ -139,8 +139,8 @@
     width: fit-content;
     left: 110px;">
         <div>
-            <button type="" class="btn btn-success show"  >add lesson</button>
-            <button type="" class="btn btn-success show"  >add unit</button>
+            <button type="" class="btn btn-success show" onclick="addLesson()" >add lesson</button>
+            <button type="" class="btn btn-success show"  onclick="addUnit()" >add unit</button>
 
             <table class="table" style="color: white;">
                 <thead>
@@ -158,17 +158,27 @@
         @foreach ($link as $links)
          @if ($i == $links->unit_number)
         <tr>
+           
             <th scope="row">{{ $links->sub_name }}</th>
             <td scope="row">unit {{ $links->unit_number }}</td>
             <td scope="row">{{ $links->lesson_number }}</td>
-            <td scope="row" id="link" style="width: 500px;">{{ $links->link }}</td>
+            <form action="{{ route('edit_link') }}">
+            <td scope="row" id="link" style="width: 500px;"><div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon3">{{ $links->link }}</span>
+                </div>
+                <input type="text" class="form-control" name='link' autocomplete="off" required  id="{{ $links->lesson_number }}.{{ $links->unit_number }}" aria-describedby="basic-addon3"  style="display: none;">
+                <input type="hidden" name='id' value="{{ $links->id }}">
+              </div></td>
             <td>
-                <button type="button" class="btn btn-success" id="edit-btn">Edit</button>
+                <button type="button" class="btn btn-secondary"  id="edit.{{ $links->lesson_number }}.{{ $links->unit_number }}" onclick="edit('{{ $links->lesson_number }}','{{ $links->unit_number }}')">Edit</button>
+               <button type="submit" class="btn btn-success"   id="save.{{ $links->lesson_number }}.{{ $links->unit_number }}" style="display: none;">Save</button>
             </td>
             <td>
-                <button type="button" class="btn btn-success" id="delete-btn">Delete</button>
+                <button type="button" class="btn btn-danger" id="delet.{{ $links->lesson_number }}.{{ $links->unit_number }}">Delete</button>
+                <button type="button" class="btn btn-danger" id="cancel.{{ $links->lesson_number }}.{{ $links->unit_number }}" onclick="cancel('{{ $links->lesson_number }}','{{ $links->unit_number }}')"  style="display: none;" >Cancel</button>
             </td>
-            
+            </form>
         </tr>
          @endif
         @endforeach
@@ -188,7 +198,7 @@
             </table>
         </div>
         
-
+      
 
     </div>
     <!-- ***** footer Area Start ***** -->
@@ -205,6 +215,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/admin.js') }}"></script>
     <script src="{{ asset('assets/js/courses.js') }}"></script>
     <script>
         $(document).ready(function() {
